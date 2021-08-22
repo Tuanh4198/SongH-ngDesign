@@ -47,120 +47,209 @@
 		<div class="main-content">
 			<div class="container">
 				<div class="row">
-					<sidebar class="col-3 category-sidebar">
+					<sidebar class="col-xl-3 col-lg-4 category-sidebar filter">
 						<div class="form-search">
 							<button class="btn-search">
 								<img src="./images/page/qa-page/search_icon.png" alt=""/>
 							</button>
 							<input type="text" placeholder="Tìm bác sĩ...">
 						</div>
-						<h5 class="title">Chuyên khoa</h5>
-						<ul class="list-doctor">
+						<ul class="list-doctor mobile d-none list-support-option">
 							<li class="active">
 								<a href="#">Tất cả bác sĩ</a>
-								<span>60</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li>
 								<a href="#">Nhi</a>
-								<span>15</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li>
 								<a href="#">Nội tổng quát</a>
-								<span>15</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li>
 								<a href="#">Sản khoa</a>
-								<span>15</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li>
 								<a href="#">Hồi sức - Cấp cứu</a>
-								<span>15</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li>
 								<a href="#">Chẩn đoán hình ảnh</a>
-								<span>15</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li>
 								<a href="#">Tim mạch</a>
-								<span>15</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li>
 								<a href="#">Tiêu hóa </a>
-								<span>15</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li>
 								<a href="#">Tiết niệu – Nam học</a>
-								<span>15</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li>
 								<a href="#">Dược</a>
-								<span>15</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li>
 								<a href="#">Mắt</a>
-								<span>15</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li>
 								<a href="#">Tai mũi họng</a>
-								<span>15</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li>
 								<a href="#">Da liễu</a>
-								<span>15</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li>
 								<a href="#">Tai mũi họng</a>
-								<span>15</span>
-								<img src="./images/page/intro-page/ico-user.png" alt=""/>
 							</li>
 							<li class="divider">
-								<a href="#">Xem thêm <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+								<a href="#">Xem thêm</a>
 							</li>
 						</ul>
-						<h5 class="title">Học hàm, học vị</h5>
-						<ul class="list-academic-rank">
-							<li>
-								<input type="checkbox" name="_1" id="_1">
-								<label for="_1">Giáo sư</label>
-							</li>
-							<li>
-								<input type="checkbox" name="_2" id="_2">
-								<label for="_2">Phó giáo sư</label>
-							</li>
-							<li>
-								<input type="checkbox" name="_3" id="_3">
-								<label for="_3">Bác sĩ cao cấp</label>
-							</li>
-							<li>
-								<input type="checkbox" name="_4" id="_4">
-								<label for="_4">Bác sĩ chuyên khoa</label>
-							</li>
-							<li>
-								<input type="checkbox" name="_5" id="_5">
-								<label for="_5">Thạc sĩ</label>
-							</li>
-							<li>
-								<input type="checkbox" name="_6" id="_6">
-								<label for="_6">Tiến sĩ</label>
-							</li>
-						</ul> 
+						<div class="d-none filter-option">
+							<p class="result">150 <span>bác sĩ</span></p>
+							<p class="show-option-text">
+								Lọc tìm bác sĩ
+								<img src="./images/page/qa-page/icofilter.png" alt=""/>
+							</p>
+						</div>
+						<div class="filter-wrapper">
+							<div class="d-none filter-option">
+								<p class="show-option-text">
+									Lọc tìm bác sĩ
+									<img src="./images/home/close.png" alt="" class="close"/>
+								</p>
+							</div>
+							<h5 class="title d-none">
+								Tiêu chí đã chọn
+								<button class="btn-clear-all">Xóa tất cả</button>
+							</h5>
+							<ul class="list-keyword d-none">
+								<li>
+									Nội tổng quát
+									<img src="./images/home/close.png" alt="" class="close"/>
+								</li>
+								<li>
+									Sản khoa
+									<img src="./images/home/close.png" alt="" class="close"/>
+								</li>
+								<li>
+									Hồi sức cấp cứu
+									<img src="./images/home/close.png" alt="" class="close"/>
+								</li>
+								<li>
+									Tim mạch
+									<img src="./images/home/close.png" alt="" class="close"/>
+								</li>
+								<li>
+									Giáo sư
+									<img src="./images/home/close.png" alt="" class="close"/>
+								</li>
+							</ul>
+							<h5 class="title">Chuyên khoa</h5>
+							<ul class="list-doctor list-support-option">
+								<li class="active">
+									<a href="#">Tất cả bác sĩ</a>
+									<span>60</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li>
+									<a href="#">Nhi</a>
+									<span>15</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li>
+									<a href="#">Nội tổng quát</a>
+									<span>15</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li>
+									<a href="#">Sản khoa</a>
+									<span>15</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li>
+									<a href="#">Hồi sức - Cấp cứu</a>
+									<span>15</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li>
+									<a href="#">Chẩn đoán hình ảnh</a>
+									<span>15</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li>
+									<a href="#">Tim mạch</a>
+									<span>15</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li>
+									<a href="#">Tiêu hóa </a>
+									<span>15</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li>
+									<a href="#">Tiết niệu – Nam học</a>
+									<span>15</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li>
+									<a href="#">Dược</a>
+									<span>15</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li>
+									<a href="#">Mắt</a>
+									<span>15</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li>
+									<a href="#">Tai mũi họng</a>
+									<span>15</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li>
+									<a href="#">Da liễu</a>
+									<span>15</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li>
+									<a href="#">Tai mũi họng</a>
+									<span>15</span>
+									<img src="./images/page/intro-page/ico-user.png" alt=""/>
+								</li>
+								<li class="divider">
+									<a href="#">Xem thêm <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<a href="#" class="d-none mobile">Xem thêm 30 chuyển khoa <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+								</li>
+							</ul>
+							<h5 class="title">Học hàm, học vị</h5>
+							<ul class="list-academic-rank list-support-option">
+								<li>
+									<input type="checkbox" name="_1" id="_1">
+									<label for="_1">Giáo sư</label>
+								</li>
+								<li>
+									<input type="checkbox" name="_2" id="_2">
+									<label for="_2">Phó giáo sư</label>
+								</li>
+								<li>
+									<input type="checkbox" name="_3" id="_3">
+									<label for="_3">Bác sĩ cao cấp</label>
+								</li>
+								<li>
+									<input type="checkbox" name="_4" id="_4">
+									<label for="_4">Bác sĩ chuyên khoa</label>
+								</li>
+								<li>
+									<input type="checkbox" name="_5" id="_5">
+									<label for="_5">Thạc sĩ</label>
+								</li>
+								<li>
+									<input type="checkbox" name="_6" id="_6">
+									<label for="_6">Tiến sĩ</label>
+								</li>
+							</ul> 
+						</div>
 					</sidebar>
-					<div class="col-9 category-products">
+					<div class="col-xl-9 col-lg-8 category-products">
 						<div class="row">
-							<div class="col-lg-6 col-12">
+							<div class="col-lg-6 col-md-6 col-12">
 								<div class="item-lg">
 									<div class="item-lg-wrapper">
 										<img src="./images/page/intro-page/doctor2.png" alt=""/>
@@ -182,7 +271,7 @@
 									<button class="btn-setup"><img src="./images/page/intro-page/calendar.png"/> Đăng kí khám</button>
 								</div>
 							</div>
-							<div class="col-lg-6 col-12">
+							<div class="col-lg-6 col-md-6 col-12">
 								<div class="item-lg">
 									<div class="item-lg-wrapper">
 										<img src="./images/page/intro-page/doctor1.png" alt=""/>
@@ -204,7 +293,7 @@
 									<button class="btn-setup"><img src="./images/page/intro-page/calendar.png"/> Đăng kí khám</button>
 								</div>
 							</div>
-							<div class="col-xl-3 col-lg-4 col-6">
+							<div class="col-xl-3 col-lg-4 col-md-4 col-6">
 								<div class="item-sm">
 									<img src="./images/page/intro-page/doctor2.png" alt=""/>
 									<div class="doctor-indo">
@@ -224,7 +313,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-3 col-lg-4 col-6">
+							<div class="col-xl-3 col-lg-4 col-md-4 col-6">
 								<div class="item-sm">
 									<img src="./images/page/intro-page/doctor1.png" alt=""/>
 									<div class="doctor-indo">
@@ -244,7 +333,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-3 col-lg-4 col-6">
+							<div class="col-xl-3 col-lg-4 col-md-4 col-6">
 								<div class="item-sm">
 									<img src="./images/page/intro-page/doctor2.png" alt=""/>
 									<div class="doctor-indo">
@@ -264,7 +353,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-3 col-lg-4 col-6">
+							<div class="col-xl-3 col-lg-4 col-md-4 col-6">
 								<div class="item-sm">
 									<img src="./images/page/intro-page/doctor1.png" alt=""/>
 									<div class="doctor-indo">
@@ -284,7 +373,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-3 col-lg-4 col-6">
+							<div class="col-xl-3 col-lg-4 col-md-4 col-6">
 								<div class="item-sm">
 									<img src="./images/page/intro-page/doctor2.png" alt=""/>
 									<div class="doctor-indo">
@@ -304,7 +393,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-3 col-lg-4 col-6">
+							<div class="col-xl-3 col-lg-4 col-md-4 col-6">
 								<div class="item-sm">
 									<img src="./images/page/intro-page/doctor1.png" alt=""/>
 									<div class="doctor-indo">
@@ -364,7 +453,35 @@
 <!-- custom js -->
 <script ttype="text/javascript">
     jQuery(document).ready(function($) {
-		
+        $('.list-support-option li').click(function(event) {
+            event.preventDefault();
+            $(this).toggleClass('active');
+        })
+
+        $('.list-keyword li .close').click(function(event) {
+            event.preventDefault();
+            $(this).parent().remove();
+        })
+
+        $('.btn-clear-all').click(function(event) {
+            event.preventDefault();
+            $('.list-keyword').remove();
+            $(this).parent().remove();
+        })
+
+		$('.list-doctor .divider').click(function(event) {
+            event.preventDefault();
+			if($(this).hasClass('d-flex')) {
+				$(this).parent().find('li').removeClass('d-flex');
+			} else {
+				$(this).parent().find('li').addClass('d-flex');
+			}
+        });
+
+		$('.filter .filter-option').click(function(event) {
+            event.preventDefault();
+			$(this).parents('.filter').toggleClass('show-filter');
+        });
 	})
 </script>
 </html>

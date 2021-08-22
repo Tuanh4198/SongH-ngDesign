@@ -5,6 +5,18 @@ jQuery(document).ready(function($) {
 	$("#modal").load("modal.html");
 
 	// call slick slide
+	if($(window).width() <= 575) {
+		$('.two-rows').each(function() {
+			$(this).attr('data-rows', 2);
+		})
+		$('.has-dots').each(function() {
+			$(this).attr('data-dots', true);
+		})
+		$('.close-center-mode').each(function() {
+			$(this).attr('data-center-mode', false);
+			$(this).attr('data-center-padding', 0);
+		})
+	}
     $(".autoplay").each(function() {
         $(this).slick($(this).data());
     });

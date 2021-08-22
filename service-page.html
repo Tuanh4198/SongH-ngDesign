@@ -41,9 +41,19 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<sidebar class="col-3 side-bar">
+				<sidebar class="col-xl-3 col-lg-4 side-bar dropdown">
 					<div class="list-category-wrapper">
-						<ul class="list-category">
+						<form action="#" method="post" class="form d-none">
+							<button type="submit" class="btn btn-search">
+								<img src="./images/page/qa-page/search_icon.png" alt=""/>
+							</button>
+							<input type="text" placeholder="Tìm câu hỏi..." class="input-key">
+						</form>
+						<div class="d-none show-option">
+							<p class="result">Tất cả dịch vụ <span>(150)</span></p>
+							<i class="fa fa-caret-down" aria-hidden="true"></i>
+						</div>
+						<ul class="list-category fretboard">
 							<li>
 								<a href="#" class="d-flex align-items-center justify-content-between">
 									Tất cả dịch vụ
@@ -89,14 +99,16 @@
 						</ul>
 					</div>
 				</sidebar>
-				<div class="col-9 col-main">
+				<div class="col-xl-9 col-lg-8 col-main">
 					<h3 class="title-tab">Khám theo chuyên khoa</h3>
 					<div class="post-lg">
 						<div class="img-wrapper">
 							<img src="./images/page/service-page/postlg.png" alt="">
 						</div>
 						<div class="content-wrapper">
-							<h3 class="post-name">Chuyên khoa mắt Bệnh viện Đa khoa Sông Thương</h3>
+							<a href="#">
+								<h3 class="post-name">Chuyên khoa mắt Bệnh viện Đa khoa Sông Thương</h3>
+							</a>
 							<p class="post-desc">Khoa Mắt và Phẫu thuật khúc xạ – Bệnh viện Đa khoa Sông Thương cung cấp dịch vụ khám và điều trị toàn diện các bệnh lý về mắt cho bệnh nhân ở mọi lứa tuổi.</p>
 							<a href="#" class="view-more">
 								<span>Xem chi tiết</span>

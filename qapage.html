@@ -48,10 +48,20 @@
 				<button class="btn-ask">Đặt câu hỏi ngay</button>
 			</div>
 			<div class="row">
-				<sidebar class="col-3 side-bar">
-					<div class="list-category-wrapper">
+				<sidebar class="col-xl-3 col-lg-4 side-bar">
+					<div class="list-category-wrapper dropdown">
+						<form action="#" method="post" class="form d-none">
+							<button type="submit" class="btn btn-search">
+								<img src="./images/page/qa-page/search_icon.png" alt=""/>
+							</button>
+							<input type="text" placeholder="Tìm câu hỏi..." class="input-key">
+						</form>
 						<h4 class="title">Danh mục</h4>
-						<ul class="list-category">
+						<div class="d-none show-option">
+							<p class="result">Tất cả câu hỏi <span>(150)</span></p>
+							<i class="fa fa-caret-down" aria-hidden="true"></i>
+						</div>
+						<ul class="list-category fretboard">
 							<li class="active">
 								<a href="#">Tất cả câu hỏi</a>
 								<div class="count-qa">
@@ -139,12 +149,12 @@
 						</ul>
 					</div>
 				</sidebar>
-				<div class="col-9 col-main">
+				<div class="col-xl-9 col-lg-8 col-main">
 					<div class="search-box-wrapper">
 						<form action="#" method="post" class="form">
 							<img src="./images/page/qa-page/search_icon.png" alt=""/>
 							<input type="text" placeholder="Tìm câu hỏi..." class="input-key">
-							<button type="submit" class="btn btn-search">Đặt câu hỏi ngay</button>
+							<button type="submit" class="btn btn-search">Tìm kiếm</button>
 						</form>
 					</div>
 					<div class="search-result-wrapper" style="display: none">
