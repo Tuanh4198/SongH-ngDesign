@@ -3,6 +3,8 @@ jQuery(document).ready(function($) {
 	$("#header").load("header.html");
 	$("#footer").load("footer.html");
 	$("#modal").load("modal.html");
+	$("#header_v2").load("header-V2.html");
+	$("#footer_v2").load("footer-V2.html");
 
 	// call slick slide
     $(".autoplay").each(function() {
@@ -58,10 +60,35 @@ jQuery(document).ready(function($) {
 
     // Effect dropdown list
     $(function() {
-        $('.dropdown .show-option').click(function(event) {
+		$('body').on('click', '.dropdown .show-option',function(event) {
             event.preventDefault();
-            $(this).parent().find('.fretboard').slideToggle();
+			console.log('object')
+			if( $(this).parent().find('.fretboard')){
+				$(this).parent().find('.fretboard').slideToggle();
+			}
+			if($(this).parent().find('.children')){
+				$(this).parent().find('.children').toggleClass('active');
+			}
         });
+
+		$('body').on('click', '.close-tab',function(event) {
+            event.preventDefault();
+			console.log('object')
+			if($(this).parents('.dropdown').find('.children')){
+				$(this).parents('.dropdown').find('.children').removeClass('active');
+			}
+        });
+
+		$('.check-radio').on('click',function(event){
+			event.preventDefault();
+			if($('.check-radio-option').find('.check-radio').hasClass('checked')){
+				$('.check-radio-option').find('.check-radio').removeClass('checked');
+				$(this).addClass('checked');
+				$('.check-radio-option').find('input').removeAttr('checked');
+				$(this).find('input').attr('checked', true);
+			}
+		});
+
     });
     // end Effect accordion
 
@@ -229,4 +256,10 @@ jQuery(document).ready(function($) {
 		}
 	});
 	// end show pass
+
+	// custom select
+	$(".select-custom").each(function() {
+        $(this).select2();
+    });
+
 });

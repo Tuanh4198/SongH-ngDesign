@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sông Thương - Thông tin nhận hàng</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/home/favicon.ico" />
+    <!-- animation -->
+    <link rel="stylesheet" href="../library/animate.css" />
+    <!-- font fontawesome -->
+    <link rel="stylesheet" href="../fonts/fontawesome/css/font-awesome.min.css" />
+    <!-- font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- bs4 -->
+    <link rel="stylesheet" href="../library/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../library/css/bootstrap-grid.min.css" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../library/slick/slick-theme.css" />
+    <link rel="stylesheet" href="../library/slick/slick.css" />
+    <!-- select 2 -->
+    <link rel="stylesheet" href="../library/select2/select2.min.css" />
+    <!-- main style -->
+    <link rel="stylesheet" href="../style/pages/style-V2.css">
+    <!-- Loading -->
+    <style type="text/css">
+        .preloading {
+            overflow: hidden;
+        }
+
+        .loading {
+            position: fixed;
+            background-color: black;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+            z-index: 1000000;
+        }
+
+        .loading .img {
+            width: 100%;
+            width: auto;
+            opacity: 1;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    </style>
+</head>
+
+<body class="preloading">
+    <!-- Loading -->
+    <div class="loading">
+        <svg width="50" height="50" viewBox="0 0 50 50" class="img">
+            <path fill="white"
+                d="M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z">
+                <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.5s"
+                    repeatCount="indefinite" />
+            </path>
+        </svg>
+    </div>
+    <!-- End Loading -->
+
+    <!-- Header -->
+    <header id="header_v2" class="header fixed-main-menu">
+        <!-- load content from header.html -->
+    </header>
+    <!-- End header -->
+
+    <!-- Content -->
+    <section class="checkout-page checkout-page-step2">
+        <div class="page-columns">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-main">
+                        <form action="method" class="form-checkout">
+                            <div class="information-shipping">
+                                <div class="block-header">
+                                    <h2 class="block-title">Thông tin nhận hàng</h2>
+                                </div>
+                                <div class="block-content">
+                                    <div class="field name required">
+                                        <input name="name" id="name" type="text" placeholder="Họ và tên"
+                                            aria-required="true">
+                                    </div>
+                                    <div class="field phone required">
+                                        <input name="phone" id="phone" type="text" placeholder="Số điện thoại"
+                                            aria-required="true">
+                                    </div>
+                                    <div class="field email required">
+                                        <input name="email" id="email" type="text" placeholder="Email"
+                                            aria-required="true">
+                                    </div>
+                                    <div class="field adress required">
+                                        <input name="adress" id="adress" type="text" placeholder="Địa Chỉ"
+                                            aria-required="true">
+                                    </div>
+                                    <div class="field location required">
+                                        <select class="cities select-custom" name="">
+                                            <option value="AL">Chọn Tỉnh/Thành</option>
+                                            <option value="AL">Hà Nội</option>
+                                            <option value="WY">Tp Hồ Chí Minh</option>
+                                            <option value="WY">Tỉnh An Giang</option>
+                                            <option value="WY">Tỉnh Bà Rịa - Vũng Tàu</option>
+                                        </select>
+                                        <select class="districts select-custom" name="">
+                                            <option value="AL">Chọn Quận/huyện</option>
+                                            <option value="AL">Quận Hai Bà Trưng</option>
+                                            <option value="WY">Quận Hoàng Mai</option>
+                                            <option value="WY">Quận Ba Đình</option>
+                                        </select>
+                                        <select class="wards select-custom" name="">
+                                            <option value="AL">Chọn Xã/phường</option>
+                                            <option value="AL">Quận Tây Hồ</option>
+                                            <option value="WY">Quận Đống Đa</option>
+                                            <option value="WY">Quận Hoàn Kiếm</option>
+                                        </select>
+                                    </div>
+                                    <div class="field note">
+                                        <textarea class="note" name="" id=""
+                                            placeholder="Ghi chú thêm (Ví dụ: Giao hàng hành chính)"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="information-payment">
+                                <div class="block-header">
+                                    <h2 class="block-title">Chọn hình thức thanh toán</h2>
+                                </div>
+                                <div class="block-content">
+                                    <div class="payment-method dflex align-items-center">
+                                        <input type="radio" id="delivery" name="radio-group">
+                                        <label  class="label" for="delivery">
+                                            <img src="../images/page/online-store/checkout/delivery.png" alt="">
+                                            <div class="method-title">
+                                                <p class="title">Thanh toán khi nhận hàng</p>
+                                                <p class="sub-title">Miễn phí vận chuyển với đơn hàng trên 500K</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="payment-method dflex align-items-center">
+                                        <input type="radio" id="zalo" name="radio-group" checked>
+                                        <label  class="label" for="zalo">
+                                            <img src="../images/page/online-store/checkout/zalo.png" alt="">
+                                            <div class="method-title">
+                                                <p class="title">Ví điện tử Zalo Pay</p>
+                                                <p class="title">Thẻ ATM / Internet Banking</p>
+                                                <p class="title">Thẻ tín dụng (Credit card) / Thẻ ghi nợ (Debit card)</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="payment-method dflex align-items-center">
+                                        <input type="radio" id="momo" name="radio-group">
+                                        <label  class="label" for="momo">
+                                            <img src="../images/page/online-store/checkout/momo.png" alt="">
+                                            <div class="method-title">
+                                                <span class="title">Ví MOMO</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-submit">Đặt hàng</button>
+                        </form>
+                    </div>
+                    <sidebar class="col-lg-5 side-bar">
+                        <div class="checkout-cart">
+                            <div class="block-header">
+                                <h2 class="block-title">Giỏ hàng của bạn</h2>
+                            </div>
+                            <div class="block-content">
+                                <div class="product-list">
+                                    <div class="product-wrapper ">
+                                        <div class="product-img-wrapper ">
+                                            <a href=" # " class="product-img ">
+                                                <img class="product-img " src="../images/page/online-store/products/2.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="product-detail-wrapper ">
+                                            <div class="product-actions dflex align-items-center">
+                                                <a href=" # " class="product-name ">Men vi sinh Biogaia Protectis tablets</a>
+                                                <button class="product-action">Xóa</button>
+                                            </div>
+                                            <div class="product-info dflex align-items-center">
+                                                <div class="group-qty ">
+                                                    <span class="label ">Số lượng</span>
+                                                    <div class="quantity ">
+                                                        <div class="quantity-nav ">
+                                                            <button
+                                                                class="quantity-button quantity-down btn-qty minus ">-</button>
+                                                            <input type=" number " min=" 1 " max="999" step=" 1 "
+                                                                value=" 1 " class=" number ">
+                                                            <button
+                                                                class="quantity-button quantity-up btn-qty plus ">+</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-price-wrapper ">
+                                                    <span class="old-price ">6.700.000 &#8363;</span>
+                                                    <span class="price">3.700.000  &#8363;</span>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="product-options">
+                                                <div class="product-option color">
+                                                    <div class="option-item">Màu vàng</div>
+                                                </div>
+                                                <div class="product-option size">
+                                                    <div class="option-item">300ml</div>
+                                                </div>
+                                            </div> -->                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="note">Có <strong class="count">5 người</strong> đang thêm cùng sản phẩm giống bạn vào giỏ hàng. Mua ngay trước khi các sản phẩm này hết hàng!</p>
+                            </div>
+                        </div>
+                        <div class="checkout-summary">
+                            <form action="" class="discount-form">
+                                <input type="text" id="coupon_code" name="coupon_code" placeholder="Mã giảm giá">
+                                <button class="action apply">Áp dụng</button>
+                            </form>
+                            <div class="cart-totals">
+                                <div class="total-item provisional dflex align-items-center">
+                                    <span class="label">Tạm tính</span>
+                                    <span class="value">3.700.000 &#8363;</span>
+                                </div>
+                                <div class="total-item discount dflex align-items-center">
+                                    <span class="label">Mã giảm giá</span>
+                                    <span class="value">0 &#8363;</span>
+                                </div>
+                                <div class="total-item discount dflex align-items-center">
+                                    <span class="label">Giảm giá khác</span>
+                                    <span class="value">0 &#8363;</span>
+                                </div>
+                                <div class="total-item shipping dflex align-items-center">
+                                    <span class="label">Phí giao hàng</span>
+                                    <span class="value">0 &#8363;</span>
+                                </div>
+                                <div class="total-item subtotal dflex align-items-center">
+                                    <span class="label">Tổng cộng</span>
+                                    <span class="value">3.700.000 &#8363;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </sidebar>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <footer id="footer_v2" class="footer">
+        <!-- load content from footer.html -->
+    </footer>
+    <!-- End Footer -->
+
+    <!-- scroll top -->
+    <span class=" up "><i class=" fa fa-chevron-up "></i></span>
+    <!-- End scroll top -->
+</body>
+
+<!-- jquerry -->
+<script type="text/javascript" src="../library/jquery.min.js"></script>
+<!-- bs4 -->
+<script type="text/javascript" src="../library/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../library/js/bootstrap.js"></script>
+<!-- slick -->
+<script type="text/javascript" src="../library/slick/slick.min.js"></script>
+<!-- select 2 -->
+<script type="text/javascript" src="../library/select2/select2.min.js"></script>
+<!-- main js -->
+<script type="text/javascript" src="../javascript/main.js"></script>
+<!-- custom js -->
+<script ttype="text/javascript">
+    jQuery(document).ready(function ($) {
+        // Loading
+        $('body').removeClass('preloading');
+        $('.loading').delay(1000).fadeOut('fast');
+    })
+</script>
+
+</html>

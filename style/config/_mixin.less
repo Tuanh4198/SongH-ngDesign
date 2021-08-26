@@ -72,16 +72,10 @@
 }
 
 .transform(@arguments) {
-    -webkit-transform: rotate(@arguments);
-    -ms-transform: rotate(@arguments);
-    -o-transform: rotate(@arguments);
-    transform: rotate(@arguments);
-}
-.late3D-transform(@arguments) {
-    -webkit-transform: translate3d(@arguments);
-    -ms-transform: translate3d(@arguments);
-    -o-transform: translate3d(@arguments);
-    transform: translate3d(@arguments);
+    -webkit-transform: @arguments;
+    -ms-transform: @arguments;
+    -o-transform: @arguments;
+    transform: @arguments;
 }
 
 .transition(@arguments) {

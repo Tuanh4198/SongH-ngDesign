@@ -1,0 +1,113 @@
+@import '../config/_config';
+@import './_header-V2';
+@import './_footer-V2';
+
+.page-top {
+    a {
+        display: block;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.home-page-online-store {
+    .page-columns {
+        margin-top: 26px;
+        margin-bottom: 80px;
+    }
+
+    .side-bar {
+        .list-category-wrapper {
+            .list-category-title {
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 34px;
+                color: #091D3E;
+            }
+
+            .list-category {
+                margin-top: 21px;
+
+                li {
+                    margin-bottom: 3px;
+
+                    a {
+                        padding: 12px 16px;
+                        color: #091D3E;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        background-color: #F7F7F7;
+
+                        &:hover {
+                            background-color: #0092FF;
+                            color: white;
+                        }
+                    }
+
+                    &:first-child {
+                        a {
+                            .round-borders(4px 4px 0 0);
+                        }
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+
+                        a {
+                            .round-borders(0 0 4px 4px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .list-products {
+        margin-top: 31px;
+    }
+    
+}
+
+.page-bottom {
+    
+    .contact-us-wrapper {
+        background-image: url('../../images/page/online-store/banner-page-bottom.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 56px 0;
+        text-align: center;
+
+        .title-wrapper {
+            max-width: 1200px;
+            margin:0 auto;
+
+            .title {
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 39px;
+            }
+
+            .sub-title {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                margin-top: 8px;
+            }
+
+            .btn-registration {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+                text-transform: uppercase;
+                background-color: @base_color;
+                color: white;
+                padding: 12px 40px;
+                .round-borders(4px);
+                margin-top: 24px;
+            }
+        }
+    }
+}
