@@ -3234,6 +3234,9 @@ body.has-modal:after {
   line-height: 24px;
   color: #858FA0;
 }
+.breadcrumb-wrapper a:hover {
+  color: #0092FF;
+}
 .pagination {
   flex-wrap: wrap;
   margin-top: 40px;
@@ -4133,5 +4136,10 @@ body.has-modal:after {
   .col8 {
     padding-left: 8px !important;
     padding-right: 8px !important;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .sub-menu {
+    display: none;
   }
 }

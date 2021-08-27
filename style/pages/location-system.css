@@ -3768,6 +3768,9 @@ body.has-modal:after {
   line-height: 24px;
   color: #858FA0;
 }
+.breadcrumb-wrapper a:hover {
+  color: #0092FF;
+}
 .pagination {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -4091,6 +4094,7 @@ body.has-modal:after {
 }
 .blog-page .side-bar .slide-shop-wrapper img {
   margin: 0 auto;
+  max-width: 100%;
 }
 .blog-page .page-columns {
   margin-top: 40px;
@@ -4319,6 +4323,57 @@ body.has-modal:after {
   font-weight: 700;
   line-height: 39px;
   margin-bottom: 24px;
+}
+@media screen and (max-width: 1199px) {
+  .blog-page .side-bar .slide-shop-wrapper .slick-slide .item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .blog-page .post-items .post-item {
+    width: 100%;
+  }
+  .blog-page .post-items .post-item .content-wrapper {
+    display: -webkit-box;
+    display: -ms-flex-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .blog-page .post-items .post-item .content-wrapper:before,
+  .blog-page .post-items .post-item .content-wrapper:after {
+    display: none;
+  }
+  .blog-page .post-items .post-item .content-wrapper .title {
+    font-size: 18px;
+  }
+  .blog-page .post-items .post-item .content-wrapper .categories {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: 0;
+    margin-top: 12px;
+  }
+  .blog-page .post-items .post-item .content-wrapper .post-info {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 12px;
+  }
+  .blog-page .post-items .post-item .content-wrapper .post-info .label {
+    display: none;
+  }
+  .blog-page .post-items .post-item:first-child .content-wrapper .title {
+    font-size: 18px;
+  }
 }
 .location-system .breadcrumb-wrapper {
   margin-bottom: 0;
