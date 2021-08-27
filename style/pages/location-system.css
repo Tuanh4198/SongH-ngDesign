@@ -3859,6 +3859,9 @@ body.has-modal:after {
 .sidebar-search .action.search:hover {
   background-image: url('../../images/page/online-store/ico-search.png');
 }
+.blog-page .col-main .toolbar {
+  display: none;
+}
 .blog-page .side-bar .form-registration {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.08);
@@ -4373,6 +4376,34 @@ body.has-modal:after {
   }
   .blog-page .post-items .post-item:first-child .content-wrapper .title {
     font-size: 18px;
+  }
+  .blog-page .col-main .toolbar {
+    display: block;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #E9E9EC;
+    padding: 11.5px 12px;
+    margin-bottom: 16px;
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .blog-page .col-main .toolbar .toolbar-amount {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    position: relative;
+  }
+  .blog-page .col-main .toolbar .toolbar-amount .count {
+    color: #858FA0;
+  }
+  .blog-page .col-main .toolbar .toolbar-amount:after {
+    content: "\f0d7";
+    font-family: Fontawesome;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 12px;
   }
 }
 .location-system .breadcrumb-wrapper {

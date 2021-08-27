@@ -145,6 +145,12 @@
 }
 
 .blog-page {
+	.col-main {
+		.toolbar {
+			display: none;
+		}
+	}
+
 	.side-bar {
 		.form-registration {
 			background: #FFFFFF;
@@ -665,7 +671,7 @@
 		.post-items {
 			.post-item {
 				width: 100%;
-				
+
 				.content-wrapper {
 					.dflex;
 					align-items: center;
@@ -675,17 +681,17 @@
 						font-size: 18px;
 					}
 
-					.categories{
+					.categories {
 						order: 2;
 						margin-bottom: 0;
 						margin-top: 12px;
 					}
 
-					.post-info{
+					.post-info {
 						order: 3;
 						margin-top: 12px;
 
-						.label{
+						.label {
 							display: none;
 						}
 					}
@@ -696,6 +702,39 @@
 						.title {
 							font-size: 18px;
 						}
+					}
+				}
+			}
+		}
+
+		.col-main {
+			.toolbar {
+				display: block;
+				border-width: 1px 0;
+				border-style: solid;
+				border-color: @border_color;
+				padding: 11.5px 12px;
+				margin-bottom: 16px;
+				margin-left: -12px;
+				margin-right: -12px;
+
+				.toolbar-amount {
+					font-size: 16px;
+					font-weight: 600;
+					line-height: 19px;
+					position: relative;
+
+					.count{
+						color: @text_blur;
+					}
+
+					&:after{
+						content:"\f0d7";
+						font-family: Fontawesome;
+						position: absolute;
+						top: 50%;
+						.transform(translateY(-50%));
+						right: 12px;
 					}
 				}
 			}
