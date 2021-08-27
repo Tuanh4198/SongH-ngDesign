@@ -2989,6 +2989,9 @@ body.has-modal:after {
 .intro-page .block-method .img-wrapper {
   width: 30%;
 }
+.intro-page .block-method .img-wrapper img {
+  width: 100%;
+}
 .intro-page .block-method .content-wrapper {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -3020,7 +3023,13 @@ body.has-modal:after {
   margin-bottom: 40px;
 }
 .intro-page .block-method .content-wrapper .list-method li {
-  margin-bottom: 8px;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .intro-page .block-method .content-wrapper .list-method img {
   margin-right: 15px;
@@ -3031,6 +3040,10 @@ body.has-modal:after {
   font-size: 14px;
   line-height: 17px;
   color: #858FA0;
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .intro-page .block-why {
   padding: 90px 0;
@@ -3454,4 +3467,295 @@ body.has-modal:after {
 .intro-page .block-hot-post .item .content-wrapper .view-more img {
   margin-left: 10px;
   width: 12px;
+}
+@media only screen and (max-width: 1199px) {
+  .intro-page .doctor-list-wrapper .title-wrapper .sub-title {
+    margin-right: 50px;
+  }
+  .intro-page .block-method,
+  .intro-page .banner-top {
+    padding: 100px 0;
+  }
+  .intro-page .block-method .content-wrapper .title,
+  .intro-page .banner-top .content-wrapper .title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .intro-page .block-hot-post .title-wrapper,
+  .intro-page .doctor-list-wrapper .title-wrapper,
+  .intro-page .block-why .title-wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .intro-page .block-hot-post .title-wrapper .title,
+  .intro-page .doctor-list-wrapper .title-wrapper .title,
+  .intro-page .block-why .title-wrapper .title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .intro-page .banner-top .content-wrapper {
+    max-width: 70%;
+  }
+  .intro-page .doctor-list-wrapper .title-wrapper .sub-title-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .intro-page .doctor-list-wrapper .title-wrapper .sub-title {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .intro-page .block-why .title-wrapper .desc,
+  .intro-page .block-why .title-wrapper .title {
+    width: 100%;
+  }
+  .intro-page .block-why .title-wrapper .title {
+    margin-bottom: 15px;
+  }
+  .intro-page .block-method .banner-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .intro-page .block-method .content-wrapper {
+    margin-bottom: 15px;
+  }
+  .intro-page .block-method .img-wrapper,
+  .intro-page .block-method .content-wrapper {
+    width: 100%;
+  }
+  .intro-page .hospital-data {
+    padding: 30px 0;
+  }
+  .intro-page .hospital-data .desc-block {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 15px;
+  }
+  .intro-page .hospital-data .item:nth-child(n+3) {
+    margin-top: 20px;
+  }
+  .intro-page .hospital-data .item .content strong {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .intro-page .hospital-data .item .content img {
+    height: 35px;
+  }
+  .intro-page .hospital-data .item .content .desc {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .intro-page .block-hot-post .title-wrapper {
+    margin-bottom: 15px;
+  }
+  .intro-page .block-hot-post .item .content-wrapper {
+    border: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .intro-page .block-hot-post .item .content-wrapper .name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .intro-page .block-hot-post .item .content-wrapper .desc,
+  .intro-page .block-hot-post .item .content-wrapper .view-more {
+    display: none;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .intro-page .block-method .content-wrapper .title,
+  .intro-page .banner-top .content-wrapper .title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 10px;
+  }
+  .intro-page .block-why {
+    padding: 30px 0;
+  }
+  .intro-page .block-why .title-wrapper {
+    margin-bottom: 25px;
+  }
+  .intro-page .block-why .title-wrapper .desc {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .intro-page .block-why .reason-list {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  .intro-page .block-why .reason-list > .col-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .intro-page .block-why .reason-list .reason-detail {
+    padding: 15px;
+  }
+  .intro-page .block-why .reason-list img {
+    margin-bottom: 15px;
+  }
+  .intro-page .block-why .reason-list .title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .intro-page .block-why .reason-list .desc {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .intro-page .block-hot-post .title-wrapper .title,
+  .intro-page .doctor-list-wrapper .title-wrapper .title,
+  .intro-page .block-why .title-wrapper .title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .intro-page .banner-top {
+    padding: 25px 0 80px;
+  }
+  .intro-page .banner-top .content-wrapper .desc {
+    margin-bottom: 25px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .intro-page .block-method {
+    padding: 15px 0;
+  }
+  .intro-page .block-method .content-wrapper .sub-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .intro-page .block-method .content-wrapper .desc {
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .intro-page .block-method .content-wrapper .list-method {
+    margin-bottom: 25px;
+  }
+  .intro-page .block-method .content-wrapper .list-method img {
+    margin-right: 5px;
+  }
+  .intro-page .block-method .content-wrapper .btn-setup {
+    display: block;
+    width: 100%;
+  }
+  .intro-page .doctor-list-wrapper {
+    padding: 30px 0;
+  }
+  .intro-page .doctor-list-wrapper .title-wrapper {
+    margin-bottom: 15px;
+  }
+  .intro-page .doctor-list-wrapper .slick-dots li {
+    margin: 0 4px;
+    width: auto;
+    height: auto;
+  }
+  .intro-page .doctor-list-wrapper .slick-dots li.slick-active button {
+    background: #0092FF;
+  }
+  .intro-page .doctor-list-wrapper .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    padding: 0;
+    background: #E9E9EC;
+    opacity: 0.8;
+  }
+  .intro-page .doctor-list-wrapper .slick-dots li button:before {
+    display: none;
+  }
+  .intro-page .doctor-list-wrapper .slick-list {
+    margin: 0 -10px;
+    padding-right: 20%;
+  }
+  .intro-page .doctor-list-wrapper .slick-slide {
+    padding: 0 10px;
+  }
+  .intro-page .doctor-list-wrapper .slick-arrow {
+    bottom: calc(100% + 15px);
+    -webkit-transform: unset;
+            transform: unset;
+    top: auto;
+  }
+  .intro-page .doctor-list-wrapper .slick-arrow.slick-prev {
+    left: auto;
+    right: 60px;
+  }
+  .intro-page .doctor-list-wrapper .slick-arrow.slick-next {
+    right: 0;
+  }
+  .intro-page .doctor-list-wrapper .item {
+    margin-bottom: 15px;
+  }
+  .intro-page .doctor-list-wrapper .item .doctor-name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .intro-page .doctor-list-wrapper .item .doctor-service {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .intro-page .doctor-list-wrapper .item .doctor-service img {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+  }
+  .intro-page .doctor-list-wrapper .item .doctor-desc {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .intro-page .doctor-list-wrapper .item .doctor-info {
+    padding: 15px;
+  }
+  .intro-page .doctor-list-wrapper .item .doctor-action {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+  }
+  .intro-page .block-hot-post {
+    padding: 30px 0;
+  }
+  .intro-page .block-hot-post .item {
+    margin-bottom: 5px;
+  }
+  .intro-page .block-hot-post .slick-list {
+    margin: 0 -5px;
+  }
+  .intro-page .block-hot-post .slick-list .slick-slide {
+    padding: 0 6px;
+  }
+  .intro-page .block-hot-post .user-comment-slide {
+    padding: 0 6px;
+  }
 }
