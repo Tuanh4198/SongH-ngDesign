@@ -144,11 +144,60 @@ table .col {
   opacity: 1;
   visibility: visible;
 }
+@-webkit-keyframes modalIn {
+  from {
+    margin-top: 100px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes modalIn {
+  from {
+    margin-top: 100px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+.modal-open {
+  -webkit-animation: modalIn 1s forwards;
+          animation: modalIn 1s forwards;
+}
+@-webkit-keyframes modalOut {
+  from {
+    margin-top: 0;
+    opacity: 1;
+  }
+  to {
+    margin-top: 100px;
+    opacity: 0;
+  }
+}
+@keyframes modalOut {
+  from {
+    margin-top: 0;
+    opacity: 1;
+  }
+  to {
+    margin-top: 100px;
+    opacity: 0;
+  }
+}
+.modal-close {
+  -webkit-animation: modalOut 1s forwards;
+          animation: modalOut 1s forwards;
+}
 body,
 html {
   font-family: 'Inter', sans-serif;
   width: 100%;
   overflow-x: hidden;
+  color: #091D3E;
 }
 .header-top {
   padding: 5px 0;

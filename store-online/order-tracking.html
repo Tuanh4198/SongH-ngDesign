@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sông Thương - Tài khoản - Theo dõi đơn hàng</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/home/favicon.ico" />
+    <!-- animation -->
+    <link rel="stylesheet" href="../library/animate.css" />
+    <!-- font fontawesome -->
+    <link rel="stylesheet" href="../fonts/fontawesome/css/font-awesome.min.css" />
+    <!-- font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- bs4 -->
+    <link rel="stylesheet" href="../library/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../library/css/bootstrap-grid.min.css" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../library/slick/slick-theme.css" />
+    <link rel="stylesheet" href="../library/slick/slick.css" />
+    <!-- select 2 -->
+    <link rel="stylesheet" href="../library/select2/select2.min.css" />
+    <!-- main style -->
+    <link rel="stylesheet" href="../style/pages/style-V2.css">
+    <!-- Loading -->
+    <style type="text/css">
+        .preloading {
+            overflow: hidden;
+        }
+
+        .loading {
+            position: fixed;
+            background-color: black;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+            z-index: 1000000;
+        }
+
+        .loading .img {
+            width: 100%;
+            width: auto;
+            opacity: 1;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    </style>
+</head>
+
+<body class="preloading">
+    <!-- Loading -->
+    <div class="loading">
+        <svg width="50" height="50" viewBox="0 0 50 50" class="img">
+            <path fill="white"
+                d="M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z">
+                <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.5s"
+                    repeatCount="indefinite" />
+            </path>
+        </svg>
+    </div>
+    <!-- End Loading -->
+
+    <!-- Header -->
+    <header id="header_v2" class="header fixed-main-menu">
+        <!-- load content from header.html -->
+    </header>
+    <!-- End header -->
+
+    <!-- Content -->
+    <section class="account-page question-doctor">
+        <div class="page-columns">
+            <div class="container">
+                <div class="row row10">
+                    <sidebar class="col-xl-3 col-lg-4 side-bar dropdown col10">
+                        <div class="block-collapsible-nav">
+                            <div class="block-collapsible-nav-title dflex align-items-center">
+                                <span class="avartar"><img src="../images/page/online-store/avatar.png" alt=""></span>
+                                <span class="info-base">
+                                    <span class="name-user">Đào Anh Lâm</span>
+                                    <span class="email-user">lamdao218@gmail.com</span>
+                                </span>
+                            </div>
+                            <ul class="block-collapsible-nav-content">
+                                <li class="collapsible-item"><a href="#">Thông tin tài khoản</a></li>
+                                <li class="collapsible-item"><a href="#">Hỏi đáp bác sĩ</a></li>
+                                <li class="collapsible-item active"><span>Theo dõi đơn hàng</span></li>
+                                <li class="collapsible-item"><a href="#">Gửi ý kiến cho chúng tôi</a></li>
+                                <li class="collapsible-item"><a href="#">
+                                    <img src="../images/page/online-store/logout.png" alt="" class="icon">
+                                    <img src="../images/page/online-store/logout.png" alt="" class="icon icon-hover">
+                                    Thoát
+                                </a>
+                            </li>
+                            </ul>
+                        </div>
+                    </sidebar>
+                    <div class="col-xl-9 col-lg-8 col-main col10">
+                        <div class="block-infomation-account">
+                            <div class="block-title">
+                                <h2 class="title">Theo dõi đơn hàng</h2>
+                            </div>
+                            <div class="block-content">
+                                <div class="list-order">
+                                    <div class="order-item">
+                                        <div class="order-header dflex align-items-center">
+                                            <div class="order-info-base">
+                                                <div class="order-id">#66313812</div>
+                                                <div class="order-date">21/08/2021</div>
+                                            </div>
+                                            <div class="order-status confirmed">Đã xác nhận</div>
+                                        </div>
+                                        <div class="order-body">
+                                            <div class="product-wrapper">
+                                                <div class="product-img-wrapper">
+                                                    <a href="#" class="product-img">
+                                                        <img class="product-img" src="../images/page/online-store/products/1.jpg"/>
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-wrapper">
+                                                    <a href="#" class="product-name">Gói chăm sóc mẹ và bé sau sinh thường (tháng đầu tiên)</a>
+                                                    <div class="quantity">
+														<span class=" label ">Số lượng</span>
+														<span class="count">1</span>
+													</div>
+                                                </div>
+                                            </div>
+                                            <div class="product-wrapper">
+                                                <div class="product-img-wrapper">
+                                                    <a href="#" class="product-img">
+                                                        <img class="product-img" src="../images/page/online-store/products/2.jpg"/>
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-wrapper">
+                                                    <a href="#" class="product-name">Men vi sinh Biogaia Protectis tablets</a>
+                                                    <div class="quantity">
+														<span class=" label ">Số lượng</span>
+														<span class="count">1</span>
+													</div>
+                                                </div>
+                                            </div>
+                                            <div class="product-wrapper">
+                                                <div class="product-img-wrapper">
+                                                    <a href="#" class="product-img">
+                                                        <img class="product-img" src="../images/page/online-store/products/3.jpg"/>
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-wrapper">
+                                                    <a href="#" class="product-name">Men vi sinh Biogaia Protectis tablets</a>
+                                                    <div class="quantity">
+														<span class=" label ">Số lượng</span>
+														<span class="count">1</span>
+													</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-footer">
+                                            <span class="label">Tổng số tiền:</span>
+                                            <span class="subtotal">3.700.000 &#8363;</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-header dflex align-items-center">
+                                            <div class="order-info-base">
+                                                <div class="order-id">#66313811</div>
+                                                <div class="order-date">21/08/2021</div>
+                                            </div>
+                                            <div class="order-status cancelled">Đã bị hủy</div>
+                                        </div>
+                                        <div class="order-body">
+                                            <div class="product-wrapper">
+                                                <div class="product-img-wrapper">
+                                                    <a href="#" class="product-img">
+                                                        <img class="product-img" src="../images/page/online-store/products/1.jpg"/>
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-wrapper">
+                                                    <a href="#" class="product-name">Gói chăm sóc mẹ và bé sau sinh thường (tháng đầu tiên)</a>
+                                                    <div class="quantity">
+														<span class=" label ">Số lượng</span>
+														<span class="count">1</span>
+													</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-footer">
+                                            <span class="label">Tổng số tiền:</span>
+                                            <span class="subtotal">3.700.000 &#8363;</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <footer id="footer_v2" class="footer">
+        <!-- load content from footer.html -->
+    </footer>
+    <!-- End Footer -->
+
+    <!-- scroll top -->
+    <span class=" up "><i class=" fa fa-chevron-up "></i></span>
+    <!-- End scroll top -->
+</body>
+
+<!-- jquerry -->
+<script type="text/javascript" src="../library/jquery.min.js"></script>
+<!-- bs4 -->
+<script type="text/javascript" src="../library/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../library/js/bootstrap.js"></script>
+<!-- slick -->
+<script type="text/javascript" src="../library/slick/slick.min.js"></script>
+<!-- main js -->
+<!-- select 2 -->
+<script type="text/javascript" src="../library/select2/select2.min.js"></script>
+<script type="text/javascript" src="../javascript/main.js"></script>
+<!-- custom js -->
+<script ttype="text/javascript">
+    jQuery(document).ready(function ($) {
+        // Loading
+        $('body').removeClass('preloading');
+        $('.loading').delay(1000).fadeOut('fast');
+    })
+</script>
+
+</html>

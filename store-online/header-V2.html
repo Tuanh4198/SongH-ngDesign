@@ -31,7 +31,8 @@
 						</div>
 						<form action="#" method="post" class="search-wrapper">
 							<input type="text" placeholder="Tìm kiếm Sản phẩm / Gói dịch vụ...">
-							<button class="btn btn-search"><img src="../images/page/online-store/ico-search.png" alt="" /></button>
+							<button class="btn btn-search"><img src="../images/page/online-store/ico-search.png"
+									alt="" /></button>
 						</form>
 						<div class="minicart-wrapper dropdown">
 							<div class=" action showcart show-option">
@@ -53,11 +54,13 @@
 										<div class=" product-wrapper ">
 											<div class=" product-img-wrapper ">
 												<a href=" # " class=" product-img ">
-													<img class=" product-img " src="../images/page/online-store/products/1.jpg">
+													<img class=" product-img "
+														src="../images/page/online-store/products/1.jpg">
 												</a>
 											</div>
 											<div class=" product-detail-wrapper ">
-												<a href=" # " class=" product-name ">Men vi sinh Biogaia Protectis tablets</a>
+												<a href=" # " class=" product-name ">Men vi sinh Biogaia Protectis
+													tablets</a>
 												<div class="product-options">
 													<div class="product-option color">
 														<div class="option-item">Màu vàng</div>
@@ -69,7 +72,7 @@
 												<div class=" product-price-wrapper ">
 													<span class=" old-price ">500.000 &#8363;</span>
 													<span class="discount">-30%</span>
-													<span class="price">369.000  &#8363;</span>
+													<span class="price">369.000 &#8363;</span>
 												</div>
 												<div class=" product-actions dflex ">
 													<div class=" group-qty ">
@@ -92,11 +95,13 @@
 										<div class=" product-wrapper ">
 											<div class=" product-img-wrapper ">
 												<a href=" # " class=" product-img ">
-													<img class=" product-img " src="../images/page/online-store/products/2.jpg">
+													<img class=" product-img "
+														src="../images/page/online-store/products/2.jpg">
 												</a>
 											</div>
 											<div class=" product-detail-wrapper ">
-												<a href=" # " class=" product-name ">Men vi sinh Biogaia Protectis tablets</a>
+												<a href=" # " class=" product-name ">Men vi sinh Biogaia Protectis
+													tablets</a>
 												<div class="product-options">
 													<div class="product-option color">
 														<div class="option-item">Màu vàng</div>
@@ -108,7 +113,7 @@
 												<div class=" product-price-wrapper ">
 													<span class=" old-price ">500.000 &#8363;</span>
 													<span class="discount">-30%</span>
-													<span class="price ">369.000  &#8363;</span>
+													<span class="price ">369.000 &#8363;</span>
 												</div>
 												<div class=" product-actions dflex ">
 													<div class=" group-qty ">
@@ -154,7 +159,34 @@
 						</ul>
 
 						<div class="account-wrapper">
-							<a class="btn-modal account-link" href="#" data-modal="form-login"> Đăng ký / Đăng nhập</a>
+							<div class="account-login">
+								<ul class="account-links">
+									<li class="account-link login">
+										<a class="btn-modal" href="#" data-modal="form-register">Đăng ký</a>
+									</li>
+									<li class="account-link register">
+										<a class="btn-modal" href="#" data-modal="form-login">Đăng nhập</a>
+									</li>
+								</ul>
+							</div>
+							<div class="account-logged dropdown" style="display: none;">
+								<span class="show-option welcome-customer">lamdao218@gmail.com</span>
+								<ul class="account-links children">
+									<li class="account-link">
+										<a href="#">Thông tin tài khoản</a>
+									</li>
+									<li class="account-link">
+										<a href="#">Danh sách đơn hàng</a>
+									</li>
+									<li class="account-link logout">
+										<a href="#">
+											<img class="icon" src="../images/page/online-store/logout.png" alt="">
+											<img class="icon icon-hover" src="../images/page/online-store/logout-white.png" alt="">
+											Thoát
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -171,7 +203,7 @@
 		<div class="modal-body">
 			<div class="title-wrapper">
 				<h4 class="title">Đăng nhập</h4>
-				<p class="sub-title">Bạn chưa có Tài khoản? Vui lòng đăng ký Tài khoản mới <a href="tel:0946233789">tại	đây</a></p>
+				<p class="sub-title">Bạn chưa có Tài khoản? Vui lòng đăng ký Tài khoản mới <a href="#" class="btn-modal btn-register" data-modal="form-register">tại đây</a></p>
 			</div>
 			<form action="#" method="post" class="form-login">
 				<input type="email" placeholder="Email" class="field">
@@ -181,7 +213,7 @@
 						<input type="checkbox" name="saveme" id="saveme">
 						<label for="saveme">Lưu thông tin đăng nhập</label>
 					</div>
-					<a href="#" class="forgot-password">Lấy lại mật khẩu</a>
+					<a href="#" class="btn-modal forgot-password" data-modal="form-reset-password">Lấy lại mật khẩu</a>
 				</div>
 				<button class="btn-login btn-block">Đăng nhập</button>
 			</form>
@@ -202,17 +234,107 @@
 		</div>
 	</div>
 </div>
-
+<!-- register account -->
+<div class="modal-register modal-custom" id="form-register">
+	<div class="inner-wrapper">
+		<div class="modal-header">
+			<button class="btn-close btn-modal" data-modal="form-register"><img src="../images/home/close.png" alt="" /></button>
+		</div>
+		<div class="modal-body">
+			<div class="title-wrapper">
+				<h4 class="title">Đăng ký tài khoản mới</h4>
+				<p class="sub-title"> 
+					<p class="text">Bạn đã có Tài khoản? Vui lòng Đăng nhập</p>
+					<a href="#" class="btn-modal btn-login" data-modal="form-login">tại đây</a>
+				</p>
+			</div>
+			<form action="#" method="post" class="form-login">
+				<input type="email" placeholder="Email" class="field">
+				<input type="password" placeholder="Mật khẩu" class="field pasword">
+				<input type="password" placeholder="Nhập lại mật khẩu" class="field retype-password">
+				<input type="password" placeholder="Số điện thoại" class="field phone">
+				<button class="btn-register btn-block btn-modal" data-modal="form-confirm-account">Đăng ký ngay</button>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<div class="line"><span>Hoặc</span></div>
+			<div class="social-login-group">
+				<a href="#" class="facebook btn-social-login">
+					<img src="../images/home/facebook.png" alt="Facebook" />
+					<span>Facebook</span>
+				</a>
+				<a href="#" class="google btn-social-login">
+					<img src="../images/home/google.png" alt="Google" />
+					<span>Google</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- confirm account -->
+<div class="modal-confirm-account modal-custom" id="form-confirm-account">
+	<div class="inner-wrapper">
+		<div class="modal-header">
+			<button class="btn-close btn-modal" data-modal="form-confirm-account"><img src="../images/home/close.png" alt="" /></button>
+		</div>
+		<div class="modal-body">
+			<div class="title-wrapper">
+				<h4 class="title">Xác minh tài khoản</h4>
+				<p class="sub-title">Đăng nhập vào email của bạn để xác minh tài khoản. Trong quá trình tạo tài khoản, bạn sẽ nhận được một email từ chúng tôi. Vui lòng bấm vào đường link xác nhận trong email của bạn để hoàn tất đăng ký</p>
+			</div>
+			<p class="notice">Tôi không nhận được email. <button class="action reset">Gửi lại ngay</button></p>
+			<a href="#" class="action back"><img src="../images/page/online-store/prev-arrow.png" alt=""><span class="title">Quay lại</span></a>
+		</div>
+	</div>
+</div>
+<!-- modal update password -->
+<div class="modal-reset-passwork modal-custom" id="form-reset-password">
+	<div class="inner-wrapper">
+		<div class="modal-header">
+			<button class="btn-close btn-modal" data-modal="form-reset-password"><img src="../images/home/close.png" alt="" /></button>
+		</div>
+		<div class="modal-body">
+			<div class="title-wrapper">
+				<h4 class="title">Cấp lại mật khẩu</h4>
+				<p class="sub-title">Bạn đang gặp vấn đề về mật khẩu khi đăng nhập. Vui lòng nhập email để chúng tôi gửi link cài đặt lại mật khẩu cho bạn.</a></p>
+			</div>
+			<form action="#" method="post" class="form-reset-password">
+				<input type="email" placeholder="Email" class="field">
+				<button class="btn-submit btn-block btn-modal" data-modal="form-reset-password-success">Gửi</button>
+			</form>
+			<a href="#" class="action back"><img src="../images/page/online-store/prev-arrow.png" alt=""><span class="title">Quay lại</span></a>
+		</div>
+	</div>
+</div>
+<!-- modal update password success-->
+<div class="modal-reset-passwork-success modal-custom" id="form-reset-password-success">
+	<div class="inner-wrapper">
+		<div class="modal-header">
+			<button class="btn-close btn-modal" data-modal="form-reset-password-success"><img src="../images/home/close.png" alt="" /></button>
+		</div>
+		<div class="modal-body">
+			<div class="title-wrapper">
+				<h4 class="title">Yêu cầu thay đổi mật khẩu thành công</h4>
+				<p class="sub-title">Vui lòng kiểm tra email để thực hiện thay đổi mật khẩu. Tôi không nhận được
+					email. <button class="reset">Gửi lại ngay</button></p>
+			</div>
+			<a href="#" class="action back"><img src="../images/page/online-store/prev-arrow.png" alt=""><span class="title">Quay lại</span></a>
+		</div>
+	</div>
+</div>
+<!--  -->
 <form action="#" method="post" class="modal-registration modal-custom" id="form-registration">
 	<div class="inner-wrapper">
 		<div class="modal-header">
-			<img src="../images/home/Frame.png" alt=""/>
-			<button class="btn-close btn-modal" data-modal="form-registration"><img src="../images/home/close.png" alt=""/></button>
+			<img src="../images/home/Frame.png" alt="" />
+			<button class="btn-close btn-modal" data-modal="form-registration"><img src="../images/home/close.png"
+					alt="" /></button>
 		</div>
 		<div class="modal-body">
 			<div class="title-wrapper">
 				<h4 class="title">Đăng ký khám và tư vấn tại Đa khoa Sông Thương</h4>
-				<p class="sub-title">Vui lòng để lại thông tin và nhu cầu của quý khách. Chúng tôi sẽ liên hệ trong thời gian sớm nhất.</p>
+				<p class="sub-title">Vui lòng để lại thông tin và nhu cầu của quý khách. Chúng tôi sẽ liên hệ trong thời
+					gian sớm nhất.</p>
 			</div>
 			<div class="row">
 				<div class="col-6">
@@ -245,12 +367,14 @@
 				</div>
 				<div class="col-12">
 					<label for="">Nhu cầu khám bệnh</label>
-					<textarea name="" id="" class="field" placeholder="Bạn đang gặp vấn đề về sức khỏe như thế nào?"></textarea>
+					<textarea name="" id="" class="field"
+						placeholder="Bạn đang gặp vấn đề về sức khỏe như thế nào?"></textarea>
 				</div>
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button href="#" class="btn-submit btn-modal" data-modal="registration-success">Gửi yêu cầu khám bệnh</button>
+			<button href="#" class="btn-submit btn-modal" data-modal="registration-success">Gửi yêu cầu khám
+				bệnh</button>
 		</div>
 	</div>
 </form>
@@ -258,13 +382,16 @@
 <div class="modal-registration modal-custom" id="registration-success">
 	<div class="inner-wrapper">
 		<div class="modal-header">
-			<img src="../images/home/Frame.png" alt=""/>
-			<button class="btn-close btn-modal" data-modal="registration-success"><img src="../images/home/close.png" alt=""/></button>
+			<img src="../images/home/Frame.png" alt="" />
+			<button class="btn-close btn-modal" data-modal="registration-success"><img src="../images/home/close.png"
+					alt="" /></button>
 		</div>
 		<div class="modal-body">
 			<div class="title-wrapper">
-				<h4 class="title"><img src="../images/home/check.png" alt=""/>Đăng ký thành công</h4>
-				<p class="sub-title">Cảm ơn quý khách! Chúng tôi sẽ gửi thông tin sức khỏe của bạn tới cho bác sĩ và liên hệ lại với quý khách theo số điện thoại <a href="tel:0946233789">0946 233 789</a> để xác nhận lịch hẹn trong thời gian sớm nhất.</p> 
+				<h4 class="title"><img src="../images/home/check.png" alt="" />Đăng ký thành công</h4>
+				<p class="sub-title">Cảm ơn quý khách! Chúng tôi sẽ gửi thông tin sức khỏe của bạn tới cho bác sĩ và
+					liên hệ lại với quý khách theo số điện thoại <a href="tel:0946233789">0946 233 789</a> để xác nhận
+					lịch hẹn trong thời gian sớm nhất.</p>
 			</div>
 			<div class="table-title">Thông tin khám bệnh</div>
 			<table class="table">
