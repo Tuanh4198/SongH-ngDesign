@@ -8,8 +8,31 @@ jQuery(document).ready(function ($) {
   $("#header_v2").load("header-V2.html");
   $("#footer_v2").load("footer-V2.html"); // call slick slide
 
+  if ($(window).width() <= 575) {
+    $('.two-rows').each(function () {
+      $(this).attr('data-rows', 2);
+    });
+    $('.has-dots').each(function () {
+      $(this).attr('data-dots', true);
+    });
+    $('.close-center-mode').each(function () {
+      $(this).attr('data-center-mode', false);
+      $(this).attr('data-center-padding', 0);
+    });
+  }
+
   $(".autoplay").each(function () {
     $(this).slick($(this).data());
+  }); // scroll slider by mouse
+
+  $('.scroll-mouse').on('wheel', function (e) {
+    e.preventDefault();
+
+    if (e.originalEvent.deltaY < 0) {
+      $(this).slick('slickNext');
+    } else {
+      $(this).slick('slickPrev');
+    }
   }); // fixed menu
 
   (function ($) {
