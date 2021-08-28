@@ -1,109 +1,145 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 	// call layout
 	$("#header").load("header.html");
 	$("#footer").load("footer.html");
 	$("#modal").load("modal.html");
+	$("#header_v2").load("header-V2.html");
+	$("#footer_v2").load("footer-V2.html");
 
 	// call slick slide
-	if($(window).width() <= 575) {
-		$('.two-rows').each(function() {
+	if ($(window).width() <= 575) {
+		$('.two-rows').each(function () {
 			$(this).attr('data-rows', 2);
 		})
-		$('.has-dots').each(function() {
+		$('.has-dots').each(function () {
 			$(this).attr('data-dots', true);
 		})
-		$('.close-center-mode').each(function() {
+		$('.close-center-mode').each(function () {
 			$(this).attr('data-center-mode', false);
 			$(this).attr('data-center-padding', 0);
 		})
 	}
-    $(".autoplay").each(function() {
-        $(this).slick($(this).data());
-    });
+	$(".autoplay").each(function () {
+		$(this).slick($(this).data());
+	});
 
-    // fixed menu
-    (function($) {
-        let menu = $('.fixed-main-menu');
-        body = $('body,html');
-        menuPosition = menu.offset().top;
-        $(window).scroll(() => {
-            let startpage = body.scrollTop();
-            (startpage > menuPosition) ? (menu.addClass('fixed')) : (menu.removeClass('fixed'))
-        });
-    })($);
-    // end fixed menu
+	// scroll slider by mouse
+	$('.scroll-mouse').on('wheel', (function (e) {
+		e.preventDefault();
+		if (e.originalEvent.deltaY < 0) {
+			$(this).slick('slickNext');
+		} else {
+			$(this).slick('slickPrev');
+		}
+	}));
 
-    // load top
-    (function($) {
-        let up_btn = $("body .up");
-        let body = $('body,html');
-        up_btn.css({
-            cursor: 'pointer'
-        });
-        up_btn.click(function() {
-            $('html,body').animate({ scrollTop: 0 }, 1000);
-        });
-        $(window).scroll(function(event) {
-            let startpage = body.scrollTop();
-            if (startpage > 200) {
-                up_btn.addClass('up-active');
-            } else if (startpage < 200) {
-                up_btn.removeClass('up-active');
-            }
-        });
-    })($);
-    // end load top
+	// fixed menu
+	(function ($) {
+		let menu = $('.fixed-main-menu');
+		body = $('body,html');
+		menuPosition = menu.offset().top;
+		$(window).scroll(() => {
+			let startpage = body.scrollTop();
+			(startpage > menuPosition) ? (menu.addClass('fixed')) : (menu.removeClass('fixed'))
+		});
+	})($);
+	// end fixed menu
 
-    // Effect accordion
-    $(function() {
-        $('.accordion .show-option').click(function(event) {
-            event.preventDefault();
+	// load top
+	(function ($) {
+		let up_btn = $("body .up");
+		let body = $('body,html');
+		up_btn.css({
+			cursor: 'pointer'
+		});
+		up_btn.click(function () {
+			$('html,body').animate({ scrollTop: 0 }, 1000);
+		});
+		$(window).scroll(function (event) {
+			let startpage = body.scrollTop();
+			if (startpage > 200) {
+				up_btn.addClass('up-active');
+			} else if (startpage < 200) {
+				up_btn.removeClass('up-active');
+			}
+		});
+	})($);
+	// end load top
+
+	// Effect accordion
+	$(function () {
+		$('.accordion .show-option').click(function (event) {
+			event.preventDefault();
 			$(this).parent().addClass('active');
 			$(this).parent().siblings().removeClass('active');
 			$(this).parent().siblings().find('.fretboard').slideUp();
 			$(this).parent().find('.fretboard').slideDown();
 			$(this).parent().siblings().find('.show').removeClass('active').text('+');
 			($(this).parent().find('.show').text() === '+') ? ($(this).parent().find('.show').removeClass('active').text('-')) : ($(this).parent().find('.show').addClass('active').text('+'));
-        });
-    });
-    // end Effect accordion
+		});
+	});
+	// end Effect accordion
 
-    // Effect dropdown list
-    $(function() {
-		$('body').on('click', '.dropdown .show-option',function(event) {
-            event.preventDefault();
-            $(this).parent().find('.fretboard').slideToggle();
-			$(this).toggleClass('active');
-        });
-    });
-    // end Effect accordion
+	// Effect dropdown list
+	$(function () {
+		$('body').on('click', '.dropdown .show-option', function (event) {
+			event.preventDefault();
+			console.log('object')
+			if ($(this).parent().find('.fretboard')) {
+				$(this).parent().find('.fretboard').slideToggle();
+			}
+			if ($(this).parent().find('.children')) {
+				$(this).parent().find('.children').toggleClass('active');
+			}
+		});
 
-    // Effect drop down
-    (function($) {
-        let box = $('body .inside');
-        box.find('.drop-down').slideUp();
-        $(document).mouseup(e => {
-            if (!box.is(e.target) && box.has(e.target).length === 0) {
-                box.find('.drop-down').slideUp();
-            }
-        });
-        box.find('.command-button').on('click', function(event) {
-            event.preventDefault();
-            $(this).parent().siblings().find('.drop-down').slideUp();
-            $(this).parent().find('.drop-down').slideToggle();
-        });
-    })($);
-    // end Effect drop down
+		$('body').on('click', '.close-tab', function (event) {
+			event.preventDefault();
+			console.log('object')
+			if ($(this).parents('.dropdown').find('.children')) {
+				$(this).parents('.dropdown').find('.children').removeClass('active');
+			}
+		});
+
+		$('.check-radio').on('click', function (event) {
+			event.preventDefault();
+			if ($('.check-radio-option').find('.check-radio').hasClass('checked')) {
+				$('.check-radio-option').find('.check-radio').removeClass('checked');
+				$(this).addClass('checked');
+				$('.check-radio-option').find('input').removeAttr('checked');
+				$(this).find('input').attr('checked', true);
+			}
+		});
+
+	});
+	// end Effect accordion
+
+	// Effect drop down
+	(function ($) {
+		let box = $('body .inside');
+		box.find('.drop-down').slideUp();
+		$(document).mouseup(e => {
+			if (!box.is(e.target) && box.has(e.target).length === 0) {
+				box.find('.drop-down').slideUp();
+			}
+		});
+		box.find('.command-button').on('click', function (event) {
+			event.preventDefault();
+			$(this).parent().siblings().find('.drop-down').slideUp();
+			$(this).parent().find('.drop-down').slideToggle();
+		});
+	})($);
+	// end Effect drop down
 
 	// Effect modal
-    (function($) {
-		$('body').on('click', '.btn-modal',function(event) {
+	(function ($) {
+		$('body').on('click', '.btn-modal', function (event) {
 			event.preventDefault();
 			let modalName = $(this).data('modal');
 			let modal = $('body').find(`#${modalName}`);
 			let allModal = $('body').find(`.modal-custom`);
-			if(!modal.hasClass('modal-open')) {
-				allModal.each(function() {
+			if (!modal.hasClass('modal-open')) {
+				allModal.each(function () {
 					$(this).removeClass(['modal-close', 'modal-open']).hide();
 				});
 				modal.show().addClass('modal-open');
@@ -111,74 +147,74 @@ jQuery(document).ready(function($) {
 			} else {
 				modal.addClass('modal-close');
 				$('body').removeClass('has-modal');
-				setTimeout(function(){ 
+				setTimeout(function () {
 					modal.hide();
 					modal.removeClass(['modal-close', 'modal-open']);
 				}, 1000);
 			}
 		});
-    })($);
-    // end Effect modal
+	})($);
+	// end Effect modal
 
-    // spinner quantity
-    (function($) {
-        $('.quantity').each(function() {
-            let spinner = $(this),
-                input = $('.quantity input[type="number"]'),
-                btnUp = $('.quantity .quantity-up'),
-                btnDown = $('.quantity .quantity-down'),
-                min = input.attr('min'),
-                max = input.attr('max');
-            let newVal;
-            btnUp.click(function() {
-                let oldValue = parseFloat(input.val());
-                if (oldValue >= max) {
-                    newVal = oldValue;
-                } else {
-                    newVal = oldValue + 1;
-                }
-                spinner.find("input").val(newVal);
-                spinner.find("input").trigger("change");
-            });
-            btnDown.click(function() {
-                let oldValue = parseFloat(input.val());
-                if (oldValue <= min) {
-                    newVal = oldValue;
-                } else {
-                    newVal = oldValue - 1;
-                }
-                spinner.find("input").val(newVal);
-                spinner.find("input").trigger("change");
-            });
+	// spinner quantity
+	(function ($) {
+		$('.quantity').each(function () {
+			let spinner = $(this),
+				input = $('.quantity input[type="number"]'),
+				btnUp = $('.quantity .quantity-up'),
+				btnDown = $('.quantity .quantity-down'),
+				min = input.attr('min'),
+				max = input.attr('max');
+			let newVal;
+			btnUp.click(function () {
+				let oldValue = parseFloat(input.val());
+				if (oldValue >= max) {
+					newVal = oldValue;
+				} else {
+					newVal = oldValue + 1;
+				}
+				spinner.find("input").val(newVal);
+				spinner.find("input").trigger("change");
+			});
+			btnDown.click(function () {
+				let oldValue = parseFloat(input.val());
+				if (oldValue <= min) {
+					newVal = oldValue;
+				} else {
+					newVal = oldValue - 1;
+				}
+				spinner.find("input").val(newVal);
+				spinner.find("input").trigger("change");
+			});
 		});
 	});
-    //end
+	//end
 
 	// tabs
-	$(function() {
-		$(".magic-tabs  ul li").on('click', function() {
+	$(function () {
+		$(".magic-tabs  ul li").on('click', function () {
 			var container_tab = $(this).closest('.cover-tab');
 			container_tab.find('.tab-content .content').removeClass('active-tab-content');
 			$(this).siblings().removeClass("action-tab-btn");
 			$(this).addClass('action-tab-btn');
 			container_tab.find('.tab-content .content').eq($(this).index()).addClass('active-tab-content');
-		});	
+		});
 	});
 	// end tabs
 
 	// modal form registor
-	$(function() {
+	$(function () {
 		// choose doctor
 		let fakeData = [
-			{"name": "Bác sĩ Nguyễn Tuấn Anh", "job": "Chuyên khoa Gây mê - Điều trị đau"},
-			{"name": "Bác sĩ Nguyễn Duy Tân", "job": "Chuyên khoa nhi"},
-			{"name": "Bác sĩ Nguyễn Tuấn Đạt", "job": "Chuyên khoa mắt"},
-			{"name": "Bác sĩ Ngô Tiến Mạnh", "job": "Chuyên khoa cơ xương khớp"},
-			{"name": "Bác sĩ Bùi Văn Tiến", "job": "Chuyên khoa răng hàm mặt"},
-			{"name": "Bác sĩ Đinh Thùy Nga", "job": "Chuyên tai mũi họng"},
-			{"name": "Bác sĩ Phan Thị Linh", "job": "Chuyên khoa Gây trĩ"},
-			{"name": "Bác sĩ Phạm văn Cần", "job": "Chuyên khoa Gây phổi"},
-			{"name": "Bác sĩ Nguyễn Tuấn Huy", "job": "Chuyên khoa Gây gan"}
+			{ "name": "Bác sĩ Nguyễn Tuấn Anh", "job": "Chuyên khoa Gây mê - Điều trị đau" },
+			{ "name": "Bác sĩ Nguyễn Duy Tân", "job": "Chuyên khoa nhi" },
+			{ "name": "Bác sĩ Nguyễn Tuấn Đạt", "job": "Chuyên khoa mắt" },
+			{ "name": "Bác sĩ Ngô Tiến Mạnh", "job": "Chuyên khoa cơ xương khớp" },
+			{ "name": "Bác sĩ Bùi Văn Tiến", "job": "Chuyên khoa răng hàm mặt" },
+			{ "name": "Bác sĩ Đinh Thùy Nga", "job": "Chuyên tai mũi họng" },
+			{ "name": "Bác sĩ Phan Thị Linh", "job": "Chuyên khoa Gây trĩ" },
+			{ "name": "Bác sĩ Phạm văn Cần", "job": "Chuyên khoa Gây phổi" },
+			{ "name": "Bác sĩ Nguyễn Tuấn Huy", "job": "Chuyên khoa Gây gan" }
 		];
 
 		function showVal(fakeData) {
@@ -192,22 +228,22 @@ jQuery(document).ready(function($) {
 		}
 		showVal(fakeData);
 
-		$(".field-doctor").keyup(function(){
+		$(".field-doctor").keyup(function () {
 			let val = $(this).val().trim().toLowerCase();
-			if(val === '') {
+			if (val === '') {
 				showVal(fakeData);
 				return;
 			}
 			let fakeDataChange = [];
 			fakeData.forEach(item => {
-				if(item.name.toLowerCase().indexOf(val) >= 0 || item.job.toLowerCase().indexOf(val) >= 0) {
+				if (item.name.toLowerCase().indexOf(val) >= 0 || item.job.toLowerCase().indexOf(val) >= 0) {
 					fakeDataChange.push(item);
 				}
 			})
 			showVal(fakeDataChange);
 		});
 
-		$('body').on('click', '#list-results .item',function() {
+		$('body').on('click', '#list-results .item', function () {
 			let text = $(this).children('.name').text() + $(this).children('.job').text();
 			$(".field-doctor").val(text);
 			console.log(text);
@@ -216,16 +252,16 @@ jQuery(document).ready(function($) {
 		// choose date
 		let today = new Date();
 		let dd = today.getDate();
-		let mm = today.getMonth()+1;
+		let mm = today.getMonth() + 1;
 		let yyyy = today.getFullYear();
-		if(dd<10) {
-			dd='0'+dd;
-		} if(mm<10) {
-			mm='0'+mm;
-		} 
-		today = yyyy+'-'+mm+'-'+dd;
+		if (dd < 10) {
+			dd = '0' + dd;
+		} if (mm < 10) {
+			mm = '0' + mm;
+		}
+		today = yyyy + '-' + mm + '-' + dd;
 		$(".field-date").attr("min", today);
-		$(".field-date").change(function() {
+		$(".field-date").change(function () {
 			$(this).parent().find('.result').text($(this).val());
 			console.log($(this).text());
 		});
@@ -233,7 +269,7 @@ jQuery(document).ready(function($) {
 	// end modal form registor
 
 	// show pass
-	(function($) {
+	(function ($) {
 		let x = document.getElementById("pass");
 		if (x.type === "password") {
 			x.type = "text";
@@ -242,4 +278,10 @@ jQuery(document).ready(function($) {
 		}
 	});
 	// end show pass
+
+	// custom select
+	$(".select-custom").each(function () {
+		$(this).select2();
+	});
+
 });

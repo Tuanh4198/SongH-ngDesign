@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Bệnh viện Đa khoa Sông Thương</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/home/favicon.ico" />
+    <!-- animation -->
+    <link rel="stylesheet" href="./library/animate.css" />
+    <!-- font fontawesome -->
+    <link rel="stylesheet" href="./fonts/fontawesome/css/font-awesome.min.css" />
+    <!-- font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- bs4 -->
+    <link rel="stylesheet" href="./library/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./library/css/bootstrap-grid.min.css" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="./library/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./library/slick/slick.css" />
+    <!-- main style -->
+    <link rel="stylesheet" href="./style/pages/location-system.css">
+    <!-- Loading -->
+    <style type="text/css">
+        .preloading {
+            overflow: hidden;
+        }
+
+        .loading {
+            position: fixed;
+            background-color: black;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+            z-index: 1000000;
+        }
+
+        .loading .img {
+            width: 100%;
+            width: auto;
+            opacity: 1;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    </style>
+</head>
+
+<body class="preloading">
+    <!-- Loading -->
+    <div class="loading">
+        <svg width="50" height="50" viewBox="0 0 50 50" class="img">
+            <path fill="white"
+                d="M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z">
+                <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.5s"
+                    repeatCount="indefinite" />
+            </path>
+        </svg>
+    </div>
+    <!-- End Loading -->
+
+    <!-- Header -->
+    <header id="header" class="header fixed-main-menu">
+        <!-- load content from header.html -->
+    </header>
+    <!-- End header -->
+
+    <!-- Content -->
+    <section class="location-system">
+        <div class="breadcrumb-wrapper">
+            <div class="container">
+                <h1 class="title">Hệ thống Bệnh viện Đa khoa Sông Thương</h1>
+            </div>
+        </div>
+        <div class="page-columns">
+            <div class="onmap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3717.9490627580767!2d106.19563901533465!3d21.273483784753665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31356d736ad1c9cd%3A0x75d802c6e2da2920!2zMjU4IEzDqiBM4bujaSwgUGjGsOG7nW5nIEhvw6BuZyBWxINuIFRo4bulLCBC4bqvYyBHaWFuZywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1629624822040!5m2!1svi!2s" width="1600" height="560" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="more-info container">
+                    <div class="more-info-content">
+                        <h2 class="title">Bệnh viện Đa khoa sông Thương</h2>
+                        <ul class="content">
+                            <li class="content-item"><span class="item-img"><img src="./images/page/location-system/adress.png" alt=""></span><span class="item-title">258 Lê Lợi, Phường Hoàng Văn Thụ, Bắc Giang</span></li>
+                            <li class="content-item"><span class="item-img"><img src="./images/page/location-system/driver.png" alt=""></span><span class="item-title">Cấp cứu (24/24): <strong>0243 728 0000</strong></span></li>
+                            <li class="content-item"><span class="item-img"><img src="./images/page/location-system/phone.png" alt=""></span><span class="item-title">Đặt lịch khám: <strong>0243 728 0001</strong></span></li>
+                        </ul>
+                        <div class="time-work">
+                            <h3 class="title">Giờ làm việc</h3>
+                            <ul class="content">
+                                <li class="content-item"><span class="label">Từ Thứ 2 - Chủ nhật:</span><strong class="item-title">26h30 - 17h00</strong></li>
+                                <li class="content-item"><span class="label">Cấp cứu:	24/24</span><strong class="item-title">24/24</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <!-- load content from footer.html -->
+    </footer>
+    <!-- End Footer -->
+
+    <!-- scroll top -->
+    <span class=" up "><i class=" fa fa-chevron-up "></i></span>
+    <!-- End scroll top -->
+</body>
+
+<!-- jquerry -->
+<script type="text/javascript" src="./library/jquery.min.js"></script>
+<!-- bs4 -->
+<script type="text/javascript" src="./library/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./library/js/bootstrap.js"></script>
+<!-- slick -->
+<script type="text/javascript" src="./library/slick/slick.min.js"></script>
+<!-- main js -->
+<script type="text/javascript" src="./javascript/main.js"></script>
+<!-- custom js -->
+<script ttype="text/javascript">
+    jQuery(document).ready(function ($) {
+        // Loading
+        $('body').removeClass('preloading');
+        $('.loading').delay(1000).fadeOut('fast');
+    })
+</script>
+
+</html>
