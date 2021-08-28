@@ -70,9 +70,10 @@ jQuery(document).ready(function($) {
 
     // Effect dropdown list
     $(function() {
-        $('.dropdown .show-option').click(function(event) {
+		$('body').on('click', '.dropdown .show-option',function(event) {
             event.preventDefault();
             $(this).parent().find('.fretboard').slideToggle();
+			$(this).toggleClass('active');
         });
     });
     // end Effect accordion

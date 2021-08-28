@@ -19,23 +19,25 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <!-- bs4 -->
     <link rel="stylesheet" href="./library/css/bootstrap.min.css" />
+    <!-- main style -->
+    <link rel="stylesheet" href="./style/home/_home.css">
 	<style>
 		a {
 			text-transform: uppercase;
+			border: none !important;
 		}
 	</style>
 </head>
 
 <body>
-	
     <!-- Header -->
-    <header class="header fixed-main-menu">
-		<h3 class="text-center">Danh sách các trang</h3>
-    </header>
+    <header id="header" class="header fixed-main-menu">
+		<!-- load content from header.html -->
+	</header>
     <!-- End header -->
 
-    <!-- Header -->
-    <section class="container">
+    <!-- content -->
+    <section class="container mt-5 mb-5">
 		<div class="list-group">
 			<a href="./homepage.html" class="list-group-item list-group-item-action">Home page</a>
 			<a href="./qapage.html" class="list-group-item list-group-item-action">QA page</a>
@@ -46,6 +48,17 @@
 			<a href="./doctor.html" class="list-group-item list-group-item-action">doctor page</a>
 		</div>
     </section>
+    <!-- End content -->
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+		<!-- load content from footer.html -->
+    </footer>
+    <!-- End Footer -->
+
+    <!-- scroll top -->
+    <span class=" up "><i class=" fa fa-chevron-up "></i></span>
+    <!-- End scroll top -->
 </body>
 
 <!-- jquerry -->
