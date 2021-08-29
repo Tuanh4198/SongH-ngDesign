@@ -5,6 +5,7 @@
 
 .detail-page {
 	margin-bottom: 60px;
+	background: #F9FCFF;
 
 	.banner-top {
 		margin-top: 15px;
@@ -124,6 +125,16 @@
 			font-size: 40px;
 			line-height: 48px;
 			margin-top: 15px;
+			color: @text_color;
+		}
+
+		.sub-title {
+			font-style: italic;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+			color: @text_color;
+			margin-top: 25px;
 		}
 	}
 
@@ -330,7 +341,7 @@
 		}
 
 		.slide-shop-wrapper {
-			border: 1px solid #E9E9EC;
+			border: 1px solid @border_color;
 			box-sizing: border-box;
 			border-radius: 12px;
 			padding: 20px 0;
@@ -428,6 +439,18 @@
 				padding: 0 15px;
 			}
 		}
+
+		.banner-bottom {
+			border: 1px solid @border_color;
+			box-sizing: border-box;
+			border-radius: 12px;
+			overflow: hidden;
+			margin-top: 25px;
+
+			img {
+				width: 100%;
+			}
+		}
 	}
 
 	.col-main {
@@ -436,12 +459,28 @@
 			margin-bottom : 30px;
 		}
 
+		.hospital-link {
+			display: flex;
+			align-items: center;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 24px;
+			color: @text_color;
+			margin: 25px 0;
+
+			img {
+				margin-right: 10px;
+			}
+		}
+
 		h3.title {
 			font-style: normal;
 			font-weight: 600;
 			font-size: 32px;
 			line-height: 39px;
-			margin-bottom: 35px;
+			margin-bottom: 25px;
+			color: @text_color;
 		}
 
 		.answer-doctor,
@@ -464,6 +503,9 @@
 			}
 		}
 
+		.block-content,
+		.vision-content,
+		.mission-content,
 		.answer-doctor {
 			font-style: normal;
 			font-weight: normal;
@@ -479,6 +521,39 @@
 			ul {
 				list-style: disc;
 				padding-left: 35px;
+			}
+		}
+
+		.table-prices {
+			background: #FFFFFF;
+			border: .3px solid @border_color;
+			box-sizing: border-box;
+			margin-bottom: 35px;
+
+			th {
+				background: #F7F7F7;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 29px;
+				color: @base_color;
+			}
+
+			td {
+				font-style: normal;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 20px;
+				color: @text_color;
+			}
+
+			th,
+			td {
+				border: .3px solid @border_color;
+				box-sizing: border-box;
+				min-height: 40px;
+				vertical-align: middle;
+				padding: 5px 15px;
 			}
 		}
 

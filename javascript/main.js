@@ -11,6 +11,12 @@ jQuery(document).ready(function ($) {
 		$('.two-rows').each(function () {
 			$(this).attr('data-rows', 2);
 		})
+		$('.to-slide').each(function () {
+			$(this).addClass('autoplay');
+		})
+		$('.three-rows').each(function () {
+			$(this).attr('data-rows', 3);
+		})
 		$('.has-dots').each(function () {
 			$(this).attr('data-dots', true);
 		})
@@ -21,6 +27,12 @@ jQuery(document).ready(function ($) {
 	}
 	$(".autoplay").each(function () {
 		$(this).slick($(this).data());
+	});
+
+	$(".field-date").each(function () {
+		$(this).datepicker({
+			dateFormat: 'dd/mm/yy'
+		});
 	});
 
 	// scroll slider by mouse
@@ -49,13 +61,12 @@ jQuery(document).ready(function ($) {
 	(function ($) {
 		let up_btn = $("body .up");
 		let body = $('body,html');
-		up_btn.css({
-			cursor: 'pointer'
-		});
 		up_btn.click(function () {
-			$('html,body').animate({ scrollTop: 0 }, 1000);
+			console.log('object')
+			$('body,html').delay(0).animate({scrollTop: 0}, 400, 'swing');
+			return false;
 		});
-		$(window).scroll(function (event) {
+		$(window).scroll(function () {
 			let startpage = body.scrollTop();
 			if (startpage > 200) {
 				up_btn.addClass('up-active');

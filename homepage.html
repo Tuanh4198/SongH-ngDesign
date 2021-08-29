@@ -21,6 +21,8 @@
     <!-- slick slider -->
     <link rel="stylesheet" href="./library/slick/slick-theme.css" />
     <link rel="stylesheet" href="./library/slick/slick.css" />
+    <!-- jquery UI -->
+    <link rel="stylesheet" href="./library/jquery-ui/jquery-ui.min.css" />
     <!-- main style -->
     <link rel="stylesheet" href="./style/home/_home.css">
 	<!-- Loading -->
@@ -114,10 +116,11 @@
 					</div>
 					<div class="col-xl-3 col-lg-6 col-12">
 						<label for="">Ngày khám</label>
-						<input type="text" name="" id="" placeholder="Chọn ngày khám bệnh">
+						<input class="field-date" type="text" name="" id="" placeholder="Chọn ngày khám bệnh">
 					</div>
-					<div class="col-xl-3 col-lg-6 col-12">
+					<div class="col-xl-3 col-lg-6 col-12 text-center">
 						<button type="SUBMIT" class="btn btn-block btn-submit">GỬI YÊU CẦU KHÁM</button>
+						<a href="#" class="link-health-declaration d-none text-center">Khai báo y tế online</a>
 					</div>
 				</form>
 			</div>
@@ -125,28 +128,28 @@
 			<div class="clinic-index-wrapper container">
 				<p class="clinic-slogan">Bệnh viện Đa khoa Sông Thương đầu tư phát triển với sứ mệnh <span>"Chăm sóc bằng tài năng, y đức và sự thấu cảm"</span>. Cùng với đội ngũ bác sĩ giỏi với kinh nghiệm lâu năm</p>
 				<div class="clinic-index row">
-					<div class="col-xl-3 col-lg-6 col-12">
+					<div class="col-xl-3 col-6">
 						<div class="ico-number d-flex align-items-center">
 							<img src="./images/home/ico1.png"/>
 							<span class="number">10</span>
 						</div>
 						<p class="content">Năm kinh nghiệm</p>
 					</div>
-					<div class="col-xl-3 col-lg-6 col-12">
+					<div class="col-xl-3 col-6">
 						<div class="ico-number d-flex align-items-center">
 							<img src="./images/home/ico2.png"/>
 							<span class="number">40</span>
 						</div>
 						<p class="content">Thạc sĩ, bác sĩ chuyên khoa</p>
 					</div>
-					<div class="col-xl-3 col-lg-6 col-12">
+					<div class="col-xl-3 col-6">
 						<div class="ico-number d-flex align-items-center">
 							<img src="./images/home/ico3.png"/>
 							<span class="number">25</span>
 						</div>
 						<p class="content">Giáo sư bác sĩ, chuyên khoa</p>
 					</div>
-					<div class="col-xl-3 col-lg-6 col-12">
+					<div class="col-xl-3 col-6">
 						<div class="ico-number d-flex align-items-center">
 							<img src="./images/home/ico4.png"/>
 							<span class="number">1,8 triệu</span>
@@ -168,20 +171,23 @@
 					<table class="table table-fixed">
 						<thead>
 							<tr>
-								<th scope="col">Bác sĩ</th>
-								<th scope="col">Chức vụ</th>
-								<th scope="col">Lịch khám</th>
-								<th scope="col"></th>
+								<th>Bác sĩ</th>
+								<th class="job">Chức vụ</th>
+								<th>Lịch khám</th>
+								<th></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td class="d-flex align-items-center">
 									<img src="./images/home/cỉcleimg1.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+									<div class="infor">
+										<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+										<span>Viện trưởng BVĐK Sông Thương</span></span>
+									</div>
 								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
+								<td class="job">Viện trưởng BVĐK Sông Thương</td>
+								<td class="colTime">
 									<p class="date">02 tháng 7, 2021</p>
 									<p class="time">08h30 - 16h30</p>
 								</td>
@@ -190,10 +196,13 @@
 							<tr>
 								<td class="d-flex align-items-center">
 									<img src="./images/home/cỉcleimg2.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+									<div class="infor">
+										<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+										<span>Viện trưởng BVĐK Sông Thương</span></span>
+									</div>
 								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
+								<td class="job">Viện trưởng BVĐK Sông Thương</td>
+								<td class="colTime">
 									<p class="date">02 tháng 7, 2021</p>
 									<p class="time">08h30 - 16h30</p>
 								</td>
@@ -202,10 +211,13 @@
 							<tr>
 								<td class="d-flex align-items-center">
 									<img src="./images/home/cỉcleimg3.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+									<div class="infor">
+										<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+										<span>Viện trưởng BVĐK Sông Thương</span></span>
+									</div>
 								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
+								<td class="job">Viện trưởng BVĐK Sông Thương</td>
+								<td class="colTime">
 									<p class="date">02 tháng 7, 2021</p>
 									<p class="time">08h30 - 16h30</p>
 								</td>
@@ -214,10 +226,13 @@
 							<tr>
 								<td class="d-flex align-items-center">
 									<img src="./images/home/cỉcleimg4.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+									<div class="infor">
+										<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+										<span>Viện trưởng BVĐK Sông Thương</span></span>
+									</div>
 								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
+								<td class="job">Viện trưởng BVĐK Sông Thương</td>
+								<td class="colTime">
 									<p class="date">02 tháng 7, 2021</p>
 									<p class="time">08h30 - 16h30</p>
 								</td>
@@ -226,10 +241,13 @@
 							<tr>
 								<td class="d-flex align-items-center">
 									<img src="./images/home/cỉcleimg5.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+									<div class="infor">
+										<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+										<span>Viện trưởng BVĐK Sông Thương</span></span>
+									</div>
 								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
+								<td class="job">Viện trưởng BVĐK Sông Thương</td>
+								<td class="colTime">
 									<p class="date">02 tháng 7, 2021</p>
 									<p class="time">08h30 - 16h30</p>
 								</td>
@@ -238,10 +256,13 @@
 							<tr>
 								<td class="d-flex align-items-center">
 									<img src="./images/home/cỉcleimg6.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+									<div class="infor">
+										<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+										<span>Viện trưởng BVĐK Sông Thương</span></span>
+									</div>
 								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
+								<td class="job">Viện trưởng BVĐK Sông Thương</td>
+								<td class="colTime">
 									<p class="date">02 tháng 7, 2021</p>
 									<p class="time">08h30 - 16h30</p>
 								</td>
@@ -250,10 +271,13 @@
 							<tr>
 								<td class="d-flex align-items-center">
 									<img src="./images/home/cỉcleimg7.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+									<div class="infor">
+										<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+										<span>Viện trưởng BVĐK Sông Thương</span></span>
+									</div>
 								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
+								<td class="job">Viện trưởng BVĐK Sông Thương</td>
+								<td class="colTime">
 									<p class="date">02 tháng 7, 2021</p>
 									<p class="time">08h30 - 16h30</p>
 								</td>
@@ -262,10 +286,13 @@
 							<tr>
 								<td class="d-flex align-items-center">
 									<img src="./images/home/cỉcleimg1.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+									<div class="infor">
+										<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+										<span>Viện trưởng BVĐK Sông Thương</span></span>
+									</div>
 								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
+								<td class="job">Viện trưởng BVĐK Sông Thương</td>
+								<td class="colTime">
 									<p class="date">02 tháng 7, 2021</p>
 									<p class="time">08h30 - 16h30</p>
 								</td>
@@ -286,7 +313,7 @@
 						<a href="#" class="view-all">Xem đội ngũ bác sĩ </a>
 					</div>
 				</div>
-				<div class="doctor-list-slide autoplay"
+				<div class="doctor-list-slide autoplay two-rows"
 					data-dots='false'
 					data-speed="300"
 					data-accessibility="true"
@@ -295,11 +322,9 @@
 					data-slides-To-Show="3"
 					data-slides-To-Scroll="1"
                     data-responsive='[
-						{"breakpoint": 1200, "settings": {"slidesToShow": 3}}, 
-						{"breakpoint": 992, "settings": {"slidesToShow": 2}}, 
-						{"breakpoint": 768, "settings": {"slidesToShow": 2}}, 
-						{"breakpoint": 481, "settings": {"slidesToShow": 1}}, 
-						{"breakpoint": 361, "settings": {"slidesToShow": 1}}
+						{"breakpoint": 1200, "settings": {"slidesToShow": 3}},
+						{"breakpoint": 992, "settings": {"slidesToShow": 2}},
+						{"breakpoint": 576, "settings": {"slidesToShow": 1}}
 					]'
 				>
 					<div class="item">
@@ -394,6 +419,52 @@
 							<a href="#" class="btn btn-registration">Đăng ký khám</a>
 						</div>
 					</div>
+					<div class="item">
+						<div class="doctor-img">
+							<img src="./images/home/avatar3.png"/>
+						</div>
+						<div class="doctor-info">
+							<h3 class="doctor-name">BS. Võ Thành Nhân</h3>
+							<div class="doctor-service-wrapper">
+								<p class="doctor-service d-flex align-items-center">
+									<img src="./images/home/ico-sick1.png"/>
+									<span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
+								</p>
+								<p class="doctor-service d-flex align-items-center">
+									<img src="./images/home/ico-sick2.png"/>
+									<span>Gây mê - Điều trị đau</span>
+								</p>
+							</div>
+							<p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
+						</div>
+						<div class="doctor-action d-flex align-items-center">
+							<a href="#" class="btn btn-get-info">Lấy thông tin liên hệ</a>
+							<a href="#" class="btn btn-registration">Đăng ký khám</a>
+						</div>
+					</div>
+					<div class="item">
+						<div class="doctor-img">
+							<img src="./images/home/avatar1.png"/>
+						</div>
+						<div class="doctor-info">
+							<h3 class="doctor-name">BS. Võ Thành Nhân</h3>
+							<div class="doctor-service-wrapper">
+								<p class="doctor-service d-flex align-items-center">
+									<img src="./images/home/ico-sick1.png"/>
+									<span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
+								</p>
+								<p class="doctor-service d-flex align-items-center">
+									<img src="./images/home/ico-sick2.png"/>
+									<span>Gây mê - Điều trị đau</span>
+								</p>
+							</div>
+							<p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
+						</div>
+						<div class="doctor-action d-flex align-items-center">
+							<a href="#" class="btn btn-get-info">Lấy thông tin liên hệ</a>
+							<a href="#" class="btn btn-registration">Đăng ký khám</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -405,7 +476,7 @@
 					<a href="#" class="view-all">Xem tất cả dịch vụ</a>
 				</div>
 				<div class="row">
-					<div class="col-lg-3 col-md-6 col-12 hot-service-column-sm">
+					<div class="col-xl-3 col-lg-6 col-12 hot-service-column-sm">
 						<div class="hot-service size-lg">
 							<a href="#" class="service-link-more">
 								<img src="./images/home/servicesm1.png"/>
@@ -431,7 +502,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6 col-12 hot-service-column-sm">
+					<div class="col-xl-3 col-lg-6 col-12 hot-service-column-sm">
 						<div class="hot-service size-sm">
 							<span class="label-service">Tim mạch</span>
 							<a href="#" class="service-link-more">
@@ -504,7 +575,11 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-lg-6 col-12">
+				<div class="col-lg-6 col-12 col-banner">
+					<div class="title-wrapper d-none">
+						<h2 class="title">Trang thiết bị tiên tiến</h3>
+						<p class="sub-title">Sở hữu không gian khám chữa bệnh văn minh, sang trọng, hiện đại, chú trọng đầu tư đồng bộ hệ thống trang thiết bị hiện đại, hỗ trợ hiệu quả cho việc chẩn đoán và điều trị.</p>
+					</div>
 					<div class="banner-wrapper">
 						<img src="./images/home/banner1.png" alt="">
 					</div>
@@ -519,7 +594,7 @@
 					<a href="#" class="view-all">Xem tất cả chuyên khoa</a>
 				</div>
 				<div class="row">
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
+					<div class="col-lg-4 col-md-6 col-6 col-professional">
 						<div class="col-professional-wrapper">
 							<div class="content-professional d-flex align-items-center">
 								<img src="./images/home/icon1.png" alt="">
@@ -528,7 +603,7 @@
 							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
+					<div class="col-lg-4 col-md-6 col-6 col-professional">
 						<div class="col-professional-wrapper">
 							<div class="content-professional d-flex align-items-center">
 								<img src="./images/home/icon2.png" alt="">
@@ -537,7 +612,7 @@
 							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
+					<div class="col-lg-4 col-md-6 col-6 col-professional">
 						<div class="col-professional-wrapper">
 							<div class="content-professional d-flex align-items-center">
 								<img src="./images/home/icon3.png" alt="">
@@ -546,7 +621,7 @@
 							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
+					<div class="col-lg-4 col-md-6 col-6 col-professional">
 						<div class="col-professional-wrapper">
 							<div class="content-professional d-flex align-items-center">
 								<img src="./images/home/icon4.png" alt="">
@@ -555,7 +630,7 @@
 							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
+					<div class="col-lg-4 col-md-6 col-6 col-professional">
 						<div class="col-professional-wrapper">
 							<div class="content-professional d-flex align-items-center">
 								<img src="./images/home/icon5.png" alt="">
@@ -564,7 +639,7 @@
 							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
+					<div class="col-lg-4 col-md-6 col-6 col-professional">
 						<div class="col-professional-wrapper">
 							<div class="content-professional d-flex align-items-center">
 								<img src="./images/home/icon6.png" alt="">
@@ -573,7 +648,7 @@
 							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
+					<div class="col-lg-4 col-md-6 col-6 col-professional">
 						<div class="col-professional-wrapper">
 							<div class="content-professional d-flex align-items-center">
 								<img src="./images/home/icon7.png" alt="">
@@ -582,7 +657,7 @@
 							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
+					<div class="col-lg-4 col-md-6 col-6 col-professional">
 						<div class="col-professional-wrapper">
 							<div class="content-professional d-flex align-items-center">
 								<img src="./images/home/icon8.png" alt="">
@@ -591,13 +666,20 @@
 							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
+					<div class="col-lg-4 col-md-6 col-6 col-professional">
 						<div class="col-professional-wrapper">
 							<div class="content-professional d-flex align-items-center">
 								<img src="./images/home/icon9.png" alt="">
 								<strong>Chuyên khoa <br>Tai mũi họng</strong>
 							</div>
 							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-6 col-professional d-none">
+						<div class="col-professional-wrapper">
+							<a href="#" class="link-view-all">
+								Xem tất cả chuyên khoa
+							</a>
 						</div>
 					</div>
 				</div>
@@ -613,7 +695,7 @@
 						<i class="fa fa-angle-right slide-right"></i>
 					</div>
 				</div>
-				<div class="shop-online-slide autoplay" 
+				<div class="shop-online-slide autoplay three-rows has-dots" 
 					data-dots='false' 
 					data-speed="300" 
 					data-accessibility="true" 
@@ -625,9 +707,7 @@
 					data-responsive='[
 						{"breakpoint": 1200, "settings": {"slidesToShow": 4}}, 
 						{"breakpoint": 992, "settings": {"slidesToShow": 3}}, 
-						{"breakpoint": 768, "settings": {"slidesToShow": 2}}, 
-						{"breakpoint": 481, "settings": {"slidesToShow": 1}}, 
-						{"breakpoint": 361, "settings": {"slidesToShow": 1}}
+						{"breakpoint": 576, "settings": {"slidesToShow": 2}}
 					]'
 				>
 					<div class="item">
@@ -659,6 +739,45 @@
 					<div class="item">
 						<a class="shop-img">
 							<img src="./images/home/shop3.png" alt=""/>
+							<span class="label">Giảm 30%</span>
+						</a>
+						<div class="shop-info">
+							<a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
+							<div class="price-wrapper">
+								<span class="new-price">2.000.000 &#8363;</span>
+                                <span class="old-price">4.000.000 &#8363;</span>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<a class="shop-img">
+							<img src="./images/home/shop4.png" alt=""/>
+							<span class="label">Giảm 30%</span>
+						</a>
+						<div class="shop-info">
+							<a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
+							<div class="price-wrapper">
+								<span class="new-price">2.000.000 &#8363;</span>
+                                <span class="old-price">4.000.000 &#8363;</span>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<a class="shop-img">
+							<img src="./images/home/shop5.png" alt=""/>
+							<span class="label">Giảm 30%</span>
+						</a>
+						<div class="shop-info">
+							<a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
+							<div class="price-wrapper">
+								<span class="new-price">2.000.000 &#8363;</span>
+                                <span class="old-price">4.000.000 &#8363;</span>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<a class="shop-img">
+							<img src="./images/home/shop1.png" alt=""/>
 							<span class="label">Giảm 30%</span>
 						</a>
 						<div class="shop-info">
@@ -749,7 +868,14 @@
 						</div>
 					</div>
 					<div class="col-lg-6 col-12 col-content">
-						<div class="tab-content">
+						<div class="tab-content to-slide"
+							data-dots='true'
+							data-speed="1000"
+							data-autoplay="false"
+							data-arrows='false'
+							data-slides-To-Show="1"
+							data-slides-To-Scroll="1"
+						>
 							<div class="content active-tab-content">
 								<div class="answer-wrapper">
 									<div class="answer-info d-flex align-items-center justify-content-between">
@@ -778,21 +904,119 @@
 								</div>
 							</div>
 							<div class="content">
-								sdfsdf
+								<div class="answer-wrapper">
+									<div class="answer-info d-flex align-items-center justify-content-between">
+										<img src="./images/home/img_answer.png" alt="">
+										<div class="info">
+											<p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
+											<div class="like">
+												<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+												<span>2.798</span>
+											</div>
+											<div class="view">
+												<i class="fa fa-eye" aria-hidden="true"></i>
+												<span>32.313 lượt xem</span>
+											</div>
+										</div>
+									</div>
+									<div class="ansver-Content">
+										<strong class="title">Trả lời</strong>
+										<ul>
+											<li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
+											<li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
+										</ul>
+										<p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
+										<a href="#" class="view-detail">Xem chi tiết</a>
+									</div>
+								</div>
 							</div>
 							<div class="content">
-								sdfsdf
+								<div class="answer-wrapper">
+									<div class="answer-info d-flex align-items-center justify-content-between">
+										<img src="./images/home/img_answer.png" alt="">
+										<div class="info">
+											<p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
+											<div class="like">
+												<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+												<span>2.798</span>
+											</div>
+											<div class="view">
+												<i class="fa fa-eye" aria-hidden="true"></i>
+												<span>32.313 lượt xem</span>
+											</div>
+										</div>
+									</div>
+									<div class="ansver-Content">
+										<strong class="title">Trả lời</strong>
+										<ul>
+											<li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
+											<li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
+										</ul>
+										<p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
+										<a href="#" class="view-detail">Xem chi tiết</a>
+									</div>
+								</div>
 							</div>
 							<div class="content">
-								sdfsdf
+								<div class="answer-wrapper">
+									<div class="answer-info d-flex align-items-center justify-content-between">
+										<img src="./images/home/img_answer.png" alt="">
+										<div class="info">
+											<p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
+											<div class="like">
+												<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+												<span>2.798</span>
+											</div>
+											<div class="view">
+												<i class="fa fa-eye" aria-hidden="true"></i>
+												<span>32.313 lượt xem</span>
+											</div>
+										</div>
+									</div>
+									<div class="ansver-Content">
+										<strong class="title">Trả lời</strong>
+										<ul>
+											<li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
+											<li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
+										</ul>
+										<p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
+										<a href="#" class="view-detail">Xem chi tiết</a>
+									</div>
+								</div>
 							</div>
 							<div class="content">
-								sdfsdf
+								<div class="answer-wrapper">
+									<div class="answer-info d-flex align-items-center justify-content-between">
+										<img src="./images/home/img_answer.png" alt="">
+										<div class="info">
+											<p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
+											<div class="like">
+												<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+												<span>2.798</span>
+											</div>
+											<div class="view">
+												<i class="fa fa-eye" aria-hidden="true"></i>
+												<span>32.313 lượt xem</span>
+											</div>
+										</div>
+									</div>
+									<div class="ansver-Content">
+										<strong class="title">Trả lời</strong>
+										<ul>
+											<li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
+											<li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
+										</ul>
+										<p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
+										<a href="#" class="view-detail">Xem chi tiết</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<a href="#" class="link-view-all">Xem thêm 324 câu hỏi khác <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+				<div class="d-flex align-items-center justify-content-center">
+					<a href="#" class="link-view-all">Xem thêm 324 câu hỏi khác <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+				</div>
 			</div>
 		</div>
 
@@ -802,7 +1026,7 @@
 					<h2 class="title">Người bệnh nói gì về chúng tôi</h3>
 				</div>
 			</div>
-			<div class="user-comment-slide autoplay"
+			<div class="user-comment-slide autoplay close-center-mode"
 				data-dots='true'
 				data-speed="300"
 				data-accessibility="true"
@@ -814,10 +1038,7 @@
  				data-center-padding='250px'
 				data-responsive='[
 					{"breakpoint": 1200, "settings": {"slidesToShow": 3}}, 
-					{"breakpoint": 992, "settings": {"slidesToShow": 2}}, 
-					{"breakpoint": 768, "settings": {"slidesToShow": 2}}, 
-					{"breakpoint": 481, "settings": {"slidesToShow": 1}}, 
-					{"breakpoint": 361, "settings": {"slidesToShow": 1}}
+					{"breakpoint": 991, "settings": {"slidesToShow": 1}}
 				]'
 			>
 				<div class="item">
@@ -916,7 +1137,7 @@
 					data-dots='true'
 					data-speed="300"
 					data-accessibility="true"
-					data-autoplay="true"
+					data-autoplay="false"
 					data-arrows='false'
 					data-slides-To-Show="3"
 					data-slides-To-Scroll="1"
@@ -937,7 +1158,9 @@
 							</div>
 							<div class="post-content">
 								<span class="label">Tin mới</span>
-								<h4 class="name">Thay da sinh học cho mặt có tốt không?</h4>
+								<a href="#">
+									<h4 class="name">Thay da sinh học cho mặt có tốt không?</h4>
+								</a>
 								<a href="#" class="view-more">
 									Xem thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 								</a>
@@ -953,7 +1176,9 @@
 							</div>
 							<div class="post-content">
 								<span class="label">Tin mới</span>
-								<h4 class="name">Thay da sinh học cho mặt có tốt không?</h4>
+								<a href="#">
+									<h4 class="name">Thay da sinh học cho mặt có tốt không?</h4>
+								</a>
 								<a href="#" class="view-more">
 									Xem thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 								</a>
@@ -969,7 +1194,9 @@
 							</div>
 							<div class="post-content">
 								<span class="label">Tin mới</span>
-								<h4 class="name">Thay da sinh học cho mặt có tốt không?</h4>
+								<a href="#">
+									<h4 class="name">Thay da sinh học cho mặt có tốt không?</h4>
+								</a>
 								<a href="#" class="view-more">
 									Xem thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 								</a>
@@ -985,7 +1212,9 @@
 							</div>
 							<div class="post-content">
 								<span class="label">Tin mới</span>
-								<h4 class="name">Thay da sinh học cho mặt có tốt không?</h4>
+								<a href="#">
+									<h4 class="name">Thay da sinh học cho mặt có tốt không?</h4>
+								</a>
 								<a href="#" class="view-more">
 									Xem thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 								</a>
@@ -1051,6 +1280,8 @@
 <script type="text/javascript" src="./library/js/bootstrap.js"></script>
 <!-- slick -->
 <script type="text/javascript" src="./library/slick/slick.min.js"></script>
+<!-- jquery UI -->
+<script type="text/javascript" src="./library/jquery-ui/jquery-ui.min.js"></script>
 <!-- main js -->
 <script type="text/javascript" src="./javascript/main.js"></script>
 <!-- custom js -->
