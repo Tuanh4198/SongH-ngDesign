@@ -12,6 +12,12 @@ jQuery(document).ready(function ($) {
     $('.two-rows').each(function () {
       $(this).attr('data-rows', 2);
     });
+    $('.to-slide').each(function () {
+      $(this).addClass('autoplay');
+    });
+    $('.three-rows').each(function () {
+      $(this).attr('data-rows', 3);
+    });
     $('.has-dots').each(function () {
       $(this).attr('data-dots', true);
     });
@@ -23,6 +29,11 @@ jQuery(document).ready(function ($) {
 
   $(".autoplay").each(function () {
     $(this).slick($(this).data());
+  });
+  $(".field-date").each(function () {
+    $(this).datepicker({
+      dateFormat: 'dd/mm/yy'
+    });
   }); // scroll slider by mouse
 
   $('.scroll-mouse').on('wheel', function (e) {
@@ -50,15 +61,14 @@ jQuery(document).ready(function ($) {
   (function ($) {
     var up_btn = $("body .up");
     var body = $('body,html');
-    up_btn.css({
-      cursor: 'pointer'
-    });
     up_btn.click(function () {
-      $('html,body').animate({
+      console.log('object');
+      $('body,html').delay(0).animate({
         scrollTop: 0
-      }, 1000);
+      }, 400, 'swing');
+      return false;
     });
-    $(window).scroll(function (event) {
+    $(window).scroll(function () {
       var startpage = body.scrollTop();
 
       if (startpage > 200) {
@@ -307,5 +317,17 @@ jQuery(document).ready(function ($) {
 
   $(".select-custom").each(function () {
     $(this).select2();
+  }); // form search active
+
+  $(function () {
+    $('body').on('click', '.form-search .input-text', function () {
+      $(this).parents('.form-search').addClass('active');
+    });
+  }); // get choose date table
+
+  $(function () {
+    $(".field-date").each(function () {
+      $(this).datepicker();
+    });
   });
 });

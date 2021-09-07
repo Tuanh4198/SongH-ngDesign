@@ -1,6 +1,10 @@
+@import '../config/_config';
+
 .header-top {
 	padding: 5px 0;
-	border-bottom: 1px solid @border_color;
+	border-width: 0 0 1px;
+	border-style: solid;
+	border-color: @border_color;
 
 	.list-link {
 		display: flex;
@@ -47,7 +51,6 @@
 		}
 	}
 }
-
 .header-bottom {
 	background: #F7F7F7;
 
@@ -81,7 +84,7 @@
 				
 				.chile-menu {
 					top: 100%;
-					transition: all 0.3s ease-in;
+					transition: all 0.2s ease-in;
 					opacity: 1;
 					visibility: visible;
 				}
@@ -126,7 +129,6 @@
 		}
 	}
 }
-
 .header-center {
 	padding: 20px 0;
 
@@ -141,11 +143,12 @@
 		border-radius: 4px;
 		margin-left: 15px;
 		margin-right: 30px;
-		transition: all 0.3s ease-in;
+		transition: all 0.2s ease-in;
 
 		&:hover,
-		&:focus {
-			border: 1px solid @text_color;
+		&:focus,
+		&.active {
+			border: 1px solid @base_color;
 		}
  
 		.btn-search {
@@ -154,7 +157,7 @@
 			display: flex;
     		align-items: center;
 			justify-content: center;
-			transition: all 0.3s ease-in;
+			transition: all 0.2s ease-in;
 
 			&:hover {
 				filter: brightness(0.5);
@@ -257,7 +260,6 @@
 		}
 	}
 }
-
 .modal-custom {
 	position: fixed;
 	top: 50%;
@@ -267,7 +269,6 @@
 	background: #FFFFFF;
 	border-radius: 12px;
 }
-
 .modal-registration {
 	display: none;
 	width: 700px;
@@ -588,7 +589,6 @@
 		}
 	}
 }
-
 .modal-login {
 	width: 460px;
 	display: none;
@@ -824,7 +824,6 @@
 		}
 	}
 }
-
 body.has-modal {
 	&:after {
 		content: "";
@@ -836,75 +835,5 @@ body.has-modal {
 		opacity: 0.6;
 		left: 0;
 		top: 0;
-	}
-}
-
-@media only screen and (max-width: 1199px){
-	.header-center {
-		.hot-line-wrapper {
-			display: none;
-		}
-
-		.btn-menu-mobile {
-			display: block !important;
-			margin-top: 5px;
-			margin-right: 10px;
-		}
-
-		.advise-wrapper {
-			.btn-registration {
-				font-style: normal;
-				font-weight: bold;
-				font-size: 12px;
-				line-height: 32px;
-				height: 32px;
-				margin: 0;
-				white-space: nowrap;
-				padding: 0 12px;
-			}
-		}
-
-		.search-wrapper {
-			margin: 0 30px;
-		}
-	}
-
-	.header-bottom {
-		display: none;
-	}
-}
-
-@media only screen and (max-width: 991px){
-	.header-top {
-		display: none;
-	}
-
-	.header-center {
-		padding: 10px 0;
-
-		.btn-menu-mobile {
-			margin-top: 3px;
-		}
-
-		.logo {
-			img {
-				width: 100px;
-			}
-		}
-	}
-}
-
-@media only screen and (max-width: 767px){
-	.header-center {
-		.search-wrapper {
-			margin: 0 15px;
-			background-color: transparent;
-			opacity: 0;
-			visibility: hidden;
-
-			> * {
-				display: none !important;
-			}
-		}
 	}
 }

@@ -295,4 +295,18 @@ jQuery(document).ready(function ($) {
 		$(this).select2();
 	});
 
+	// form search active
+	$(function () {
+		$('body').on('click', '.form-search .input-text',function() {
+			$(this).parents('.form-search').addClass('active');
+		});		
+	});
+
+	// get choose date table
+	$( function() {
+        $( ".field-date").each(function () {
+            $(this).datepicker();
+        });
+    });
+
 });

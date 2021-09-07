@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="../library/slick/slick-theme.css" />
     <link rel="stylesheet" href="../library/slick/slick.css" />
     <!-- main style -->
+
+    <link rel="stylesheet" href="./library/jquery-ui/jquery-ui.min.css" />
+
     <link rel="stylesheet" href="../style/pages/style-V2.css">
     <!-- Loading -->
     <style type="text/css">
@@ -79,12 +82,12 @@
         </div>
         <div class="page-columns">
             <div class="container">
-                <div class="row row24">
-                    <sidebar class="col-xl-3 col-lg-4 side-bar dropdown col24">
+                <div class="row row24 row-mobile">
+                    <sidebar class="col-xl-3 col-lg-4 side-bar dropdown col24 col-mobile">
                         <div class="list-category-wrapper">
                             <h2 class="list-category-title">Danh mục</h2>
                             <div class="d-none show-option">
-                                <p class="result">Tất cả dịch vụ <span>(150)</span></p>
+                                <span class="result">Tất cả Sản phẩm / Dịch vụ <span class="count">(150)</span></span>
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
                             </div>
                             <ul class="list-category fretboard">
@@ -139,7 +142,7 @@
                             </ul>
                         </div>
                     </sidebar>
-                    <div class="col-xl-9 col-lg-8 col-main col24">
+                    <div class="col-xl-9 col-lg-8 col-main col24 col-mobile">
                         <div class="toolbar">
                             <div class="toolbar-amount"><span class="amount-number">195</span> sản phẩm</div>
                             <div class="toolbar-sorter">
@@ -151,8 +154,8 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="list-products row row10">
-                            <div class="col-xl-4 col-lg-4 col-6 col10 product-item">
+                        <div class="list-products row row10 row-product-mobile">
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
                                 <div class="product-wrapper">
                                     <div class="product-img-wrapper">
                                         <!-- <div class="product-label">
@@ -180,7 +183,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-6 col10 product-item">
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
                                 <div class="product-wrapper">
                                     <div class="product-img-wrapper">
                                         <a href="#" class="product-img">
@@ -199,7 +202,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-6 col10 product-item">
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
                                 <div class="product-wrapper">
                                     <div class="product-img-wrapper">
                                         <a href="#" class="product-img">
@@ -218,7 +221,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-6 col10 product-item">
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
                                 <div class="product-wrapper">
                                     <div class="product-img-wrapper">
                                         <a href="#" class="product-img">
@@ -237,7 +240,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-6 col10 product-item">
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
                                 <div class="product-wrapper">
                                     <div class="product-img-wrapper">
                                         <a href="#" class="product-img">
@@ -256,7 +259,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-6 col10 product-item">
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
                                 <div class="product-wrapper">
                                     <div class="product-img-wrapper">
                                         <a href="#" class="product-img">
@@ -275,7 +278,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-6 col10 product-item">
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
                                 <div class="product-wrapper">
                                     <div class="product-img-wrapper">
                                         <a href="#" class="product-img">
@@ -294,7 +297,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-6 col10 product-item">
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
                                 <div class="product-wrapper">
                                     <div class="product-img-wrapper">
                                         <a href="#" class="product-img">
@@ -313,7 +316,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-6 col10 product-item">
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
                                 <div class="product-wrapper">
                                     <div class="product-img-wrapper">
                                         <a href="#" class="product-img">
@@ -333,7 +336,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <ul class="pagination d-flex align-items-center justify-content-center">
+                        <!-- <ul class="pagination d-flex align-items-center">
                             <li><a href="#" class="prev none"><i class="fa fa-angle-left" aria-hidden="true"></i>Trước</a></li>
                             <li><a href="#" class="active">1</a></li>
                             <li><a href="#">2</a></li>
@@ -381,6 +384,8 @@
 <!-- slick -->
 <script type="text/javascript" src="../library/slick/slick.min.js"></script>
 <!-- main js -->
+<script type="text/javascript" src="./library/jquery-ui/jquery-ui.min.js"></script>
+
 <script type="text/javascript" src="../javascript/main.js"></script>
 <!-- custom js -->
 <script ttype="text/javascript">
