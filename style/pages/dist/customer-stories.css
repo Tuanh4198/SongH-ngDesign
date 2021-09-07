@@ -3516,6 +3516,9 @@ body.has-modal:after {
 .blog-page .side-bar:after {
   display: none;
 }
+.blog-page .side-bar > * {
+  width: 100%;
+}
 .blog-page .side-bar .form-registration {
   background: #FFFFFF;
   box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.08);
