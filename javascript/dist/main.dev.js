@@ -329,5 +329,5 @@ jQuery(document).ready(function ($) {
     $(".field-date").each(function () {
       $(this).datepicker();
     });
-  });
+  }); // social detail page fixed
 });

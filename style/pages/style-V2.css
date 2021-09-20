@@ -2910,7 +2910,8 @@ body.has-modal:after {
 }
 .up:hover {
   color: #FFFFFF;
-  background: #091D3E;
+  background: #004B84;
+  border-color: #004B84;
 }
 #footer .home-page .contact-us-wrapper .contact-us {
   background: #F7FAFF;
@@ -2933,6 +2934,7 @@ body.has-modal:after {
 #footer .home-page .contact-us-wrapper .get-price-block .link-get-price {
   margin-left: 20px;
   height: 48px;
+  line-height: 48px;
   background: #0092FF;
   border-radius: 4px;
   font-style: normal;
@@ -2947,8 +2949,7 @@ body.has-modal:after {
   display: none;
 }
 #footer .home-page .contact-us-wrapper .get-price-block .link-get-price:hover {
-  background: white;
-  color: #091D3E;
+  background: #004B84;
 }
 .copyright {
   height: 48px;
@@ -3057,7 +3058,7 @@ body.has-modal:after {
   margin-left: 15px;
 }
 .main-content-footer .form-register .btn-register:hover {
-  background: #091D3E;
+  background: #004B84;
 }
 .main-content-footer .form-register input {
   -webkit-box-flex: 1;
@@ -3093,8 +3094,9 @@ body.has-modal:after {
 .main-content-footer .form-register input::placeholder {
   color: #858FA0;
 }
-.main-content-footer .form-register input:hover {
-  border: 1px solid #091D3E;
+.main-content-footer .form-register input:hover,
+.main-content-footer .form-register input:focus {
+  border-color: #0092FF;
 }
 .main-content-footer .social-signin {
   display: -webkit-box;

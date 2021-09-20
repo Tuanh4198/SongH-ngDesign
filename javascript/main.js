@@ -63,7 +63,7 @@ jQuery(document).ready(function ($) {
 		let body = $('body,html');
 		up_btn.click(function () {
 			console.log('object')
-			$('body,html').delay(0).animate({scrollTop: 0}, 400, 'swing');
+			$('body,html').delay(0).animate({ scrollTop: 0 }, 400, 'swing');
 			return false;
 		});
 		$(window).scroll(function () {
@@ -297,16 +297,24 @@ jQuery(document).ready(function ($) {
 
 	// form search active
 	$(function () {
-		$('body').on('click', '.form-search .input-text',function() {
+		$('body').on('click', '.form-search .input-text', function () {
 			$(this).parents('.form-search').addClass('active');
-		});		
+		});
 	});
 
 	// get choose date table
-	$( function() {
-        $( ".field-date").each(function () {
-            $(this).datepicker();
-        });
-    });
+	$(function () {
+		$(".field-date").each(function () {
+			$(this).datepicker();
+		});
+	});
+
+	// social detail page fixed
+
+	$(function () {
+		$(document).scroll(() => {
+			let post_content = $('.post-content');
+		}
+	});
 
 });

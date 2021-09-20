@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sông Hương</title>
+    <title>Sông Hương -Câu hỏi online</title>
     <!-- <link rel="shortcut icon" type="image/x-icon" href="./images/Hera/favicon.ico" /> -->
     <!-- animation -->
     <link rel="stylesheet" href="./library/animate.css" />
@@ -21,8 +21,9 @@
     <!-- slick slider -->
     <link rel="stylesheet" href="./library/slick/slick-theme.css" />
     <link rel="stylesheet" href="./library/slick/slick.css" />
+	<link rel="stylesheet" href="./library/jquery-ui/jquery-ui.min.css" />
     <!-- main style -->
-    <link rel="stylesheet" href="./style/pages/qaPage.css">
+    <link rel="stylesheet" href="./style/pages/style.css">
 </head>
 
 <body>
@@ -35,8 +36,10 @@
     <!-- Content -->
     <section class="qa-page">
 		<div class="breadcrumb-wrapper">
-			<div class="container">
-				<h3 class="title">Hỏi bấc sĩ online</h3> 
+			<div class="page-title">
+				<div class="container">
+					<h1 class="title">Hỏi bác sĩ online</h1> 
+				</div>
 			</div>
 		</div>
 		<div class="container">
@@ -50,11 +53,11 @@
 			<div class="row">
 				<sidebar class="col-xl-3 col-lg-4 side-bar">
 					<div class="list-category-wrapper dropdown">
-						<form action="#" method="post" class="form d-none">
+						<form action="#" method="post" class="form form-search d-none">
 							<button type="submit" class="btn btn-search">
 								<img src="./images/page/qa-page/search_icon.png" alt=""/>
 							</button>
-							<input type="text" placeholder="Tìm câu hỏi..." class="input-key">
+							<input type="text" placeholder="Tìm câu hỏi..." class="input-key input-text">
 						</form>
 						<h4 class="title">Danh mục</h4>
 						<div class="d-none show-option">
@@ -151,9 +154,9 @@
 				</sidebar>
 				<div class="col-xl-9 col-lg-8 col-main">
 					<div class="search-box-wrapper">
-						<form action="#" method="post" class="form">
+						<form action="#" method="post" class="form form-search">
 							<img src="./images/page/qa-page/search_icon.png" alt=""/>
-							<input type="text" placeholder="Tìm câu hỏi..." class="input-key">
+							<input type="text" placeholder="Tìm câu hỏi..." class="input-key input-text">
 							<button type="submit" class="btn btn-search">Tìm kiếm</button>
 						</form>
 					</div>
@@ -170,7 +173,7 @@
 								</div>
 							</div>
 							<div class="qa-item-center">
-								<strong class="question">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</strong>
+								<a href="#" class="question">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</a>
 								<p class="answer">Mấy năm nay em bị đau đầu bên trái, bên phần lưng sát mông bên trái của em bị đau nhói, ngồi nằm khó khăn, dạo này em đau thêm cả phần vai và bả vai trái, thỉnh thoảng em có bị tê 1 số chỗ, đứng lên ngồi xuống chóng mặt, mặc dù em ăn uống đầy đủ và không phải vận động nặng trong đời sống. Bác sĩ cho em hỏi đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì và điều trị như nào? Em xin cảm ơn.</p>
 							</div>
 							<div class="qa-item-bottom">
@@ -203,7 +206,7 @@
 								</div>
 							</div>
 							<div class="qa-item-center">
-								<strong class="question">Đọc kết quả xét nghiệm Pepsinogen như thế nào?</strong>
+								<a href="#" class="question">Đọc kết quả xét nghiệm Pepsinogen như thế nào?</a>
 								<p class="answer">Hôm trước, em có làm xét nghiệm Pepsinogen có kết quả Pepsinogen I là 57,03ng/mL, Pepsinogen II là 10,11 ng/mL. Tỉ lệ Pepsinogen I/II là 5,64 ng/mL. Vậy bác sĩ cho em hỏi đọc kết quả xét nghiệm Pepsinogen như thế nào? Em cảm ơn bác sĩ.</p>
 							</div>
 							<div class="qa-item-bottom">
@@ -261,6 +264,7 @@
 <script type="text/javascript" src="./library/js/bootstrap.js"></script>
 <!-- slick -->
 <script type="text/javascript" src="./library/slick/slick.min.js"></script>
+<script type="text/javascript" src="./library/jquery-ui/jquery-ui.min.js"></script>
 <!-- main js -->
 <script type="text/javascript" src="./javascript/main.js"></script>
 <!-- custom js -->
