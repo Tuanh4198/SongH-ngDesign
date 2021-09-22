@@ -2,186 +2,396 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Thư viện ảnh - Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô</title>
-	<link rel="shortcut icon" type="image/x-icon" href="./images/home/favicon.ico" />
-	<!-- animation -->
-	<link rel="stylesheet" href="./library/animate.css" />
-	<!-- font fontawesome -->
-	<link rel="stylesheet" href="./fonts/fontawesome/css/font-awesome.min.css" />
-	<!-- font Inter -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-		rel="stylesheet">
-	<!-- bs4 -->
-	<link rel="stylesheet" href="./library/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="./library/css/bootstrap-grid.min.css" />
-	<!-- slick slider -->
-	<link rel="stylesheet" href="./library/slick/slick-theme.css" />
-	<link rel="stylesheet" href="./library/slick/slick.css" />
-	<link rel="stylesheet" href="./library/jquery-ui/jquery-ui.min.css" />
-	<!-- main style -->
-	<link rel="stylesheet" href="./style/pages/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư viện ảnh - Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/home/favicon.ico" />
+    <!-- animation -->
+    <link rel="stylesheet" href="./library/animate.css" />
+    <!-- font fontawesome -->
+    <link rel="stylesheet" href="./fonts/fontawesome/css/font-awesome.min.css" />
+    <!-- font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- bs4 -->
+    <link rel="stylesheet" href="./library/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./library/css/bootstrap-grid.min.css" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="./library/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./library/slick/slick.css" />
+    <link rel="stylesheet" href="./library/jquery-ui/jquery-ui.min.css" />
+    <!-- main style -->
+    <link rel="stylesheet" href="./style/pages/style.css">
 </head>
 
 <body>
-	<!-- Header -->
-	<header id="header" class="header fixed-main-menu">
-		<!-- load content from header.html -->
-	</header>
-	<!-- End header -->
+    <!-- Header -->
+    <header id="header" class="header fixed-main-menu">
+        <div class="header-top">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="header-top-left">
+                    <ul class="list-link">
+                        <li><a href="#">Hướng dẫn khách hàng</a></li>
+                        <li><a href="#">Hệ thống Bệnh viện Đa khoa Sông Thương</a></li>
+                    </ul>
+                </div>
+                <div class="header-top-left">
+                    <div class="account">
+                        <a href="#"><img src="./images/home/ico_user.png" alt="" /> Tài khoản</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="header-center">
+            <div class="container d-flex align-items-center justify-content-between">
+                <button class="btn-menu-mobile d-none">
+					<img src="./images/home/mobile-menu.png" alt="">
+				</button>
+                <a href="#" class="logo">
+                    <img src="./images/home/logo.svg" alt="">
+                </a>
+                <form action="#" method="post" class="search-wrapper form-search">
+                    <button class="btn btn-search"><img src="./images/home/ico-search.png" alt=""/></button>
+                    <input class="input-text" type="text" placeholder="Tìm kiếm bài viết, trợ giúp...">
+                </form>
+                <div class="advise-wrapper">
+                    <div class="hot-line-wrapper">
+                        <img src="./images/home/hotline.png" alt="">
+                        <div class="content">
+                            <span>TỔNG ĐÀI</span>
+                            <a href="tel:0946 233 789" class="phone">0946 233 789</a>
+                        </div>
+                    </div>
+                    <div class="hot-line-wrapper">
+                        <img src="./images/home/user.png" alt="">
+                        <div class="content">
+                            <span>Tư vấn</span>
+                            <a href="#" class="phone">Hỏi bác sĩ online</a>
+                        </div>
+                    </div>
+                    <button class="btn-registration btn-modal" data-modal="form-registration">ĐĂNG KÍ KHÁM</button>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="header-bottom">
+            <div class="container">
+                <ul class="main-menu">
+                    <li>
+                        <a href="#">Giới thiệu <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <div class="chile-menu">
+                            <ul>
+                                <li><a href="#">Về chúng tôi</a></li>
+                                <li><a href="#">Sứ mệnh - Tầm nhìn</a></li>
+                                <li><a href="#">Cơ sở vật chất</a></li>
+                                <li><a href="#">Hoạt động của bệnh viện</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Đội ngũ bác sĩ</a>
+                    </li>
+                    <li>
+                        <a href="#">Dịch vụ y tế<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <div class="chile-menu">
+                            <ul>
+                                <li><a href="#">Dịch vụ y tế</a></li>
+                                <li><a href="#">Dịch vụ y tế</a></li>
+                                <li><a href="#">Dịch vụ y tế</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Gian hàng trực tuyến</a>
+                    </li>
+                    <li>
+                        <a href="#">Tin tức, hướng dẫn và các bài viết <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <div class="chile-menu">
+                            <ul>
+                                <li><a href="#">Tin tức</a></li>
+                                <li><a href="#">Hướng dẫn khác hàng </a></li>
+                                <li><a href="#">Cơ sở vật chất</a></li>
+                                <li><a href="#">Hoạt động của bệnh viện</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Thư viện</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form action="#" method="post" class="modal-registration modal-custom" id="form-registration">
+            <div class="modal-header">
+                <img src="./images/home/Frame.png" alt="" />
+                <button class="btn-close btn-modal" data-modal="form-registration"><img src="./images/home/close.png" alt=""/></button>
+            </div>
+            <div class="modal-body">
+                <div class="title-wrapper">
+                    <h4 class="title">Đăng ký khám và tư vấn tại Đa khoa Sông Thương</h4>
+                    <p class="sub-title">Vui lòng để lại thông tin và nhu cầu của quý khách. Chúng tôi sẽ liên hệ trong thời gian sớm nhất.</p>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="">Họ và tên <sup>*</sup></label>
+                        <input type="text" class="field" placeholder="Nhập họ và tên">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Số điện thoại <sup>*</sup></label>
+                        <input type="text" class="field" placeholder="Nhập số điện thoại">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Email</label>
+                        <input type="text" class="field" placeholder="Nhập email">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Ngày khám</label>
+                        <div class="field-date-wrapper field">
+                            <p class="result">Chọn ngày khám bệnh</p>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <input type="datetime" class="field-date">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="">Bạn có muốn khám bác sĩ nào không?</label>
+                        <div class="field-doctor-wrapper">
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <input type="text" class="field-doctor field" placeholder="Chọn bác sĩ khám bệnh">
+                            <div id="list-results"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="">Nhu cầu khám bệnh</label>
+                        <textarea name="" id="" class="field" placeholder="Bạn đang gặp vấn đề về sức khỏe như thế nào?"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button href="#" class="btn-submit btn-modal" data-modal="registration-success">Gửi yêu cầu khám bệnh</button>
+            </div>
+        </form>
+        <!-- modal đặt lịch -->
+        <div class="modal-registration modal-custom" id="registration-success">
+            <div class="modal-header">
+                <img src="./images/home/Frame.png" alt="" />
+                <button class="btn-close btn-modal" data-modal="registration-success"><img src="./images/home/close.png" alt=""/></button>
+            </div>
+            <div class="modal-body">
+                <div class="title-wrapper">
+                    <h4 class="title"><img src="./images/home/check.png" alt="" />Đăng ký thành công</h4>
+                    <p class="sub-title">Cảm ơn quý khách! Chúng tôi sẽ gửi thông tin sức khỏe của bạn tới cho bác sĩ và liên hệ lại với quý khách theo số điện thoại <a href="tel:0946233789">0946 233 789</a> để xác nhận lịch hẹn trong thời gian sớm nhất.</p>
+                </div>
+                <div class="table-title">Thông tin khám bệnh</div>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Họ và tên</td>
+                            <td><strong>Đào Anh Lâm</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Số điện thoại</td>
+                            <td><strong>0946 233 789</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><strong>lamda@vdcs.com.vn</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Ngày khám</td>
+                            <td><strong>27 tháng 4, 2021</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Bác sĩ khám</td>
+                            <td><strong>Bác sĩ Nguyễn Đức Đạt</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Nhu cầu khám bệnh</td>
+                            <td><strong>Tôi đang đau 2 răng số 8, cần bác sĩ khám ngay.</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- modal login -->
+        <div class="modal-login modal-custom">
+            <div class="modal-header">
+                <button class="btn-close"><img src="./images/home/close.png" alt=""/></button>
+            </div>
+            <div class="modal-body">
+                <div class="title-wrapper">
+                    <h4 class="title">Đăng nhập để gửi câu hỏi</h4>
+                    <p class="sub-title">Bạn chưa có Tài khoản? Vui lòng đăng ký Tài khoản mới <a href="tel:0946233789">tại đây</a></p>
+                </div>
+                <form action="#" method="post" class="form-login">
+                    <input type="email" placeholder="Email" class="field">
+                    <input type="password" placeholder="Mật khẩu" class="field">
+                    <div class="field-group">
+                        <div class="check-box">
+                            <input type="checkbox" name="saveme" id="saveme">
+                            <label for="saveme">Lưu thông tin đăng nhập</label>
+                        </div>
+                        <a href="#" class="forgot-password">Lấy lại mật khẩu</a>
+                    </div>
+                    <button class="btn-login btn-block">Đăng nhập</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="line"><span>Hoặc</span></div>
+                <div class="social-login-group">
+                    <a href="#" class="facebook btn-social-login">
+                        <img src="./images/home/facebook.png" alt="Facebook" />
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="google btn-social-login">
+                        <img src="./images/home/google.png" alt="Google" />
+                        <span>Google</span>
+                    </a>
+                </div>
+                <a href="#" class="anonymus">Gửi câu hỏi ẩn anh</a>
+            </div>
+        </div>
+    </header>
+    <!-- End header -->
 
-	<!-- Content -->
-	<section class="blog-page gallery-post-detail">
-		<div class="breadcrumb-wrapper">
-			<div class="container">
-				<ul class="list-breadcrumb-wrapper">
-					<li><span>Thư viện hình ảnh</span></li>
-					<li><a href="#">Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="post-info">
-			<div class="container">
-				<h1 class="postname">Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô</h1>
-			</div>
-		</div>
+    <!-- Content -->
+    <section class="blog-page gallery-post-detail">
+        <div class="breadcrumb-wrapper">
+            <div class="container">
+                <ul class="list-breadcrumb-wrapper">
+                    <li><span>Thư viện hình ảnh</span></li>
+                    <li><a href="#">Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="post-info">
+            <div class="container">
+                <h1 class="postname">Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô</h1>
+            </div>
+        </div>
 
-		<div class="page-columns">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-main">
-						<p>Không cần tốn nhiều thời gian công sức sang nước ngoài người bệnh vẫn có thể khám và điều trị
-							ung thư với các chuyên gia hàng đầu Singapore tại Bệnh viện Sông Thương. Trong thời điểm
-							diễn ra dịch bệnh Covid 19, các bệnh nhân ung thư sẽ được kết nối và khám trực tuyến với các
-							bác sĩ Singapore thông qua các thiết bị hỗ trợ đảm bảo an toàn phòng dịch đồng thời vẫn đáp
-							ứng việc điều trị theo đúng phác đồ.</p>
-						<br>
-						<div class="gallery-post-detail">
-							<div class="row row8">
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+        <div class="page-columns">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-main">
+                        <p>Không cần tốn nhiều thời gian công sức sang nước ngoài người bệnh vẫn có thể khám và điều trị ung thư với các chuyên gia hàng đầu Singapore tại Bệnh viện Sông Thương. Trong thời điểm diễn ra dịch bệnh Covid 19, các bệnh nhân ung
+                            thư sẽ được kết nối và khám trực tuyến với các bác sĩ Singapore thông qua các thiết bị hỗ trợ đảm bảo an toàn phòng dịch đồng thời vẫn đáp ứng việc điều trị theo đúng phác đồ.</p>
+                        <br>
+                        <div class="gallery-post-detail">
+                            <div class="row row8">
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail1.jpg" alt=""></span>
-								</div>
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail2.jpg" alt=""></span>
-								</div>
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail3.jpg" alt=""></span>
-								</div>
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail4.jpg" alt=""></span>
-								</div>
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail5.jpg" alt=""></span>
-								</div>
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail6.jpg" alt=""></span>
-								</div>
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail7.jpg" alt=""></span>
-								</div>
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail8.jpg" alt=""></span>
-								</div>
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail9.jpg" alt=""></span>
-								</div>
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail10.jpg" alt=""></span>
-								</div>
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail11.jpg" alt=""></span>
-								</div>
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail12.jpg" alt=""></span>
-								</div>
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail13.jpg" alt=""></span>
-								</div>
-								<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
-									<span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 col8 gallery-post-item">
+                                    <span class="btn-modal btn-gallery" data-modal="modal-gallery"><img
 											src="./images/page/gallery/post-detail14.jpg" alt=""></span>
-								</div>
-							</div>
-							<div class="modal-gallery modal-custom" id="modal-gallery" style="display: none;">
-								<button class="btn-close btn-modal" data-modal="modal-gallery"><img
+                                </div>
+                            </div>
+                            <div class="modal-gallery modal-custom" id="modal-gallery" style="display: none;">
+                                <button class="btn-close btn-modal" data-modal="modal-gallery"><img
 										src="./images/page/gallery/ico-close-white.png" alt="" /></button>
-								<div class="inner-wrapper">
-									<div class="modal-body">
-										<div class="title-wrapper">
-											<h4 class="title">Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần
-												Quy mô</h4>
-										</div>
-										<div class="content-wrapper">
-											<div class="main-slider">
-												<ul class="autoplay scroll-mouse slider-galerry" data-dots='true'
-													data-infinite="true" data-speed="1000" data-accessibility="true"
-													data-autoplay="false" data-arrows='false' data-slides-To-Show="1"
-													data-slides-To-Scroll="1" data-vertical='true' ,
-													data-vertical-swiping="true">
-													<div class="slider-gallery-item">
-														<img src="./images/page/gallery/modal-gallery.jpg" alt="">
-													</div>
-													<div class="slider-gallery-item">
-														<img src="./images/page/gallery/modal-gallery.jpg" alt="">
-													</div>
-													<div class="slider-gallery-item">
-														<img src="./images/page/gallery/modal-gallery.jpg" alt="">
-													</div>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<sidebar class="col-lg-4 side-bar">
-						<form action="#" class="form-registration">
-							<div class="title-wrapper">
-								<h5 class="title">ĐĂNG KÝ KHÁM</h5>
-								<p class="sub-title">Đặt hẹn ngay để nhận tư vấn và xếp lịch khám kịp thời.</p>
-							</div>
-							<label for="">Họ và tên <sup>*</sup></label>
-							<input type="text" class="field" placeholder="Nhập họ và tên">
-							<label for="">Số điện thoại <sup>*</sup></label>
-							<input type="text" class="field" placeholder="Nhập số điện thoại">
-							<label for="">Email</label>
-							<input type="text" class="field" placeholder="Nhập email">
-							<label for="">Ngày khám</label>
-							<div class="field-date-wrapper field">
-								<p class="result">Chọn ngày khám bệnh</p>
-								<i class="fa fa-calendar" aria-hidden="true"></i>
-								<input type="text" class="field-date" placeholder="Nhập email">
-							</div>
-							<button class="btn-submit">Gửi yêu cầu khám bệnh</button>
-						</form>
-						<div class="slide-shop-wrapper">
-							<a href="#" class="logo">
-								<img src="./images/home/logo.svg" alt="" />
-							</a>
-							<h4 class="title">Gian hàng trực tuyến</h4>
-							<div class="slide-content  autoplay" data-dots='true' data-speed="300"
-								data-accessibility="true" data-autoplay="false" data-arrows='false'
-								data-center-mode="true" data-slides-To-Show="1" data-slides-To-Scroll="1"
-								data-center-padding='44px'
-								data-responsive='[
+                                <div class="inner-wrapper">
+                                    <div class="modal-body">
+                                        <div class="title-wrapper">
+                                            <h4 class="title">Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô</h4>
+                                        </div>
+                                        <div class="content-wrapper">
+                                            <div class="main-slider">
+                                                <ul class="autoplay scroll-mouse slider-galerry" data-dots='true' data-infinite="true" data-speed="1000" data-accessibility="true" data-autoplay="false" data-arrows='false' data-slides-To-Show="1" data-slides-To-Scroll="1" data-vertical='true' , data-vertical-swiping="true">
+                                                    <div class="slider-gallery-item">
+                                                        <img src="./images/page/gallery/modal-gallery.jpg" alt="">
+                                                    </div>
+                                                    <div class="slider-gallery-item">
+                                                        <img src="./images/page/gallery/modal-gallery.jpg" alt="">
+                                                    </div>
+                                                    <div class="slider-gallery-item">
+                                                        <img src="./images/page/gallery/modal-gallery.jpg" alt="">
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <sidebar class="col-lg-4 side-bar">
+                        <form action="#" class="form-registration">
+                            <div class="title-wrapper">
+                                <h5 class="title">ĐĂNG KÝ KHÁM</h5>
+                                <p class="sub-title">Đặt hẹn ngay để nhận tư vấn và xếp lịch khám kịp thời.</p>
+                            </div>
+                            <label for="">Họ và tên <sup>*</sup></label>
+                            <input type="text" class="field" placeholder="Nhập họ và tên">
+                            <label for="">Số điện thoại <sup>*</sup></label>
+                            <input type="text" class="field" placeholder="Nhập số điện thoại">
+                            <label for="">Email</label>
+                            <input type="text" class="field" placeholder="Nhập email">
+                            <label for="">Ngày khám</label>
+                            <div class="field-date-wrapper field">
+                                <p class="result">Chọn ngày khám bệnh</p>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <input type="text" class="field-date" placeholder="Nhập email">
+                            </div>
+                            <button class="btn-submit">Gửi yêu cầu khám bệnh</button>
+                        </form>
+                        <div class="slide-shop-wrapper">
+                            <a href="#" class="logo">
+                                <img src="./images/home/logo.svg" alt="" />
+                            </a>
+                            <h4 class="title">Gian hàng trực tuyến</h4>
+                            <div class="slide-content  autoplay" data-dots='true' data-speed="300" data-accessibility="true" data-autoplay="false" data-arrows='false' data-center-mode="true" data-slides-To-Show="1" data-slides-To-Scroll="1" data-center-padding='44px' data-responsive='[
 									{"breakpoint": 1471, "settings": {"slidesToShow": 1}}, 
 									{"breakpoint": 1200, "settings": {"slidesToShow": 1}}, 
 									{"breakpoint": 992, "settings": {"slidesToShow": 2}}, 
@@ -190,43 +400,34 @@
 									{"breakpoint": 481, "settings": {"slidesToShow": 1}}, 
 									{"breakpoint": 361, "settings": {"slidesToShow": 1}}
                                 ]'>
-								<div class="item">
-									<a href="#">
-										<img src="./images/page/qa-page/slide.png" alt="" />
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="./images/page/qa-page/slide.png" alt="" />
-									</a>
-								</div>
-								<div class="item">
-									<a href="#">
-										<img src="./images/page/qa-page/slide.png" alt="" />
-									</a>
-								</div>
-							</div>
-						</div>
-					</sidebar>
-				</div>
-			</div>
-		</div>
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="./images/page/qa-page/slide.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="./images/page/qa-page/slide.png" alt="" />
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="./images/page/qa-page/slide.png" alt="" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </sidebar>
+                </div>
+            </div>
+        </div>
 
-		<div class="page-bottom">
-			<div class="related-news">
-				<div class="container">
-					<h3 class="title">Xem chuyên mục ảnh khác</h3>
-					<div class="list-related-news">
-						<div class="autoplay" 
-							data-dots='false'
-							data-infinite="true"
-							data-speed="1000"
-							data-accessibility="true"
-							data-autoplay="false"
-							data-arrows='false'
-							data-slides-To-Show="3"
-							data-slides-To-Scroll="1"
-							data-responsive='[
+        <div class="page-bottom">
+            <div class="related-news">
+                <div class="container">
+                    <h3 class="title">Xem chuyên mục ảnh khác</h3>
+                    <div class="list-related-news">
+                        <div class="autoplay" data-dots='false' data-infinite="true" data-speed="1000" data-accessibility="true" data-autoplay="false" data-arrows='false' data-slides-To-Show="3" data-slides-To-Scroll="1" data-responsive='[
 							{"breakpoint": 1471, "settings": {"slidesToShow": 3}}, 
 							{"breakpoint": 1200, "settings": {"slidesToShow": 2}}, 
 							{"breakpoint": 992, "settings": {"slidesToShow": 2}}, 
@@ -234,73 +435,184 @@
 							{"breakpoint": 576, "settings": {"slidesToShow": 2}}, 
 							{"breakpoint": 481, "settings": {"slidesToShow": 2}}, 
 							{"breakpoint": 361, "settings": {"slidesToShow": 1}}
-							]'
-							>
-							<div class="related-news-item">
-								<div class="news-item-info">
-									<div class="img">
-										<a href="#"><img src="./images/page/news/post1.jpg" alt="" /></a>
-									</div>
-									<div class="content">
-										<a href="#">
-											<h4 class="name">Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô</h4>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="related-news-item">
-								<div class="news-item-info">
-									<div class="img">
-										<a href="#"><img src="./images/page/news/post2.jpg" alt="" /></a>
-									</div>
-									<div class="content">
-										<a href="#">
-											<h4 class="name">Khai trương cơ sở 3 Hệ thống Y Tế Sông Thương</h4>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="related-news-item">
-								<div class="news-item-info">
-									<div class="img">
-										<a href="#"><img src="./images/page/news/post3.jpg" alt="" /></a>
-									</div>
-									<div class="content">
-										<a href="#">
-											<h4 class="name">Hội thảo: Sơ cấp cứu cho mẹ bầu</h4>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="related-news-item">
-								<div class="news-item-info">
-									<div class="img">
-										<a href="#"><img src="./images/page/news/post1.jpg" alt="" /></a>
-									</div>
-									<div class="content">
-										<a href="#">
-											<h4 class="name">Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô</h4>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Content -->
+							]'>
+                            <div class="related-news-item">
+                                <div class="news-item-info">
+                                    <div class="img">
+                                        <a href="#"><img src="./images/page/news/post1.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="content">
+                                        <a href="#">
+                                            <h4 class="name">Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="related-news-item">
+                                <div class="news-item-info">
+                                    <div class="img">
+                                        <a href="#"><img src="./images/page/news/post2.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="content">
+                                        <a href="#">
+                                            <h4 class="name">Khai trương cơ sở 3 Hệ thống Y Tế Sông Thương</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="related-news-item">
+                                <div class="news-item-info">
+                                    <div class="img">
+                                        <a href="#"><img src="./images/page/news/post3.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="content">
+                                        <a href="#">
+                                            <h4 class="name">Hội thảo: Sơ cấp cứu cho mẹ bầu</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="related-news-item">
+                                <div class="news-item-info">
+                                    <div class="img">
+                                        <a href="#"><img src="./images/page/news/post1.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="content">
+                                        <a href="#">
+                                            <h4 class="name">Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô</h4>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Content -->
 
-	<!-- Footer -->
-	<footer id="footer" class="footer">
-		<!-- load content from footer.html -->
-	</footer>
-	<!-- End Footer -->
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="home-page">
+            <div class="contact-us-wrapper">
+                <div class="contact-us">
+                    <div class="container">
+                        <div class="row">
+                            <div class="title-wrapper">
+                                <h3 class="title">Sông Thương làm hài lòng 99.9% người bệnh</h3>
+                                <p class="sub-title">Hoạt động không vì mục tiêu lợi nhuận, luôn tiên phong trong ứng dụng các phương pháp điều trị mới nhất</p>
+                            </div>
+                            <div class="hot-line-service">
+                                <div class="hot-line">
+                                    <img src="./images/home/phone.png" alt="">
+                                    <div class="content">
+                                        <p>Liên hệ đặt lịch khám</p>
+                                        <a href="tel:18001234567" class="phone">1 800-123-4567</a>
+                                    </div>
+                                </div>
+                                <div class="hot-line">
+                                    <img src="./images/home/car.png" alt="">
+                                    <div class="content">
+                                        <p>Cấp cứu (24/24)</p>
+                                        <a href="tel:18001234567" class="phone">1 800-123-4567</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="get-price-block">
+                    <div class="container">
+                        <p>Tìm hiểu các sản phẩm dịch vụ được cung cấp độc quyền từ Sông Thương</p>
+                        <a href="#" class="link-get-price">Khám phá ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="main-content-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6">
+                        <h3 class="ft-title">
+                            Bệnh viên Đa khoa Sông Thương
+                        </h3>
+                        <div class="fretboard">
+                            <ul class="ft-info-shop">
+                                <li>
+                                    <img src="./images/home/ftico1.png" alt="">
+                                    <address>258 Lê Lợi, Phường Hoàng Văn Thụ, Bắc Giang</address>
+                                </li>
+                                <li>
+                                    <img src="./images/home/ftico2.png" alt="">
+                                    <address>Cấp cứu (24/24): <a href="tel:02437280000">0243 728 0000</a></address>
+                                </li>
+                                <li>
+                                    <img src="./images/home/ftico3.png" alt="">
+                                    <address>Đặt lịch khám: <a href="tel:02437280001">0243 728 0001</a></address>
+                                </li>
+                            </ul>
+                            <img src="./images/home/img-ft.png" alt="" class="ft-logo">
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 dropdown">
+                        <h3 class="ft-title show-option">
+                            Về chúng tôi
+                        </h3>
+                        <div class="fretboard">
+                            <ul class="ft-list-link">
+                                <li><a href="#">Giới thiệu</a></li>
+                                <li><a href="#">Đội ngũ bác sĩ</a></li>
+                                <li><a href="#">Tin tức</a></li>
+                                <li><a href="#">Tuyển dụng </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 dropdown">
+                        <h3 class="ft-title show-option">
+                            Dịch vụ
+                        </h3>
+                        <div class="fretboard">
+                            <ul class="ft-list-link">
+                                <li><a href="#">Đăng ký khám</a></li>
+                                <li><a href="#">Các gói dịch vụ</a></li>
+                                <li><a href="#">Hướng dẫn</a></li>
+                                <li><a href="#">Gian hàng trực tuyến</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6">
+                        <h3 class="ft-title">
+                            Theo dõi tin tức và dịch vụ mới nhất của chúng tôi
+                        </h3>
+                        <div class="fretboard">
+                            <form action="" method="post" class="form-register">
+                                <input type="text" placeholder="Địa chỉ email">
+                                <button class="btn-register">Đăng ký</button>
+                            </form>
+                            <div class="social-signin">
+                                <p>Theo dõi chúng tôi qua</p>
+                                <div class="social">
+                                    <a href="#" class="social-facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                    <a href="#" class="social-youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="copyright">
+            <p>Copyright © 2021 SongThuong. All rights reserved</p>
+        </div>
+    </footer>
+    <!-- End Footer -->
 
-	<!-- scroll top -->
-	<span class=" up "><i class=" fa fa-chevron-up "></i></span>
-	<!-- End scroll top -->
+    <!-- scroll top -->
+    <span class=" up "><i class=" fa fa-chevron-up "></i></span>
+    <!-- End scroll top -->
 </body>
 
 <!-- jquerry -->
@@ -315,9 +627,9 @@
 <script type="text/javascript" src="./library/jquery-ui/jquery-ui.min.js"></script>
 <!-- custom js -->
 <script ttype="text/javascript">
-	jQuery(document).ready(function ($) {
+    jQuery(document).ready(function($) {
 
-	})
+    })
 </script>
 
 </html>

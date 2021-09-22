@@ -12,1127 +12,1419 @@
     <!-- font fontawesome -->
     <link rel="stylesheet" href="./fonts/fontawesome/css/font-awesome.min.css" />
     <!-- font Inter -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- bs4 -->
     <link rel="stylesheet" href="./library/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./library/css/bootstrap-grid.min.css" />
     <!-- slick slider -->
     <link rel="stylesheet" href="./library/slick/slick-theme.css" />
     <link rel="stylesheet" href="./library/slick/slick.css" />
-	<link rel="stylesheet" href="./library/jquery-ui/jquery-ui.min.css" />
+    <link rel="stylesheet" href="./library/jquery-ui/jquery-ui.min.css" />
     <!-- main style -->
     <link rel="stylesheet" href="./style/pages/style.css">
-	<!-- Loading -->
-	<style type="text/css">
-		.preloading{
-			overflow: hidden;
-		}
-		.loading{
-			position: fixed;
-			background-color: black;
-			top: 0;
-			left: 0;
-			opacity: 1; 
-			width: 100%;
-			height: 100%;
-			z-index: 1000000;
-		}
-		.loading .img{
-			width: 100%;
-			width: auto;
-			opacity: 1; 
-			position: absolute;
-			top: 45%;
-			left: 50%;
-			transform: translate(-50%);
-		}
-		#footer .home-page {
-			display: none;
-		}
-	</style>
+    <!-- Loading -->
+    <style type="text/css">
+        .preloading {
+            overflow: hidden;
+        }
+        
+        .loading {
+            position: fixed;
+            background-color: black;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+            z-index: 1000000;
+        }
+        
+        .loading .img {
+            width: 100%;
+            width: auto;
+            opacity: 1;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        
+        #footer .home-page {
+            display: none;
+        }
+    </style>
 </head>
 
 <body class="preloading">
-	<!-- Loading -->
-	<div class="loading">
-		<svg width="50" height="50" viewBox="0 0 50 50" class="img">
+    <!-- Loading -->
+    <div class="loading">
+        <svg width="50" height="50" viewBox="0 0 50 50" class="img">
 			<path fill="white" d="M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z">
 				<animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.5s" repeatCount="indefinite" />
 			</path>
 		</svg>
-	</div>
-	<!-- End Loading -->
+    </div>
+    <!-- End Loading -->
 
     <!-- Header -->
     <header id="header" class="header fixed-main-menu">
-		<!-- load content from header.html -->
-	</header>
+        <div class="header-top">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="header-top-left">
+                    <ul class="list-link">
+                        <li><a href="#">Hướng dẫn khách hàng</a></li>
+                        <li><a href="#">Hệ thống Bệnh viện Đa khoa Sông Thương</a></li>
+                    </ul>
+                </div>
+                <div class="header-top-left">
+                    <div class="account">
+                        <a href="#"><img src="./images/home/ico_user.png" alt="" /> Tài khoản</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="header-center">
+            <div class="container d-flex align-items-center justify-content-between">
+                <button class="btn-menu-mobile d-none">
+					<img src="./images/home/mobile-menu.png" alt="">
+				</button>
+                <a href="#" class="logo">
+                    <img src="./images/home/logo.svg" alt="">
+                </a>
+                <form action="#" method="post" class="search-wrapper form-search">
+                    <button class="btn btn-search"><img src="./images/home/ico-search.png" alt=""/></button>
+                    <input class="input-text" type="text" placeholder="Tìm kiếm bài viết, trợ giúp...">
+                </form>
+                <div class="advise-wrapper">
+                    <div class="hot-line-wrapper">
+                        <img src="./images/home/hotline.png" alt="">
+                        <div class="content">
+                            <span>TỔNG ĐÀI</span>
+                            <a href="tel:0946 233 789" class="phone">0946 233 789</a>
+                        </div>
+                    </div>
+                    <div class="hot-line-wrapper">
+                        <img src="./images/home/user.png" alt="">
+                        <div class="content">
+                            <span>Tư vấn</span>
+                            <a href="#" class="phone">Hỏi bác sĩ online</a>
+                        </div>
+                    </div>
+                    <button class="btn-registration btn-modal" data-modal="form-registration">ĐĂNG KÍ KHÁM</button>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="header-bottom">
+            <div class="container">
+                <ul class="main-menu">
+                    <li>
+                        <a href="#">Giới thiệu <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <div class="chile-menu">
+                            <ul>
+                                <li><a href="#">Về chúng tôi</a></li>
+                                <li><a href="#">Sứ mệnh - Tầm nhìn</a></li>
+                                <li><a href="#">Cơ sở vật chất</a></li>
+                                <li><a href="#">Hoạt động của bệnh viện</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Đội ngũ bác sĩ</a>
+                    </li>
+                    <li>
+                        <a href="#">Dịch vụ y tế<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <div class="chile-menu">
+                            <ul>
+                                <li><a href="#">Dịch vụ y tế</a></li>
+                                <li><a href="#">Dịch vụ y tế</a></li>
+                                <li><a href="#">Dịch vụ y tế</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Gian hàng trực tuyến</a>
+                    </li>
+                    <li>
+                        <a href="#">Tin tức, hướng dẫn và các bài viết <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <div class="chile-menu">
+                            <ul>
+                                <li><a href="#">Tin tức</a></li>
+                                <li><a href="#">Hướng dẫn khác hàng </a></li>
+                                <li><a href="#">Cơ sở vật chất</a></li>
+                                <li><a href="#">Hoạt động của bệnh viện</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Thư viện</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form action="#" method="post" class="modal-registration modal-custom" id="form-registration">
+            <div class="modal-header">
+                <img src="./images/home/Frame.png" alt="" />
+                <button class="btn-close btn-modal" data-modal="form-registration"><img src="./images/home/close.png" alt=""/></button>
+            </div>
+            <div class="modal-body">
+                <div class="title-wrapper">
+                    <h4 class="title">Đăng ký khám và tư vấn tại Đa khoa Sông Thương</h4>
+                    <p class="sub-title">Vui lòng để lại thông tin và nhu cầu của quý khách. Chúng tôi sẽ liên hệ trong thời gian sớm nhất.</p>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="">Họ và tên <sup>*</sup></label>
+                        <input type="text" class="field" placeholder="Nhập họ và tên">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Số điện thoại <sup>*</sup></label>
+                        <input type="text" class="field" placeholder="Nhập số điện thoại">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Email</label>
+                        <input type="text" class="field" placeholder="Nhập email">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Ngày khám</label>
+                        <div class="field-date-wrapper field">
+                            <p class="result">Chọn ngày khám bệnh</p>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <input type="datetime" class="field-date">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="">Bạn có muốn khám bác sĩ nào không?</label>
+                        <div class="field-doctor-wrapper">
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <input type="text" class="field-doctor field" placeholder="Chọn bác sĩ khám bệnh">
+                            <div id="list-results"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="">Nhu cầu khám bệnh</label>
+                        <textarea name="" id="" class="field" placeholder="Bạn đang gặp vấn đề về sức khỏe như thế nào?"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button href="#" class="btn-submit btn-modal" data-modal="registration-success">Gửi yêu cầu khám bệnh</button>
+            </div>
+        </form>
+        <!-- modal đặt lịch -->
+        <div class="modal-registration modal-custom" id="registration-success">
+            <div class="modal-header">
+                <img src="./images/home/Frame.png" alt="" />
+                <button class="btn-close btn-modal" data-modal="registration-success"><img src="./images/home/close.png" alt=""/></button>
+            </div>
+            <div class="modal-body">
+                <div class="title-wrapper">
+                    <h4 class="title"><img src="./images/home/check.png" alt="" />Đăng ký thành công</h4>
+                    <p class="sub-title">Cảm ơn quý khách! Chúng tôi sẽ gửi thông tin sức khỏe của bạn tới cho bác sĩ và liên hệ lại với quý khách theo số điện thoại <a href="tel:0946233789">0946 233 789</a> để xác nhận lịch hẹn trong thời gian sớm nhất.</p>
+                </div>
+                <div class="table-title">Thông tin khám bệnh</div>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Họ và tên</td>
+                            <td><strong>Đào Anh Lâm</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Số điện thoại</td>
+                            <td><strong>0946 233 789</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><strong>lamda@vdcs.com.vn</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Ngày khám</td>
+                            <td><strong>27 tháng 4, 2021</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Bác sĩ khám</td>
+                            <td><strong>Bác sĩ Nguyễn Đức Đạt</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Nhu cầu khám bệnh</td>
+                            <td><strong>Tôi đang đau 2 răng số 8, cần bác sĩ khám ngay.</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- modal login -->
+        <div class="modal-login modal-custom">
+            <div class="modal-header">
+                <button class="btn-close"><img src="./images/home/close.png" alt=""/></button>
+            </div>
+            <div class="modal-body">
+                <div class="title-wrapper">
+                    <h4 class="title">Đăng nhập để gửi câu hỏi</h4>
+                    <p class="sub-title">Bạn chưa có Tài khoản? Vui lòng đăng ký Tài khoản mới <a href="tel:0946233789">tại đây</a></p>
+                </div>
+                <form action="#" method="post" class="form-login">
+                    <input type="email" placeholder="Email" class="field">
+                    <input type="password" placeholder="Mật khẩu" class="field">
+                    <div class="field-group">
+                        <div class="check-box">
+                            <input type="checkbox" name="saveme" id="saveme">
+                            <label for="saveme">Lưu thông tin đăng nhập</label>
+                        </div>
+                        <a href="#" class="forgot-password">Lấy lại mật khẩu</a>
+                    </div>
+                    <button class="btn-login btn-block">Đăng nhập</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="line"><span>Hoặc</span></div>
+                <div class="social-login-group">
+                    <a href="#" class="facebook btn-social-login">
+                        <img src="./images/home/facebook.png" alt="Facebook" />
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="google btn-social-login">
+                        <img src="./images/home/google.png" alt="Google" />
+                        <span>Google</span>
+                    </a>
+                </div>
+                <a href="#" class="anonymus">Gửi câu hỏi ẩn anh</a>
+            </div>
+        </div>
+    </header>
     <!-- End header -->
 
     <!-- Content -->
     <section class="home-page">
-		<!-- main slide -->
-		<div class="main-slider">
-			<div class="slider autoplay"
-				data-dots='true'
-				data-infinite="true"
-				data-speed="1000"
-				data-accessibility="true"
-				data-autoplay="false"
-				data-arrows='true'
-				data-slides-To-Show="1"
-				data-slides-To-Scroll="1"
-			>
-				<div class="content-slider">
-					<img src="./images/home/slide.svg" alt="">
-				</div>
-				<div class="content-slider">
-					<img src="./images/home/slide.svg" alt="">
-				</div>
-				<div class="content-slider">
-					<img src="./images/home/slide.svg" alt="">
-				</div>
-			</div>
-		</div>
+        <!-- main slide -->
+        <div class="main-slider">
+            <div class="slider autoplay" data-dots='true' data-infinite="true" data-speed="1000" data-accessibility="true" data-autoplay="true" data-arrows='true' data-slides-To-Show="1" data-slides-To-Scroll="1">
+                <div class="content-slider">
+                    <img src="./images/home/slide.svg" alt="">
+                </div>
+                <div class="content-slider">
+                    <img src="./images/home/slide.svg" alt="">
+                </div>
+                <div class="content-slider">
+                    <img src="./images/home/slide.svg" alt="">
+                </div>
+            </div>
+        </div>
 
-		<div class="block-bottom-slide">
-			<!-- form submit info -->
-			<div class="form-submit-info container">
-				<div class="title-wrapper d-flex justify-content-between align-items-center">
-					<h3 class="title">Để lại thông tin và chúng tôi sẽ liên hệ hỗ trợ đặt lịch khám cho bạn sau 5 phút!</h3>
-					<a href="#" class="link-health-declaration">Khai báo y tế online</a>
-				</div>
-				<form class="row">
-					<div class="col-xl-3 col-lg-6 col-12">
-						<label for="">Họ và tên</label>
-						<input type="text" name="" id="" placeholder="Nhập họ và tên">
-					</div>
-					<div class="col-xl-3 col-lg-6 col-12">
-						<label for="">Số điện thoại</label>
-						<input type="text" name="" id="" placeholder="Nhập số điện thoại">
-					</div>
-					<div class="col-xl-3 col-lg-6 col-12">
-						<label for="">Ngày khám</label>
-						<input type="text" name="" id="" placeholder="Chọn ngày khám bệnh">
-					</div>
-					<div class="col-xl-3 col-lg-6 col-12">
-						<button type="SUBMIT" class="btn btn-block btn-submit">GỬI YÊU CẦU KHÁM</button>
-					</div>
-				</form>
-			</div>
-			<!-- clinic index -->
-			<div class="clinic-index-wrapper container">
-				<p class="clinic-slogan">Bệnh viện Đa khoa Sông Thương đầu tư phát triển với sứ mệnh <span>"Chăm sóc bằng tài năng, y đức và sự thấu cảm"</span>. Cùng với đội ngũ bác sĩ giỏi với kinh nghiệm lâu năm</p>
-				<div class="clinic-index row">
-					<div class="col-xl-3 col-lg-6 col-12">
-						<div class="ico-number d-flex align-items-center">
-							<img src="./images/home/ico1.png"/>
-							<span class="number">10</span>
-						</div>
-						<p class="content">Năm kinh nghiệm</p>
-					</div>
-					<div class="col-xl-3 col-lg-6 col-12">
-						<div class="ico-number d-flex align-items-center">
-							<img src="./images/home/ico2.png"/>
-							<span class="number">40</span>
-						</div>
-						<p class="content">Thạc sĩ, bác sĩ chuyên khoa</p>
-					</div>
-					<div class="col-xl-3 col-lg-6 col-12">
-						<div class="ico-number d-flex align-items-center">
-							<img src="./images/home/ico3.png"/>
-							<span class="number">25</span>
-						</div>
-						<p class="content">Giáo sư bác sĩ, chuyên khoa</p>
-					</div>
-					<div class="col-xl-3 col-lg-6 col-12">
-						<div class="ico-number d-flex align-items-center">
-							<img src="./images/home/ico4.png"/>
-							<span class="number">1,8 triệu</span>
-						</div>
-						<p class="content">Bệnh nhân điều trị</p>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="block-bottom-slide">
+            <!-- form submit info -->
+            <div class="form-submit-info container">
+                <div class="title-wrapper d-flex justify-content-between align-items-center">
+                    <h3 class="title">Để lại thông tin và chúng tôi sẽ liên hệ hỗ trợ đặt lịch khám cho bạn sau 5 phút!</h3>
+                    <a href="#" class="link-health-declaration">Khai báo y tế online</a>
+                </div>
+                <form class="row">
+                    <div class="col-xl-3 col-lg-6 col-12">
+                        <label for="">Họ và tên</label>
+                        <input type="text" name="" id="" placeholder="Nhập họ và tên">
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-12">
+                        <label for="">Số điện thoại</label>
+                        <input type="text" name="" id="" placeholder="Nhập số điện thoại">
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-12">
+                        <label for="">Ngày khám</label>
+                        <input type="text" name="" id="" placeholder="Chọn ngày khám bệnh">
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-12">
+                        <button type="SUBMIT" class="btn btn-block btn-submit">GỬI YÊU CẦU KHÁM</button>
+                    </div>
+                </form>
+            </div>
+            <!-- clinic index -->
+            <div class="clinic-index-wrapper container">
+                <p class="clinic-slogan">Bệnh viện Đa khoa Sông Thương đầu tư phát triển với sứ mệnh <span>"Chăm sóc bằng tài năng, y đức và sự thấu cảm"</span>. Cùng với đội ngũ bác sĩ giỏi với kinh nghiệm lâu năm</p>
+                <div class="clinic-index row">
+                    <div class="col-xl-3 col-lg-6 col-12">
+                        <div class="ico-number d-flex align-items-center">
+                            <img src="./images/home/ico1.png" />
+                            <span class="number">10</span>
+                        </div>
+                        <p class="content">Năm kinh nghiệm</p>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-12">
+                        <div class="ico-number d-flex align-items-center">
+                            <img src="./images/home/ico2.png" />
+                            <span class="number">40</span>
+                        </div>
+                        <p class="content">Thạc sĩ, bác sĩ chuyên khoa</p>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-12">
+                        <div class="ico-number d-flex align-items-center">
+                            <img src="./images/home/ico3.png" />
+                            <span class="number">25</span>
+                        </div>
+                        <p class="content">Giáo sư bác sĩ, chuyên khoa</p>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-12">
+                        <div class="ico-number d-flex align-items-center">
+                            <img src="./images/home/ico4.png" />
+                            <span class="number">1,8 triệu</span>
+                        </div>
+                        <p class="content">Bệnh nhân điều trị</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="examination-schedule-wrapper">
-			<div class="container">
-				<div class="title-wrapper">
-					<h2 class="title">Lịch khám bác sĩ đầu ngành của <span>tháng 7</span></h3>
-					<p class="sub-title">Bệnh viện Đa Khoa Sông Thương đang có chương trình khám bệnh cùng các bác sĩ đầu ngành. Tham gia cùng với chúng tôi ngay hôm nay</p>
-				</div>
+        <div class="examination-schedule-wrapper">
+            <div class="container">
+                <div class="title-wrapper">
+                    <h2 class="title">Lịch khám bác sĩ đầu ngành của <span>tháng 7</span></h3>
+                        <p class="sub-title">Bệnh viện Đa Khoa Sông Thương đang có chương trình khám bệnh cùng các bác sĩ đầu ngành. Tham gia cùng với chúng tôi ngay hôm nay</p>
+                </div>
 
-				<div class="table-responsive">
-					<table class="table table-fixed">
-						<thead>
-							<tr>
-								<th scope="col">Bác sĩ</th>
-								<th scope="col">Chức vụ</th>
-								<th scope="col">Lịch khám</th>
-								<th scope="col"></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="d-flex align-items-center">
-									<img src="./images/home/cỉcleimg1.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
-								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
-									<p class="date">02 tháng 7, 2021</p>
-									<p class="time">08h30 - 16h30</p>
-								</td>
-								<td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
-							</tr>
-							<tr>
-								<td class="d-flex align-items-center">
-									<img src="./images/home/cỉcleimg2.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
-								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
-									<p class="date">02 tháng 7, 2021</p>
-									<p class="time">08h30 - 16h30</p>
-								</td>
-								<td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
-							</tr>
-							<tr>
-								<td class="d-flex align-items-center">
-									<img src="./images/home/cỉcleimg3.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
-								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
-									<p class="date">02 tháng 7, 2021</p>
-									<p class="time">08h30 - 16h30</p>
-								</td>
-								<td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
-							</tr>
-							<tr>
-								<td class="d-flex align-items-center">
-									<img src="./images/home/cỉcleimg4.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
-								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
-									<p class="date">02 tháng 7, 2021</p>
-									<p class="time">08h30 - 16h30</p>
-								</td>
-								<td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
-							</tr>
-							<tr>
-								<td class="d-flex align-items-center">
-									<img src="./images/home/cỉcleimg5.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
-								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
-									<p class="date">02 tháng 7, 2021</p>
-									<p class="time">08h30 - 16h30</p>
-								</td>
-								<td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
-							</tr>
-							<tr>
-								<td class="d-flex align-items-center">
-									<img src="./images/home/cỉcleimg6.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
-								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
-									<p class="date">02 tháng 7, 2021</p>
-									<p class="time">08h30 - 16h30</p>
-								</td>
-								<td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
-							</tr>
-							<tr>
-								<td class="d-flex align-items-center">
-									<img src="./images/home/cỉcleimg7.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
-								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
-									<p class="date">02 tháng 7, 2021</p>
-									<p class="time">08h30 - 16h30</p>
-								</td>
-								<td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
-							</tr>
-							<tr>
-								<td class="d-flex align-items-center">
-									<img src="./images/home/cỉcleimg1.png"/>
-									<strong class="doctor-name">PGS. Võ Thành Nhân</strong>
-								</td>
-								<td>Viện trưởng BVĐK Sông Thương</td>
-								<td>
-									<p class="date">02 tháng 7, 2021</p>
-									<p class="time">08h30 - 16h30</p>
-								</td>
-								<td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
+                <div class="table-responsive">
+                    <table class="table table-fixed">
+                        <thead>
+                            <tr>
+                                <th scope="col">Bác sĩ</th>
+                                <th scope="col">Chức vụ</th>
+                                <th scope="col">Lịch khám</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="d-flex align-items-center">
+                                    <img src="./images/home/cỉcleimg1.png" />
+                                    <strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+                                </td>
+                                <td>Viện trưởng BVĐK Sông Thương</td>
+                                <td>
+                                    <p class="date">02 tháng 7, 2021</p>
+                                    <p class="time">08h30 - 16h30</p>
+                                </td>
+                                <td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex align-items-center">
+                                    <img src="./images/home/cỉcleimg2.png" />
+                                    <strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+                                </td>
+                                <td>Viện trưởng BVĐK Sông Thương</td>
+                                <td>
+                                    <p class="date">02 tháng 7, 2021</p>
+                                    <p class="time">08h30 - 16h30</p>
+                                </td>
+                                <td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex align-items-center">
+                                    <img src="./images/home/cỉcleimg3.png" />
+                                    <strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+                                </td>
+                                <td>Viện trưởng BVĐK Sông Thương</td>
+                                <td>
+                                    <p class="date">02 tháng 7, 2021</p>
+                                    <p class="time">08h30 - 16h30</p>
+                                </td>
+                                <td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex align-items-center">
+                                    <img src="./images/home/cỉcleimg4.png" />
+                                    <strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+                                </td>
+                                <td>Viện trưởng BVĐK Sông Thương</td>
+                                <td>
+                                    <p class="date">02 tháng 7, 2021</p>
+                                    <p class="time">08h30 - 16h30</p>
+                                </td>
+                                <td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex align-items-center">
+                                    <img src="./images/home/cỉcleimg5.png" />
+                                    <strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+                                </td>
+                                <td>Viện trưởng BVĐK Sông Thương</td>
+                                <td>
+                                    <p class="date">02 tháng 7, 2021</p>
+                                    <p class="time">08h30 - 16h30</p>
+                                </td>
+                                <td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex align-items-center">
+                                    <img src="./images/home/cỉcleimg6.png" />
+                                    <strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+                                </td>
+                                <td>Viện trưởng BVĐK Sông Thương</td>
+                                <td>
+                                    <p class="date">02 tháng 7, 2021</p>
+                                    <p class="time">08h30 - 16h30</p>
+                                </td>
+                                <td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex align-items-center">
+                                    <img src="./images/home/cỉcleimg7.png" />
+                                    <strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+                                </td>
+                                <td>Viện trưởng BVĐK Sông Thương</td>
+                                <td>
+                                    <p class="date">02 tháng 7, 2021</p>
+                                    <p class="time">08h30 - 16h30</p>
+                                </td>
+                                <td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex align-items-center">
+                                    <img src="./images/home/cỉcleimg1.png" />
+                                    <strong class="doctor-name">PGS. Võ Thành Nhân</strong>
+                                </td>
+                                <td>Viện trưởng BVĐK Sông Thương</td>
+                                <td>
+                                    <p class="date">02 tháng 7, 2021</p>
+                                    <p class="time">08h30 - 16h30</p>
+                                </td>
+                                <td><a href="#" class="btn btn-set-date">Đặt lịch khám</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-		<div class="doctor-list-wrapper">
-			<div class="container">
-				<div class="title-wrapper">
-					<h2 class="title">Đội ngũ 40 bác sĩ</h3>
-					<div class="sub-title-wrapper d-flex align-items-center">
-						<p class="sub-title">Chúng tôi quy tụ đội ngũ chuyên gia, bác sĩ, dược sĩ và điều dưỡng được đào tạo bài bản đến chuyên sâu tại Việt nam... Luôn lấy người bệnh là trung tâm, Sông Thương cam kết mang lại dịch vụ chăm sóc sức khỏe toàn diện và chất lượng cao cho khách hàng.</p>
-						<a href="#" class="view-all">Xem đội ngũ bác sĩ </a>
-					</div>
-				</div>
-				<div class="doctor-list-slide autoplay"
-					data-dots='false'
-					data-speed="300"
-					data-accessibility="true"
-					data-autoplay="true"
-					data-arrows='true'
-					data-slides-To-Show="3"
-					data-slides-To-Scroll="1"
-                    data-responsive='[
+        <div class="doctor-list-wrapper">
+            <div class="container">
+                <div class="title-wrapper">
+                    <h2 class="title">Đội ngũ 40 bác sĩ</h3>
+                        <div class="sub-title-wrapper d-flex align-items-center">
+                            <p class="sub-title">Chúng tôi quy tụ đội ngũ chuyên gia, bác sĩ, dược sĩ và điều dưỡng được đào tạo bài bản đến chuyên sâu tại Việt nam... Luôn lấy người bệnh là trung tâm, Sông Thương cam kết mang lại dịch vụ chăm sóc sức khỏe toàn diện và chất
+                                lượng cao cho khách hàng.</p>
+                            <a href="#" class="view-all">Xem đội ngũ bác sĩ </a>
+                        </div>
+                </div>
+                <div class="doctor-list-slide autoplay" data-dots='false' data-speed="300" data-accessibility="true" data-autoplay="true" data-arrows='true' data-slides-To-Show="3" data-slides-To-Scroll="1" data-responsive='[
 						{"breakpoint": 1200, "settings": {"slidesToShow": 3}}, 
 						{"breakpoint": 992, "settings": {"slidesToShow": 2}}, 
 						{"breakpoint": 768, "settings": {"slidesToShow": 2}}, 
 						{"breakpoint": 481, "settings": {"slidesToShow": 1}}, 
 						{"breakpoint": 361, "settings": {"slidesToShow": 1}}
-					]'
-				>
-					<div class="item">
-						<div class="doctor-img">
-							<img src="./images/home/avatar1.png"/>
-						</div>
-						<div class="doctor-info">
-							<h3 class="doctor-name">BS. Võ Thành Nhân</h3>
-							<div class="doctor-service-wrapper">
-								<p class="doctor-service d-flex align-items-center">
-									<img src="./images/home/ico-sick1.png"/>
-									<span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
-								</p>
-								<p class="doctor-service d-flex align-items-center">
-									<img src="./images/home/ico-sick2.png"/>
-									<span>Gây mê - Điều trị đau</span>
-								</p>
-							</div>
-							<p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
-						</div>
-						<div class="doctor-action d-flex align-items-center">
-							<a href="#" class="btn btn-get-info">Lấy thông tin liên hệ</a>
-							<a href="#" class="btn btn-registration">Đăng ký khám</a>
-						</div>
-					</div>
-					<div class="item">
-						<div class="doctor-img">
-							<img src="./images/home/avatar2.png"/>
-						</div>
-						<div class="doctor-info">
-							<h3 class="doctor-name">BS. Võ Thành Nhân</h3>
-							<div class="doctor-service-wrapper">
-								<p class="doctor-service d-flex align-items-center">
-									<img src="./images/home/ico-sick1.png"/>
-									<span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
-								</p>
-								<p class="doctor-service d-flex align-items-center">
-									<img src="./images/home/ico-sick2.png"/>
-									<span>Gây mê - Điều trị đau</span>
-								</p>
-							</div>
-							<p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
-						</div>
-						<div class="doctor-action d-flex align-items-center">
-							<a href="#" class="btn btn-get-info">Lấy thông tin liên hệ</a>
-							<a href="#" class="btn btn-registration">Đăng ký khám</a>
-						</div>
-					</div>
-					<div class="item">
-						<div class="doctor-img">
-							<img src="./images/home/avatar3.png"/>
-						</div>
-						<div class="doctor-info">
-							<h3 class="doctor-name">BS. Võ Thành Nhân</h3>
-							<div class="doctor-service-wrapper">
-								<p class="doctor-service d-flex align-items-center">
-									<img src="./images/home/ico-sick1.png"/>
-									<span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
-								</p>
-								<p class="doctor-service d-flex align-items-center">
-									<img src="./images/home/ico-sick2.png"/>
-									<span>Gây mê - Điều trị đau</span>
-								</p>
-							</div>
-							<p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
-						</div>
-						<div class="doctor-action d-flex align-items-center">
-							<a href="#" class="btn btn-get-info">Lấy thông tin liên hệ</a>
-							<a href="#" class="btn btn-registration">Đăng ký khám</a>
-						</div>
-					</div>
-					<div class="item">
-						<div class="doctor-img">
-							<img src="./images/home/avatar1.png"/>
-						</div>
-						<div class="doctor-info">
-							<h3 class="doctor-name">BS. Võ Thành Nhân</h3>
-							<div class="doctor-service-wrapper">
-								<p class="doctor-service d-flex align-items-center">
-									<img src="./images/home/ico-sick1.png"/>
-									<span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
-								</p>
-								<p class="doctor-service d-flex align-items-center">
-									<img src="./images/home/ico-sick2.png"/>
-									<span>Gây mê - Điều trị đau</span>
-								</p>
-							</div>
-							<p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
-						</div>
-						<div class="doctor-action d-flex align-items-center">
-							<a href="#" class="btn btn-get-info">Lấy thông tin liên hệ</a>
-							<a href="#" class="btn btn-registration">Đăng ký khám</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+					]'>
+                    <div class="item">
+                        <div class="doctor-img">
+                            <img src="./images/home/avatar1.png" />
+                        </div>
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">BS. Võ Thành Nhân</h3>
+                            <div class="doctor-service-wrapper">
+                                <p class="doctor-service d-flex align-items-center">
+                                    <img src="./images/home/ico-sick1.png" />
+                                    <span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
+                                </p>
+                                <p class="doctor-service d-flex align-items-center">
+                                    <img src="./images/home/ico-sick2.png" />
+                                    <span>Gây mê - Điều trị đau</span>
+                                </p>
+                            </div>
+                            <p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
+                        </div>
+                        <div class="doctor-action d-flex align-items-center">
+                            <a href="#" class="btn btn-get-info">Lấy thông tin liên hệ</a>
+                            <a href="#" class="btn btn-registration">Đăng ký khám</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor-img">
+                            <img src="./images/home/avatar2.png" />
+                        </div>
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">BS. Võ Thành Nhân</h3>
+                            <div class="doctor-service-wrapper">
+                                <p class="doctor-service d-flex align-items-center">
+                                    <img src="./images/home/ico-sick1.png" />
+                                    <span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
+                                </p>
+                                <p class="doctor-service d-flex align-items-center">
+                                    <img src="./images/home/ico-sick2.png" />
+                                    <span>Gây mê - Điều trị đau</span>
+                                </p>
+                            </div>
+                            <p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
+                        </div>
+                        <div class="doctor-action d-flex align-items-center">
+                            <a href="#" class="btn btn-get-info">Lấy thông tin liên hệ</a>
+                            <a href="#" class="btn btn-registration">Đăng ký khám</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor-img">
+                            <img src="./images/home/avatar3.png" />
+                        </div>
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">BS. Võ Thành Nhân</h3>
+                            <div class="doctor-service-wrapper">
+                                <p class="doctor-service d-flex align-items-center">
+                                    <img src="./images/home/ico-sick1.png" />
+                                    <span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
+                                </p>
+                                <p class="doctor-service d-flex align-items-center">
+                                    <img src="./images/home/ico-sick2.png" />
+                                    <span>Gây mê - Điều trị đau</span>
+                                </p>
+                            </div>
+                            <p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
+                        </div>
+                        <div class="doctor-action d-flex align-items-center">
+                            <a href="#" class="btn btn-get-info">Lấy thông tin liên hệ</a>
+                            <a href="#" class="btn btn-registration">Đăng ký khám</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor-img">
+                            <img src="./images/home/avatar1.png" />
+                        </div>
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">BS. Võ Thành Nhân</h3>
+                            <div class="doctor-service-wrapper">
+                                <p class="doctor-service d-flex align-items-center">
+                                    <img src="./images/home/ico-sick1.png" />
+                                    <span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
+                                </p>
+                                <p class="doctor-service d-flex align-items-center">
+                                    <img src="./images/home/ico-sick2.png" />
+                                    <span>Gây mê - Điều trị đau</span>
+                                </p>
+                            </div>
+                            <p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
+                        </div>
+                        <div class="doctor-action d-flex align-items-center">
+                            <a href="#" class="btn btn-get-info">Lấy thông tin liên hệ</a>
+                            <a href="#" class="btn btn-registration">Đăng ký khám</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="hot-service-wrapper">
-			<div class="container">
-				<div class="title-wrapper d-flex align-items-center justify-content-between">
-					<h2 class="title">Dịch vụ nổi bật</h3>
-					<a href="#" class="view-all">Xem tất cả dịch vụ</a>
-				</div>
-				<div class="row">
-					<div class="col-lg-3 col-md-6 col-12 hot-service-column-sm">
-						<div class="hot-service size-lg">
-							<a href="#" class="service-link-more">
-								<img src="./images/home/servicesm1.png"/>
-								<span class="label-service">Tim mạch</span>
-								<h5 class="service-name">Thay van tim qua da mà không cần phẫu thuật</h5>
-							</a>
-						</div>
-						<div class="hot-service size-lg">
-							<a href="#" class="service-link-more">
-								<img src="./images/home/servicesm2.png"/>
-								<span class="label-service">Tim mạch</span>
-								<h5 class="service-name">Thay van tim qua da mà không cần phẫu thuật</h5>
-							</a>
-						</div>
-					</div>
-					<div class="col-lg-6 col-12 hot-service-column-lg">
-						<div class="hot-service size-xl">
-							<a href="#" class="service-link-more text-center">
-								<img src="./images/home/servicelg.png"/>
-								<span class="label-service">Tim mạch</span>
-								<h5 class="service-name">Thay van tim qua da mà không cần phẫu thuật</h5>
-								<p class="service-desc">Thay van tim qua da không cần phẫu thuật là một trong những kỹ thuật thay van tim...</p>
-							</a>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-12 hot-service-column-sm">
-						<div class="hot-service size-sm">
-							<span class="label-service">Tim mạch</span>
-							<a href="#" class="service-link-more">
-								<h5 class="service-name">Thay van tim qua da mà không cần phẫu thuật</h5>
-							</a>
-							<p class="service-desc">Thay van tim qua da không cần phẫu thuật là một trong những kỹ thuật ...</p>
-						</div>
-						<div class="hot-service size-sm">
-							<span class="label-service">Tim mạch</span>
-							<a href="#" class="service-link-more">
-								<h5 class="service-name">Thay van tim qua da mà không cần phẫu thuật</h5>
-							</a>
-							<p class="service-desc">Thay van tim qua da không cần phẫu thuật là một trong những kỹ thuật ...</p>
-						</div>
-						<div class="hot-service size-sm">
-							<span class="label-service">Tim mạch</span>
-							<a href="#" class="service-link-more">
-								<h5 class="service-name">Thay van tim qua da mà không cần phẫu thuật</h5>
-							</a>
-							<p class="service-desc">Thay van tim qua da không cần phẫu thuật là một trong những kỹ thuật ...</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="hot-service-wrapper">
+            <div class="container">
+                <div class="title-wrapper d-flex align-items-center justify-content-between">
+                    <h2 class="title">Dịch vụ nổi bật</h3>
+                        <a href="#" class="view-all">Xem tất cả dịch vụ</a>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12 hot-service-column-sm">
+                        <div class="hot-service size-lg">
+                            <a href="#" class="service-link-more">
+                                <img src="./images/home/servicesm1.png" />
+                                <span class="label-service">Tim mạch</span>
+                                <h5 class="service-name">Thay van tim qua da mà không cần phẫu thuật</h5>
+                            </a>
+                        </div>
+                        <div class="hot-service size-lg">
+                            <a href="#" class="service-link-more">
+                                <img src="./images/home/servicesm2.png" />
+                                <span class="label-service">Tim mạch</span>
+                                <h5 class="service-name">Thay van tim qua da mà không cần phẫu thuật</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 hot-service-column-lg">
+                        <div class="hot-service size-xl">
+                            <a href="#" class="service-link-more text-center">
+                                <img src="./images/home/servicelg.png" />
+                                <span class="label-service">Tim mạch</span>
+                                <h5 class="service-name">Thay van tim qua da mà không cần phẫu thuật</h5>
+                                <p class="service-desc">Thay van tim qua da không cần phẫu thuật là một trong những kỹ thuật thay van tim...</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 hot-service-column-sm">
+                        <div class="hot-service size-sm">
+                            <span class="label-service">Tim mạch</span>
+                            <a href="#" class="service-link-more">
+                                <h5 class="service-name">Thay van tim qua da mà không cần phẫu thuật</h5>
+                            </a>
+                            <p class="service-desc">Thay van tim qua da không cần phẫu thuật là một trong những kỹ thuật ...</p>
+                        </div>
+                        <div class="hot-service size-sm">
+                            <span class="label-service">Tim mạch</span>
+                            <a href="#" class="service-link-more">
+                                <h5 class="service-name">Thay van tim qua da mà không cần phẫu thuật</h5>
+                            </a>
+                            <p class="service-desc">Thay van tim qua da không cần phẫu thuật là một trong những kỹ thuật ...</p>
+                        </div>
+                        <div class="hot-service size-sm">
+                            <span class="label-service">Tim mạch</span>
+                            <a href="#" class="service-link-more">
+                                <h5 class="service-name">Thay van tim qua da mà không cần phẫu thuật</h5>
+                            </a>
+                            <p class="service-desc">Thay van tim qua da không cần phẫu thuật là một trong những kỹ thuật ...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="banner-and-dropdown-list">
-			<div class="row">
-				<div class="col-lg-6 col-12 dropdown-list-wrapper">
-					<div class="title-wrapper">
-						<h2 class="title">Trang thiết bị tiên tiến</h3>
-						<p class="sub-title">Sở hữu không gian khám chữa bệnh văn minh, sang trọng, hiện đại, chú trọng đầu tư đồng bộ hệ thống trang thiết bị hiện đại, hỗ trợ hiệu quả cho việc chẩn đoán và điều trị.</p>
-					</div>
-					<ul class="dropdown-list accordion">
-						<li>
-							<div class="show-option d-flex align-items-center justify-content-between">
-								<div class="name-option">Phòng mổ Hybrid hiện đại</div>
-								<div class="show">-</div>
-							</div>
-							<div class="fretboard">
-								Phòng Hybrid Discovery IGS 730 (của hãng GE Healthcare - Mỹ) đầu tiên tại Việt Nam
-							</div>
-						</li>
-						<li>
-							<div class="show-option d-flex align-items-center justify-content-between">
-								<div class="name-option">Máy chụp cắt lớp tiên tiến CT</div>
-								<div class="show">-</div>
-							</div>
-							<div class="fretboard">
-								Phòng Hybrid Discovery IGS 730 (của hãng GE Healthcare - Mỹ) đầu tiên tại Việt Nam
-							</div>
-						</li>
-						<li>
-							<div class="show-option d-flex align-items-center justify-content-between">
-								<div class="name-option">Hệ thống SPECT/CT 16 dãy</div>
-								<div class="show">-</div>
-							</div>
-							<div class="fretboard">
-								Phòng Hybrid Discovery IGS 730 (của hãng GE Healthcare - Mỹ) đầu tiên tại Việt Nam
-							</div>
-						</li>
-						<li>
-							<div class="show-option d-flex align-items-center justify-content-between">
-								<div class="name-option">Máy xạ trị gia tốc Truebeam NDS120HD</div>
-								<div class="show">-</div>
-							</div>
-							<div class="fretboard">
-								Phòng Hybrid Discovery IGS 730 (của hãng GE Healthcare - Mỹ) đầu tiên tại Việt Nam
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="col-lg-6 col-12">
-					<div class="banner-wrapper">
-						<img src="./images/home/banner1.png" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="banner-and-dropdown-list">
+            <div class="row">
+                <div class="col-lg-6 col-12 dropdown-list-wrapper">
+                    <div class="title-wrapper">
+                        <h2 class="title">Trang thiết bị tiên tiến</h3>
+                            <p class="sub-title">Sở hữu không gian khám chữa bệnh văn minh, sang trọng, hiện đại, chú trọng đầu tư đồng bộ hệ thống trang thiết bị hiện đại, hỗ trợ hiệu quả cho việc chẩn đoán và điều trị.</p>
+                    </div>
+                    <ul class="dropdown-list accordion">
+                        <li>
+                            <div class="show-option d-flex align-items-center justify-content-between">
+                                <div class="name-option">Phòng mổ Hybrid hiện đại</div>
+                                <div class="show">-</div>
+                            </div>
+                            <div class="fretboard">
+                                Phòng Hybrid Discovery IGS 730 (của hãng GE Healthcare - Mỹ) đầu tiên tại Việt Nam
+                            </div>
+                        </li>
+                        <li>
+                            <div class="show-option d-flex align-items-center justify-content-between">
+                                <div class="name-option">Máy chụp cắt lớp tiên tiến CT</div>
+                                <div class="show">-</div>
+                            </div>
+                            <div class="fretboard">
+                                Phòng Hybrid Discovery IGS 730 (của hãng GE Healthcare - Mỹ) đầu tiên tại Việt Nam
+                            </div>
+                        </li>
+                        <li>
+                            <div class="show-option d-flex align-items-center justify-content-between">
+                                <div class="name-option">Hệ thống SPECT/CT 16 dãy</div>
+                                <div class="show">-</div>
+                            </div>
+                            <div class="fretboard">
+                                Phòng Hybrid Discovery IGS 730 (của hãng GE Healthcare - Mỹ) đầu tiên tại Việt Nam
+                            </div>
+                        </li>
+                        <li>
+                            <div class="show-option d-flex align-items-center justify-content-between">
+                                <div class="name-option">Máy xạ trị gia tốc Truebeam NDS120HD</div>
+                                <div class="show">-</div>
+                            </div>
+                            <div class="fretboard">
+                                Phòng Hybrid Discovery IGS 730 (của hãng GE Healthcare - Mỹ) đầu tiên tại Việt Nam
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="banner-wrapper">
+                        <img src="./images/home/banner1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="list-professional-wrapper">
-			<div class="container">
-				<div class="title-wrapper d-flex align-items-center justify-content-between">
-					<h2 class="title">Các chuyên khoa của chúng tôi</h3>
-					<a href="#" class="view-all">Xem tất cả chuyên khoa</a>
-				</div>
-				<div class="row">
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
-						<div class="col-professional-wrapper">
-							<div class="content-professional d-flex align-items-center">
-								<img src="./images/home/icon1.png" alt="">
-								<a href="#" class="title"><strong>Nội chung <br>và  Đa khoa</strong></a>
-							</div>
-							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
-						<div class="col-professional-wrapper">
-							<div class="content-professional d-flex align-items-center">
-								<img src="./images/home/icon2.png" alt="">
-								<a href="#" class="title"><strong>Chuyên khoa <br>Tim mạch</strong></a>
-							</div>
-							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
-						<div class="col-professional-wrapper">
-							<div class="content-professional d-flex align-items-center">
-								<img src="./images/home/icon3.png" alt="">
-								<a href="#" class="title"><strong>Chuyên khoa <br>Gan Mật</strong></a>
-							</div>
-							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
-						<div class="col-professional-wrapper">
-							<div class="content-professional d-flex align-items-center">
-								<img src="./images/home/icon4.png" alt="">
-								<a href="#" class="title"><strong>Sản phụ khoa <br>và Hỗ trợ sinh sản</strong></a>
-							</div>
-							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
-						<div class="col-professional-wrapper">
-							<div class="content-professional d-flex align-items-center">
-								<img src="./images/home/icon5.png" alt="">
-								<a href="#" class="title"><strong>Chuyên khoa Mắt</strong></a>
-							</div>
-							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
-						<div class="col-professional-wrapper">
-							<div class="content-professional d-flex align-items-center">
-								<img src="./images/home/icon6.png" alt="">
-								<a href="#" class="title"><strong>Chuyên khoa <br>Răng hàm mặt</strong></a>
-							</div>
-							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
-						<div class="col-professional-wrapper">
-							<div class="content-professional d-flex align-items-center">
-								<img src="./images/home/icon7.png" alt="">
-								<a href="#" class="title"><strong>Ung bướu <br>và Xạ trị</strong></a>
-							</div>
-							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
-						<div class="col-professional-wrapper">
-							<div class="content-professional d-flex align-items-center">
-								<img src="./images/home/icon8.png" alt="">
-								<a href="#" class="title"><strong>Chuyên khoa <br>Cơ Xương Khớp</strong></a>
-							</div>
-							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-12 col-professional">
-						<div class="col-professional-wrapper">
-							<div class="content-professional d-flex align-items-center">
-								<img src="./images/home/icon9.png" alt="">
-								<a href="#" class="title"><strong>Chuyên khoa <br>Tai mũi họng</strong></a>
-							</div>
-							<a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="list-professional-wrapper">
+            <div class="container">
+                <div class="title-wrapper d-flex align-items-center justify-content-between">
+                    <h2 class="title">Các chuyên khoa của chúng tôi</h3>
+                        <a href="#" class="view-all">Xem tất cả chuyên khoa</a>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12 col-professional">
+                        <div class="col-professional-wrapper">
+                            <div class="content-professional d-flex align-items-center">
+                                <img src="./images/home/icon1.png" alt="">
+                                <a href="#" class="title"><strong>Nội chung <br>và  Đa khoa</strong></a>
+                            </div>
+                            <a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 col-professional">
+                        <div class="col-professional-wrapper">
+                            <div class="content-professional d-flex align-items-center">
+                                <img src="./images/home/icon2.png" alt="">
+                                <a href="#" class="title"><strong>Chuyên khoa <br>Tim mạch</strong></a>
+                            </div>
+                            <a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 col-professional">
+                        <div class="col-professional-wrapper">
+                            <div class="content-professional d-flex align-items-center">
+                                <img src="./images/home/icon3.png" alt="">
+                                <a href="#" class="title"><strong>Chuyên khoa <br>Gan Mật</strong></a>
+                            </div>
+                            <a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 col-professional">
+                        <div class="col-professional-wrapper">
+                            <div class="content-professional d-flex align-items-center">
+                                <img src="./images/home/icon4.png" alt="">
+                                <a href="#" class="title"><strong>Sản phụ khoa <br>và Hỗ trợ sinh sản</strong></a>
+                            </div>
+                            <a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 col-professional">
+                        <div class="col-professional-wrapper">
+                            <div class="content-professional d-flex align-items-center">
+                                <img src="./images/home/icon5.png" alt="">
+                                <a href="#" class="title"><strong>Chuyên khoa Mắt</strong></a>
+                            </div>
+                            <a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 col-professional">
+                        <div class="col-professional-wrapper">
+                            <div class="content-professional d-flex align-items-center">
+                                <img src="./images/home/icon6.png" alt="">
+                                <a href="#" class="title"><strong>Chuyên khoa <br>Răng hàm mặt</strong></a>
+                            </div>
+                            <a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 col-professional">
+                        <div class="col-professional-wrapper">
+                            <div class="content-professional d-flex align-items-center">
+                                <img src="./images/home/icon7.png" alt="">
+                                <a href="#" class="title"><strong>Ung bướu <br>và Xạ trị</strong></a>
+                            </div>
+                            <a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 col-professional">
+                        <div class="col-professional-wrapper">
+                            <div class="content-professional d-flex align-items-center">
+                                <img src="./images/home/icon8.png" alt="">
+                                <a href="#" class="title"><strong>Chuyên khoa <br>Cơ Xương Khớp</strong></a>
+                            </div>
+                            <a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 col-professional">
+                        <div class="col-professional-wrapper">
+                            <div class="content-professional d-flex align-items-center">
+                                <img src="./images/home/icon9.png" alt="">
+                                <a href="#" class="title"><strong>Chuyên khoa <br>Tai mũi họng</strong></a>
+                            </div>
+                            <a href="#" class="view-more">Tìm hiểu thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="shop-online-wraper">
-			<div class="container">
-				<div class="title-wrapper d-flex align-items-center justify-content-between">
-					<h2 class="title">Gian hàng trực tuyến</h3>
-					<div class="btn-slide">
-						<i class="fa fa-angle-left slide-left"></i>
-						<i class="fa fa-angle-right slide-right"></i>
-					</div>
-				</div>
-				<div class="shop-online-slide autoplay" 
-					data-dots='false' 
-					data-speed="300" 
-					data-accessibility="true" 
-					data-autoplay="true" 
-					data-slides-To-Show="5" 
-					data-slides-To-Scroll="1" 
-					data-next-Arrow='.shop-online-wraper .slide-right' 
-					data-prev-Arrow='.shop-online-wraper .slide-left'
-					data-responsive='[
+        <div class="shop-online-wraper">
+            <div class="container">
+                <div class="title-wrapper d-flex align-items-center justify-content-between">
+                    <h2 class="title">Gian hàng trực tuyến</h3>
+                        <div class="btn-slide">
+                            <i class="fa fa-angle-left slide-left"></i>
+                            <i class="fa fa-angle-right slide-right"></i>
+                        </div>
+                </div>
+                <div class="shop-online-slide autoplay" data-dots='false' data-speed="300" data-accessibility="true" data-autoplay="true" data-slides-To-Show="5" data-slides-To-Scroll="1" data-next-Arrow='.shop-online-wraper .slide-right' data-prev-Arrow='.shop-online-wraper .slide-left'
+                    data-responsive='[
 						{"breakpoint": 1200, "settings": {"slidesToShow": 4}}, 
 						{"breakpoint": 992, "settings": {"slidesToShow": 3}}, 
 						{"breakpoint": 768, "settings": {"slidesToShow": 2}}, 
 						{"breakpoint": 481, "settings": {"slidesToShow": 1}}, 
 						{"breakpoint": 361, "settings": {"slidesToShow": 1}}
-					]'
-				>
-					<div class="item">
-						<a class="shop-img">
-							<img src="./images/home/shop1.png" alt=""/>
-							<span class="label">Giảm 30%</span>
-						</a>
-						<div class="shop-info">
-							<a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
-							<div class="price-wrapper">
-								<span class="new-price">2.000.000 &#8363;</span>
+					]'>
+                    <div class="item">
+                        <a class="shop-img">
+                            <img src="./images/home/shop1.png" alt="" />
+                            <span class="label">Giảm 30%</span>
+                        </a>
+                        <div class="shop-info">
+                            <a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
+                            <div class="price-wrapper">
+                                <span class="new-price">2.000.000 &#8363;</span>
                                 <span class="old-price">4.000.000 &#8363;</span>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<a class="shop-img">
-							<img src="./images/home/shop2.png" alt=""/>
-							<span class="label">Giảm 30%</span>
-						</a>
-						<div class="shop-info">
-							<a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
-							<div class="price-wrapper">
-								<span class="new-price">2.000.000 &#8363;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a class="shop-img">
+                            <img src="./images/home/shop2.png" alt="" />
+                            <span class="label">Giảm 30%</span>
+                        </a>
+                        <div class="shop-info">
+                            <a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
+                            <div class="price-wrapper">
+                                <span class="new-price">2.000.000 &#8363;</span>
                                 <span class="old-price">4.000.000 &#8363;</span>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<a class="shop-img">
-							<img src="./images/home/shop3.png" alt=""/>
-							<span class="label">Giảm 30%</span>
-						</a>
-						<div class="shop-info">
-							<a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
-							<div class="price-wrapper">
-								<span class="new-price">2.000.000 &#8363;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a class="shop-img">
+                            <img src="./images/home/shop3.png" alt="" />
+                            <span class="label">Giảm 30%</span>
+                        </a>
+                        <div class="shop-info">
+                            <a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
+                            <div class="price-wrapper">
+                                <span class="new-price">2.000.000 &#8363;</span>
                                 <span class="old-price">4.000.000 &#8363;</span>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<a class="shop-img">
-							<img src="./images/home/shop4.png" alt=""/>
-							<span class="label">Giảm 30%</span>
-						</a>
-						<div class="shop-info">
-							<a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
-							<div class="price-wrapper">
-								<span class="new-price">2.000.000 &#8363;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a class="shop-img">
+                            <img src="./images/home/shop4.png" alt="" />
+                            <span class="label">Giảm 30%</span>
+                        </a>
+                        <div class="shop-info">
+                            <a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
+                            <div class="price-wrapper">
+                                <span class="new-price">2.000.000 &#8363;</span>
                                 <span class="old-price">4.000.000 &#8363;</span>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<a class="shop-img">
-							<img src="./images/home/shop5.png" alt=""/>
-							<span class="label">Giảm 30%</span>
-						</a>
-						<div class="shop-info">
-							<a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
-							<div class="price-wrapper">
-								<span class="new-price">2.000.000 &#8363;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a class="shop-img">
+                            <img src="./images/home/shop5.png" alt="" />
+                            <span class="label">Giảm 30%</span>
+                        </a>
+                        <div class="shop-info">
+                            <a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
+                            <div class="price-wrapper">
+                                <span class="new-price">2.000.000 &#8363;</span>
                                 <span class="old-price">4.000.000 &#8363;</span>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<a class="shop-img">
-							<img src="./images/home/shop1.png" alt=""/>
-							<span class="label">Giảm 30%</span>
-						</a>
-						<div class="shop-info">
-							<a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
-							<div class="price-wrapper">
-								<span class="new-price">2.000.000 &#8363;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a class="shop-img">
+                            <img src="./images/home/shop1.png" alt="" />
+                            <span class="label">Giảm 30%</span>
+                        </a>
+                        <div class="shop-info">
+                            <a href="#" class="shop-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
+                            <div class="price-wrapper">
+                                <span class="new-price">2.000.000 &#8363;</span>
                                 <span class="old-price">4.000.000 &#8363;</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="title-wrapper d-flex align-items-center">
-					<a href="#" class="view-all">Xem thêm sản phẩm</a>
-				</div>
-			</div>
-		</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-wrapper d-flex align-items-center">
+                    <a href="#" class="view-all">Xem thêm sản phẩm</a>
+                </div>
+            </div>
+        </div>
 
-		<div class="question-answer-wrapper">
-			<div class="container">
-				<div class="title-wrapper d-flex align-items-center justify-content-between">
-					<h2 class="title">Hỏi đáp cùng bác sĩ</h3>
-					<a href="#" class="view-all">Đặt câu hỏi cho bác sĩ</a>
-				</div>
-				<div class="row cover-tab">
-					<div class="col-lg-6 col-12 col-tab">
-						<div class="magic-tabs control-tab">
-							<ul>
-								<li class="action-tab-btn">
-									<p>Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
-									<i class="fa fa-angle-right" aria-hidden="true"></i>
-								</li>
-								<li>
-									<p>Đọc kết quả xét nghiệm Pepsinogen như thế nào?</p>
-									<i class="fa fa-angle-right" aria-hidden="true"></i>
-								</li>
-								<li>
-									<p>Tự nhiên xuất hiện vết bầm kèm xuất huyết là bệnh lý gì?</p>
-									<i class="fa fa-angle-right" aria-hidden="true"></i>
-								</li>
-								<li>
-									<p>Cách phòng ngừa áp xe tầng sinh môn là gì?</p>
-									<i class="fa fa-angle-right" aria-hidden="true"></i>
-								</li>
-								<li>
-									<p>Người bị sỏi thận có nên ăn chuối không?</p>
-									<i class="fa fa-angle-right" aria-hidden="true"></i>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-6 col-12 col-content">
-						<div class="tab-content">
-							<div class="content active-tab-content">
-								<div class="answer-wrapper">
-									<div class="answer-info d-flex align-items-center justify-content-between">
-										<img src="./images/home/img_answer.png" alt="">
-										<div class="info">
-											<p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
-											<div class="like">
-												<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-												<span>2.798</span>
-											</div>
-											<div class="view">
-												<i class="fa fa-eye" aria-hidden="true"></i>
-												<span>32.313 lượt xem</span>
-											</div>
-										</div>
-									</div>
-									<div class="ansver-Content">
-										<strong class="title">Trả lời</strong>
-										<ul>
-											<li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
-											<li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
-										</ul>
-										<p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
-										<a href="#" class="view-detail">Xem chi tiết</a>
-									</div>
-								</div>
-							</div>
-							<div class="content">
-								<div class="answer-wrapper">
-									<div class="answer-info d-flex align-items-center justify-content-between">
-										<img src="./images/home/img_answer.png" alt="">
-										<div class="info">
-											<p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
-											<div class="like">
-												<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-												<span>2.798</span>
-											</div>
-											<div class="view">
-												<i class="fa fa-eye" aria-hidden="true"></i>
-												<span>32.313 lượt xem</span>
-											</div>
-										</div>
-									</div>
-									<div class="ansver-Content">
-										<strong class="title">Trả lời</strong>
-										<ul>
-											<li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
-											<li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
-										</ul>
-										<p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
-										<a href="#" class="view-detail">Xem chi tiết</a>
-									</div>
-								</div>
-							</div>
-							<div class="content">
-								<div class="answer-wrapper">
-									<div class="answer-info d-flex align-items-center justify-content-between">
-										<img src="./images/home/img_answer.png" alt="">
-										<div class="info">
-											<p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
-											<div class="like">
-												<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-												<span>2.798</span>
-											</div>
-											<div class="view">
-												<i class="fa fa-eye" aria-hidden="true"></i>
-												<span>32.313 lượt xem</span>
-											</div>
-										</div>
-									</div>
-									<div class="ansver-Content">
-										<strong class="title">Trả lời</strong>
-										<ul>
-											<li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
-											<li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
-										</ul>
-										<p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
-										<a href="#" class="view-detail">Xem chi tiết</a>
-									</div>
-								</div>
-							</div>
-							<div class="content">
-								<div class="answer-wrapper">
-									<div class="answer-info d-flex align-items-center justify-content-between">
-										<img src="./images/home/img_answer.png" alt="">
-										<div class="info">
-											<p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
-											<div class="like">
-												<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-												<span>2.798</span>
-											</div>
-											<div class="view">
-												<i class="fa fa-eye" aria-hidden="true"></i>
-												<span>32.313 lượt xem</span>
-											</div>
-										</div>
-									</div>
-									<div class="ansver-Content">
-										<strong class="title">Trả lời</strong>
-										<ul>
-											<li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
-											<li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
-										</ul>
-										<p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
-										<a href="#" class="view-detail">Xem chi tiết</a>
-									</div>
-								</div>
-							</div>
-							<div class="content">
-								<div class="answer-wrapper">
-									<div class="answer-info d-flex align-items-center justify-content-between">
-										<img src="./images/home/img_answer.png" alt="">
-										<div class="info">
-											<p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
-											<div class="like">
-												<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-												<span>2.798</span>
-											</div>
-											<div class="view">
-												<i class="fa fa-eye" aria-hidden="true"></i>
-												<span>32.313 lượt xem</span>
-											</div>
-										</div>
-									</div>
-									<div class="ansver-Content">
-										<strong class="title">Trả lời</strong>
-										<ul>
-											<li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
-											<li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
-										</ul>
-										<p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
-										<a href="#" class="view-detail">Xem chi tiết</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<a href="#" class="link-view-all">Xem thêm 324 câu hỏi khác <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-			</div>
-		</div>
+        <div class="question-answer-wrapper">
+            <div class="container">
+                <div class="title-wrapper d-flex align-items-center justify-content-between">
+                    <h2 class="title">Hỏi đáp cùng bác sĩ</h3>
+                        <a href="#" class="view-all">Đặt câu hỏi cho bác sĩ</a>
+                </div>
+                <div class="row cover-tab">
+                    <div class="col-lg-6 col-12 col-tab">
+                        <div class="magic-tabs control-tab">
+                            <ul>
+                                <li class="action-tab-btn">
+                                    <p>Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </li>
+                                <li>
+                                    <p>Đọc kết quả xét nghiệm Pepsinogen như thế nào?</p>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </li>
+                                <li>
+                                    <p>Tự nhiên xuất hiện vết bầm kèm xuất huyết là bệnh lý gì?</p>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </li>
+                                <li>
+                                    <p>Cách phòng ngừa áp xe tầng sinh môn là gì?</p>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </li>
+                                <li>
+                                    <p>Người bị sỏi thận có nên ăn chuối không?</p>
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 col-content">
+                        <div class="tab-content">
+                            <div class="content active-tab-content">
+                                <div class="answer-wrapper">
+                                    <div class="answer-info d-flex align-items-center justify-content-between">
+                                        <img src="./images/home/img_answer.png" alt="">
+                                        <div class="info">
+                                            <p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
+                                            <div class="like">
+                                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                <span>2.798</span>
+                                            </div>
+                                            <div class="view">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <span>32.313 lượt xem</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ansver-Content">
+                                        <strong class="title">Trả lời</strong>
+                                        <ul>
+                                            <li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
+                                            <li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
+                                        </ul>
+                                        <p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
+                                        <a href="#" class="view-detail">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="answer-wrapper">
+                                    <div class="answer-info d-flex align-items-center justify-content-between">
+                                        <img src="./images/home/img_answer.png" alt="">
+                                        <div class="info">
+                                            <p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
+                                            <div class="like">
+                                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                <span>2.798</span>
+                                            </div>
+                                            <div class="view">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <span>32.313 lượt xem</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ansver-Content">
+                                        <strong class="title">Trả lời</strong>
+                                        <ul>
+                                            <li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
+                                            <li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
+                                        </ul>
+                                        <p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
+                                        <a href="#" class="view-detail">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="answer-wrapper">
+                                    <div class="answer-info d-flex align-items-center justify-content-between">
+                                        <img src="./images/home/img_answer.png" alt="">
+                                        <div class="info">
+                                            <p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
+                                            <div class="like">
+                                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                <span>2.798</span>
+                                            </div>
+                                            <div class="view">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <span>32.313 lượt xem</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ansver-Content">
+                                        <strong class="title">Trả lời</strong>
+                                        <ul>
+                                            <li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
+                                            <li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
+                                        </ul>
+                                        <p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
+                                        <a href="#" class="view-detail">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="answer-wrapper">
+                                    <div class="answer-info d-flex align-items-center justify-content-between">
+                                        <img src="./images/home/img_answer.png" alt="">
+                                        <div class="info">
+                                            <p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
+                                            <div class="like">
+                                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                <span>2.798</span>
+                                            </div>
+                                            <div class="view">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <span>32.313 lượt xem</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ansver-Content">
+                                        <strong class="title">Trả lời</strong>
+                                        <ul>
+                                            <li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
+                                            <li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
+                                        </ul>
+                                        <p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
+                                        <a href="#" class="view-detail">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="answer-wrapper">
+                                    <div class="answer-info d-flex align-items-center justify-content-between">
+                                        <img src="./images/home/img_answer.png" alt="">
+                                        <div class="info">
+                                            <p class="name">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</p>
+                                            <div class="like">
+                                                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                <span>2.798</span>
+                                            </div>
+                                            <div class="view">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <span>32.313 lượt xem</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ansver-Content">
+                                        <strong class="title">Trả lời</strong>
+                                        <ul>
+                                            <li>Một là đau thắt lưng, bả vai, kèm tê bì tay chân thì có thể do bệnh đĩa đệm cột sống cổ hay thắt lưng chèn ép vào rễ thần kinh, hoặc có thể là bệnh của dây thần kinh ngoại biên, hay thiếu canxi.</li>
+                                            <li>Hai là đau đầu bên trái, đau triền miên, chóng mặt khi đứng lên ngồi xuống thì có thể là rối loạn tiền đình hoặc do tổn thương trong não hoặc các bệnh lý về thiếu máu thiếu sắt.</li>
+                                        </ul>
+                                        <p>Bạn nên đến khám tại cơ sở y tế kiểm tra tìm nguyên nhân và làm thêm các xét nghiệm thăm dò chẩn đoán từ đó xác định phương pháp điều trị cụ thể.</p>
+                                        <a href="#" class="view-detail">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="link-view-all">Xem thêm 324 câu hỏi khác <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
 
-		<div class="user-comment-wrapper">
-			<div class="container">
-				<div class="title-wrapper">
-					<h2 class="title">Người bệnh nói gì về chúng tôi</h3>
-				</div>
-			</div>
-			<div class="user-comment-slide autoplay"
-				data-dots='true'
-				data-speed="300"
-				data-accessibility="true"
-				data-autoplay="true"
-				data-arrows='false'
-				data-center-mode="true"
-				data-slides-To-Show="3"
-				data-slides-To-Scroll="1"
- 				data-center-padding='250px'
-				data-responsive='[
+        <div class="user-comment-wrapper">
+            <div class="container">
+                <div class="title-wrapper">
+                    <h2 class="title">Người bệnh nói gì về chúng tôi</h3>
+                </div>
+            </div>
+            <div class="user-comment-slide autoplay" data-dots='true' data-speed="300" data-accessibility="true" data-autoplay="true" data-arrows='false' data-center-mode="true" data-slides-To-Show="3" data-slides-To-Scroll="1" data-center-padding='250px' data-responsive='[
 					{"breakpoint": 1200, "settings": {"slidesToShow": 3}}, 
 					{"breakpoint": 992, "settings": {"slidesToShow": 2}}, 
 					{"breakpoint": 768, "settings": {"slidesToShow": 2}}, 
 					{"breakpoint": 481, "settings": {"slidesToShow": 1}}, 
 					{"breakpoint": 361, "settings": {"slidesToShow": 1}}
-				]'
-			>
-				<div class="item">
-					<div class="user-info">
-						<div class="avatar">
-							<img src="./images/home/user1.png" alt="">
-						</div>
-						<div class="info">
-							<p class="name">Nguyễn Tấn Trường</p>
-							<div class="sick">Bệnh nhân chữa tim mạch</div>
-						</div>
-					</div>
-					<div class="user-comment">
-						Tôi rất hài lòng vì không gian sạch đẹp, sang trọng, dịch vụ tiện lợi. Việc đặt hẹn qua tổng đài rất nhanh chóng. Đáng quý nữa là thái độ phục vụ tận tình, nhẹ nhàng của các bác sĩ, điều dưỡng cho tới nhân viên tiếp đón
-					</div>
-				</div>
-				<div class="item">
-					<div class="user-info">
-						<div class="avatar">
-							<img src="./images/home/user2.png" alt="">
-						</div>
-						<div class="info">
-							<p class="name">Nguyễn Tấn Trường</p>
-							<div class="sick">Bệnh nhân chữa tim mạch</div>
-						</div>
-					</div>
-					<div class="user-comment">
-						Tôi rất hài lòng vì không gian sạch đẹp, sang trọng, dịch vụ tiện lợi. Việc đặt hẹn qua tổng đài rất nhanh chóng. Đáng quý nữa là thái độ phục vụ tận tình, nhẹ nhàng của các bác sĩ, điều dưỡng cho tới nhân viên tiếp đón
-					</div>
-				</div>
-				<div class="item">
-					<div class="user-info">
-						<div class="avatar">
-							<img src="./images/home/user3.png" alt="">
-						</div>
-						<div class="info">
-							<p class="name">Nguyễn Tấn Trường</p>
-							<div class="sick">Bệnh nhân chữa tim mạch</div>
-						</div>
-					</div>
-					<div class="user-comment">
-						Tôi rất hài lòng vì không gian sạch đẹp, sang trọng, dịch vụ tiện lợi. Việc đặt hẹn qua tổng đài rất nhanh chóng. Đáng quý nữa là thái độ phục vụ tận tình, nhẹ nhàng của các bác sĩ, điều dưỡng cho tới nhân viên tiếp đón
-					</div>
-				</div>
-				<div class="item">
-					<div class="user-info">
-						<div class="avatar">
-							<img src="./images/home/user4.png" alt="">
-						</div>
-						<div class="info">
-							<p class="name">Nguyễn Tấn Trường</p>
-							<div class="sick">Bệnh nhân chữa tim mạch</div>
-						</div>
-					</div>
-					<div class="user-comment">
-						Tôi rất hài lòng vì không gian sạch đẹp, sang trọng, dịch vụ tiện lợi. Việc đặt hẹn qua tổng đài rất nhanh chóng. Đáng quý nữa là thái độ phục vụ tận tình, nhẹ nhàng của các bác sĩ, điều dưỡng cho tới nhân viên tiếp đón
-					</div>
-				</div>
-				<div class="item">
-					<div class="user-info">
-						<div class="avatar">
-							<img src="./images/home/user1.png" alt="">
-						</div>
-						<div class="info">
-							<p class="name">Nguyễn Tấn Trường</p>
-							<div class="sick">Bệnh nhân chữa tim mạch</div>
-						</div>
-					</div>
-					<div class="user-comment">
-						Tôi rất hài lòng vì không gian sạch đẹp, sang trọng, dịch vụ tiện lợi. Việc đặt hẹn qua tổng đài rất nhanh chóng. Đáng quý nữa là thái độ phục vụ tận tình, nhẹ nhàng của các bác sĩ, điều dưỡng cho tới nhân viên tiếp đón
-					</div>
-				</div>
-				<div class="item">
-					<div class="user-info">
-						<div class="avatar">
-							<img src="./images/home/user2.png" alt="">
-						</div>
-						<div class="info">
-							<p class="name">Nguyễn Tấn Trường</p>
-							<div class="sick">Bệnh nhân chữa tim mạch</div>
-						</div>
-					</div>
-					<div class="user-comment">
-						Tôi rất hài lòng vì không gian sạch đẹp, sang trọng, dịch vụ tiện lợi. Việc đặt hẹn qua tổng đài rất nhanh chóng. Đáng quý nữa là thái độ phục vụ tận tình, nhẹ nhàng của các bác sĩ, điều dưỡng cho tới nhân viên tiếp đón
-					</div>
-				</div>
-			</div>
-		</div>
+				]'>
+                <div class="item">
+                    <div class="user-info">
+                        <div class="avatar">
+                            <img src="./images/home/user1.png" alt="">
+                        </div>
+                        <div class="info">
+                            <p class="name">Nguyễn Tấn Trường</p>
+                            <div class="sick">Bệnh nhân chữa tim mạch</div>
+                        </div>
+                    </div>
+                    <div class="user-comment">
+                        Tôi rất hài lòng vì không gian sạch đẹp, sang trọng, dịch vụ tiện lợi. Việc đặt hẹn qua tổng đài rất nhanh chóng. Đáng quý nữa là thái độ phục vụ tận tình, nhẹ nhàng của các bác sĩ, điều dưỡng cho tới nhân viên tiếp đón
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="user-info">
+                        <div class="avatar">
+                            <img src="./images/home/user2.png" alt="">
+                        </div>
+                        <div class="info">
+                            <p class="name">Nguyễn Tấn Trường</p>
+                            <div class="sick">Bệnh nhân chữa tim mạch</div>
+                        </div>
+                    </div>
+                    <div class="user-comment">
+                        Tôi rất hài lòng vì không gian sạch đẹp, sang trọng, dịch vụ tiện lợi. Việc đặt hẹn qua tổng đài rất nhanh chóng. Đáng quý nữa là thái độ phục vụ tận tình, nhẹ nhàng của các bác sĩ, điều dưỡng cho tới nhân viên tiếp đón
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="user-info">
+                        <div class="avatar">
+                            <img src="./images/home/user3.png" alt="">
+                        </div>
+                        <div class="info">
+                            <p class="name">Nguyễn Tấn Trường</p>
+                            <div class="sick">Bệnh nhân chữa tim mạch</div>
+                        </div>
+                    </div>
+                    <div class="user-comment">
+                        Tôi rất hài lòng vì không gian sạch đẹp, sang trọng, dịch vụ tiện lợi. Việc đặt hẹn qua tổng đài rất nhanh chóng. Đáng quý nữa là thái độ phục vụ tận tình, nhẹ nhàng của các bác sĩ, điều dưỡng cho tới nhân viên tiếp đón
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="user-info">
+                        <div class="avatar">
+                            <img src="./images/home/user4.png" alt="">
+                        </div>
+                        <div class="info">
+                            <p class="name">Nguyễn Tấn Trường</p>
+                            <div class="sick">Bệnh nhân chữa tim mạch</div>
+                        </div>
+                    </div>
+                    <div class="user-comment">
+                        Tôi rất hài lòng vì không gian sạch đẹp, sang trọng, dịch vụ tiện lợi. Việc đặt hẹn qua tổng đài rất nhanh chóng. Đáng quý nữa là thái độ phục vụ tận tình, nhẹ nhàng của các bác sĩ, điều dưỡng cho tới nhân viên tiếp đón
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="user-info">
+                        <div class="avatar">
+                            <img src="./images/home/user1.png" alt="">
+                        </div>
+                        <div class="info">
+                            <p class="name">Nguyễn Tấn Trường</p>
+                            <div class="sick">Bệnh nhân chữa tim mạch</div>
+                        </div>
+                    </div>
+                    <div class="user-comment">
+                        Tôi rất hài lòng vì không gian sạch đẹp, sang trọng, dịch vụ tiện lợi. Việc đặt hẹn qua tổng đài rất nhanh chóng. Đáng quý nữa là thái độ phục vụ tận tình, nhẹ nhàng của các bác sĩ, điều dưỡng cho tới nhân viên tiếp đón
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="user-info">
+                        <div class="avatar">
+                            <img src="./images/home/user2.png" alt="">
+                        </div>
+                        <div class="info">
+                            <p class="name">Nguyễn Tấn Trường</p>
+                            <div class="sick">Bệnh nhân chữa tim mạch</div>
+                        </div>
+                    </div>
+                    <div class="user-comment">
+                        Tôi rất hài lòng vì không gian sạch đẹp, sang trọng, dịch vụ tiện lợi. Việc đặt hẹn qua tổng đài rất nhanh chóng. Đáng quý nữa là thái độ phục vụ tận tình, nhẹ nhàng của các bác sĩ, điều dưỡng cho tới nhân viên tiếp đón
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="post-list-wrapper">
-			<div class="container">
-				<div class="title-wrapper">
-					<h2 class="title">Tin tức</h3>
-				</div>
-				<div class="post-list-slide autoplay"
-					data-dots='true'
-					data-speed="300"
-					data-accessibility="true"
-					data-autoplay="true"
-					data-arrows='false'
-					data-slides-To-Show="3"
-					data-slides-To-Scroll="1"
-					data-responsive='[
+        <div class="post-list-wrapper">
+            <div class="container">
+                <div class="title-wrapper">
+                    <h2 class="title">Tin tức</h3>
+                </div>
+                <div class="post-list-slide autoplay" data-dots='true' data-speed="300" data-accessibility="true" data-autoplay="true" data-arrows='false' data-slides-To-Show="3" data-slides-To-Scroll="1" data-responsive='[
 						{"breakpoint": 1200, "settings": {"slidesToShow": 3}}, 
 						{"breakpoint": 992, "settings": {"slidesToShow": 2}}, 
 						{"breakpoint": 768, "settings": {"slidesToShow": 2}}, 
 						{"breakpoint": 481, "settings": {"slidesToShow": 1}}, 
 						{"breakpoint": 361, "settings": {"slidesToShow": 1}}
-					]'
-				>
-					<div class="item">
-						<div class="d-flex">
-							<div class="post-banner">
-								<a href="#">
-									<img src="./images/home/post1.png" alt="">
-								</a>
-							</div>
-							<div class="post-content">
-								<span class="label">Tin mới</span>
-								<h4 class="name"><a href="#" class="post-link">Thay da sinh học cho mặt có tốt không?</a></h4>
-								<a href="#" class="view-more">
+					]'>
+                    <div class="item">
+                        <div class="d-flex">
+                            <div class="post-banner">
+                                <a href="#">
+                                    <img src="./images/home/post1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="post-content">
+                                <span class="label">Tin mới</span>
+                                <h4 class="name"><a href="#" class="post-link">Thay da sinh học cho mặt có tốt không?</a></h4>
+                                <a href="#" class="view-more">
 									Xem thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 								</a>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="d-flex">
-							<div class="post-banner">
-								<a href="#">
-									<img src="./images/home/post2.png" alt="">
-								</a>
-							</div>
-							<div class="post-content">
-								<span class="label">Tin mới</span>
-								<h4 class="name"><a href="#" class="post-link">Thay da sinh học cho mặt có tốt không?</a></h4>
-								<a href="#" class="view-more">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="d-flex">
+                            <div class="post-banner">
+                                <a href="#">
+                                    <img src="./images/home/post2.png" alt="">
+                                </a>
+                            </div>
+                            <div class="post-content">
+                                <span class="label">Tin mới</span>
+                                <h4 class="name"><a href="#" class="post-link">Thay da sinh học cho mặt có tốt không?</a></h4>
+                                <a href="#" class="view-more">
 									Xem thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 								</a>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="d-flex">
-							<div class="post-banner">
-								<a href="#">
-									<img src="./images/home/post3.png" alt="">
-								</a>
-							</div>
-							<div class="post-content">
-								<span class="label">Tin mới</span>
-								<h4 class="name"><a href="#" class="post-link">Thay da sinh học cho mặt có tốt không?</a></h4>
-								<a href="#" class="view-more">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="d-flex">
+                            <div class="post-banner">
+                                <a href="#">
+                                    <img src="./images/home/post3.png" alt="">
+                                </a>
+                            </div>
+                            <div class="post-content">
+                                <span class="label">Tin mới</span>
+                                <h4 class="name"><a href="#" class="post-link">Thay da sinh học cho mặt có tốt không?</a></h4>
+                                <a href="#" class="view-more">
 									Xem thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 								</a>
-							</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="d-flex">
-							<div class="post-banner">
-								<a href="#">
-									<img src="./images/home/post1.png" alt="">
-								</a>
-							</div>
-							<div class="post-content">
-								<span class="label">Tin mới</span>
-								<h4 class="name"><a href="#" class="post-link">Thay da sinh học cho mặt có tốt không?</a></h4>
-								<a href="#" class="view-more">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="d-flex">
+                            <div class="post-banner">
+                                <a href="#">
+                                    <img src="./images/home/post1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="post-content">
+                                <span class="label">Tin mới</span>
+                                <h4 class="name"><a href="#" class="post-link">Thay da sinh học cho mặt có tốt không?</a></h4>
+                                <a href="#" class="view-more">
 									Xem thêm <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="contact-us-wrapper">
-			<div class="get-price-block">
-				<div class="container">
-					<p>Bạn đang do dự vì không biết chi phí khám bệnh tại Bệnh viện Đa khoa Sông Thương.</p>
-					<a href="#" class="link-get-price">Xem bảng giá</a>
-				</div>
-			</div>
-			<div class="contact-us">
-				<div class="container">
-					<div class="row">
-						<div class="title-wrapper">
-							<h3 class="title">Sông Thương làm hài lòng 99.9% người bệnh</h3>
-							<p class="sub-title">Hoạt động không vì mục tiêu lợi nhuận, luôn tiên phong trong ứng dụng các phương pháp điều trị mới nhất</p>
-						</div>
-						<div class="hot-line-service">
-							<div class="hot-line">
-								<img src="./images/home/phone.png" alt="">
-								<div class="content">
-									<p>Liên hệ đặt lịch khám</p>
-									<a href="tel:18001234567" class="phone">1 800-123-4567</a>
-								</div>
-							</div>
-							<div class="hot-line">
-								<img src="./images/home/car.png" alt="">
-								<div class="content">
-									<p>Cấp cứu (24/24)</p>
-									<a href="tel:18001234567" class="phone">1 800-123-4567</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="contact-us-wrapper">
+            <div class="get-price-block">
+                <div class="container">
+                    <p>Bạn đang do dự vì không biết chi phí khám bệnh tại Bệnh viện Đa khoa Sông Thương.</p>
+                    <a href="#" class="link-get-price">Xem bảng giá</a>
+                </div>
+            </div>
+            <div class="contact-us">
+                <div class="container">
+                    <div class="row">
+                        <div class="title-wrapper">
+                            <h3 class="title">Sông Thương làm hài lòng 99.9% người bệnh</h3>
+                            <p class="sub-title">Hoạt động không vì mục tiêu lợi nhuận, luôn tiên phong trong ứng dụng các phương pháp điều trị mới nhất</p>
+                        </div>
+                        <div class="hot-line-service">
+                            <div class="hot-line">
+                                <img src="./images/home/phone.png" alt="">
+                                <div class="content">
+                                    <p>Liên hệ đặt lịch khám</p>
+                                    <a href="tel:18001234567" class="phone">1 800-123-4567</a>
+                                </div>
+                            </div>
+                            <div class="hot-line">
+                                <img src="./images/home/car.png" alt="">
+                                <div class="content">
+                                    <p>Cấp cứu (24/24)</p>
+                                    <a href="tel:18001234567" class="phone">1 800-123-4567</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- End Content -->
 
     <!-- Footer -->
     <footer id="footer" class="footer">
-		<!-- load content from footer.html -->
+        <div class="home-page">
+            <div class="contact-us-wrapper">
+                <div class="contact-us">
+                    <div class="container">
+                        <div class="row">
+                            <div class="title-wrapper">
+                                <h3 class="title">Sông Thương làm hài lòng 99.9% người bệnh</h3>
+                                <p class="sub-title">Hoạt động không vì mục tiêu lợi nhuận, luôn tiên phong trong ứng dụng các phương pháp điều trị mới nhất</p>
+                            </div>
+                            <div class="hot-line-service">
+                                <div class="hot-line">
+                                    <img src="./images/home/phone.png" alt="">
+                                    <div class="content">
+                                        <p>Liên hệ đặt lịch khám</p>
+                                        <a href="tel:18001234567" class="phone">1 800-123-4567</a>
+                                    </div>
+                                </div>
+                                <div class="hot-line">
+                                    <img src="./images/home/car.png" alt="">
+                                    <div class="content">
+                                        <p>Cấp cứu (24/24)</p>
+                                        <a href="tel:18001234567" class="phone">1 800-123-4567</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="get-price-block">
+                    <div class="container">
+                        <p>Tìm hiểu các sản phẩm dịch vụ được cung cấp độc quyền từ Sông Thương</p>
+                        <a href="#" class="link-get-price">Khám phá ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="main-content-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6">
+                        <h3 class="ft-title">
+                            Bệnh viên Đa khoa Sông Thương
+                        </h3>
+                        <div class="fretboard">
+                            <ul class="ft-info-shop">
+                                <li>
+                                    <img src="./images/home/ftico1.png" alt="">
+                                    <address>258 Lê Lợi, Phường Hoàng Văn Thụ, Bắc Giang</address>
+                                </li>
+                                <li>
+                                    <img src="./images/home/ftico2.png" alt="">
+                                    <address>Cấp cứu (24/24): <a href="tel:02437280000">0243 728 0000</a></address>
+                                </li>
+                                <li>
+                                    <img src="./images/home/ftico3.png" alt="">
+                                    <address>Đặt lịch khám: <a href="tel:02437280001">0243 728 0001</a></address>
+                                </li>
+                            </ul>
+                            <img src="./images/home/img-ft.png" alt="" class="ft-logo">
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 dropdown">
+                        <h3 class="ft-title show-option">
+                            Về chúng tôi
+                        </h3>
+                        <div class="fretboard">
+                            <ul class="ft-list-link">
+                                <li><a href="#">Giới thiệu</a></li>
+                                <li><a href="#">Đội ngũ bác sĩ</a></li>
+                                <li><a href="#">Tin tức</a></li>
+                                <li><a href="#">Tuyển dụng </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 dropdown">
+                        <h3 class="ft-title show-option">
+                            Dịch vụ
+                        </h3>
+                        <div class="fretboard">
+                            <ul class="ft-list-link">
+                                <li><a href="#">Đăng ký khám</a></li>
+                                <li><a href="#">Các gói dịch vụ</a></li>
+                                <li><a href="#">Hướng dẫn</a></li>
+                                <li><a href="#">Gian hàng trực tuyến</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6">
+                        <h3 class="ft-title">
+                            Theo dõi tin tức và dịch vụ mới nhất của chúng tôi
+                        </h3>
+                        <div class="fretboard">
+                            <form action="" method="post" class="form-register">
+                                <input type="text" placeholder="Địa chỉ email">
+                                <button class="btn-register">Đăng ký</button>
+                            </form>
+                            <div class="social-signin">
+                                <p>Theo dõi chúng tôi qua</p>
+                                <div class="social">
+                                    <a href="#" class="social-facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                    <a href="#" class="social-youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="copyright">
+            <p>Copyright © 2021 SongThuong. All rights reserved</p>
+        </div>
     </footer>
     <!-- End Footer -->
 
@@ -1154,9 +1446,10 @@
 <!-- custom js -->
 <script ttype="text/javascript">
     jQuery(document).ready(function($) {
-		// Loading
-		$('body').removeClass('preloading');
-		$('.loading').delay(1000).fadeOut('fast');
-	})
+        // Loading
+        $('body').removeClass('preloading');
+        $('.loading').delay(1000).fadeOut('fast');
+    })
 </script>
+
 </html>
