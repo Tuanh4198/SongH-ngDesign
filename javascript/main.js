@@ -1,10 +1,21 @@
 jQuery(document).ready(function ($) {
 	// call layout
-	$("#header").load("header.html");
-	$("#footer").load("footer.html");
-	$("#modal").load("modal.html");
-	$("#header_v2").load("header-V2.html");
-	$("#footer_v2").load("footer-V2.html");
+		
+	async function getlayout() {
+		await $("#header").load("header.html");
+		await $("#footer").load("footer.html");
+		await $("#modal").load("modal.html");
+		await $("#header_v2").load("header-V2.html");
+		await $("#footer_v2").load("footer-V2.html");
+
+		await $(".field-date").each(function () {
+			$(this).datepicker({
+				dateFormat: 'dd/mm/yy'
+			});
+		});
+	}
+
+	getlayout();
 
 	// call slick slide
 	if ($(window).width() <= 575) {
@@ -28,6 +39,7 @@ jQuery(document).ready(function ($) {
 	$(".autoplay").each(function () {
 		$(this).slick($(this).data());
 	});
+
 
 	$(".field-date").each(function () {
 		$(this).datepicker({
@@ -81,12 +93,19 @@ jQuery(document).ready(function ($) {
 	$(function () {
 		$('.accordion .show-option').click(function (event) {
 			event.preventDefault();
-			$(this).parent().addClass('active');
-			$(this).parent().siblings().removeClass('active');
-			$(this).parent().siblings().find('.fretboard').slideUp();
-			$(this).parent().find('.fretboard').slideDown();
-			$(this).parent().siblings().find('.show').removeClass('active').text('+');
-			($(this).parent().find('.show').text() === '+') ? ($(this).parent().find('.show').removeClass('active').text('-')) : ($(this).parent().find('.show').addClass('active').text('+'));
+			
+			if ($(this).parent().hasClass('active')) {
+				$(this).parent().removeClass('active');
+				$(this).parent().find('.fretboard').slideUp();
+				($(this).parent().find('.show').removeClass('active').text('-'));
+			} else{
+				$(this).parent().addClass('active');
+				$(this).parent().siblings().removeClass('active');
+				$(this).parent().siblings().find('.fretboard').slideUp();
+				$(this).parent().find('.fretboard').slideDown();
+				$(this).parent().siblings().find('.show').removeClass('active').text('-');
+				($(this).parent().find('.show').text() === '+') ? ($(this).parent().find('.show').removeClass('active').text('-')) : ($(this).parent().find('.show').addClass('active').text('+'));
+			}
 		});
 	});
 	// end Effect accordion
@@ -314,7 +333,7 @@ jQuery(document).ready(function ($) {
 	$(function () {
 		$(document).scroll(() => {
 			let post_content = $('.post-content');
-		}
+		});
 	});
 
 });
