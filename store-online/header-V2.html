@@ -3,10 +3,11 @@
 		<div class="dflex">
 			<div class="logo-online-store">
 				<a class="logo" href="#"><img src="../images/page/online-store/logo-online-store.png" alt=""></a>
+				<a class="logo logo-mobile" href="#"><img src="../images/page/online-store/logo-online-store-mobile.png" alt=""></a>
 			</div>
 			<div class="header-main">
 				<div class="header-top">
-					<div class="dflex align-items-center">
+					<div class="dflex align-items-center header-top-content">
 						<div class="vertical-menu dropdown">
 							<div class="vertical-menu-title show-option">
 								<span class="icon">
@@ -29,11 +30,36 @@
 								</ul>
 							</div>
 						</div>
-						<form action="#" method="post" class="search-wrapper">
-							<input type="text" placeholder="Tìm kiếm Sản phẩm / Gói dịch vụ...">
-							<button class="btn btn-search"><img src="../images/page/online-store/ico-search.png"
-									alt="" /></button>
+						<form action="#" method="post" class="search-wrapper dropdown">
+							<div class="block-title show-option"><img src="../images/page/online-store/ico-search-white.png" alt="" /></div>
+							<div class="block-content children">
+								<input type="text" placeholder="Tìm kiếm Sản phẩm / Gói dịch vụ...">
+								<button class="btn btn-search"><img src="../images/page/online-store/ico-search.png" alt="" /></button>
+							</div>
 						</form>
+						<div class="account-wrapper">
+							<div class="account-login">
+								<button class="btn-modal account-links" data-modal="form-login">Đăng nhập</button>
+							</div>
+							<div class="account-logged dropdown" style="display: none;">
+								<span class="show-option welcome-customer">lamdao218@gmail.com</span>
+								<ul class="account-links children">
+									<li class="account-link">
+										<a href="#">Thông tin tài khoản</a>
+									</li>
+									<li class="account-link">
+										<a href="#">Danh sách đơn hàng</a>
+									</li>
+									<li class="account-link logout">
+										<a href="#">
+											<img class="icon" src="../images/page/online-store/logout.png" alt="">
+											<img class="icon icon-hover" src="../images/page/online-store/logout-white.png" alt="">
+											Thoát
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 						<div class="minicart-wrapper dropdown">
 							<div class=" action showcart show-option">
 								<span class=" minicart-text ">

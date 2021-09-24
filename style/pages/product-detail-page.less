@@ -3,6 +3,12 @@
         margin-top: 15px;
     }
 
+    .product-media {
+        img {
+            width: 100%;
+        }
+    }
+
     .product-info-main {
         .name-product {
             font-size: 24px;
@@ -17,6 +23,7 @@
                 display: inline-block;
                 font-size: 24px;
                 line-height: 32px;
+                margin-top: 0;
             }
 
             .old-price {
@@ -69,6 +76,10 @@
                 &:hover {
                     background: linear-gradient(180deg, #F77910 0%, #FF9238 100%);
                 }
+
+                .product-status {
+                    display: none;
+                }
             }
 
             .call-now {
@@ -99,6 +110,7 @@
             font-size: 24px;
             font-weight: 500;
             line-height: 36px;
+            margin-bottom: 8px;
         }
 
         .detail-content {
@@ -135,22 +147,228 @@
             line-height: 34px;
         }
 
-        .content{
+        .content {
             margin-top: 24px;
 
-            .slick-list{
+            .slick-list {
                 margin-left: -15px;
                 margin-right: -15px;
             }
 
-            .product-wrapper{
+            .product-wrapper {
                 padding-left: 15px;
                 padding-right: 15px;
             }
         }
     }
 
-    .contact-us-wrapper{
+    .contact-us-wrapper {
         margin-top: 16px;
+    }
+}
+
+// responsive
+@media only screen and(max-width: 991px) {
+    .product-detail-page {
+        .product-info-main {
+            .name-product {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            .product-price-wrapper {
+                margin-top: 9px;
+
+                .price {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+
+                .old-price {
+                    font-size: 14px;
+                }
+
+                .discount {
+                    font-size: 14px;
+                }
+            }
+
+            .group-qty {
+                .label {
+                    font-size: 14px;
+                }
+
+                .quantity {
+                    .product-status {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .prodduct-info-detail {
+            .detail-title {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            .detail-content {
+                font-size: 14px;
+
+                h3 {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+        }
+
+        .product-related {
+            .related-title {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 767px) {
+    .product-detail-page {
+        .product-info-main {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media only screen and(max-width: 575px) {
+    .product-detail-page {
+        .breadcrumb-wrapper {
+            margin-top: 0;
+        }
+
+        .product-info-main {
+            .name-product {
+                font-size: 16px;
+            }
+
+            .product-price-wrapper {
+                .dflex;
+
+                .price {
+                    margin-top: 14px;
+                    width: 100%;
+                    order: 3;
+                }
+
+                .old-price {
+                    line-height: 17px;
+
+                }
+
+                .discount {
+                    line-height: 17px;
+                    font-weight: 600;
+                }
+            }
+
+            .group-qty {
+                margin-top: 0;
+
+                .label {
+                    line-height: 17px;
+                }
+
+                .quantity {
+                    .product-status {
+                        display: none;
+                    }
+
+                    .quantity-nav {
+
+                        .quantity-button,
+                        input {
+                            width: 40px;
+                            height: 40px;
+                            line-height: 40px;
+                        }
+                    }
+                }
+
+            }
+
+            .product-price-group {
+                .dflex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .product-actions {
+                margin-top: 0;
+
+                .add-cart {
+                    position: fixed;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    z-index: 20;
+                    padding: 13px;
+
+
+                    .product-status {
+                        display: block;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 15px;
+                        margin-top: 1px;
+                    }
+                }
+
+                .call-now {
+                    text-align: initial;
+                }
+            }
+
+        }
+
+        .prodduct-info-detail {
+            margin-top: 24px;
+
+            .container {
+                padding-top: 0;
+                border-width: 0;
+            }
+
+            .detail-title {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 22px;
+            }
+
+            .detail-content {
+                line-height: 20px;
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22px;
+                }
+            }
+        }
+
+        .page-bottom {
+            margin-top: 24px;
+            padding-top: 0;
+            border-width: 0;
+        }
+
+        .product-related {
+            .related-title {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 22px;
+            }
+        }
     }
 }

@@ -24,7 +24,8 @@
 
 	&:hover {
 		color: #FFFFFF;
-		background: @text_color;
+		background: #004B84;
+		border-color: #004B84;
 	}
 }
 
@@ -65,6 +66,7 @@
 				.link-get-price {
 					margin-left:20px;
 					height: 48px;
+					line-height: 48px;
 					background: @base_color;
 					border-radius: 4px;
 					font-style: normal;
@@ -80,8 +82,7 @@
 					}
 
 					&:hover {
-						background: white;
-						color: @text_color;
+						background: #004B84;
 					}
 				}
 			}
@@ -190,7 +191,7 @@
 			margin-left: 15px;
 
 			&:hover {
-				background: @text_color;
+				background: #004B84;
 			}
 		}
 
@@ -213,8 +214,9 @@
 				color: @text_blur;
 			}
 
-			&:hover {
-				border: 1px solid @text_color;
+			&:hover,
+			&:focus {
+				border-color: @base_color;
 			}
 		}
 	}
