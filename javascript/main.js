@@ -344,9 +344,7 @@ jQuery(document).ready(function ($) {
 		$(this).addClass('active');
 
 		let item_scroll = $(this).children('.tab-item-link').attr('href');
-		$('html, body').animate({
-			scrollTop: $(item_scroll).offset().top
-		}, 0);
+		$('html, body').scrollTop( $(item_scroll).offset().top - 100);  
 	});
 
 });
