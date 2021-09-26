@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sông Hương - Chi tiết bác sĩ</title>
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./images/Hera/favicon.ico" /> -->
+    <!-- animation -->
+    <link rel="stylesheet" href="./library/animate.css" />
+    <!-- font fontawesome -->
+    <link rel="stylesheet" href="./fonts/fontawesome/css/font-awesome.min.css" />
+    <!-- font Inter -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- bs4 -->
+    <link rel="stylesheet" href="./library/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./library/css/bootstrap-grid.min.css" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="./library/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./library/slick/slick.css" />
+	<link rel="stylesheet" href="./library/jquery-ui/jquery-ui.min.css" />
+    <!-- main style -->
+    <link rel="stylesheet" href="./style/pages/style.css">
+	<!-- Loading -->
+	<style type="text/css">
+		.preloading{
+			overflow: hidden;
+		}
+		.loading{
+			position: fixed;
+			background-color: black;
+			top: 0;
+			left: 0;
+			opacity: 1; 
+			width: 100%;
+			height: 100%;
+			z-index: 1000000;
+		}
+		.loading .img{
+			width: 100%;
+			width: auto;
+			opacity: 1; 
+			position: absolute;
+			top: 45%;
+			left: 50%;
+			transform: translate(-50%);
+		}
+		#footer .home-page {
+			display: none;
+		}
+	</style>
+</head>
+
+<body class="preloading">
+	<!-- Loading -->
+	<div class="loading">
+		<svg width="50" height="50" viewBox="0 0 50 50" class="img">
+			<path fill="white" d="M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z">
+				<animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.5s" repeatCount="indefinite" />
+			</path>
+		</svg>
+	</div>
+	<!-- End Loading -->
+
+    <!-- Header -->
+    <header id="header" class="header fixed-main-menu">
+		<!-- load content from header.html -->
+	</header>
+    <!-- End header -->
+
+    <!-- Content -->
+    <section class="doctor-detail">
+        <div class="breadcrumb-wrapper">
+			<h3 class="page-title"></h3>
+		</div>
+		<div class="page-columns">
+			<div class="container">
+				<div class="row row-mobile">
+					<sidebar class="col-xl-3 col-lg-4 side-bar col-mobile">
+						<div class="doctor-main-info">
+							<div class="doctor-images">
+								<img src="./images/page/intro-page/detail-doctor.jpg" alt="">
+							</div>
+							<div class="doctor-detail">
+								<h3 class="name">GS. Võ Thành Nhân</h3>
+								<p class="position"><img src="./images/page/intro-page/ico-position.svg" alt=""> Viện trưởng BVĐK Sông Thương</p>
+								<p class="specialist"><img src="./images/page/intro-page/ico-specialist.svg" alt=""> Gây mê - Điều trị đau</p>
+								<p class="short-description">Bác sĩ Võ Thành Nhân đã cống hiến hơn 30 năm trong lĩnh vực Gây mê - điều trị đau, là chuyên gia có thế mạnh về: Gây mê hồi sức trong phẫu thuật nhi.</p>
+							</div>
+                            <div class="sidebar-login">
+                                <div class="login-icon"><img src="./images/page/intro-page/ico-phone.svg" alt=""></div>
+                                <div class="login-detail">
+                                    <span class="title">Bạn cần phải đăng nhập để lấy thông tin liên hệ với bác sĩ.</span>
+                                    <a href="#" class="action action-login">Đăng nhập ngay</a>
+                                </div>
+                            </div>
+                            <button class="btn-registration btn-modal" data-modal="form-registration">Đăng ký khám</button>
+						</div>
+                        <div class="contact-order">
+                            <h3 class="title">Liên hệ đặt lịch khám</h3>
+                            <p class="description">Vui lòng liên hệ với đội ngũ y tá, bác sĩ của chúng tôi khi gặp bất kỳ vấn đề gì về sức khỏe của bạn và gia đình bạn.</p>
+                            <a href="tel: 1 800-123-4567" class="action action-contact">
+                                <span class="phone-images"><img src="./images/page/intro-page/ico-phone-2.svg" alt=""></span>
+                                <span class="phone-title">1 800-123-4567</span>
+                            </a>
+                        </div>
+					</sidebar>
+					<div class="col-xl-9 col-lg-8 col-main col-mobile">
+						<div class="doctor-info-detail">
+                            <div class="tab-scroll-content">
+                                <!-- add tag tab-title -->
+                                <ul class="tab-items">
+                                    <li class="tab-item active"><a href="#tab-item-1" class="tab-item-link"><span>Giới thiệu</span></a></li>
+                                    <li class="tab-item"><a href="#tab-item-2" class="tab-item-link"><span>Kinh nghiệm, học vấn</span></a></li>
+                                    <li class="tab-item"><a href="#tab-item-3" class="tab-item-link"><span>Thành tựu</span></a></li>
+                                    <li class="tab-item"><a href="#tab-item-4" class="tab-item-link"><span>Giải thưởng và ghi nhận</span></a></li>
+                                    <li class="tab-item"><a href="#tab-item-5" class="tab-item-link"><span>Các bài viết</span></a></li>
+                                </ul>
+    
+                                <!-- Tab panes -->
+                                <div class="tab-content-introduce" id="tab-item-1">
+                                    <h2 class="content-title">Giới thiệu sơ lược về BS. Võ Thành Nhân</h2>
+                                    <div class="description">
+                                        <p>Giáo sư, Tiến sĩ, Bác sĩ Võ Thành Nhân đã cống hiến hơn 30 năm trong lĩnh vực Gây mê - điều trị đau, là chuyên gia có thế mạnh về: Gây mê hồi sức trong phẫu thuật nhi; Xử trí đường thở khó và đặt ống nội khí quản khó; Gây tê mặt phẳng cơ dựng sống dưới hướng dẫn siêu âm (ESP) cho phẫu thuật mở tim và ngực, kỹ thuật mới để điều trị đau không opioid; Giám sát thông khí cho bệnh nhân béo phì trong quá trình thực hiện phẫu thuật giảm cân; Chăm sóc giảm nhẹ cho người bệnh.</p>
+                                        <div class="mask-description"></div>
+                                    </div>
+                                    <button class="see-more">Xem thêm giới thiệu</button>
+                                </div>
+                                <div class="tab-content-level" id="tab-item-2">
+                                    <h2 class="content-title">Kinh nghiệm, học vấn</h2>
+                                    <div class="description">
+                                        <table class="doctor-level">
+                                            <tr class="doctor-position">
+                                                <th>Chức vụ</th>
+                                                <td>Giám đốc bệnh viên kiêm giám đốc chuyên môn</td>
+                                            </tr>
+                                            <tr class="doctor-level">
+                                                <th>Cấp bậc</th>
+                                                <td>Thạc sĩ, bác sĩ</td>
+                                            </tr>
+                                            <tr class="doctor-specialist">
+                                                <th>Chuyên khoa</th>
+                                                <td>
+                                                    <ul>
+                                                        <li>Nhi</li>
+                                                        <li>Y học tái tạo</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="doctor-place">
+                                                <th>Nơi công tác</th>
+                                                <td>Bệnh viên Đa khoa Sông Thương</td>
+                                            </tr>
+                                            <tr class="doctor-experence">
+                                                <th>Kinh nghiệm</th>
+                                                <td>
+                                                    <ul>
+                                                        <li>Viện trưởng Viện nghiên cứu Tế bào gốc và công nghệ</li>
+                                                        <li>Giám đốc - Bệnh viện Đa khoa Sông Thương</li>
+                                                        <li>Viện trưởng Viện Nghiên cứu sức khỏe trẻ em</li>
+                                                        <li>Giám đốc Bệnh viện Nhi trung Ương</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="tab-content-achievement" id="tab-item-3">
+                                    <h2 class="content-title">Thành tựu</h2>
+                                    <div class="description">
+                                        <ul>
+                                            <li>Thực hiện thành công 5 ca phẫu thuật tách cặp song sinh dính liền</li>
+                                            <li>Tiến hành các ca ghép gan, ghép thận, ghép tủy xương ở trẻ em đầu tiên tại các Bệnh viện Nhi của Việt Nam</li>
+                                            <li>Là người đầu tiên tại Việt Nam thực hiện phẫu thuật nội soi ở trẻ em (1997), là người đầu tiên thực hiện phẫu thuật robot ở trẻ em tại Việt Nam</li>
+                                            <li>Chuyên gia hàng đầu quốc tế về lĩnh vực phẫu thuật nội soi điều trị u nang ống mật chủ (trên 500 trường hợp) và thoát vị cơ hoành bẩm sinh (trên 300 trường hợp)</li>
+                                            <li>Là người đầu tiên trên thế giới thực hiện việc ghép tế bào gốc điều trị chứng loạn sản phế quản phổi, rối loạn thần kinh ruột vào năm 2017</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-content-recognition" id="tab-item-4">
+                                    <h2 class="content-title">Giải thưởng và ghi nhận</h2>
+                                    <div class="description">
+                                        <div class="row  row8 row-mobile">
+                                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 col8 col-mobile prize-item">
+                                                <div class="prize-item-content">
+                                                    <div class="prize-images"><img src="./images/page/intro-page/ico-prize.svg" alt=""></div>
+                                                    <div class="prize-title">Anh hùng lao động trong thời kỳ đổi mới</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 col8 col-mobile prize-item">
+                                                <div class="prize-item-content">
+                                                    <div class="prize-images"><img src="./images/page/intro-page/ico-prize.svg" alt=""></div>
+                                                    <div class="prize-title">Giải thưởng Hồ Chí Minh</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 col8 col-mobile prize-item">
+                                                <div class="prize-item-content">
+                                                    <div class="prize-images"><img src="./images/page/intro-page/ico-prize.svg" alt=""></div>
+                                                    <div class="prize-title">Giải thưởng Nikkei Châu Á</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 col8 col-mobile prize-item">
+                                                <div class="prize-item-content">
+                                                    <div class="prize-images"><img src="./images/page/intro-page/ico-prize.svg" alt=""></div>
+                                                    <div class="prize-title">Giải nhất Giải thưởng khoa học sáng tạo</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 col8 col-mobile prize-item">
+                                                <div class="prize-item-content">
+                                                    <div class="prize-images"><img src="./images/page/intro-page/ico-prize.svg" alt=""></div>
+                                                    <div class="prize-title">Nhân tài đất Việt năm 2019</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 col8 col-mobile prize-item">
+                                                <div class="prize-item-content">
+                                                    <div class="prize-images"><img src="./images/page/intro-page/ico-prize.svg" alt=""></div>
+                                                    <div class="prize-title">Thầy thuốc nhân dân năm 2019</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content-blogs" id="tab-item-5">
+                                    <h3 class="content-title">Các bài viết khác</h3>
+                                    <div class="description">
+                                        <div class="related-question">
+                                            <div class="list-related-question">
+                                                <div class="question-short-content">
+                                                    <div class="img">
+                                                        <img src="./images/page/qa-page/related-post1.png" alt=""/>
+                                                    </div>
+                                                    <div class="content">
+                                                        <a href="#">
+                                                            <h4 class="name">Thay van tim qua da mà không cần phẫu thuật tại Bệnh viện ĐK Sông Thương</h4>
+                                                        </a>
+                                                        <p class="short-desc">Thay van tim qua da không cần phẫu thuật là một trong những kỹ thuật thay van tim phức tạp nhất thế giới giúp sức khỏe bệnh nhân được cải thiện rõ rệt, đặc biệt là khả năng hồi phục nhanh.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="question-short-content">
+                                                    <div class="img">
+                                                        <img src="./images/page/qa-page/related-post2.png" alt=""/>
+                                                    </div>
+                                                    <div class="content">
+                                                        <a href="#">
+                                                            <h4 class="name">Thay van tim qua da mà không cần phẫu thuật tại Bệnh viện ĐK Sông Thương</h4>
+                                                        </a>
+                                                        <p class="short-desc">Thay van tim qua da không cần phẫu thuật là một trong những kỹ thuật thay van tim phức tạp nhất thế giới giúp sức khỏe bệnh nhân được cải thiện rõ rệt, đặc biệt là khả năng hồi phục nhanh.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="question-short-content">
+                                                    <div class="img">
+                                                        <img src="./images/page/qa-page/related-post3.png" alt=""/>
+                                                    </div>
+                                                    <div class="content">
+                                                        <a href="#">
+                                                            <h4 class="name">Thay van tim qua da mà không cần phẫu thuật tại Bệnh viện ĐK Sông Thương</h4>
+                                                        </a>
+                                                        <p class="short-desc">Thay van tim qua da không cần phẫu thuật là một trong những kỹ thuật thay van tim phức tạp nhất thế giới giúp sức khỏe bệnh nhân được cải thiện rõ rệt, đặc biệt là khả năng hồi phục nhanh.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="question-short-content">
+                                                    <div class="img">
+                                                        <img src="./images/page/qa-page/related-post3.png" alt=""/>
+                                                    </div>
+                                                    <div class="content">
+                                                        <a href="#">
+                                                            <h4 class="name">Thay van tim qua da mà không cần phẫu thuật tại Bệnh viện ĐK Sông Thương</h4>
+                                                        </a>
+                                                        <p class="short-desc">Thay van tim qua da không cần phẫu thuật là một trong những kỹ thuật thay van tim phức tạp nhất thế giới giúp sức khỏe bệnh nhân được cải thiện rõ rệt, đặc biệt là khả năng hồi phục nhanh.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="page-bottom">
+			<div class="doctor-list-wrapper">
+                <div class="container">
+                    <div class="title-wrapper">
+                        <h2 class="title">Xem thêm các bác sĩ khác</h3>
+                    </div>
+                    <div class="doctor-list-slide autoplay"
+                        data-dots='false'
+                        data-speed="300"
+                        data-accessibility="true"
+                        data-autoplay="true"
+                        data-arrows='true'
+                        data-slides-To-Show="4"
+                        data-slides-To-Scroll="1"
+                        data-responsive='[
+                            {"breakpoint": 1200, "settings": {"slidesToShow": 3}}, 
+                            {"breakpoint": 992, "settings": {"slidesToShow": 3}}, 
+                            {"breakpoint": 768, "settings": {"slidesToShow": 2}}, 
+                            {"breakpoint": 481, "settings": {"slidesToShow": 1}}, 
+                            {"breakpoint": 361, "settings": {"slidesToShow": 1}}
+                        ]'
+                    >
+                        <div class="item">
+                            <div class="doctor-img">
+                                <img src="./images/home/avatar1.png"/>
+                            </div>
+                            <div class="doctor-info">
+                                <h3 class="doctor-name">BS. Võ Thành Nhân</h3>
+                                <div class="doctor-service-wrapper">
+                                    <p class="doctor-service d-flex align-items-center">
+                                        <img src="./images/home/ico-sick1.png"/>
+                                        <span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
+                                    </p>
+                                    <p class="doctor-service d-flex align-items-center">
+                                        <img src="./images/home/ico-sick2.png"/>
+                                        <span>Gây mê - Điều trị đau</span>
+                                    </p>
+                                </div>
+                                <p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
+                            </div>
+                            <div class="doctor-action d-flex align-items-center">
+                                <a href="#" class="btn btn-registration"><img src="./images/page/intro-page/ico-calendar.svg" alt=""> Đăng ký khám</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="doctor-img">
+                                <img src="./images/home/avatar2.png"/>
+                            </div>
+                            <div class="doctor-info">
+                                <h3 class="doctor-name">BS. Võ Thành Nhân</h3>
+                                <div class="doctor-service-wrapper">
+                                    <p class="doctor-service d-flex align-items-center">
+                                        <img src="./images/home/ico-sick1.png"/>
+                                        <span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
+                                    </p>
+                                    <p class="doctor-service d-flex align-items-center">
+                                        <img src="./images/home/ico-sick2.png"/>
+                                        <span>Gây mê - Điều trị đau</span>
+                                    </p>
+                                </div>
+                                <p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
+                            </div>
+                            <div class="doctor-action d-flex align-items-center">
+                                <a href="#" class="btn btn-registration"><img src="./images/page/intro-page/ico-calendar.svg" alt=""> Đăng ký khám</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="doctor-img">
+                                <img src="./images/home/avatar3.png"/>
+                            </div>
+                            <div class="doctor-info">
+                                <h3 class="doctor-name">BS. Võ Thành Nhân</h3>
+                                <div class="doctor-service-wrapper">
+                                    <p class="doctor-service d-flex align-items-center">
+                                        <img src="./images/home/ico-sick1.png"/>
+                                        <span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
+                                    </p>
+                                    <p class="doctor-service d-flex align-items-center">
+                                        <img src="./images/home/ico-sick2.png"/>
+                                        <span>Gây mê - Điều trị đau</span>
+                                    </p>
+                                </div>
+                                <p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
+                            </div>
+                            <div class="doctor-action d-flex align-items-center">
+                                <a href="#" class="btn btn-registration"><img src="./images/page/intro-page/ico-calendar.svg" alt=""> Đăng ký khám</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="doctor-img">
+                                <img src="./images/home/avatar1.png"/>
+                            </div>
+                            <div class="doctor-info">
+                                <h3 class="doctor-name">BS. Võ Thành Nhân</h3>
+                                <div class="doctor-service-wrapper">
+                                    <p class="doctor-service d-flex align-items-center">
+                                        <img src="./images/home/ico-sick1.png"/>
+                                        <span>Viện trưởng Bệnh viện ĐK Sông Thương</span>
+                                    </p>
+                                    <p class="doctor-service d-flex align-items-center">
+                                        <img src="./images/home/ico-sick2.png"/>
+                                        <span>Gây mê - Điều trị đau</span>
+                                    </p>
+                                </div>
+                                <p class="doctor-desc">Chuyên gia đầu tiên tại Việt Nam về can thiệp động mạch qua da (TAVI), có 40 năm kinh nghiệm giảng ...</p>
+                            </div>
+                            <div class="doctor-action d-flex align-items-center">
+                                <a href="#" class="btn btn-registration"><img src="./images/page/intro-page/ico-calendar.svg" alt=""> Đăng ký khám</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+    </section>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+		<!-- load content from footer.html -->
+    </footer>
+    <!-- End Footer -->
+
+    <!-- scroll top -->
+    <span class=" up "><i class=" fa fa-chevron-up "></i></span>
+    <!-- End scroll top -->
+</body>
+
+<!-- jquerry -->
+<script type="text/javascript" src="./library/jquery.min.js"></script>
+<!-- bs4 -->
+<script type="text/javascript" src="./library/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./library/js/bootstrap.js"></script>
+<!-- slick -->
+<script type="text/javascript" src="./library/slick/slick.min.js"></script>
+<script type="text/javascript" src="./library/jquery-ui/jquery-ui.min.js"></script>
+<!-- main js -->
+<script type="text/javascript" src="./javascript/main.js"></script>
+<!-- custom js -->
+<script ttype="text/javascript">
+    jQuery(document).ready(function($) {
+		// Loading
+		$('body').removeClass('preloading');
+		$('.loading').delay(1000).fadeOut('fast');
+
+        $('body').on('click', '.tab-scroll-content .see-more', function (event) {
+            event.preventDefault();
+            $(this).parent().addClass('loaded');
+        });
+
+        // fixed tab
+        let scroll_tab = $('.tab-scroll-content');
+		body = $('body,html');
+		tabPosition = scroll_tab.offset().top;
+
+		$(window).scroll(() => {
+			let startpage = body.scrollTop();
+			(startpage > tabPosition) ? (scroll_tab.addClass('fixed')) : (scroll_tab.removeClass('fixed'))
+		});
+
+        let page_bottom = $('.page-bottom');
+        page_bottom_position = page_bottom.offset().top;
+        $(window).scroll(() => {
+			let startpage = body.scrollTop();
+            if (startpage > page_bottom_position) {
+                scroll_tab.removeClass('fixed');
+            }
+		});
+
+	})
+</script>
+</html>
