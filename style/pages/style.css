@@ -3679,6 +3679,7 @@ html {
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
+  cursor: pointer;
 }
 .modal-registration .modal-body [class*="col-"] .field-doctor-wrapper #list-results .item:not(:last-child) {
   margin-bottom: 10px;
