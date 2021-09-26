@@ -9807,7 +9807,7 @@ body.has-modal:after {
   transition: 0.3s ease-in;
 }
 .home-page .banner-and-dropdown-list .dropdown-list li.active:after {
-  width: 40%;
+  width: 100%;
   opacity: 1;
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
