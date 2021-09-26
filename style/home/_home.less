@@ -489,6 +489,8 @@
 				justify-content: center;
 				color: @text_color;
 				border-radius: 50%;
+				font-size: 30px;
+				font-weight: 600;
 			}
 			&:hover{
 				
@@ -503,7 +505,7 @@
 			left: -80px;
 
 			&:before {
-				content: "\f053";
+				content: "\f104";
 			}
 		}
 
@@ -511,7 +513,7 @@
 			right: -80px;
 
 			&:before {
-				content: "\f054";
+				content: "\f105";
 			}
 		}
 
@@ -891,10 +893,11 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				transition: all 0.3s ease-in;
 
 				&:hover {
-					border: 3px solid @text_color;
+					border: 3px solid @base_color;
+					color: @base_color;
+					cursor: pointer;
 				}
 
 				&:before {
@@ -904,6 +907,8 @@
 					font-size: 30px;
 					align-items: center;
 					justify-content: center;
+					font-weight: 600;
+					
 				}
 			}
 

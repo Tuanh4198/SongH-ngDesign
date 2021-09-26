@@ -8969,6 +8969,8 @@ body.has-modal:after {
           justify-content: center;
   color: #091D3E;
   border-radius: 50%;
+  font-size: 30px;
+  font-weight: 600;
 }
 .home-page .doctor-list-wrapper .slick-arrow:hover::before {
   border-color: #0092FF;
@@ -8978,13 +8980,13 @@ body.has-modal:after {
   left: -80px;
 }
 .home-page .doctor-list-wrapper .slick-prev:before {
-  content: "\f053";
+  content: "\f104";
 }
 .home-page .doctor-list-wrapper .slick-next {
   right: -80px;
 }
 .home-page .doctor-list-wrapper .slick-next:before {
-  content: "\f054";
+  content: "\f105";
 }
 .home-page .doctor-list-wrapper .slick-list {
   margin: 0 -25px;
@@ -9362,11 +9364,11 @@ body.has-modal:after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
 }
 .home-page .shop-online-wraper .btn-slide i:hover {
-  border: 3px solid #091D3E;
+  border: 3px solid #0092FF;
+  color: #0092FF;
+  cursor: pointer;
 }
 .home-page .shop-online-wraper .btn-slide i:before {
   width: 100%;
@@ -9381,6 +9383,7 @@ body.has-modal:after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-weight: 600;
 }
 .home-page .shop-online-wraper .btn-slide .slide-right {
   margin-left: 20px;
