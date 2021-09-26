@@ -1,21 +1,18 @@
 jQuery(document).ready(function ($) {
-	// call layout
-		
-	async function getlayout() {
-		await $("#header").load("header.html");
-		await $("#footer").load("footer.html");
-		await $("#modal").load("modal.html");
-		await $("#header_v2").load("header-V2.html");
-		await $("#footer_v2").load("footer-V2.html");
+	// call layout:
+    // bao giờ ghép thì xóa phần này đi
+	$("#header").load("header.html");
+	$("#footer").load("footer.html");
+	$("#modal").load("modal.html");
+	$("#header_v2").load("header-V2.html");
+	$("#footer_v2").load("footer-V2.html");
+    // end
 
-		await $(".field-date").each(function () {
-			$(this).datepicker({
-				dateFormat: 'dd/mm/yy'
-			});
-		});
-	}
-
-	getlayout();
+	$(".field-date").each(function () {
+        $(this).datepicker({
+            dateFormat: 'dd/mm/yy'
+        });
+    });
 
 	// call slick slide
 	if ($(window).width() <= 575) {
