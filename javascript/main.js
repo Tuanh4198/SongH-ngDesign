@@ -336,4 +336,19 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
+	// hide fixed_menu_social
+	(function ($) {
+		const fixed_menu_social = $('.detail-page .fixed-menu-social');
+		$(window).scroll(function () {
+			let startpage = body.scrollTop();
+			let hidePosition = $('.detail-page .col-main').offset().top + $('.detail-page .col-main').height();
+			if(startpage >= hidePosition) {
+				fixed_menu_social.fadeOut();
+			} else {
+				fixed_menu_social.fadeIn();
+			}
+		});
+	})($);
+	// end hide fixed_menu_social
+
 });
