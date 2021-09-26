@@ -3615,6 +3615,16 @@
   visibility: hidden;
   height: 0;
 }
+.doctor-detail .doctor-info-detail .tab-scroll-content.fixed .tab-items {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  z-index: 10;
+  right: 0;
+  left: 36.1%;
+  padding-left: 70px;
+  padding-top: 25px;
+}
 .doctor-detail .doctor-info-detail .content-title {
   font-size: 22px;
   font-weight: 700;
