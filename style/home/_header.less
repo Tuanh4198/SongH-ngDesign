@@ -1,6 +1,8 @@
 .header-top {
 	padding: 5px 0;
-	border-bottom: 1px solid @border_color;
+	border-width: 0 0 1px;
+	border-style: solid;
+	border-color: @border_color;
 
 	.list-link {
 		display: flex;
@@ -47,7 +49,6 @@
 		}
 	}
 }
-
 .header-bottom {
 	background: #F7F7F7;
 
@@ -81,7 +82,7 @@
 				
 				.chile-menu {
 					top: 100%;
-					transition: all 0.3s ease-in;
+					transition: all 0.2s ease-in;
 					opacity: 1;
 					visibility: visible;
 				}
@@ -90,7 +91,7 @@
 			.chile-menu {
 				min-width: 100%;
 				position: absolute;
-				background: #FFFFFF;
+				background: #FFFFFf;
 				box-shadow: 0px 1px 3px rgba(19, 10, 46, 0.13);
 				border-radius: 4px;
 				left: 0;
@@ -108,7 +109,7 @@
 						display: block;
 						height: 32px;
 						line-height: 32px;
-						background: @white;
+						background: white;
 						font-style: normal;
 						font-weight: normal;
 						font-size: 14px;
@@ -126,7 +127,6 @@
 		}
 	}
 }
-
 .header-center {
 	padding: 20px 0;
 
@@ -141,11 +141,12 @@
 		border-radius: 4px;
 		margin-left: 15px;
 		margin-right: 30px;
-		transition: all 0.3s ease-in;
+		transition: all 0.2s ease-in;
 
 		&:hover,
-		&:focus {
-			border: 1px solid @text_color;
+		&:focus,
+		&.active {
+			border: 1px solid @base_color;
 		}
  
 		.btn-search {
@@ -154,7 +155,7 @@
 			display: flex;
     		align-items: center;
 			justify-content: center;
-			transition: all 0.3s ease-in;
+			transition: all 0.2s ease-in;
 
 			&:hover {
 				filter: brightness(0.5);
@@ -257,7 +258,6 @@
 		}
 	}
 }
-
 .modal-custom {
 	position: fixed;
 	top: 50%;
@@ -267,7 +267,6 @@
 	background: #FFFFFF;
 	border-radius: 12px;
 }
-
 .modal-registration {
 	display: none;
 	width: 700px;
@@ -326,7 +325,7 @@
 
 	.modal-body {
 		padding: 25px;
-		padding-bottom: 0;
+		padding-bottom: 14px;
 		border: none;
 
 		.title-wrapper {
@@ -410,7 +409,7 @@
 
 				&:focus,
 				&:hover {
-					border: 1px solid @text_color;
+					border-color: @base_color;
 				}
 
 				&::placeholder {
@@ -588,7 +587,6 @@
 		}
 	}
 }
-
 .modal-login {
 	width: 460px;
 	display: none;
@@ -824,7 +822,6 @@
 		}
 	}
 }
-
 body.has-modal {
 	&:after {
 		content: "";

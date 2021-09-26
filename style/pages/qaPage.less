@@ -1,22 +1,7 @@
-@import '../config/_config';
-@import '../home/_header';
-@import '../home/_footer';
-@import '../home/_home';
-
 .qa-page {
 	margin-bottom: 40px;
 
 	.breadcrumb-wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-image: url(../../images/page/qa-page/banner_qa_page.png);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		height: 160px;
-		padding-bottom: 30px;
-
 		.title {
 			font-style: normal;
 			font-weight: bold;
@@ -73,7 +58,7 @@
 			padding: 0 25px;
 
 			&:hover {
-				background: @text_color;
+				background: #004B84;
 			}
 		}
 	}
@@ -117,7 +102,7 @@
 				&:not(:last-child) {
 					margin-bottom: 15px;
 					padding-bottom: 15px;
-					border: 1px solid #F7F7F7;
+					// border: 1px solid #F7F7F7;
 				}
 
 				a {
@@ -166,6 +151,14 @@
 				justify-content: space-between;
 				background: #F7F7F7;
 				border-radius: 8px;
+				border-width: 1px;
+				border-style: solid;
+				border-color: transparent;
+
+				&.active,
+				&:hover{
+					border-color: @base_color;
+				}
 			}
 
 			img {
@@ -209,6 +202,7 @@
 
 				&:hover {
 					background: @base_color;
+					border-color: @base_color;
 				}
 			}
 		}
@@ -245,6 +239,10 @@
 				border-radius: 8px;
 				margin-bottom: 15px;
 				padding: 25px 30px;
+
+				&:hover{
+					border-color: @base_color;
+				}
 			}
 
 			.qa-item-top {
@@ -294,6 +292,10 @@
 					color: @text_color;
 					margin-bottom: 15px;
 					display: block;
+
+					&:hover{
+						color: @base_color;
+					}
 				}
 
 				.answer {
@@ -362,7 +364,7 @@
 					.like {
 						margin-right: 10px;
 						padding-right: 10px;
-						border: 1px solid @border_color;
+						// border: 1px solid @border_color;
 
 						i {
 							color: @base_color;

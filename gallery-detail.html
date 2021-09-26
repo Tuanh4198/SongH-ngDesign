@@ -22,8 +22,9 @@
 	<!-- slick slider -->
 	<link rel="stylesheet" href="./library/slick/slick-theme.css" />
 	<link rel="stylesheet" href="./library/slick/slick.css" />
+	<link rel="stylesheet" href="./library/jquery-ui/jquery-ui.min.css" />
 	<!-- main style -->
-	<link rel="stylesheet" href="./style/pages/news.css">
+	<link rel="stylesheet" href="./style/pages/style.css">
 </head>
 
 <body>
@@ -167,7 +168,7 @@
 							<div class="field-date-wrapper field">
 								<p class="result">Chọn ngày khám bệnh</p>
 								<i class="fa fa-calendar" aria-hidden="true"></i>
-								<input type="date" class="field-date" placeholder="Nhập email">
+								<input type="text" class="field-date" placeholder="Nhập email">
 							</div>
 							<button class="btn-submit">Gửi yêu cầu khám bệnh</button>
 						</form>
@@ -179,7 +180,16 @@
 							<div class="slide-content  autoplay" data-dots='true' data-speed="300"
 								data-accessibility="true" data-autoplay="false" data-arrows='false'
 								data-center-mode="true" data-slides-To-Show="1" data-slides-To-Scroll="1"
-								data-center-padding='44px'>
+								data-center-padding='44px'
+								data-responsive='[
+									{"breakpoint": 1471, "settings": {"slidesToShow": 1}}, 
+									{"breakpoint": 1200, "settings": {"slidesToShow": 1}}, 
+									{"breakpoint": 992, "settings": {"slidesToShow": 2}}, 
+									{"breakpoint": 768, "settings": {"slidesToShow": 2}}, 
+									{"breakpoint": 576, "settings": {"slidesToShow": 2}}, 
+									{"breakpoint": 481, "settings": {"slidesToShow": 1}}, 
+									{"breakpoint": 361, "settings": {"slidesToShow": 1}}
+                                ]'>
 								<div class="item">
 									<a href="#">
 										<img src="./images/page/qa-page/slide.png" alt="" />
@@ -207,24 +217,41 @@
 				<div class="container">
 					<h3 class="title">Xem chuyên mục ảnh khác</h3>
 					<div class="list-related-news">
-						<div class="row">
-							<div class="related-news-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+						<div class="autoplay" 
+							data-dots='false'
+							data-infinite="true"
+							data-speed="1000"
+							data-accessibility="true"
+							data-autoplay="false"
+							data-arrows='false'
+							data-slides-To-Show="3"
+							data-slides-To-Scroll="1"
+							data-responsive='[
+							{"breakpoint": 1471, "settings": {"slidesToShow": 3}}, 
+							{"breakpoint": 1200, "settings": {"slidesToShow": 2}}, 
+							{"breakpoint": 992, "settings": {"slidesToShow": 2}}, 
+							{"breakpoint": 768, "settings": {"slidesToShow": 2}}, 
+							{"breakpoint": 576, "settings": {"slidesToShow": 2}}, 
+							{"breakpoint": 481, "settings": {"slidesToShow": 2}}, 
+							{"breakpoint": 361, "settings": {"slidesToShow": 1}}
+							]'
+							>
+							<div class="related-news-item">
 								<div class="news-item-info">
 									<div class="img">
-										<img src="./images/page/news/post1.jpg" alt="" />
+										<a href="#"><img src="./images/page/news/post1.jpg" alt="" /></a>
 									</div>
 									<div class="content">
 										<a href="#">
-											<h4 class="name">Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô
-											</h4>
+											<h4 class="name">Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô</h4>
 										</a>
 									</div>
 								</div>
 							</div>
-							<div class="related-news-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+							<div class="related-news-item">
 								<div class="news-item-info">
 									<div class="img">
-										<img src="./images/page/news/post2.jpg" alt="" />
+										<a href="#"><img src="./images/page/news/post2.jpg" alt="" /></a>
 									</div>
 									<div class="content">
 										<a href="#">
@@ -233,14 +260,26 @@
 									</div>
 								</div>
 							</div>
-							<div class="related-news-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+							<div class="related-news-item">
 								<div class="news-item-info">
 									<div class="img">
-										<img src="./images/page/news/post3.jpg" alt="" />
+										<a href="#"><img src="./images/page/news/post3.jpg" alt="" /></a>
 									</div>
 									<div class="content">
 										<a href="#">
 											<h4 class="name">Hội thảo: Sơ cấp cứu cho mẹ bầu</h4>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="related-news-item">
+								<div class="news-item-info">
+									<div class="img">
+										<a href="#"><img src="./images/page/news/post1.jpg" alt="" /></a>
+									</div>
+									<div class="content">
+										<a href="#">
+											<h4 class="name">Tưng bừng khánh thành Bệnh viện giai đoạn 2 – Gấp 3 lần Quy mô</h4>
 										</a>
 									</div>
 								</div>
@@ -273,6 +312,7 @@
 <script type="text/javascript" src="./library/slick/slick.min.js"></script>
 <!-- main js -->
 <script type="text/javascript" src="./javascript/main.js"></script>
+<script type="text/javascript" src="./library/jquery-ui/jquery-ui.min.js"></script>
 <!-- custom js -->
 <script ttype="text/javascript">
 	jQuery(document).ready(function ($) {
