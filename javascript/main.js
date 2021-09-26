@@ -364,7 +364,7 @@ jQuery(document).ready(function($) {
     })
 
     $(function() {
-        $('.menu-mobile .main-menu li > a').click(function() {
+        $('.menu-mobile .main-menu > li > a').click(function() {
             $(this).toggleClass('active');
             $(this).next().toggleClass('active')
         })
@@ -385,10 +385,11 @@ jQuery(document).ready(function($) {
     // hide fixed_menu_social
     (function($) {
         const fixed_menu_social = $('.detail-page .fixed-menu-social');
+        const column_main = $('.detail-page .col-main');
         $(window).scroll(function() {
-            if (fixed_menu_social) {
+            if (fixed_menu_social && column_main) {
                 let startpage = body.scrollTop();
-                let hidePosition = $('.detail-page .col-main').offset().top + $('.detail-page .col-main').height() - parseFloat(fixed_menu_social.css('top')) - fixed_menu_social.height();
+                let hidePosition = column_main.offset().top + column_main.height() - parseFloat(fixed_menu_social.css('top')) - fixed_menu_social.height();
                 if (startpage >= hidePosition) {
                     fixed_menu_social.fadeOut();
                 } else {

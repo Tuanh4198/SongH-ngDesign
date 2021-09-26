@@ -862,7 +862,10 @@ body.has-modal {
 			right: 0;
 			bottom: 0;
 			background: #fff;
-			z-index: 10;
+			z-index: 10;	
+			height: 100vh;
+			max-height: 100vh;		
+
 			.btn-close-mobile{
 				background-color: #fff;
 			}
@@ -1023,9 +1026,44 @@ body.has-modal {
 	}
 	.menu-active{
 		overflow: hidden;
+		width: 100vw;
+		height: 100vh;
+
 		.header-center {
 			.menu-mobile{
-				display: block !important;
+				display: flex !important;
+				flex-direction: column;
+
+				.header-bottom{
+					flex: 1;
+					height: 400px;
+
+					>.container{
+						height: 100%;
+						overflow-y: auto;
+						overflow-x: hidden;
+					}
+
+					.main-menu{
+						height: 100%;
+						overflow-y: auto;
+						justify-content: flex-start;
+
+						li {
+							.chile-menu{
+								position: static;
+							}
+
+							&:hover {
+								a{
+									color: @text_color;
+									background-color: transparent;
+								}
+							}
+						}
+					}
+				}
+
 			}
 			.search-wrapper{
 				height: 36px;
