@@ -635,6 +635,8 @@
 				}
 
 				.description{
+					position: relative;
+
 					>ul{
 						.round-borders(8px);
 						padding-top: 12px;
@@ -685,10 +687,29 @@
 					}
 				}
 
+				.mask-description{
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background-color: white;
+					opacity: .6;
+					height: 25px;
+					transition: all ease .3s;
+				}
+
 				&:last-child{
 					border-width: 0;
 					padding-bottom: 0;
 					margin-bottom: 0;
+				}
+
+				&.loaded{
+					.mask-description{
+						opacity: 0;
+						visibility: hidden;
+						height: 0;
+					}
 				}
 			}
 		}

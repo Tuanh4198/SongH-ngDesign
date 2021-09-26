@@ -125,8 +125,9 @@
                                     <h2 class="content-title">Giới thiệu sơ lược về BS. Võ Thành Nhân</h2>
                                     <div class="description">
                                         <p>Giáo sư, Tiến sĩ, Bác sĩ Võ Thành Nhân đã cống hiến hơn 30 năm trong lĩnh vực Gây mê - điều trị đau, là chuyên gia có thế mạnh về: Gây mê hồi sức trong phẫu thuật nhi; Xử trí đường thở khó và đặt ống nội khí quản khó; Gây tê mặt phẳng cơ dựng sống dưới hướng dẫn siêu âm (ESP) cho phẫu thuật mở tim và ngực, kỹ thuật mới để điều trị đau không opioid; Giám sát thông khí cho bệnh nhân béo phì trong quá trình thực hiện phẫu thuật giảm cân; Chăm sóc giảm nhẹ cho người bệnh.</p>
-                                        <button class="see-more">Xem thêm giới thiệu</button>
+                                        <div class="mask-description"></div>
                                     </div>
+                                    <button class="see-more">Xem thêm giới thiệu</button>
                                 </div>
                                 <div class="tab-content-level" id="tab-item-2">
                                     <h2 class="content-title">Kinh nghiệm, học vấn</h2>
@@ -425,6 +426,12 @@
 		// Loading
 		$('body').removeClass('preloading');
 		$('.loading').delay(1000).fadeOut('fast');
+
+        $('body').on('click', '.tab-scroll-content .see-more', function (event) {
+            event.preventDefault();
+            $(this).parent().addClass('loaded');
+        });
+
 	})
 </script>
 </html>

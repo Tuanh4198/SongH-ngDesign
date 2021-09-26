@@ -3547,6 +3547,9 @@
   list-style-position: outside;
   padding-left: 40px;
 }
+.doctor-detail .doctor-info-detail .tab-scroll-content [class*="tab-content-"] .description {
+  position: relative;
+}
 .doctor-detail .doctor-info-detail .tab-scroll-content [class*="tab-content-"] .description > ul {
   border-radius: 8px;
   -moz-border-radius: 8px;
@@ -3591,10 +3594,26 @@
 .doctor-detail .doctor-info-detail .tab-scroll-content [class*="tab-content-"] .prize-item .prize-item-content:hover {
   border-color: #0092FF;
 }
+.doctor-detail .doctor-info-detail .tab-scroll-content [class*="tab-content-"] .mask-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  opacity: 0.6;
+  height: 25px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
 .doctor-detail .doctor-info-detail .tab-scroll-content [class*="tab-content-"]:last-child {
   border-width: 0;
   padding-bottom: 0;
   margin-bottom: 0;
+}
+.doctor-detail .doctor-info-detail .tab-scroll-content [class*="tab-content-"].loaded .mask-description {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
 }
 .doctor-detail .doctor-info-detail .content-title {
   font-size: 22px;
