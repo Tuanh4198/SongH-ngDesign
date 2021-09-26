@@ -643,6 +643,8 @@
 			}
 
 			.list-category {
+				.dflex;
+				
 				li {
 					margin-left: 8px;
 				}
@@ -716,6 +718,14 @@
 	}
 }
 
+@media only screen and (max-width: 1199px){
+	.detail-page {
+		.fixed-menu-social{
+			display: none !important;
+		}
+	}
+}
+
 @media only screen and (max-width: 991px) {
 	.detail-page {
 
@@ -741,7 +751,7 @@
 		}
 
 		.fixed-menu-social {
-			display: none;
+			display: none !important;
 		}
 
 		.col-main {
@@ -904,6 +914,36 @@
 						border-bottom: none;
 					}
 				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 575px){
+	.detail-page{
+		.page-title {
+			margin-bottom: 16px;
+
+			.title{
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 32px;
+				margin-top: 12px;
+			}
+		}
+
+
+		.related-question {
+			h3.title{
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 29px;
+			}
+
+			.category{
+				display: none !important;
 			}
 		}
 	}

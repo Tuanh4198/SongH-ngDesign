@@ -746,14 +746,14 @@
 			(startpage > tabPosition) ? (scroll_tab.addClass('fixed')) : (scroll_tab.removeClass('fixed'));
 		});
 
-        // let page_bottom = $('.page-bottom');
-        // page_bottom_position = page_bottom.offset().top;
-        // $(window).scroll(() => {
-		// 	let startpage = body.scrollTop();
-        //     if (startpage > page_bottom_position) {
-        //         scroll_tab.removeClass('fixed');
-        //     }
-		// });
+        let page_bottom = $('.page-bottom');
+        page_bottom_position = page_bottom.offset().top;
+        $(window).scroll(() => {
+			let startpage = body.scrollTop();
+            if (startpage > page_bottom_position) {
+                scroll_tab.removeClass('fixed');
+            }
+		});
 
 	})
 </script>
