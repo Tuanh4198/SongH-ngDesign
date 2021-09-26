@@ -336,4 +336,17 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
+
+	// scroll tab
+	$('body').on('click', '.tab-scroll-content .tab-items .tab-item', function (event) {
+		event.preventDefault();
+		$(this).parent().find('.tab-item').removeClass('active');
+		$(this).addClass('active');
+
+		let item_scroll = $(this).children('.tab-item-link').attr('href');
+		$('html, body').animate({
+			scrollTop: $(item_scroll).offset().top
+		}, 0);
+	});
+
 });
