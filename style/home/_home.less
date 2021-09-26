@@ -2,7 +2,6 @@
 @import './_header';
 @import './_footer';
 @import './_home';
-
 .home-page {
 	.title-wrapper {
 		margin-bottom: 25px; 
@@ -223,7 +222,9 @@
 					width: 100%;
 					line-height: 44px;
 					padding: 0 12px;
-
+					&:focus{
+						border-color: #0092FF;
+					}
 					&::placeholder {
 						font-style: normal;
 						font-weight: normal;
@@ -337,7 +338,7 @@
 				box-sizing: border-box;
 				border-radius: 16px 16px 0px 0px;
 				position: sticky; 
-				top: 0;
+				top: -1px;
 				z-index: 1;
 			}
 
@@ -389,8 +390,21 @@
 					line-height: 19px;
 					color: @text_color;
 					white-space: nowrap;
+				
 				}
-
+				.col-info{
+					padding-left: 12px;
+					.office{
+						display: none;
+					}
+					&:hover{
+						.doctor-name
+						{
+							color: @base_color;
+						}
+						cursor: pointer;
+					}
+				}
 				.infor {
 					margin-left: 12px;
 
@@ -475,6 +489,15 @@
 				justify-content: center;
 				color: @text_color;
 				border-radius: 50%;
+				font-size: 30px;
+				font-weight: 600;
+			}
+			&:hover{
+				
+				&::before{
+					border-color: @base_color;
+					color: @base_color;
+				}
 			}
 		}
 
@@ -482,7 +505,7 @@
 			left: -80px;
 
 			&:before {
-				content: "\f053";
+				content: "\f104";
 			}
 		}
 
@@ -490,7 +513,7 @@
 			right: -80px;
 
 			&:before {
-				content: "\f054";
+				content: "\f105";
 			}
 		}
 
@@ -506,14 +529,14 @@
 			position: relative;
 
 			&:hover {
+				box-shadow: 0px 4px 40px rgba(5, 8, 80, 0.12);	
 				.doctor-action {
 					opacity: 1;
 					visibility: visible;
 				}
 
 				.doctor-info {
-					transform: translateY(-40px);
-					box-shadow: 0px 4px 40px rgba(5, 8, 80, 0.12);					
+					transform: translateY(-40px);				
 				}
 			}
 
@@ -537,6 +560,10 @@
 				line-height: 24px;
 				color: @text_color;
 				margin-bottom:10px;
+				&:hover{
+					color: @base_color;
+					cursor: pointer;
+				}
 			}
 
 			.doctor-desc {
@@ -596,11 +623,17 @@
 				.btn-get-info {
 					background: #43D5CB;
 					border-radius: 0px 0px 0px 4px;
+					&:hover{
+						background-color: #36ece0;
+					}
 				}
 
 				.btn-registration {
 					background: #018DF8;
 					border-radius: 0px 0px 4px 0px;
+					&:hover{
+						background-color: @text_color;
+					}
 				}
 			}
 		}
@@ -808,6 +841,12 @@
 			img {
 				margin-right: 20px;
 			}
+			a{
+				color: @text_color;
+				&:hover{
+					color: @base_color;
+				}
+			}
 		}
 
 		.view-more {
@@ -854,10 +893,11 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				transition: all 0.3s ease-in;
 
 				&:hover {
-					border: 3px solid @text_color;
+					border: 3px solid @base_color;
+					color: @base_color;
+					cursor: pointer;
 				}
 
 				&:before {
@@ -867,6 +907,8 @@
 					font-size: 30px;
 					align-items: center;
 					justify-content: center;
+					font-weight: 600;
+					
 				}
 			}
 
@@ -967,6 +1009,7 @@
 				border-radius: 12px;
 				padding-left: 20px;
 				position: relative;
+				cursor: pointer;
 
 				&:before {
 					content:"";
@@ -1096,6 +1139,7 @@
 				color: @text_color;
 				width: 100%;
 				margin-bottom: 15px;
+				
 			}
 
 			.like,
@@ -1288,7 +1332,9 @@
 				}
 			}
 		}
-
+		.title-wrapper{
+			display: none;
+		}
 		.item {
 			display: flex;
 			align-items: center;
@@ -1327,6 +1373,12 @@
 				display: -webkit-box;
 				-webkit-line-clamp: 2;
 				-webkit-box-orient: vertical;
+				.post-link{
+					color: @text_color;
+					&:hover{
+						color: @base_color;
+					}
+				}
 			}
 
 			.view-more {
@@ -1581,7 +1633,7 @@
 	}
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1199px){
 	.home-page {
 		.block-bottom-slide {
 			.clinic-index {
@@ -1682,6 +1734,7 @@
 			}
 		}
 	}
+	
 }
 
 @media only screen and (max-width: 992px){
@@ -1710,9 +1763,14 @@
 			padding-bottom: 10px;
 
 			.form-submit-info {
-				padding: 20px 15px 10px;
+				padding: 20px 16px 75px 16px;
 				margin-bottom: 30px;
-
+				.link-health-declaration {
+					position: absolute;
+					bottom: 32px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
 
 				.title-wrapper {
 					.title {
@@ -1721,10 +1779,6 @@
 						font-size: 15px;
 						line-height: 22px;
 						text-align: left;
-					}
-
-					.link-health-declaration {
-						display: none;
 					}
 				}
 
@@ -1877,12 +1931,12 @@
 				.doctor-service {
 					font-style: normal;
 					font-weight: 500;
-					font-size: 10px;
+					font-size: 12px;
 					line-height: 12px;
 
 					img {
-						width: 10px;
-						height: 10px;
+						width: 15px;
+						height: 15px;
 						margin-right: 5px;
 					}
 				}
@@ -2200,7 +2254,92 @@
 		}
 	}
 }
-
+@media only screen and (max-width: 767px){
+	
+	.home-page {
+		.examination-schedule-wrapper{
+			.table-fixed{
+				th,td{
+					&:nth-child(2),
+					&:nth-child(4){
+						display: none;
+					}
+				}
+				td {
+					.col-info {
+						.office{
+							display: block;
+						}
+					}
+				}
+			}
+			.table-responsive{
+				td{
+					.office{
+						color: @base_color;
+					}
+				} 
+			} 
+		}
+		.doctor-list-wrapper{
+			.item{
+				.doctor-action{
+					.btn{
+						font-size: 12px;
+					}
+				} 
+				&:hover {
+					.doctor-info{
+						-webkit-transform: translateY(0);
+    					transform: translateY(0);
+					}
+				}
+			} 
+			
+		}
+		.post-list-wrapper{
+			.item {
+				padding-bottom: 15px;
+				.view-more{
+					display: none;
+				}
+			} 
+			.title-wrapper{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+			}
+		} 
+		.list-professional-wrapper{
+			.col-professional{
+				&:last-child{
+					.col-professional-wrapper{
+						padding: 25px;
+						text-align: center;
+						a{
+							color: @base_color;
+							font-size: 14px;
+							font-weight: 600;
+							&:hover{
+								color: @text_color;
+							}
+						}
+					}
+				}
+			}
+		} 
+		.question-answer-wrapper {
+			.answer-wrapper{
+				.view{
+					.view{
+						display: none;
+					}
+				}
+			} 
+		}
+	}
+}
 @media only screen and (max-width: 576px){
 	.home-page {
 		.main-slider {
@@ -2470,7 +2609,35 @@
 		}
 	}
 }
-
+@media only screen and (max-width: 480px){
+	.examination-schedule-wrapper{
+		.container{
+			padding-left: 0;
+			padding-right: 0;
+			.title-wrapper{
+				padding: 0 15px;
+			}
+		}
+	}
+	.home-page{
+		.examination-schedule-wrapper {
+			.table-responsive{
+				td {
+					font-size: 12px;
+					.doctor-name{
+						font-size: 13px;
+					}
+					.date{
+						font-size: 12px;
+					}
+					.time{
+						font-size: 12px;
+					}
+				}
+			} 
+		}
+	} 
+}
 @media only screen and (max-width: 375px){
 	.home-page {
 		.doctor-list-wrapper {
