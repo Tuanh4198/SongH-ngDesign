@@ -389,7 +389,7 @@ jQuery(document).ready(function($) {
         $(window).scroll(function() {
             if (fixed_menu_social && column_main) {
                 let startpage = body.scrollTop();
-                let hidePosition = column_main.offset().top + column_main.height() - parseFloat(fixed_menu_social.css('top')) - fixed_menu_social.height();
+                let hidePosition = column_main.offset().top + column_main.height() - parseFloat(fixed_menu_social.css('top')) - fixed_menu_social.height() - 50;
                 if (startpage >= hidePosition) {
                     fixed_menu_social.fadeOut();
                 } else {
