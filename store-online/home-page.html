@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sông Thương - Gian hàng trực tuyến</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/home/favicon.ico" />
+    <!-- animation -->
+    <link rel="stylesheet" href="../library/animate.css" />
+    <!-- font fontawesome -->
+    <link rel="stylesheet" href="../fonts/fontawesome/css/font-awesome.min.css" />
+    <!-- font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- bs4 -->
+    <link rel="stylesheet" href="../library/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../library/css/bootstrap-grid.min.css" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="../library/slick/slick-theme.css" />
+    <link rel="stylesheet" href="../library/slick/slick.css" />
+    <!-- main style -->
+
+    <link rel="stylesheet" href="./library/jquery-ui/jquery-ui.min.css" />
+
+    <link rel="stylesheet" href="../style/pages/style-V2.css">
+    <!-- Loading -->
+    <style type="text/css">
+        .preloading {
+            overflow: hidden;
+        }
+
+        .loading {
+            position: fixed;
+            background-color: black;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+            z-index: 1000000;
+        }
+
+        .loading .img {
+            width: 100%;
+            width: auto;
+            opacity: 1;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    </style>
+</head>
+
+<body class="preloading">
+    <!-- Loading -->
+    <div class="loading">
+        <svg width="50" height="50" viewBox="0 0 50 50" class="img">
+            <path fill="white"
+                d="M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z">
+                <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.5s"
+                    repeatCount="indefinite" />
+            </path>
+        </svg>
+    </div>
+    <!-- End Loading -->
+
+    <!-- Header -->
+    <header id="header_v2" class="header fixed-main-menu">
+        <!-- load content from header.html -->
+    </header>
+    <!-- End header -->
+
+    <!-- Content -->
+    <section class="home-page-online-store">
+        <div class="page-top">
+            <a href="#"><img src="../images/page/online-store/banner-page-top.jpg" alt=""></a>
+        </div>
+        <div class="page-columns">
+            <div class="container">
+                <div class="row row24 row-mobile">
+                    <sidebar class="col-xl-3 col-lg-4 side-bar dropdown col24 col-mobile">
+                        <div class="list-category-wrapper">
+                            <h2 class="list-category-title">Danh mục</h2>
+                            <div class="d-none show-option">
+                                <span class="result">Tất cả Sản phẩm / Dịch vụ <span class="count">(150)</span></span>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </div>
+                            <ul class="list-category fretboard">
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        Tất cả Sản phẩm / Dịch vụ
+                                        <span class="fa fa-caret-right" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        Khóa học
+                                        <span class="fa fa-caret-right" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        Thẻ và hội viên Sông Thương
+                                        <span class="fa fa-caret-right" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        Thai sản và tiêm chủng
+                                        <span class="fa fa-caret-right" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        Thẩm mỹ
+                                        <span class="fa fa-caret-right" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        Sức khỏe cá nhân
+                                        <span class="fa fa-caret-right" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        Thực phẩm chức năng
+                                        <span class="fa fa-caret-right" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex align-items-center justify-content-between">
+                                        Các gói dịch vụ khác
+                                        <span class="fa fa-caret-right" aria-hidden="true"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </sidebar>
+                    <div class="col-xl-9 col-lg-8 col-main col24 col-mobile">
+                        <div class="toolbar">
+                            <div class="toolbar-amount"><span class="amount-number">195</span> sản phẩm</div>
+                            <div class="toolbar-sorter">
+                                <label class="label" for="sorter">Sắp xếp: </label>
+                                <select id="sorter" data-role="sorter" class="sorter-options"> 
+                                    <option value="position" selected="selected"> Mới nhất </option> 
+                                    <option value="name"> Theo tên </option> 
+                                    <option value="price"> Theo giá </option> 
+                                </select>
+                            </div>
+                        </div>
+                        <div class="list-products row row10 row-product-mobile">
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
+                                <div class="product-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <!-- <div class="product-label">
+                                            <div class="label-content">
+                                                <span class="discount">-30%</span>
+                                            </div>
+                                        </div> -->
+                                        <a href="#" class="product-img">
+                                            <img class="product-img-first" src="../images/page/online-store/products/1.jpg"/>
+                                            <img class="product-img-second" src="../images/page/online-store/products/2.jpg"/>
+                                        </a>
+                                        <!-- <a href="#" class="add-to-wishlist">
+                                            <img src="./images/page/category/heart.png" />
+                                        </a> -->
+                                    </div>
+                                    <div class="product-detail-wrapper">
+                                        <!-- <p class="product-status">Mới ra mắt</p> -->
+                                        <a href="#" class="product-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (36 Tuần)</a>
+                                        <div class="product-price-wrapper">
+                                            <span class="old-price">500.000 &#8363;</span>
+                                            <span class="discount">-25%</span>
+                                            <span class="price">369.000 &#8363;</span>
+                                        </div>
+                                        <button class="action add-cart btn-modal" data-modal="ajax-cart">Chọn mua</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
+                                <div class="product-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <a href="#" class="product-img">
+                                            <img class="product-img-first" src="../images/page/online-store/products/2.jpg"/>
+                                            <img class="product-img-second" src="../images/page/online-store/products/3.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="product-detail-wrapper">
+                                        <a href="#" class="product-name">Gói phục hồi chức năng sàn chậu sau sinh sản phụ</a>
+                                        <div class="product-price-wrapper">
+                                            <span class="old-price">500.000 &#8363;</span>
+                                            <span class="discount">-25%</span>
+                                            <span class="price">369.000 &#8363;</span>
+                                        </div>
+                                        <button class="action add-cart btn-modal" data-modal="ajax-cart">Chọn mua</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
+                                <div class="product-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <a href="#" class="product-img">
+                                            <img class="product-img-first" src="../images/page/online-store/products/3.jpg"/>
+                                            <img class="product-img-second" src="../images/page/online-store/products/4.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="product-detail-wrapper">
+                                        <a href="#" class="product-name">Men vi sinh Biogaia Protectis tablets</a>
+                                        <div class="product-price-wrapper">
+                                            <span class="old-price">500.000 &#8363;</span>
+                                            <span class="discount">-25%</span>
+                                            <span class="price">369.000 &#8363;</span>
+                                        </div>
+                                        <button class="action add-cart btn-modal" data-modal="ajax-cart">Chọn mua</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
+                                <div class="product-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <a href="#" class="product-img">
+                                            <img class="product-img-first" src="../images/page/online-store/products/4.jpg"/>
+                                            <img class="product-img-second" src="../images/page/online-store/products/5.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="product-detail-wrapper">
+                                        <a href="#" class="product-name">Chương Trình Thai Sản, Sinh Thường, Thai Đôi (40 Tuần)</a>
+                                        <div class="product-price-wrapper">
+                                            <span class="old-price">500.000 &#8363;</span>
+                                            <span class="discount">-25%</span>
+                                            <span class="price">369.000 &#8363;</span>
+                                        </div>
+                                        <button class="action add-cart btn-modal" data-modal="ajax-cart">Chọn mua</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
+                                <div class="product-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <a href="#" class="product-img">
+                                            <img class="product-img-first" src="../images/page/online-store/products/5.jpg"/>
+                                            <img class="product-img-second" src="../images/page/online-store/products/6.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="product-detail-wrapper">
+                                        <a href="#" class="product-name">Bột cốm Pediakid Calcium C+</a>
+                                        <div class="product-price-wrapper">
+                                            <span class="old-price">500.000 &#8363;</span>
+                                            <span class="discount">-25%</span>
+                                            <span class="price">369.000 &#8363;</span>
+                                        </div>
+                                        <button class="action add-cart btn-modal" data-modal="ajax-cart">Chọn mua</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
+                                <div class="product-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <a href="#" class="product-img">
+                                            <img class="product-img-first" src="../images/page/online-store/products/6.jpg"/>
+                                            <img class="product-img-second" src="../images/page/online-store/products/7.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="product-detail-wrapper">
+                                        <a href="#" class="product-name">Men vi sinh Biogaia Protectis tablets</a>
+                                        <div class="product-price-wrapper">
+                                            <span class="old-price">500.000 &#8363;</span>
+                                            <span class="discount">-25%</span>
+                                            <span class="price">369.000 &#8363;</span>
+                                        </div>
+                                        <button class="action add-cart btn-modal" data-modal="ajax-cart">Chọn mua</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
+                                <div class="product-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <a href="#" class="product-img">
+                                            <img class="product-img-first" src="../images/page/online-store/products/7.jpg"/>
+                                            <img class="product-img-second" src="../images/page/online-store/products/8.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="product-detail-wrapper">
+                                        <a href="#" class="product-name">Khoá học "Thai kỳ khỏe mạnh cùng chuyên gia Sông Thương"</a>
+                                        <div class="product-price-wrapper">
+                                            <span class="old-price">500.000 &#8363;</span>
+                                            <span class="discount">-25%</span>
+                                            <span class="price">369.000 &#8363;</span>
+                                        </div>
+                                        <button class="action add-cart btn-modal" data-modal="ajax-cart">Chọn mua</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
+                                <div class="product-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <a href="#" class="product-img">
+                                            <img class="product-img-first" src="../images/page/online-store/products/8.jpg"/>
+                                            <img class="product-img-second" src="../images/page/online-store/products/9.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="product-detail-wrapper">
+                                        <a href="#" class="product-name">Siro Pediakid 22 Vitamin et oligo</a>
+                                        <div class="product-price-wrapper">
+                                            <span class="old-price">500.000 &#8363;</span>
+                                            <span class="discount">-25%</span>
+                                            <span class="price">369.000 &#8363;</span>
+                                        </div>
+                                        <button class="action add-cart btn-modal" data-modal="ajax-cart">Chọn mua</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-6 col10 col-product-mobile product-item">
+                                <div class="product-wrapper">
+                                    <div class="product-img-wrapper">
+                                        <a href="#" class="product-img">
+                                            <img class="product-img-first" src="../images/page/online-store/products/9.jpg"/>
+                                            <img class="product-img-second" src="../images/page/online-store/products/1.jpg"/>
+                                        </a>
+                                    </div>
+                                    <div class="product-detail-wrapper">
+                                        <a href="#" class="product-name">Gói phục hồi chức năng sàn chậu sau sinh sản phụ</a>
+                                        <div class="product-price-wrapper">
+                                            <span class="old-price">500.000 &#8363;</span>
+                                            <span class="discount">-25%</span>
+                                            <span class="price">369.000 &#8363;</span>
+                                        </div>
+                                        <button class="action add-cart btn-modal" data-modal="ajax-cart">Chọn mua</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <ul class="pagination d-flex align-items-center">
+                            <li><a href="#" class="prev none"><i class="fa fa-angle-left" aria-hidden="true"></i>Trước</a></li>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#" class="next">Sau<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-bottom">
+            <div class="contact-us-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="title-wrapper">
+                            <h3 class="title">Sông Thương làm hài lòng 99.9% người bệnh</h3>
+                            <p class="sub-title">Hoạt động không vì mục tiêu lợi nhuận, luôn tiên phong trong ứng dụng các phương pháp điều trị mới nhất cùng chất lượng dịch vụ hoàn hảo để trở thành địa chỉ chăm sóc sức khỏe tiêu chuẩn quốc tế tại Việt Nam.</p>
+                            <button class="btn-registration btn-modal" data-modal="form-registration">Đặt lịch khám ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <footer id="footer_v2" class="footer">
+        <!-- load content from footer.html -->
+    </footer>
+    <!-- End Footer -->
+
+    <!-- scroll top -->
+    <span class=" up "><i class=" fa fa-chevron-up "></i></span>
+    <!-- End scroll top -->
+</body>
+
+<!-- jquerry -->
+<script type="text/javascript" src="../library/jquery.min.js"></script>
+<!-- bs4 -->
+<script type="text/javascript" src="../library/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../library/js/bootstrap.js"></script>
+<!-- slick -->
+<script type="text/javascript" src="../library/slick/slick.min.js"></script>
+<!-- main js -->
+<script type="text/javascript" src="./library/jquery-ui/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="../javascript/main.js"></script>
+<!-- custom js -->
+<script ttype="text/javascript">
+    jQuery(document).ready(function ($) {
+        // Loading
+        $('body').removeClass('preloading');
+        $('.loading').delay(1000).fadeOut('fast');
+    })
+</script>
+
+</html>
