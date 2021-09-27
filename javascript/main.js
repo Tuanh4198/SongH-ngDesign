@@ -370,16 +370,15 @@ jQuery(document).ready(function($) {
     })
 
     // scroll tab
-    $('body').on('click', '.tab-scroll-content .tab-items .tab-item', function(event) {
-        event.preventDefault();
-        $(this).parent().find('.tab-item').removeClass('active');
-        $(this).addClass('active');
+	$('body').on('click', '.tab-scroll-content .tab-items .tab-item', function (event) {
+		event.preventDefault();
+		$(this).parent().find('.tab-item').removeClass('active');
+		$(this).addClass('active');
 
-        let item_scroll = $(this).children('.tab-item-link').attr('href');
-        $('html, body').animate({
-            scrollTop: $(item_scroll).offset().top
-        }, 0);
-    });
+		let item_scroll = $(this).children('.tab-item-link').attr('href');
+		$('html, body').scrollTop( $(item_scroll).offset().top - 100);  
+	});
+
 
     // hide fixed_menu_social
     (function($) {
@@ -388,7 +387,7 @@ jQuery(document).ready(function($) {
         $(window).scroll(function() {
             if (fixed_menu_social && column_main) {
                 let startpage = body.scrollTop();
-                let hidePosition = column_main.offset().top + column_main.height() - parseFloat(fixed_menu_social.css('top')) - fixed_menu_social.height();
+                let hidePosition = column_main.offset().top + column_main.height() - parseFloat(fixed_menu_social.css('top')) - fixed_menu_social.height() - 50;
                 if (startpage >= hidePosition) {
                     fixed_menu_social.fadeOut();
                 } else {

@@ -18,7 +18,7 @@
 		border-radius: 12px;
 		position: relative;
 		z-index: 1;
-		margin-top: -30px;
+		margin-top: -50px;
 		display: flex;
 		align-items: center;
 		padding: 20px;
@@ -572,18 +572,25 @@
 
 @media only screen and (max-width: 575px){
 	.qa-page {
-		.breadcrumb-wrapper {
-			padding-bottom: 80px;
+		.container{
+			padding-left: 12px;
+			padding-right: 12px;
+		}
 
+		.breadcrumb-wrapper {
+			.page-title{
+				padding-top: 0;
+			}
 			.title {
 				font-style: normal;
 				font-weight: bold;
 				font-size: 24px;
 				line-height: 29px;
 				text-align: left;
+				padding-left: 0;
+				padding-right: 0;
 			}
 		}
-
 		.add-question-block {
 			padding: 15px;
 			flex-wrap: wrap;
@@ -642,6 +649,25 @@
 						width: 100%;
 						margin-top: 15px;
 					}
+				}
+
+				.qa-item{
+					margin-left: -15px;
+					margin-right: -15px;
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+
+			}
+		}
+
+		.side-bar {
+			.list-category-wrapper {
+				.show-option{
+					margin-left: -15px;
+					margin-right: -15px;
+					padding-left: 15px;
+					padding-right: 15px;
 				}
 			}
 		}
