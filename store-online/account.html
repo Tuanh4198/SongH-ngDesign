@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="../style/pages/style-V2.css">
     <!-- Loading -->
     <style type="text/css">
+
         .preloading {
             overflow: hidden;
         }
@@ -78,32 +79,33 @@
     <section class="account-page">
         <div class="page-columns">
             <div class="container">
-                <div class="row row10">
+                <div class="row row10 cover-tab">
                     <sidebar class="col-xl-3 col-lg-4 side-bar dropdown col10">
-                        <div class="block-collapsible-nav">
-                            <div class="block-collapsible-nav-title dflex align-items-center">
-                                <span class="avartar"><img src="../images/page/online-store/avatar.png" alt=""></span>
-                                <span class="info-base">
-                                    <span class="name-user">Đào Anh Lâm</span>
-                                    <span class="email-user">lamdao218@gmail.com</span>
-                                </span>
-                            </div>
+                        <div class="info-main-user dflex align-items-center">
+                            <span class="avartar"><img src="../images/page/online-store/avatar.png" alt=""></span>
+                            <span class="info-base">
+                                <span class="name-user">Đào Anh Lâm</span>
+                                <span class="email-user">lamdao218@gmail.com</span>
+                            </span>
+                        </div>
+                        <div class="block-collapsible-nav magic-tabs">
                             <ul class="block-collapsible-nav-content">
-                                <li class="collapsible-item active"><span>Thông tin tài khoản</span></li>
+                                <li class="collapsible-item action-tab-btn"><a href="#">Thông tin tài khoản</a></li>
                                 <li class="collapsible-item"><a href="#">Hỏi đáp bác sĩ</a></li>
                                 <li class="collapsible-item"><a href="#">Theo dõi đơn hàng</a></li>
                                 <li class="collapsible-item"><a href="#">Gửi ý kiến cho chúng tôi</a></li>
-                                <li class="collapsible-item"><a href="#">
+                            </ul>
+                            <div class="account-logout">   
+                                <a href="#">
                                     <img src="../images/page/online-store/logout.png" alt="" class="icon">
                                     <img src="../images/page/online-store/logout.png" alt="" class="icon icon-hover">
                                     Thoát
                                 </a>
-                            </li>
-                            </ul>
+                            </div>
                         </div>
                     </sidebar>
-                    <div class="col-xl-9 col-lg-8 col-main col10">
-                        <div class="block-infomation-account">
+                    <div class="col-xl-9 col-lg-8 col-main col10 tab-content">
+                        <div class="block-infomation-account content active-tab-content">
                             <div class="block-title">
                                 <h2 class="title">Thông tin tài khoản</h2>
                             </div>
@@ -153,6 +155,164 @@
                             <div class="block-action dflex align-items-center">
                                 <button class="action reset-password">Đổi mật khẩu</button>
                                 <div class="action save-info">lưu lại thông tin</div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="block-infomation-account content">
+                            <div class="block-title">
+                                <h2 class="title">Hỏi đáp bác sĩ</h2>
+                            </div>
+                            <div class="block-content">
+                                <div class="list-question">
+                                    <div class="question-item">
+                                        <div class="question-header dflex align-items-center">
+                                            <div class="category">Cơ xương khớp</div>
+                                            <div class="public-date"><span class="label">Đã hỏi:</span> 21 Tháng 4, 2021</div>
+                                        </div>
+                                        <div class="question-body">
+                                            <h3 class="question-title">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</h3>
+                                            <p class="question-description">Mấy năm nay em bị đau đầu bên trái, bên phần lưng sát mông bên trái của em bị đau nhói, ngồi nằm khó khăn, dạo này em đau thêm cả phần vai và bả vai trái, thỉnh thoảng em có bị tê 1 số chỗ, đứng lên ngồi xuống chóng mặt, mặc dù em ăn uống đầy đủ và không phải vận động nặng trong đời sống. Bác sĩ cho em hỏi đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì và điều trị như nào? Em xin cảm ơn.</p>
+                                            <p class="question-status">Câu hỏi của bạn đã được chuyên gia của chúng tôi trả lời. <a href="#" class="see-answers">Xem câu trả lời ngay</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="question-item">
+                                        <div class="question-header dflex align-items-center">
+                                            <div class="category">Cơ xương khớp</div>
+                                            <div class="public-date"><span class="label">Đã hỏi:</span> 21 Tháng 4, 2021</div>
+                                        </div>
+                                        <div class="question-body">
+                                            <h3 class="question-title">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</h3>
+                                            <p class="question-description">Mấy năm nay em bị đau đầu bên trái, bên phần lưng sát mông bên trái của em bị đau nhói, ngồi nằm khó khăn, dạo này em đau thêm cả phần vai và bả vai trái, thỉnh thoảng em có bị tê 1 số chỗ, đứng lên ngồi xuống chóng mặt, mặc dù em ăn uống đầy đủ và không phải vận động nặng trong đời sống. Bác sĩ cho em hỏi đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì và điều trị như nào? Em xin cảm ơn.</p>
+                                            <p class="question-status no-answers">Chưa có câu trả lời cho câu hỏi này của bạn.</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="block-infomation-account content">
+                            <div class="block-title">
+                                <h2 class="title">Theo dõi đơn hàng</h2>
+                            </div>
+                            <div class="block-content">
+                                <div class="list-order">
+                                    <div class="order-item">
+                                        <div class="order-header dflex align-items-center">
+                                            <div class="order-info-base">
+                                                <div class="order-id">#66313812</div>
+                                                <div class="order-date">21/08/2021</div>
+                                            </div>
+                                            <div class="order-status confirmed">Đã xác nhận</div>
+                                        </div>
+                                        <div class="order-body">
+                                            <div class="product-wrapper">
+                                                <div class="product-img-wrapper">
+                                                    <a href="#" class="product-img">
+                                                        <img class="product-img" src="../images/page/online-store/products/1.jpg"/>
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-wrapper">
+                                                    <a href="#" class="product-name">Gói chăm sóc mẹ và bé sau sinh thường (tháng đầu tiên)</a>
+                                                    <div class="quantity">
+														<span class=" label ">Số lượng</span>
+														<span class="count">1</span>
+													</div>
+                                                </div>
+                                            </div>
+                                            <div class="product-wrapper">
+                                                <div class="product-img-wrapper">
+                                                    <a href="#" class="product-img">
+                                                        <img class="product-img" src="../images/page/online-store/products/2.jpg"/>
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-wrapper">
+                                                    <a href="#" class="product-name">Men vi sinh Biogaia Protectis tablets</a>
+                                                    <div class="quantity">
+														<span class=" label ">Số lượng</span>
+														<span class="count">1</span>
+													</div>
+                                                </div>
+                                            </div>
+                                            <div class="product-wrapper">
+                                                <div class="product-img-wrapper">
+                                                    <a href="#" class="product-img">
+                                                        <img class="product-img" src="../images/page/online-store/products/3.jpg"/>
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-wrapper">
+                                                    <a href="#" class="product-name">Men vi sinh Biogaia Protectis tablets</a>
+                                                    <div class="quantity">
+														<span class=" label ">Số lượng</span>
+														<span class="count">1</span>
+													</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-footer">
+                                            <span class="label">Tổng số tiền:</span>
+                                            <span class="subtotal">3.700.000 &#8363;</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-header dflex align-items-center">
+                                            <div class="order-info-base">
+                                                <div class="order-id">#66313811</div>
+                                                <div class="order-date">21/08/2021</div>
+                                            </div>
+                                            <div class="order-status cancelled">Đã bị hủy</div>
+                                        </div>
+                                        <div class="order-body">
+                                            <div class="product-wrapper">
+                                                <div class="product-img-wrapper">
+                                                    <a href="#" class="product-img">
+                                                        <img class="product-img" src="../images/page/online-store/products/1.jpg"/>
+                                                    </a>
+                                                </div>
+                                                <div class="product-detail-wrapper">
+                                                    <a href="#" class="product-name">Gói chăm sóc mẹ và bé sau sinh thường (tháng đầu tiên)</a>
+                                                    <div class="quantity">
+														<span class=" label ">Số lượng</span>
+														<span class="count">1</span>
+													</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-footer">
+                                            <span class="label">Tổng số tiền:</span>
+                                            <span class="subtotal">3.700.000 &#8363;</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="block-infomation-account content">
+                            <div class="block-title">
+                                <h2 class="title">Gửi ý kiến cho chúng tôi</h2>
+                            </div>
+                            <div class="block-content">
+                                <div class="send-us-comment">
+                                    <div class="comment-header">
+                                        <img src="../images/page/online-store/banner-account-top.jpg" alt="">
+                                    </div>
+                                    <div class="comment-body">
+                                        <h3 class="title">Gởi góp ý cho Sông Thương</h3>
+                                        <p class="sub-title">Cảm ơn bạn đã luôn ủng hộ. Chúng tôi mong nhận được những góp ý thẳng thắn của bạn về sản phẩm cũng như dịch vụ để cải tiến tốt hơn. Sông Thương đảm bảo tất cả thông tin chỉ nhằm mục đích trên và được bảo mật 100%.</p>
+                                        <form action="" class="form-send-comment">
+                                            <div class="field comment required">
+                                                <label for="comment" class="label">Góp ý của bạn</label>
+                                                <textarea class="comment" name="comment" id="comment"></textarea>
+                                            </div>
+                                            <div class="field phone">
+                                                <label for="phone" class="label">Cho chúng tôi số điện thoại của bạn nhé</label>
+                                                <input name="phone" id="phone" type="text">
+                                            </div>
+                                            <div class="actions">
+                                                <button class="action submit">Gửi góp ý</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

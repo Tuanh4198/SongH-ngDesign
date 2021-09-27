@@ -184,37 +184,38 @@ jQuery(document).ready(function ($) {
 	// end Effect modal
 
 	// spinner quantity
-	(function ($) {
-		$('.quantity').each(function () {
-			let spinner = $(this),
-				input = $('.quantity input[type="number"]'),
-				btnUp = $('.quantity .quantity-up'),
-				btnDown = $('.quantity .quantity-down'),
-				min = input.attr('min'),
-				max = input.attr('max');
-			let newVal;
-			btnUp.click(function () {
-				let oldValue = parseFloat(input.val());
-				if (oldValue >= max) {
-					newVal = oldValue;
-				} else {
-					newVal = oldValue + 1;
-				}
-				spinner.find("input").val(newVal);
-				spinner.find("input").trigger("change");
-			});
-			btnDown.click(function () {
-				let oldValue = parseFloat(input.val());
-				if (oldValue <= min) {
-					newVal = oldValue;
-				} else {
-					newVal = oldValue - 1;
-				}
-				spinner.find("input").val(newVal);
-				spinner.find("input").trigger("change");
-			});
-		});
-	});
+	(function($) {
+		console.log('object')
+        $('.quantity').each(function() {
+            let spinner = $(this),
+                input = $(this).find('input'),
+                btnUp = $(this).find('.quantity-up'),
+                btnDown = $(this).find('.quantity-down'),
+                min = input.attr('min'),
+                max = input.attr('max');
+            let newVal;
+            btnUp.click(function() {
+                let oldValue = parseFloat(input.val());
+                if (oldValue >= max) {
+                    newVal = oldValue;
+                } else {
+                    newVal = oldValue + 1;
+                }
+                spinner.find("input").val(newVal);
+                spinner.find("input").trigger("change");
+            });
+            btnDown.click(function() {
+                let oldValue = parseFloat(input.val());
+                if (oldValue <= min) {
+                    newVal = oldValue;
+                } else {
+                    newVal = oldValue - 1;
+                }
+                spinner.find("input").val(newVal);
+                spinner.find("input").trigger("change");
+            });
+        });
+    })($);
 	//end
 
 	// tabs
@@ -343,23 +344,5 @@ jQuery(document).ready(function ($) {
 		let item_scroll = $(this).children('.tab-item-link').attr('href');
 		$('html, body').scrollTop( $(item_scroll).offset().top - 100);  
 	});
-
-	// hide fixed_menu_social
-    (function($) {
-        const fixed_menu_social = $('.detail-page .fixed-menu-social');
-        const column_main = $('.detail-page .col-main');
-        $(window).scroll(function() {
-            if (fixed_menu_social && column_main) {
-                let startpage = body.scrollTop();
-                let hidePosition = column_main.offset().top + column_main.height() - parseFloat(fixed_menu_social.css('top')) - fixed_menu_social.height() - 100;
-                if (startpage >= hidePosition) {
-                    fixed_menu_social.fadeOut();
-                } else {
-                    fixed_menu_social.fadeIn();
-                }
-            }
-        });
-    })($);
-    // end hide fixed_menu_social
 
 });

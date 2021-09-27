@@ -143,6 +143,10 @@
             width: 52px;
             .round-borders(0 8px 8px 0);
             background-color: #E9E9EC;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             img {
                 vertical-align: baseline;
@@ -157,17 +161,19 @@
             color: white;
             background-color: #056CB9;
             .round-borders(8px);
-            padding: 13px 30px;
+            padding: 9.5px 30px;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &:before {
-                content: "";
-                width: 24px;
-                height: 24px;
-                background-image: url('../../images/page/online-store/shopping-cart.png');
-                background-repeat: no-repeat;
+                content: "\f07a";
+                font-family: Fontawesome;
+                font-size: 22px; 
                 display: inline-block;
                 vertical-align: middle;
+                margin-right: 10px;
             }
 
             .minicart-text {
@@ -198,6 +204,11 @@
                 &:after {
                     content: ")";
                 }
+            }
+
+            &:hover{
+                background-color: white;
+                color: @base_color;
             }
         }
 
@@ -574,6 +585,10 @@
                 font-weight: 500;
                 line-height: 20px;
                 color: white;
+
+                &:hover{
+                    text-decoration: underline;
+                }
             }
 
             &:after {
