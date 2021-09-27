@@ -17,6 +17,10 @@
 
             a {
                 color: @base_color;
+
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -50,6 +54,11 @@
 
             &:placeholder {
                 color: #858FA0;
+            }
+
+            &:hover,
+            &:focus{
+                border-color: @base_color;
             }
         }
 
@@ -167,8 +176,14 @@
                     margin-bottom: 0;
                 }
 
-                &.checked{
+                &.checked,
+                &:hover{
                     border-color: @base_color;
+                }
+
+                &.disable {
+                    opacity: .7;
+                    pointer-events: none;
                 }
             }
         }
@@ -316,10 +331,6 @@
     margin-top: 24px;
 
     .discount-form {
-        border-width: 1px;
-        border-style: solid;
-        border-color: #E9E9EC;
-        .round-borders(4px);
         .dflex;
 
         input {
@@ -330,11 +341,26 @@
             font-weight: 400;
             padding: 0 12px;
             color: #091D3E;
+            .round-borders(4px 0 0 4px);
+            border-width: 1px;
+            border-style: solid;
+            border-color: @border_color;
+
+            &:hover,
+            &:focus{
+                border-color: @base_color;
+            }
         }
 
         .action {
             width: 85px;
             .round-borders(0 4px 4px 0);
+            background-color: #858FA0;
+            color: white;
+
+            &:hover{
+                background-color: @base_color;
+            }
         }
     }
 
@@ -437,6 +463,10 @@
             padding: 12px 24px;
             .round-borders(4px);
             margin-top: 24px;
+
+            &:hover{
+                background-color: @hover_color;
+            }
         }
     }
 

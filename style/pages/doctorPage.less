@@ -440,7 +440,7 @@
 		}
 		
 		.doctor-detail{
-			padding: 29px 32px 0;
+			position: relative;
 
 			.name{
 				font-size: 20px;
@@ -472,7 +472,46 @@
 				margin-top: 16px;
 			}
 
+			.doctor-info{
+				transition: all ease .3s;
+				background-color: white;
+				padding: 29px 32px 0;
+			}
 
+			.doctor-action {
+				transition: 0.3s ease-in;
+				margin-top: 29px;
+
+				.btn {
+					flex: 1;
+					font-style: normal;
+					font-weight: 600;
+					font-size: 14px;
+					padding:0;
+					border: none;
+					line-height: 40px;
+					height: 40px;
+					color: white;
+					text-align: center;
+				}
+
+				.btn-get-info {
+					background: #43D5CB;
+					border-radius: 0px 0px 0px 4px;
+					&:hover{
+						background-color: #36ece0;
+					}
+				}
+
+				.btn-registration {
+					background: #018DF8;
+					border-radius: 0px 0px 4px 0px;
+					margin-top: 0;
+					&:hover{
+						background-color: @hover_color;
+					}
+				}
+			}
 		}
 	}
 

@@ -740,6 +740,16 @@ html {
   -moz-border-radius: 0 8px 8px 0;
   -webkit-border-radius: 0 8px 8px 0;
   background-color: #E9E9EC;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .header .search-wrapper .btn-search img {
   vertical-align: baseline;
@@ -753,17 +763,25 @@ html {
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
-  padding: 13px 30px;
+  padding: 9.5px 30px;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .header .minicart-wrapper .showcart:before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  background-image: url('../../images/page/online-store/shopping-cart.png');
-  background-repeat: no-repeat;
+  content: "\f07a";
+  font-family: Fontawesome;
+  font-size: 22px;
   display: inline-block;
   vertical-align: middle;
+  margin-right: 10px;
 }
 .header .minicart-wrapper .showcart .minicart-text {
   vertical-align: middle;
@@ -788,6 +806,10 @@ html {
 }
 .header .minicart-wrapper .showcart .counter:after {
   content: ")";
+}
+.header .minicart-wrapper .showcart:hover {
+  background-color: white;
+  color: #0092FF;
 }
 .header .minicart-wrapper .minicart-content {
   padding: 34px 32px;
@@ -1138,6 +1160,9 @@ html {
   font-weight: 500;
   line-height: 20px;
   color: white;
+}
+.header .account-wrapper .account-link a:hover {
+  text-decoration: underline;
 }
 .header .account-wrapper .account-link:after {
   content: "/";
@@ -2748,6 +2773,10 @@ body.has-modal:after {
   background-color: #0092FF;
   color: white;
 }
+.home-page-online-store .side-bar .list-category-wrapper .list-category li a span {
+  font-size: 18px;
+  font-weight: 500;
+}
 .home-page-online-store .side-bar .list-category-wrapper .list-category li:first-child a {
   border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
@@ -2798,6 +2827,9 @@ body.has-modal:after {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   margin-top: 24px;
+}
+.page-bottom .contact-us-wrapper .title-wrapper .btn-registration:hover {
+  background-color: #004B84;
 }
 @media only screen and (max-width: 991px) {
   .page-top {
@@ -3452,6 +3484,9 @@ body.has-modal:after {
 .product-detail-page .product-info-main .product-actions .call-now a {
   color: #0092FF;
 }
+.product-detail-page .product-info-main .product-actions .call-now a:hover {
+  text-decoration: underline;
+}
 .product-detail-page .prodduct-info-detail {
   margin-top: 32px;
 }
@@ -3705,6 +3740,9 @@ body.has-modal:after {
 .form-checkout .block-header .block-link a {
   color: #0092FF;
 }
+.form-checkout .block-header .block-link a:hover {
+  text-decoration: underline;
+}
 .form-checkout .block-content {
   margin-top: 16px;
   display: -webkit-box;
@@ -3747,6 +3785,16 @@ body.has-modal:after {
 .form-checkout .block-content textarea:placeholder,
 .form-checkout .block-content .select2:placeholder {
   color: #858FA0;
+}
+.form-checkout .block-content input[type="text"]:hover,
+.form-checkout .block-content select:hover,
+.form-checkout .block-content textarea:hover,
+.form-checkout .block-content .select2:hover,
+.form-checkout .block-content input[type="text"]:focus,
+.form-checkout .block-content select:focus,
+.form-checkout .block-content textarea:focus,
+.form-checkout .block-content .select2:focus {
+  border-color: #0092FF;
 }
 .form-checkout .block-content .select2 .select2-selection {
   display: -webkit-box;
@@ -3891,8 +3939,13 @@ body.has-modal:after {
 .form-checkout .information-payment .block-content .payment-method:last-child {
   margin-bottom: 0;
 }
-.form-checkout .information-payment .block-content .payment-method.checked {
+.form-checkout .information-payment .block-content .payment-method.checked,
+.form-checkout .information-payment .block-content .payment-method:hover {
   border-color: #0092FF;
+}
+.form-checkout .information-payment .block-content .payment-method.disable {
+  opacity: 0.7;
+  pointer-events: none;
 }
 .form-checkout .btn-submit {
   font-size: 16px;
@@ -4026,12 +4079,6 @@ body.has-modal:after {
   margin-top: 24px;
 }
 .checkout-summary .discount-form {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #E9E9EC;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
   display: -webkit-box;
   display: -ms-flex-box;
   display: -ms-flexbox;
@@ -4051,12 +4098,27 @@ body.has-modal:after {
   font-weight: 400;
   padding: 0 12px;
   color: #091D3E;
+  border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px 0 0 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #E9E9EC;
+}
+.checkout-summary .discount-form input:hover,
+.checkout-summary .discount-form input:focus {
+  border-color: #0092FF;
 }
 .checkout-summary .discount-form .action {
   width: 85px;
   border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0 4px 4px 0;
+  background-color: #858FA0;
+  color: white;
+}
+.checkout-summary .discount-form .action:hover {
+  background-color: #0092FF;
 }
 .checkout-summary .cart-totals {
   margin-top: 16px;
@@ -4130,6 +4192,9 @@ body.has-modal:after {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   margin-top: 24px;
+}
+.checkout-sucess .block-notice .action:hover {
+  background-color: #004B84;
 }
 .checkout-sucess .information-order {
   text-align: center;
@@ -4307,6 +4372,9 @@ body.has-modal:after {
   width: 100%;
   margin-bottom: 16px;
 }
+.new-password-page .form-set-password input:hover {
+  border-color: #0092FF;
+}
 .new-password-page .form-set-password .action.confirm {
   font-size: 16px;
   font-weight: 700;
@@ -4321,8 +4389,67 @@ body.has-modal:after {
   padding: 14.5px 0;
   display: block;
 }
+.new-password-page .form-set-password .action.confirm:hover {
+  background-color: #004B84;
+}
 .new-password-page .form-set-password .block-content {
   margin-top: 24px;
+}
+.info-main-user {
+  padding: 25px;
+  background-color: white;
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color: #E9E9EC;
+  border-radius: 4px 4px 0px 0px;
+  -moz-border-radius: 4px 4px 0px 0px;
+  -webkit-border-radius: 4px 4px 0px 0px;
+}
+.info-main-user .avartar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.info-main-user .info-base {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 12px;
+}
+.info-main-user .info-base .name-user {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.info-main-user .info-base .email-user {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+.account-logout a {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 16px 20px;
+  display: block;
+  color: #091D3E;
+}
+.account-logout a .icon {
+  margin-right: 9px;
+}
+.account-logout a .icon-hover {
+  display: none;
+}
+.account-logout a:hover {
+  color: #0092FF;
+}
+.account-logout a:hover .icon {
+  display: none;
+}
+.account-logout a:hover .icon-hover {
+  display: inline-block;
 }
 .block-collapsible-nav {
   border-width: 1px;
@@ -4338,29 +4465,6 @@ body.has-modal:after {
   border-width: 0 0 1px;
   border-style: solid;
   border-color: #E9E9EC;
-}
-.block-collapsible-nav .block-collapsible-nav-title .avartar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-}
-.block-collapsible-nav .block-collapsible-nav-title .info-base {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-left: 12px;
-}
-.block-collapsible-nav .block-collapsible-nav-title .info-base .name-user {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-}
-.block-collapsible-nav .block-collapsible-nav-title .info-base .email-user {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 15px;
 }
 .block-collapsible-nav .collapsible-item {
   border-width: 0 0 1px 1px;
@@ -4379,33 +4483,12 @@ body.has-modal:after {
 .block-collapsible-nav .collapsible-item a:hover {
   color: #0092FF;
 }
-.block-collapsible-nav .collapsible-item a:hover .icon {
-  display: none;
-}
-.block-collapsible-nav .collapsible-item a:hover .icon-hover {
-  display: inline-block;
-}
-.block-collapsible-nav .collapsible-item span {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  padding: 16px 20px;
-  display: block;
-}
-.block-collapsible-nav .collapsible-item .icon {
-  margin-right: 9px;
-}
-.block-collapsible-nav .collapsible-item .icon-hover {
-  display: none;
-}
-.block-collapsible-nav .collapsible-item:last-child {
-  border-width: 0;
-}
-.block-collapsible-nav .collapsible-item.active {
+.block-collapsible-nav .collapsible-item.action-tab-btn {
   border-left-color: #0092FF;
 }
-.block-collapsible-nav .collapsible-item.active span {
+.block-collapsible-nav .collapsible-item.action-tab-btn a {
   color: #0092FF;
+  font-weight: 600;
 }
 .account-page .page-columns {
   background-color: #F7F7F7;
@@ -4423,6 +4506,7 @@ body.has-modal:after {
   box-shadow: 0px 2px 6px 0px #0000001F;
   -moz-box-shadow: 0px 2px 6px 0px #0000001F;
   -webkit-box-shadow: 0px 2px 6px 0px #0000001F;
+  display: none;
 }
 .account-page .block-infomation-account .block-title .title {
   font-size: 24px;
@@ -4488,6 +4572,12 @@ body.has-modal:after {
 .account-page .block-infomation-account .block-content .field textarea:placeholder,
 .account-page .block-infomation-account .block-content .field .select2:placeholder {
   color: #858FA0;
+}
+.account-page .block-infomation-account .block-content .field input[type="text"]:hover,
+.account-page .block-infomation-account .block-content .field select:hover,
+.account-page .block-infomation-account .block-content .field textarea:hover,
+.account-page .block-infomation-account .block-content .field .select2:hover {
+  border-color: #0092FF;
 }
 .account-page .block-infomation-account .block-content .field .select2 .select2-selection {
   display: -webkit-box;
@@ -4593,6 +4683,9 @@ body.has-modal:after {
 .account-page .block-infomation-account .block-action .action.save-info:hover {
   background-color: #091D3E;
   border-color: #091D3E;
+}
+.account-page .block-infomation-account.active-tab-content {
+  display: block;
 }
 .account-page .list-question .question-item {
   border-width: 1px;

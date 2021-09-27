@@ -40,6 +40,10 @@
             padding: 0 20px;
             width: 100%;
             margin-bottom: 16px;
+
+            &:hover{
+                border-color: @base_color;
+            }
         }
 
         .action {
@@ -54,6 +58,10 @@
                 background-color: @base_color;
                 padding: 14.5px 0;
                 display: block;
+
+                &:hover{
+                    background-color: @hover_color;
+                }
             }
         }
 
@@ -64,6 +72,68 @@
 }
 
 // account
+.info-main-user{
+    padding: 25px;
+    background-color: white;
+    border-width: 1px 1px 0 1px;
+    border-style: solid; 
+    border-color: @border_color;
+    .round-borders(4px 4px 0px 0px);
+
+    .avartar {
+        width: 40px;
+        height: 40px;
+        .round-borders(50%);
+    }
+
+    .info-base {
+        flex: 1;
+        margin-left: 12px;
+
+        .name-user {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+        }
+
+        .email-user {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15px;
+        }
+    }
+}
+.account-logout{
+    a {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 16px 20px;
+        display: block;
+        color: #091D3E;
+
+        .icon {
+            margin-right: 9px;
+        }
+
+        .icon-hover {
+            display: none;
+        }
+
+        &:hover {
+            color: @base_color;
+
+            .icon {
+                display: none;
+            }
+
+            .icon-hover {
+                display: inline-block;
+            }
+        }
+    }
+}
+
 .block-collapsible-nav {
     border-width: 1px;
     border-style: solid;
@@ -76,29 +146,6 @@
         border-width: 0 0 1px;
         border-style: solid;
         border-color: #E9E9EC;
-
-        .avartar {
-            width: 40px;
-            height: 40px;
-            .round-borders(50%);
-        }
-
-        .info-base {
-            flex: 1;
-            margin-left: 12px;
-
-            .name-user {
-                font-size: 16px;
-                font-weight: 600;
-                line-height: 24px;
-            }
-
-            .email-user {
-                font-size: 12px;
-                font-weight: 400;
-                line-height: 15px;
-            }
-        }
     }
 
     .collapsible-item {
@@ -114,45 +161,18 @@
             padding: 16px 20px;
             display: block;
             color: #091D3E;
-
+    
             &:hover {
                 color: @base_color;
-
-                .icon {
-                    display: none;
-                }
-
-                .icon-hover {
-                    display: inline-block;
-                }
             }
         }
 
-        span {
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 24px;
-            padding: 16px 20px;
-            display: block;
-        }
-
-        .icon {
-            margin-right: 9px;
-        }
-
-        .icon-hover {
-            display: none;
-        }
-
-        &:last-child {
-            border-width: 0;
-        }
-
-        &.active {
+        &.action-tab-btn {
             border-left-color: @base_color;
 
-            span {
+            a {
                 color: @base_color;
+                font-weight: 600;
             }
         }
     }
@@ -172,6 +192,7 @@
         background-color: white;
         padding: 24px 32px 32px;
         .box-shadow(0px 2px 6px 0px #0000001F);
+        display: none;
 
         .block-title {
             .title {
@@ -225,6 +246,10 @@
 
                     &:placeholder {
                         color: #858FA0;
+                    }
+
+                    &:hover{
+                        border-color: @base_color;
                     }
                 }
 
@@ -311,6 +336,10 @@
                     }
                 }
             }
+        }
+
+        &.active-tab-content{
+            display: block;
         }
     }
 

@@ -117,6 +117,14 @@
 					<div class="sinature d-flex justify-content-end">
 						<a href="#">Bệnh viện Sông Thương</a>
 					</div>
+					<div class="category">
+						<ul class="list-category">
+							<span>Chủ đề</span>
+							<li><a href="#">Hướng dẫn khách hàng</a></li>
+							<li><a href="#">Dịch vụ cấp cứu</a></li>
+							<li><a href="#">Giờ làm việc của bệnh viện</a></li>
+						</ul>
+					</div>
 					<div class="post-footer">
 						<div class="left d-flex align-items-center">
 							<a href="#" class="back"><img src="./images/page/qa-page/back.png" alt="" /></a>
@@ -247,14 +255,6 @@
 				<div class="col-lg-8 col-main">
 					<div class="related-question">
 						<h3 class="title">Các câu hỏi khác</h3>
-						<div class="category d-flex align-items-center">
-							<span>Chủ đề</span>
-							<ul class="list-category d-flex align-items-center">
-								<li><a href="#">Hướng dẫn khách hàng</a></li>
-								<li><a href="#">Dịch vụ cấp cứu</a></li>
-								<li><a href="#">Giờ làm việc của bệnh viện</a></li>
-							</ul>
-						</div>
 						<div class="list-related-question">
 							<div class="question-short-content">
 								<div class="content">
@@ -321,7 +321,25 @@
 <!-- custom js -->
 <script ttype="text/javascript">
     jQuery(document).ready(function($) {
-		
+
+		// hide fixed_menu_social
+		(function($) {
+			const fixed_menu_social = $('.detail-page .fixed-menu-social');
+			const column_main = $('.detail-page .col-main');
+			$(window).scroll(function() {
+				if (fixed_menu_social && column_main) {
+					let startpage = body.scrollTop();
+					let hidePosition = column_main.offset().top + column_main.height() - parseFloat(fixed_menu_social.css('top')) - fixed_menu_social.height() - 100;
+					if (startpage >= hidePosition) {
+						fixed_menu_social.fadeOut();
+					} else {
+						fixed_menu_social.fadeIn();
+					}
+				}
+			});
+		})($);
+		// end hide fixed_menu_social
+
 	})
 </script>
 </html> 
