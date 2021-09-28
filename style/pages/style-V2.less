@@ -254,8 +254,13 @@
 
 //
 .breadcrumb-wrapper {
+    position: relative;
+
     .items {
         padding: 26px 0;
+        .dflex;
+        align-items: baseline;
+        white-space: nowrap;
 
         .item {
             display: inline-block;
@@ -267,6 +272,11 @@
             }
 
             &:last-child {
+                flex: 1;
+                overflow: hidden;
+                white-space: nowrap; 
+                text-overflow: ellipsis;
+                
                 &:after {
                     .hidden-visibility;
                 }

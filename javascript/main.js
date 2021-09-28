@@ -117,6 +117,7 @@ jQuery(document).ready(function ($) {
 			}
 			if ($(this).parent().find('.children')) {
 				$(this).parent().find('.children').toggleClass('active');
+				$(this).parent().toggleClass('active');
 			}
 		});
 

@@ -596,3 +596,114 @@
         }
     }
 }
+
+@media(max-width: 1199px){
+    .account-page {
+        .block-infomation-account {
+            .block-content {
+                .field {
+                    .control {
+                        justify-content: space-between;
+
+                        .select2, 
+                        select{
+                            flex: 0 0 calc(~"50% - 6px");
+                            margin-right: 0;
+                            margin-bottom: 12px;
+
+                            &:last-child{
+                                flex: 0 0 100%;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .info-main-user{
+            border-width: 0;
+            background-color: #F7F7F7;
+            .round-borders(4px);
+            padding: 20px 24px;
+
+            .info-base{
+                span{
+                    display: block;
+                }
+            }
+        }
+
+        .block-collapsible-nav{
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 100%;
+            max-width: 319px;
+            transform: translateX(100%);
+            transition: all ease .3s;
+            background-color: white;
+            border-width: 0;
+            box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.45);
+            z-index: 11;
+            padding: 0 16px;
+            .round-borders(0);
+
+            &.active{
+                transform: translateX(0);
+            }
+
+            .collapsible-item {
+                border-width: 0;
+            }
+        }
+
+        .side-bar{
+            &.active{
+                .info-main-user{
+                    &:after{
+                        content:"";
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100vh;
+                        background-color: rgba(0, 0, 0, .5);
+                        z-index: 10;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .block-infomation-account{
+            box-shadow: none;
+            border-width: 0;
+            padding: 0;
+
+            .block-title {
+                .title{
+                    font-size: 22px;
+                    font-weight: 600;
+                    line-height: 27px;
+                }
+            }
+
+            .block-content{
+                margin-top: 17px;
+            }
+        }
+
+        .tab-content{
+            margin-top: 24px;
+        }
+
+        .page-columns{
+            background-color: white;
+        }
+    }
+}
+
+@media(max-width: 1199px){}
