@@ -716,21 +716,28 @@
 				}
 			}
 		}
+		
 	}
 }
 
 @media only screen and (max-width: 575px) {
-	.breadcrumb-wrapper {
-		.title {
-			padding: 24px 16px 16px;
-			text-align: initial;
-			background-image: none;
-			font-size: 24px;
-			line-height: 29px;
-			margin-bottom: 0;
+	.customer-stories {
+		.breadcrumb-wrapper{
+			.title {
+				padding: 24px 0 16px 0;
+				text-align: initial;
+				background-image: none;
+				font-size: 24px;
+				line-height: 29px;
+				margin-bottom: 0;
+			}
+			.page-title{
+				background-image: none;
+				padding: 0;
+				margin: 0;
+			}
 		}
 	}
-
 	.blog-page {
 
 		.post-items {
@@ -745,7 +752,13 @@
 				padding-bottom: 20px;
 				padding-left: 0;
 				padding-right: 0;
-
+				&:first-child{
+					.content-wrapper{
+						.title{
+							line-height: 24px;
+						}
+					} 
+				} 
 
 				.content-wrapper {
 					.dflex;

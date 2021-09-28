@@ -350,6 +350,20 @@
     .list-breadcrumb-wrapper {
         padding-bottom: 16px;
         padding-top: 24px;
+        li{
+            .seperate{
+                &::after{
+                    content: "\f105";
+                    font-family: Fontawesome;
+                    margin: 0 10px;
+                }
+            }
+            a{
+                &:first-child{
+                    color: @text_color;
+                }
+            }
+        }
     }
 
     .gallery-post-detail {
@@ -368,12 +382,13 @@
 
     .post-info {
         margin-bottom: 16px;
-
+        margin-top: 0;
         .postname {
             font-size: 32px;
             font-weight: 700;
             line-height: 39px;
             color: @text_color;
+            margin-top: 0;
         }
     }
 
@@ -555,7 +570,55 @@
         }
     }
 }
-
+@media only screen and (max-width: 767px){
+    .gallery-post-detail{
+        .list-breadcrumb-wrapper{
+            li{
+                word-break: break-all;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                max-height: 24px;
+                line-height: 24px;
+                overflow: hidden;
+            }
+        }
+        .related-news{
+            .list-related-news{
+                .related-news-item{
+                    .content{
+                        .name{
+                            word-break: break-all;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            max-height: 40px;
+                            line-height: 20px;
+                            overflow: hidden;
+                        }
+                    }
+                    
+                } 
+                .slick-slide{
+                    & > div{
+                        &:first-child{
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        } 
+        .page-bottom{
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        .page-columns{
+            padding-bottom: 25px;
+        }
+    } 
+}
 @media only screen and (max-width: 575px) {
     .news-page {
         .breadcrumb-wrapper {
@@ -674,7 +737,7 @@
     .gallery-post-detail {
         .post-info {
             .postname {
-                font-size: 18px;
+                font-size: 24px;
                 line-height: 24px;
             }
         }
