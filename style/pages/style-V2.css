@@ -3955,6 +3955,11 @@ body.has-modal:after {
 .checkout-cart .product-list .product-wrapper .product-detail-wrapper .group-qty .quantity .quantity-nav input {
   width: 29px;
 }
+.checkout-cart .product-list .product-wrapper .product-detail-wrapper .group-qty .quantity .quantity-nav input[type=number]::-webkit-inner-spin-button,
+.checkout-cart .product-list .product-wrapper .product-detail-wrapper .group-qty .quantity .quantity-nav input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .checkout-cart .product-list .product-wrapper .product-detail-wrapper .product-price-wrapper {
   margin-top: 0;
 }
