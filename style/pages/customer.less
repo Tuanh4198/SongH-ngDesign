@@ -141,6 +141,10 @@
     .round-borders(4px);
     background-color: white;
 
+    .block-collapible-title{
+        display: none;
+    }
+
     .block-collapsible-nav-title {
         padding: 24px;
         border-width: 0 0 1px;
@@ -655,7 +659,35 @@
             }
 
             .collapsible-item {
-                border-width: 0;
+                border-width: 0 0 1px;
+
+                a{
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+            .block-collapible-title{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-width: 0 0 6px;
+                border-style: solid;
+                border-color: @border_color;
+                padding: 8px 16px;
+                margin-left: -16px;
+                margin-right: -16px;
+
+                .close-tab{
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .account-logout {
+            a{
+                padding-left: 0;
+                padding-right: 0;
             }
         }
 
@@ -706,4 +738,79 @@
     }
 }
 
-@media(max-width: 1199px){}
+@media(max-width: 575px){
+    .account-page {
+        .block-infomation-account {
+            .block-content {
+                .field {
+                    margin-bottom: 16px;
+
+                    .label{
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 15px;
+                        width: 100%;
+                        margin-bottom: 6px;
+                        .note{
+                            font-size: 12px;
+                            font-weight: 500;
+                            line-height: 15px;
+                        }
+                    }
+
+                    input[type="text"], 
+                    select, 
+                    textarea,
+                    .select2{
+                        margin-left: 0;
+                    }
+
+                    .control {
+                        margin-left: 0;
+
+                        .select2, 
+                        select{
+                            flex: 0 0 100%;
+
+                            .select2-selection{
+                                height: auto;
+
+                                .select2-selection__rendered{
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 18px;
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .block-action {
+                .action{
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 19px;
+                    padding: 11.5px 33px;
+
+                    &.save-info{
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 19px;
+                        padding: 11.5px 20px;
+                        text-transform: initial;
+                    }
+                }
+            }
+        }
+
+        .page-columns{
+            padding-top: 18px;
+            padding-bottom: 40px;
+            border-width: 0 0 1px;
+            border-style: solid;
+            border-color: @border_color;
+        }
+    }
+}

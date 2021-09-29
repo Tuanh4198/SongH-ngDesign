@@ -33,6 +33,17 @@ jQuery(document).ready(function ($) {
 			$(this).attr('data-center-padding', 0);
 		})
 	}
+	
+	if ($(window).width() <= 575) {
+        $(".two-rows").each(function() {
+            $(this).attr("data-rows", 2);
+        });
+
+        $(".remove-vertical").each(function() {
+            $(this).attr("data-vertical", false);
+        });
+    }
+
 	$(".autoplay").each(function () {
 		$(this).slick($(this).data());
 	});
@@ -126,6 +137,7 @@ jQuery(document).ready(function ($) {
 			console.log('object')
 			if ($(this).parents('.dropdown').find('.children')) {
 				$(this).parents('.dropdown').find('.children').removeClass('active');
+				$(this).parents('.dropdown').removeClass('active');
 			}
 		});
 

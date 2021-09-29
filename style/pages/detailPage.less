@@ -904,19 +904,24 @@
 		}
 
 		.banner-top {
-			margin-bottom: 15px;
+			padding-top: 0;
 		}
 
 		.post-info {
 			margin-bottom: 15px;
+			margin-top: 12px;
 
 			.postname {
 				font-style: normal;
 				font-weight: bold;
 				font-size: 24px;
 				line-height: 32px;
-				margin-top: 10px;
+				margin-top: 0;
 			}
+		}
+
+		.page-columns{
+			padding-top: 0;
 		}
 
 		.fixed-menu-social {
@@ -1047,48 +1052,49 @@
 					}
 				}
 			}
+		}
 
-			.list-related-question {
-				display: flex;
-				justify-content: space-between;
-				flex-wrap: wrap;
-				margin: 0 -6px;
+		.list-related-question {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin: 0 -6px;
 
-				.img {
-					width: 100%;
-					margin: 0;
-					margin-bottom: 10px;
+			.img {
+				width: 100%;
+				margin: 0;
+				margin-bottom: 10px;
+			}
+
+			.content {
+				.short-desc {
+					display: none;
 				}
 
-				.content {
-					.short-desc {
-						display: none;
-					}
+				.name {
+					margin-bottom: 0;
+					font-style: normal;
+					font-weight: bold;
+					font-size: 14px;
+					line-height: 20px;
+				}
+			}
 
-					.name {
-						margin-bottom: 0;
-						font-style: normal;
-						font-weight: bold;
-						font-size: 14px;
-						line-height: 20px;
-					}
+			.question-short-content {
+				width: 50%;
+				padding: 0 6px;
+				flex-direction: column-reverse;
+				margin-bottom: 15px;
+
+				&:not(:first-child) {
+					padding-bottom: 0;
+					margin-top: 0;
+					border-top: none;
+					padding-top: 0;
 				}
 
-				.question-short-content {
-					width: 50%;
-					padding: 0 6px;
-					flex-direction: column-reverse;
-					margin-bottom: 15px;
-
-					&:not(:first-child) {
-						padding-bottom: 0;
-						margin-top: 0;
-						border-top: none;
-					}
-
-					&:nth-child(n+4){
-						display: flex;
-					}
+				&:nth-child(n+4){
+					display: flex;
 				}
 			}
 		}

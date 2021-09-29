@@ -346,6 +346,34 @@
 					}
 				}
 			}
+
+			.slick-dots {
+				li {
+					width: 8px;
+					height: 8px;
+
+					button{
+						width: 100%;
+						height: 100%;
+						padding: 0;
+						position: relative;
+
+						&:before{
+							width: 100%;
+							height: 100%;
+							line-height: inherit;
+							top: 50%;
+							transform: translateY(-50%);
+							left: 0;
+							font-size: 0;
+							display: inline-block;
+							background-color: @base_color;
+							border-radius: 50%;
+							right: 0;
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -546,53 +574,6 @@
 		border-style: solid;
 		border-color: #E9E9EC;
 
-		.list-related-question {
-			.question-short-content {
-				display: flex;
-				align-items: flex-start;
-
-				&:not(:last-child) {
-					padding-bottom: 25px;
-					margin-bottom: 15px;
-					border-bottom: 1px solid @border_color;
-				}
-			}
-
-			.img {
-				width: 30%;
-				margin-left: 30px;
-
-				img {
-					width: 100%;
-				}
-			}
-
-			.content {
-				flex: 1;
-
-				.name {
-					font-style: normal;
-					font-weight: bold;
-					font-size: 20px;
-					line-height: 28px;
-					color: @text_color;
-					margin-bottom: 10px;
-
-					&:hover {
-						color: @base_color;
-					}
-				}
-
-				.short-desc {
-					font-style: normal;
-					font-weight: normal;
-					font-size: 14px;
-					line-height: 22px;
-					color: @text_blur;
-				}
-			}
-		}
-
 		.related-question {
 			.title {
 				font-size: 32px;
@@ -605,21 +586,6 @@
 }
 
 // responsive
-@media only screen and (max-width: 1199px) {
-	// .blog-page {
-	// 	.side-bar {
-	// 		.slide-shop-wrapper {
-	// 			.slick-slide {
-	// 				.item {
-	// 					padding-left: 15px;
-	// 					padding-right: 15px;
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-	// }
-}
-
 @media only screen and (max-width: 991px) {
 	.detail-page {
 		.post-info {
@@ -629,63 +595,22 @@
 			}
 		}
 	}
-
-	.customer-story-detail {
-		.page-bottom {
-			.related-question {
-				.title {
-					font-size: 25px;
-					line-height: 30px;
-				}
-
-				.content {
-					.name {
-						font-size: 18px;
-						line-height: 24px;
-					}
-				}
-			}
-		}
-	}
-}
-
-@media only screen and (max-width: 767px) {
-	.customer-story-detail {
-		.page-bottom {
-			.list-related-question {
-				.question-short-content {
-					flex-direction: column;
-
-					&:not(:last-child) {
-						margin-bottom: 20px;
-						padding-bottom: 20px;
-					}
-				}
-
-				.content {
-					flex: 0 0 100%;
-					order: 2;
-					margin-top: 16px;
-				}
-
-				.img {
-					width: 100%;
-					margin: 0;
-				}
-			}
-		}
-	}
 }
 
 @media only screen and (max-width: 575px) {
 	.breadcrumb-wrapper {
-		.title {
-			padding: 24px 16px 16px;
+		.page-title {
+			padding-top: 24px;
+			padding-bottom: 16px;
 			text-align: initial;
 			background-image: none;
-			font-size: 24px;
-			line-height: 29px;
 			margin-bottom: 0;
+			
+			.title{
+				font-size: 24px;
+				line-height: 29px;
+				padding: 0;
+			}
 		}
 	}
 
@@ -734,6 +659,7 @@
 					.content-wrapper {
 						.title {
 							font-size: 18px;
+							line-height: 24px;
 						}
 					}
 				}
@@ -817,10 +743,10 @@
 
 	.customer-stories {
 		.breadcrumb-wrapper {
-			.title {
+			.page-title {
 				background-image: none;
 			}
-		}
+		}	
 
 		.post-items {
 			.post-item {
@@ -853,10 +779,14 @@
 
 	.customer-story-detail {
 		.page-bottom {
+			padding-top: 32px;
+			margin-top: 14px !important;
+
 			.related-question {
 				.title {
-					font-size: 18px;
-					line-height: 24px;
+					font-size: 24px;
+					font-weight: 700;
+					line-height: 29px;
 				}
 			}
 		}

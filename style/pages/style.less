@@ -17,6 +17,20 @@
             line-height: 39px;
         }
     }
+    .list-breadcrumb-wrapper{
+        .dflex;
+        align-items: baseline;
+        white-space: nowrap;
+
+        li{
+            &:last-child{
+                flex: 1;
+                overflow: hidden;
+                white-space: nowrap; 
+                text-overflow: ellipsis;
+            }
+        }
+    }
 
     li {
         display: inline-block;

@@ -2665,7 +2665,7 @@ body.has-modal:after {
   .header .minicart-wrapper .showcart .counter-number {
     position: absolute;
     top: 0;
-    right: -10px;
+    right: 0px;
     width: 16px;
     height: 16px;
     line-height: 16px;
@@ -3014,6 +3014,9 @@ body.has-modal:after {
 .footer .home-page .contact-us-wrapper .get-price-block .link-get-price:hover {
   background: #004B84;
 }
+.logo-bct-mobile {
+  display: none;
+}
 .copyright {
   height: 48px;
   background: #F7F7F7;
@@ -3287,6 +3290,9 @@ body.has-modal:after {
   .main-content-footer .form-register input {
     width: 50%;
   }
+  .main-content-footer .ft-info-shop {
+    margin-bottom: 0;
+  }
   .main-content-footer .dropdown .ft-title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3312,6 +3318,13 @@ body.has-modal:after {
   .main-content-footer .dropdown .fretboard {
     display: none;
     padding-left: 20px;
+  }
+  .logo-bct {
+    display: none;
+  }
+  .logo-bct-mobile {
+    display: block;
+    margin-top: 30px;
   }
 }
 .product-detail-page .breadcrumb-wrapper {
@@ -4550,6 +4563,9 @@ body.has-modal:after {
   -webkit-border-radius: 4px;
   background-color: white;
 }
+.block-collapsible-nav .block-collapible-title {
+  display: none;
+}
 .block-collapsible-nav .block-collapsible-nav-title {
   padding: 24px;
   border-width: 0 0 1px;
@@ -5069,7 +5085,35 @@ body.has-modal:after {
             transform: translateX(0);
   }
   .account-page .block-collapsible-nav .collapsible-item {
-    border-width: 0;
+    border-width: 0 0 1px;
+  }
+  .account-page .block-collapsible-nav .collapsible-item a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .account-page .block-collapsible-nav .block-collapible-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-width: 0 0 6px;
+    border-style: solid;
+    border-color: #E9E9EC;
+    padding: 8px 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  .account-page .block-collapsible-nav .block-collapible-title .close-tab {
+    background-color: transparent;
+  }
+  .account-page .account-logout a {
+    padding-left: 0;
+    padding-right: 0;
   }
   .account-page .side-bar.active .info-main-user:after {
     content: "";
@@ -5102,6 +5146,69 @@ body.has-modal:after {
   }
   .account-page .page-columns {
     background-color: white;
+  }
+}
+@media (max-width: 575px) {
+  .account-page .block-infomation-account .block-content .field {
+    margin-bottom: 16px;
+  }
+  .account-page .block-infomation-account .block-content .field .label {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+  .account-page .block-infomation-account .block-content .field .label .note {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+  }
+  .account-page .block-infomation-account .block-content .field input[type="text"],
+  .account-page .block-infomation-account .block-content .field select,
+  .account-page .block-infomation-account .block-content .field textarea,
+  .account-page .block-infomation-account .block-content .field .select2 {
+    margin-left: 0;
+  }
+  .account-page .block-infomation-account .block-content .field .control {
+    margin-left: 0;
+  }
+  .account-page .block-infomation-account .block-content .field .control .select2,
+  .account-page .block-infomation-account .block-content .field .control select {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  .account-page .block-infomation-account .block-content .field .control .select2 .select2-selection,
+  .account-page .block-infomation-account .block-content .field .control select .select2-selection {
+    height: auto;
+  }
+  .account-page .block-infomation-account .block-content .field .control .select2 .select2-selection .select2-selection__rendered,
+  .account-page .block-infomation-account .block-content .field .control select .select2-selection .select2-selection__rendered {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 0;
+  }
+  .account-page .block-infomation-account .block-action .action {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    padding: 11.5px 33px;
+  }
+  .account-page .block-infomation-account .block-action .action.save-info {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    padding: 11.5px 20px;
+    text-transform: initial;
+  }
+  .account-page .page-columns {
+    padding-top: 18px;
+    padding-bottom: 40px;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: #E9E9EC;
   }
 }
 @media only screen and (min-width: 1600px) {
