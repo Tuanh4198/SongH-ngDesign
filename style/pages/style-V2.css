@@ -1330,7 +1330,7 @@ html {
   transform: translateY(-50%);
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 100;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -1484,7 +1484,9 @@ html {
   width: 100%;
   height: 44px;
   background: #FFFFFF;
-  border: 1px solid #E9E9EC;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #E9E9EC;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
@@ -1496,7 +1498,7 @@ html {
 }
 .modal-registration .modal-body [class*="col-"] .field:focus,
 .modal-registration .modal-body [class*="col-"] .field:hover {
-  border: 1px solid #091D3E;
+  border-color: #0092FF;
 }
 .modal-registration .modal-body [class*="col-"] .field::-webkit-input-placeholder {
   color: #858FA0;
@@ -1856,7 +1858,9 @@ html {
   width: 100%;
   height: 44px;
   background: #FFFFFF;
-  border: 1px solid #E9E9EC;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #E9E9EC;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
@@ -1887,6 +1891,10 @@ html {
 .modal-login .modal-body .field::placeholder {
   font-size: 14px;
   color: #091D3E;
+}
+.modal-login .modal-body .field:hover,
+.modal-login .modal-body .field:focus {
+  border-color: #0092FF;
 }
 .modal-login .modal-body .field-group {
   display: -webkit-box;
@@ -1966,7 +1974,7 @@ html {
   margin-bottom: 15px;
 }
 .modal-login .modal-body .btn-login:hover {
-  background: #091D3E;
+  background: #004B84;
 }
 .modal-register .inner-wrapper {
   max-width: 460px;
@@ -2152,7 +2160,9 @@ html {
   width: 100%;
   height: 44px;
   background: #FFFFFF;
-  border: 1px solid #E9E9EC;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #E9E9EC;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
@@ -2183,6 +2193,10 @@ html {
 .modal-register .modal-body .field::placeholder {
   font-size: 14px;
   color: #091D3E;
+}
+.modal-register .modal-body .field:hover,
+.modal-register .modal-body .field:focus {
+  border-color: #0092FF;
 }
 .modal-register .modal-body .field-group {
   display: -webkit-box;
@@ -2262,7 +2276,7 @@ html {
   margin-bottom: 15px;
 }
 .modal-register .modal-body .btn-register:hover {
-  background: #091D3E;
+  background: #004B84;
 }
 .modal-register .modal-body .form-login {
   margin-top: 26px;
@@ -2372,13 +2386,15 @@ html {
   line-height: 24px;
 }
 .modal-reset-passwork .modal-body .form-reset-password {
-  margin-top: 26px;
+  margin-top: 25px;
 }
 .modal-reset-passwork .modal-body .field {
   width: 100%;
   height: 44px;
   background: #FFFFFF;
-  border: 1px solid #E9E9EC;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #E9E9EC;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
@@ -2409,6 +2425,10 @@ html {
   font-size: 14px;
   color: #091D3E;
 }
+.modal-reset-passwork .modal-body .field:hover,
+.modal-reset-passwork .modal-body .field:focus {
+  border-color: #0092FF;
+}
 .modal-reset-passwork .modal-body .btn-submit {
   height: 48px;
   line-height: 48px;
@@ -2424,7 +2444,7 @@ html {
   margin-top: 16px;
 }
 .modal-reset-passwork .modal-body .btn-submit:hover {
-  background: #091D3E;
+  background: #004B84;
 }
 .modal-reset-passwork .modal-body .action.back {
   margin-top: 16px;
@@ -2577,7 +2597,7 @@ body.has-modal:after {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 9;
+  z-index: 99;
   background-color: black;
   opacity: 0.6;
   left: 0;
@@ -2754,6 +2774,109 @@ body.has-modal:after {
     width: 25px;
     height: 25px;
     line-height: 25px;
+  }
+  .modal-login .inner-wrapper,
+  .modal-register .inner-wrapper {
+    max-width: calc(100% - 8px);
+  }
+  .modal-login .modal-body,
+  .modal-register .modal-body {
+    padding: 32px 24px 0;
+  }
+  .modal-login .modal-body .title-wrapper .title,
+  .modal-register .modal-body .title-wrapper .title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  .modal-login .modal-body .title-wrapper .sub-title,
+  .modal-register .modal-body .title-wrapper .sub-title {
+    margin-bottom: 15px;
+  }
+  .modal-login .modal-body .title-wrapper .btn-modal,
+  .modal-register .modal-body .title-wrapper .btn-modal {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .modal-login .modal-body .form-login,
+  .modal-register .modal-body .form-login {
+    margin-top: 0;
+  }
+  .modal-login .modal-body .btn-login,
+  .modal-register .modal-body .btn-login,
+  .modal-login .modal-body .btn-register,
+  .modal-register .modal-body .btn-register {
+    height: 44px;
+    line-height: 44px;
+  }
+  .modal-login .modal-footer,
+  .modal-register .modal-footer {
+    padding: 0 24px 32px;
+  }
+  .modal-login .modal-footer .social-login-group,
+  .modal-register .modal-footer .social-login-group {
+    margin-bottom: 0;
+  }
+  .modal-login .modal-footer .social-login-group {
+    margin-bottom: 15px;
+  }
+  .modal-confirm-account .inner-wrapper {
+    max-width: calc(100% - 8px);
+  }
+  .modal-confirm-account .modal-body {
+    padding: 32px 24px;
+  }
+  .modal-confirm-account .modal-body .title-wrapper .title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  .modal-confirm-account .modal-body .title-wrapper .sub-title {
+    margin-top: 8px;
+    line-height: 21px;
+  }
+  .modal-confirm-account .modal-body .notice {
+    margin-top: 24px;
+  }
+  .modal-confirm-account .modal-body .action.back {
+    margin-top: 24px;
+  }
+  .modal-reset-passwork .modal-body {
+    padding: 32px 24px 32px;
+  }
+  .modal-reset-passwork .modal-body .title-wrapper .title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  .modal-reset-passwork .modal-body .title-wrapper .sub-title {
+    margin-top: 8px;
+    line-height: 21px;
+  }
+  .modal-reset-passwork .modal-body .form-reset-password {
+    margin-top: 16px;
+  }
+  .modal-reset-passwork .modal-body .btn-submit {
+    height: 44px;
+    line-height: 44px;
+  }
+  .modal-reset-passwork .modal-body .action.back {
+    margin-top: 24px;
+  }
+  .modal-reset-passwork-success .modal-body {
+    padding: 32px 24px 32px;
+  }
+  .modal-reset-passwork-success .modal-body .title-wrapper .title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    max-width: 284px;
+    margin: 0 auto;
+  }
+  .modal-reset-passwork-success .modal-body .title-wrapper .sub-title {
+    margin-top: 8px;
+    line-height: 21px;
   }
 }
 @media only screen and (max-width: 374px) {
@@ -4856,6 +4979,7 @@ body.has-modal:after {
   border-style: solid;
   color: #0092FF;
   cursor: pointer;
+  display: inline-block;
 }
 .account-page .list-question .question-item:last-child {
   margin-bottom: 0;
@@ -4877,6 +5001,7 @@ body.has-modal:after {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10.5px 16px;
+  margin-bottom: 4px;
 }
 .account-page .list-order .order-item .order-header .order-id {
   font-size: 16px;
@@ -4912,7 +5037,7 @@ body.has-modal:after {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 16px 16px 12px;
+  padding: 12px 16px;
   margin-bottom: 0;
   border-width: 0 0 1px;
   border-style: solid;
@@ -4971,6 +5096,9 @@ body.has-modal:after {
   line-height: 22px;
   color: #0092FF;
 }
+.account-page .send-us-comment .comment-header img {
+  width: 100%;
+}
 .account-page .send-us-comment .comment-body {
   margin-top: 24px;
 }
@@ -5027,7 +5155,91 @@ body.has-modal:after {
 .account-page .send-us-comment .form-send-comment .action.submit:hover {
   background-color: #091D3E;
 }
-@media (max-width: 1199px) {
+.modal-reset-password-account .inner-wrapper {
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 0 40px 40px;
+}
+.modal-reset-password-account .modal-header {
+  border-width: 0;
+  padding: 14px 0;
+  position: relative;
+}
+.modal-reset-password-account .modal-header .btn-close {
+  position: absolute;
+  right: -16px;
+  top: 24px;
+  padding: 0;
+  margin: 0;
+}
+.modal-reset-password-account .modal-body {
+  padding: 0;
+}
+.modal-reset-password-account .modal-body .title-wrapper {
+  text-align: center;
+}
+.modal-reset-password-account .modal-body .title-wrapper .title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 27px;
+  margin-bottom: 15px;
+}
+.modal-reset-password-account .modal-body .title-wrapper .sub-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.modal-reset-password-account .modal-body .title-wrapper .account {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.modal-reset-password-account .modal-body .content-wrapper {
+  margin-top: 20px;
+}
+.modal-reset-password-account .modal-body .content-wrapper .field {
+  margin-bottom: 12px;
+}
+.modal-reset-password-account .modal-body .content-wrapper .field input {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #E9E9EC;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  width: 100%;
+  padding: 13.5px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+.modal-reset-password-account .modal-body .content-wrapper .field input:hover,
+.modal-reset-password-account .modal-body .content-wrapper .field input:focus {
+  border-color: #0092FF;
+}
+.modal-reset-password-account .modal-body .content-wrapper .field:last-child {
+  margin-bottom: 16px;
+}
+.modal-reset-password-account .modal-footer {
+  border-width: 0;
+  padding: 0;
+}
+.modal-reset-password-account .modal-footer .btn-submit {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 12px;
+  margin: 0;
+  background-color: #0092FF;
+  color: white;
+}
+.modal-reset-password-account .modal-footer .btn-submit:hover {
+  background-color: #004B84;
+}
+@media (max-width: 991px) {
   .account-page .block-infomation-account .block-content .field .control {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -5147,8 +5359,23 @@ body.has-modal:after {
   .account-page .page-columns {
     background-color: white;
   }
+  .account-page .list-question .question-item .question-body .question-title {
+    line-height: 24px;
+  }
+  .account-page .list-question .question-item .question-body .see-answers {
+    margin-top: 8px;
+  }
 }
 @media (max-width: 575px) {
+  .account-page .tab-content {
+    margin-top: 12px;
+  }
+  .account-page .block-infomation-account {
+    overflow: visible;
+  }
+  .account-page .block-infomation-account .block-content {
+    margin-top: 12px;
+  }
   .account-page .block-infomation-account .block-content .field {
     margin-bottom: 16px;
   }
@@ -5209,6 +5436,132 @@ body.has-modal:after {
     border-width: 0 0 1px;
     border-style: solid;
     border-color: #E9E9EC;
+  }
+  .account-page .list-question {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  .account-page .list-question .question-item {
+    padding: 0 16px 16px;
+    border-width: 0 0 8px;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    margin-bottom: 18px;
+  }
+  .account-page .list-question .question-item:last-child {
+    border-width: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .account-page .list-question .question-item .question-header .category {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 2px 8px;
+  }
+  .account-page .list-question .question-item .question-header .public-date {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+  }
+  .account-page .list-question .question-item .question-body {
+    margin-top: 8px;
+  }
+  .account-page .list-question .question-item .question-body .question-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .account-page .list-question .question-item .question-body .question-description {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .account-page .list-question .question-item .question-body .question-status {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  .account-page .list-question .question-item .question-body .question-status .see-answers {
+    border-width: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+  }
+  .account-page .list-order .order-item .product-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .account-page .list-order .order-item .product-wrapper .product-detail-wrapper {
+    margin-top: 0;
+  }
+  .account-page .list-order .order-item .product-wrapper .product-detail-wrapper .product-name {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+  }
+  .account-page .list-order .order-item .order-footer .subtotal {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+  }
+  .account-page .list-order .order-item:last-child {
+    margin-bottom: 0;
+  }
+  .account-page .send-us-comment .comment-header {
+    display: none;
+  }
+  .account-page .send-us-comment .comment-body {
+    margin-top: 8px;
+  }
+  .account-page .send-us-comment .comment-body .title {
+    display: none;
+  }
+  .account-page .send-us-comment .comment-body .sub-title {
+    margin-top: 0;
+  }
+  .account-page .send-us-comment .comment-body .form-send-comment .field {
+    margin-bottom: 24px;
+  }
+  .account-page .send-us-comment .comment-body .form-send-comment .field .label {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+  }
+  .account-page .send-us-comment .comment-body .form-send-comment .action.submit {
+    padding: 11.5px 23.5px;
+  }
+  .account-page .row10 {
+    margin-left: -16px !important;
+    margin-right: -16px !important;
+  }
+  .account-page .col10 {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .modal-reset-password-account .inner-wrapper {
+    max-width: calc(100% - 8px);
+    padding: 0 24px 24px;
+  }
+  .modal-reset-password-account .modal-header {
+    padding: 16px 0;
+  }
+  .modal-reset-password-account .modal-header .btn-close {
+    top: 11px;
+    right: -19px;
+  }
+  .modal-reset-password-account .modal-body .title-wrapper .title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+  .modal-reset-password-account .modal-body .title-wrapper .sub-title {
+    line-height: 21px;
+  }
+  .modal-reset-password-account .modal-body .title-wrapper .account {
+    line-height: 21px;
   }
 }
 @media only screen and (min-width: 1600px) {

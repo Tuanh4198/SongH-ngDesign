@@ -728,7 +728,7 @@
     .transform(translateY(-50%));
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 100;
     opacity: 0;
     visibility: hidden;
     .transition(all .3s ease);
@@ -902,7 +902,9 @@
                 width: 100%;
                 height: 44px;
                 background: #FFFFFF;
-                border: 1px solid @border_color;
+                border-width: 1px;
+                border-style: solid;
+                border-color: @border_color;
                 box-sizing: border-box;
                 border-radius: 4px;
                 font-style: normal;
@@ -913,7 +915,7 @@
 
                 &:focus,
                 &:hover {
-                    border: 1px solid @text_color;
+                    border-color: @base_color;
                 }
 
                 &::placeholder {
@@ -1249,7 +1251,9 @@
             width: 100%;
             height: 44px;
             background: #FFFFFF;
-            border: 1px solid @border_color;
+            border-width: 1px;
+            border-style: solid;
+            border-color: @border_color;
             box-sizing: border-box;
             border-radius: 4px;
             font-style: normal;
@@ -1263,6 +1267,11 @@
             &::placeholder {
                 font-size: 14px;
                 color: @text_color;
+            }
+
+            &:hover,
+            &:focus{
+                border-color: @base_color;
             }
         }
 
@@ -1327,7 +1336,7 @@
             margin-bottom: 15px;
 
             &:hover {
-                background: @text_color;
+                background: @hover_color;
             }
         }
     }
@@ -1490,7 +1499,9 @@
             width: 100%;
             height: 44px;
             background: #FFFFFF;
-            border: 1px solid @border_color;
+            border-width: 1px;
+            border-style: solid;
+            border-color: @border_color;
             box-sizing: border-box;
             border-radius: 4px;
             font-style: normal;
@@ -1504,6 +1515,11 @@
             &::placeholder {
                 font-size: 14px;
                 color: @text_color;
+            }
+
+            &:hover,
+            &:focus{
+                border-color: @base_color;
             }
         }
 
@@ -1568,7 +1584,7 @@
             margin-bottom: 15px;
 
             &:hover {
-                background: @text_color;
+                background: @hover_color;
             }
         }
 
@@ -1705,14 +1721,16 @@
         }
 
         .form-reset-password {
-            margin-top: 26px;
+            margin-top: 25px;
         }
 
         .field {
             width: 100%;
             height: 44px;
             background: #FFFFFF;
-            border: 1px solid @border_color;
+            border-width: 1px;
+            border-style: solid;
+            border-color: @border_color;
             box-sizing: border-box;
             border-radius: 4px;
             font-style: normal;
@@ -1725,6 +1743,11 @@
             &::placeholder {
                 font-size: 14px;
                 color: @text_color;
+            }
+
+            &:hover,
+            &:focus{
+                border-color: @base_color;
             }
         }
 
@@ -1743,7 +1766,7 @@
             margin-top: 16px;
 
             &:hover {
-                background: @text_color;
+                background: @hover_color;
             }
         }
 
@@ -1907,7 +1930,7 @@ body {
             position: fixed;
             width: 100vw;
             height: 100vh;
-            z-index: 9;
+            z-index: 99;
             background-color: black;
             opacity: 0.6;
             left: 0;
@@ -2118,6 +2141,149 @@ body {
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .modal-login,
+    .modal-register {
+        .inner-wrapper{
+            max-width: calc(~"100% - 8px");
+        }
+
+        .modal-body{
+            padding: 32px 24px 0;
+
+            .title-wrapper {
+                .title{
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22px;
+                }
+
+                .sub-title{
+                    margin-bottom: 15px;
+                }
+
+                .btn-modal{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+            }
+
+            .form-login{
+                margin-top: 0;
+            }
+
+            .btn-login,
+            .btn-register{
+                height: 44px;
+                line-height: 44px;
+            }
+        }
+
+        .modal-footer{
+            padding: 0 24px 32px;
+
+            .social-login-group{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .modal-login{
+        .modal-footer{
+            .social-login-group{
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .modal-confirm-account{
+        .inner-wrapper{
+            max-width: calc(~"100% - 8px");
+        }
+
+        .modal-body{
+            padding: 32px 24px;
+
+            .title-wrapper {
+                .title{
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22px;
+                }
+
+                .sub-title{
+                    margin-top: 8px;
+                    line-height: 21px;
+                }
+            }
+
+            .notice{
+                margin-top: 24px;
+            }
+
+            .action {
+                &.back{
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+
+    .modal-reset-passwork {
+        .modal-body{
+            padding: 32px 24px 32px;
+
+            .title-wrapper {
+                .title{
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22px;
+                }
+
+                .sub-title{
+                    margin-top: 8px;
+                    line-height: 21px;
+                }
+            }
+
+            .form-reset-password{
+                margin-top: 16px;
+            }
+
+            .btn-submit{
+                height: 44px;
+                line-height: 44px;
+            }
+
+            .action {
+                &.back{
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+
+    .modal-reset-passwork-success {
+        .modal-body{
+            padding: 32px 24px 32px;
+
+            .title-wrapper {
+                .title{
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    max-width: 284px;
+                    margin: 0 auto;
+                }
+
+                .sub-title{
+                    margin-top: 8px;
+                    line-height: 21px;
                 }
             }
         }

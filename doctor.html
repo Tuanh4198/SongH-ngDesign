@@ -52,7 +52,7 @@
 							<button class="btn-search">
 								<img src="./images/page/qa-page/search_icon.png" alt=""/>
 							</button>
-							<input type="text" placeholder="Tìm bác sĩ...">
+							<input  class="input-text" type="text" placeholder="Tìm bác sĩ...">
 						</div>
 						<ul class="list-doctor mobile d-none list-support-option">
 							<li class="active">
@@ -254,7 +254,7 @@
 									<div class="item-lg-wrapper">
 										<img src="./images/page/intro-page/doctor2.png" alt=""/>
 										<div class="doctor-indo">
-											<h6 class="name">GS. Phạm Nhật An</h6>
+											<h6 class="name"><a href="#">GS. Phạm Nhật An</a></h6>
 											<div class="doctor-service-wrapper">
 												<p class="doctor-service d-flex align-items-center">
 													<img src="./images/home/ico-sick1.png"/>
@@ -276,7 +276,7 @@
 									<div class="item-lg-wrapper">
 										<img src="./images/page/intro-page/doctor1.png" alt=""/>
 										<div class="doctor-indo">
-											<h6 class="name">GS. Phạm Nhật An</h6>
+											<h6 class="name"><a href="#">GS. Phạm Nhật An</a></h6>
 											<div class="doctor-service-wrapper">
 												<p class="doctor-service d-flex align-items-center">
 													<img src="./images/home/ico-sick1.png"/>
@@ -297,7 +297,7 @@
 								<div class="item-sm">
 									<img src="./images/page/intro-page/doctor2.png" alt=""/>
 									<div class="doctor-indo">
-										<h6 class="name">GS. Phạm Nhật An</h6>
+										<h6 class="name"><a href="#">GS. Phạm Nhật An</a></h6>
 										<div class="doctor-service-wrapper">
 											<p class="doctor-service d-flex align-items-center">
 												<img src="./images/home/ico-sick1.png"/>
@@ -317,7 +317,7 @@
 								<div class="item-sm">
 									<img src="./images/page/intro-page/doctor1.png" alt=""/>
 									<div class="doctor-indo">
-										<h6 class="name">GS. Phạm Nhật An</h6>
+										<h6 class="name"><a href="#">GS. Phạm Nhật An</a></h6>
 										<div class="doctor-service-wrapper">
 											<p class="doctor-service d-flex align-items-center">
 												<img src="./images/home/ico-sick1.png"/>
@@ -337,7 +337,7 @@
 								<div class="item-sm">
 									<img src="./images/page/intro-page/doctor2.png" alt=""/>
 									<div class="doctor-indo">
-										<h6 class="name">GS. Phạm Nhật An</h6>
+										<h6 class="name"><a href="#">GS. Phạm Nhật An</a></h6>
 										<div class="doctor-service-wrapper">
 											<p class="doctor-service d-flex align-items-center">
 												<img src="./images/home/ico-sick1.png"/>
@@ -357,7 +357,7 @@
 								<div class="item-sm">
 									<img src="./images/page/intro-page/doctor1.png" alt=""/>
 									<div class="doctor-indo">
-										<h6 class="name">GS. Phạm Nhật An</h6>
+										<h6 class="name"><a href="#">GS. Phạm Nhật An</a></h6>
 										<div class="doctor-service-wrapper">
 											<p class="doctor-service d-flex align-items-center">
 												<img src="./images/home/ico-sick1.png"/>
@@ -377,7 +377,7 @@
 								<div class="item-sm">
 									<img src="./images/page/intro-page/doctor2.png" alt=""/>
 									<div class="doctor-indo">
-										<h6 class="name">GS. Phạm Nhật An</h6>
+										<h6 class="name"><a href="#">GS. Phạm Nhật An</a></h6>
 										<div class="doctor-service-wrapper">
 											<p class="doctor-service d-flex align-items-center">
 												<img src="./images/home/ico-sick1.png"/>
@@ -397,7 +397,7 @@
 								<div class="item-sm">
 									<img src="./images/page/intro-page/doctor1.png" alt=""/>
 									<div class="doctor-indo">
-										<h6 class="name">GS. Phạm Nhật An</h6>
+										<h6 class="name"><a href="#">GS. Phạm Nhật An</a></h6>
 										<div class="doctor-service-wrapper">
 											<p class="doctor-service d-flex align-items-center">
 												<img src="./images/home/ico-sick1.png"/>
@@ -456,6 +456,7 @@
         $('.list-support-option li').click(function(event) {
             event.preventDefault();
             $(this).toggleClass('active');
+			$(this).find('input[type="checkbox"]').attr('checked', true);
         })
 
         $('.list-keyword li .close').click(function(event) {

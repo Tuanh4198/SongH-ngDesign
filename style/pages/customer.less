@@ -413,6 +413,7 @@
                     border-style: solid;
                     color: @base_color;
                     cursor: pointer;
+                    display: inline-block;
                 }
             }
 
@@ -436,6 +437,7 @@
                 border-color: #E9E9EC;
                 justify-content: space-between;
                 padding: 10.5px 16px;
+                margin-bottom: 4px;
 
                 .order-id {
                     font-size: 16px;
@@ -469,7 +471,7 @@
 
             .product-wrapper {
                 .dflex;
-                padding: 16px 16px 12px;
+                padding: 12px 16px;
                 margin-bottom: 0;
                 border-width: 0 0 1px;
                 border-style: solid;
@@ -534,6 +536,12 @@
     }
 
     .send-us-comment {
+        .comment-header{
+            img{
+                width: 100%;
+            }
+        }
+
         .comment-body {
             margin-top: 24px;
 
@@ -601,7 +609,108 @@
     }
 }
 
-@media(max-width: 1199px){
+// modal reset password in account page
+.modal-reset-password-account{
+    .inner-wrapper{
+        max-width: 460px;
+        margin: 0 auto;
+        padding: 0 40px 40px;
+    }
+    
+    .modal-header{
+        border-width: 0;
+        padding: 14px 0;
+        position: relative;
+
+        .btn-close{
+            position: absolute;
+            right: -16px;
+            top: 24px;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .modal-body{
+        padding: 0;
+
+        .title-wrapper{
+            text-align: center;
+
+            .title{
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 27px;
+                margin-bottom: 15px;
+            }
+
+            .sub-title{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+            }
+
+            .account{
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+            }
+        }
+
+        .content-wrapper{
+            margin-top: 20px;
+
+            .field{
+                margin-bottom: 12px;
+
+                input{
+                    border-width: 1px;
+                    border-style: solid;
+                    border-color: @border_color;
+                    .round-borders(4px);
+                    width: 100%;
+                    padding: 13.5px 12px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 17px;
+
+                    &:hover,
+                    &:focus{
+                        border-color: @base_color;
+                    }
+                }
+
+                &:last-child{
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+
+    .modal-footer{
+        border-width: 0;
+        padding: 0;
+
+        .btn-submit{
+            width: 100%;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 12px;
+            margin: 0;
+            background-color: @base_color;
+            color: white;
+
+            &:hover{
+                background-color: @hover_color;
+            }
+        }
+    }
+}
+
+@media(max-width: 991px){
     .account-page {
         .block-infomation-account {
             .block-content {
@@ -735,13 +844,35 @@
         .page-columns{
             background-color: white;
         }
+
+        .list-question {
+            .question-item {
+                .question-body {
+                    .question-title{
+                        line-height: 24px;
+                    }
+
+                    .see-answers{
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media(max-width: 575px){
     .account-page {
+        .tab-content{
+            margin-top: 12px;
+        }
+
         .block-infomation-account {
+            overflow: visible;
+
             .block-content {
+                margin-top: 12px;
+
                 .field {
                     margin-bottom: 16px;
 
@@ -812,5 +943,179 @@
             border-style: solid;
             border-color: @border_color;
         }
+
+        .list-question {
+            margin-left: -16px;
+            margin-right: -16px;
+            
+            .question-item{
+                padding: 0 16px 16px;
+                border-width: 0 0 8px;
+                .round-borders(0);
+                margin-bottom: 18px;
+
+                &:last-child{
+                    border-width: 0;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+
+                .question-header {
+                    .category{
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 16px;
+                        padding: 2px 8px;
+                    }
+
+                    .public-date{
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 15px;
+                    }
+                } 
+
+                .question-body{
+                    margin-top: 8px;
+
+                    .question-title{
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 24px;
+                    }
+
+                    .question-description{
+                        font-size: 13px;
+                        font-weight: 400;
+                        line-height: 18px;
+                    }
+
+                    .question-status{
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 22px;
+
+                        .see-answers{
+                            border-width: 0;
+                            padding-bottom: 0;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .list-order {
+            .order-item {
+                .product-wrapper {
+                    align-items: center;
+
+                    .product-detail-wrapper {
+                        margin-top: 0;
+
+                        .product-name{
+                            font-size: 12px;
+                            font-weight: 600;
+                            line-height: 15px;
+                        }
+                    }
+                }
+
+                .order-footer {
+                    .subtotal{
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 19px;
+                    }
+                }
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            
+        }
+
+        .send-us-comment {
+            .comment-header {
+                display: none;
+            }
+
+            .comment-body {
+                margin-top: 8px;
+
+                .title{
+                    display: none;
+                }
+
+                .sub-title{
+                    margin-top: 0;
+                }
+
+                .form-send-comment {
+                    .field {
+                        margin-bottom: 24px;
+
+                        .label{
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 17px;
+                        }
+                    }
+
+                    .action{
+                        &.submit{
+                            padding: 11.5px 23.5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .row10{
+            margin-left: -16px !important;
+            margin-right: -16px !important;
+        }
+
+        .col10{
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+        }
+    }
+
+    .modal-reset-password-account {
+        .inner-wrapper{
+            max-width: calc(~"100% - 8px");
+            padding: 0 24px 24px;
+        }
+
+        .modal-header{
+            padding: 16px 0;
+
+            .btn-close{
+                top: 11px;
+                right: -19px;
+            }
+        }
+        
+        .modal-body {
+            .title-wrapper {
+                .title{
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    margin-bottom: 8px;
+                }
+
+                .sub-title{
+                    line-height: 21px;
+                }
+
+                .account{
+                    line-height: 21px;
+                }
+            }
+        }
+
     }
 }

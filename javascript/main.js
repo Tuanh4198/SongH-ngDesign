@@ -347,6 +347,22 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
+	$(function() {
+        $('.btn-menu-mobile').click(function() {
+            $('body').addClass('menu-active');
+        })
+        $('.btn-close-mobile').click(function() {
+            $('body').removeClass('menu-active');
+        })
+    })
+
+    $(function() {
+        $('.menu-mobile .main-menu > li > a').click(function() {
+            $(this).toggleClass('active');
+            $(this).next().toggleClass('active')
+        })
+    })
+
 
 	// scroll tab
 	$('body').on('click', '.tab-scroll-content .tab-items .tab-item', function (event) {

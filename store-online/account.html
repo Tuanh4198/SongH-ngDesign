@@ -157,7 +157,7 @@
                                 </div>
                             </form>
                             <div class="block-action dflex align-items-center">
-                                <button class="action reset-password">Đổi mật khẩu</button>
+                                <button class="action reset-password btn-modal" data-modal="form-reset-password-account">Đổi mật khẩu</button>
                                 <div class="action save-info">lưu lại thông tin</div>
                             </div>
                         </div>
@@ -175,8 +175,11 @@
                                         </div>
                                         <div class="question-body">
                                             <h3 class="question-title">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</h3>
-                                            <p class="question-description">Mấy năm nay em bị đau đầu bên trái, bên phần lưng sát mông bên trái của em bị đau nhói, ngồi nằm khó khăn, dạo này em đau thêm cả phần vai và bả vai trái, thỉnh thoảng em có bị tê 1 số chỗ, đứng lên ngồi xuống chóng mặt, mặc dù em ăn uống đầy đủ và không phải vận động nặng trong đời sống. Bác sĩ cho em hỏi đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì và điều trị như nào? Em xin cảm ơn.</p>
-                                            <p class="question-status">Câu hỏi của bạn đã được chuyên gia của chúng tôi trả lời. <a href="#" class="see-answers">Xem câu trả lời ngay</a></p>
+                                            <div class="question-description">Mấy năm nay em bị đau đầu bên trái, bên phần lưng sát mông bên trái của em bị đau nhói, ngồi nằm khó khăn, dạo này em đau thêm cả phần vai và bả vai trái, thỉnh thoảng em có bị tê 1 số chỗ, đứng lên ngồi xuống chóng mặt, mặc dù em ăn uống đầy đủ và không phải vận động nặng trong đời sống. Bác sĩ cho em hỏi đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì và điều trị như nào? Em xin cảm ơn.</div>
+                                            <div class="question-status">
+                                                <p class="status">Câu hỏi của bạn đã được chuyên gia của chúng tôi trả lời.</p>
+                                                <a href="#" class="see-answers">Xem câu trả lời ngay</a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="question-item">
@@ -186,8 +189,10 @@
                                         </div>
                                         <div class="question-body">
                                             <h3 class="question-title">Đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì?</h3>
-                                            <p class="question-description">Mấy năm nay em bị đau đầu bên trái, bên phần lưng sát mông bên trái của em bị đau nhói, ngồi nằm khó khăn, dạo này em đau thêm cả phần vai và bả vai trái, thỉnh thoảng em có bị tê 1 số chỗ, đứng lên ngồi xuống chóng mặt, mặc dù em ăn uống đầy đủ và không phải vận động nặng trong đời sống. Bác sĩ cho em hỏi đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì và điều trị như nào? Em xin cảm ơn.</p>
-                                            <p class="question-status no-answers">Chưa có câu trả lời cho câu hỏi này của bạn.</span></p>
+                                            <div class="question-description">Mấy năm nay em bị đau đầu bên trái, bên phần lưng sát mông bên trái của em bị đau nhói, ngồi nằm khó khăn, dạo này em đau thêm cả phần vai và bả vai trái, thỉnh thoảng em có bị tê 1 số chỗ, đứng lên ngồi xuống chóng mặt, mặc dù em ăn uống đầy đủ và không phải vận động nặng trong đời sống. Bác sĩ cho em hỏi đau lưng, vai và bả vai trái triền miên là dấu hiệu bệnh gì và điều trị như nào? Em xin cảm ơn.</div>
+                                            <div class="question-status no-answers">
+                                                <p class="status">Chưa có câu trả lời cho câu hỏi này của bạn.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -325,7 +330,36 @@
         </div>
     </section>
     <!-- End Content -->
-
+    <!-- Popup -->
+    <form action="#" method="post" class="modal-reset-password-account modal-custom" id="form-reset-password-account">
+        <div class="inner-wrapper">
+            <div class="modal-header">
+                <button class="btn-close btn-modal" data-modal="form-reset-password-account"><img src="./images/home/close.png" alt=""/></button>
+            </div>
+            <div class="modal-body">
+                <div class="title-wrapper">
+                    <h4 class="title">Thay đổi mật khẩu</h4>
+                    <p class="sub-title">Bạn đang thay đổi mật khẩu của tài khoản</p>
+                    <strong class="account">lamdao218@gmail.com</strong>
+                </div>
+                <div class="content-wrapper">
+                    <div class="field old-pass">
+                        <input type="text" class="field" placeholder="Mật khẩu cũ (*)">
+                    </div>
+                    <div class="field new-pass">
+                        <input type="text" class="field" placeholder="Mật khẩu mới (*)">
+                    </div>
+                    <div class="field confirm-pass">
+                        <input type="text" class="field" placeholder="Nhập lại mật khẩu mới (*)">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button href="#" class="btn-submit">Xác nhận</button>
+            </div>
+        </div>
+    </form>
+    <!-- End popup -->
     <!-- Footer -->
     <footer id="footer_v2" class="footer">
         <!-- load content from footer.html -->
