@@ -1237,6 +1237,7 @@ html {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   width: 181px;
+  z-index: 2;
 }
 .header .account-wrapper .account-logged .account-links:before {
   border: 0;
@@ -1344,6 +1345,11 @@ html {
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
   margin: 0 auto;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+.modal-custom .inner-wrapper::-webkit-scrollbar {
+  width: 0;
 }
 .modal-custom.modal-open {
   opacity: 1;
@@ -1692,6 +1698,8 @@ html {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
+  width: auto;
+  height: auto;
 }
 .modal-login .modal-footer {
   padding: 0 40px 40px;
@@ -2734,6 +2742,31 @@ body.has-modal:after {
     background-image: url('../../images/page/online-store/ico-user-white.svg');
     margin-right: 0;
     background-position: center bottom;
+  }
+  .header .header-top .account-wrapper .account-logged .show-option:before {
+    content: "";
+    height: 24px;
+    width: 24px;
+    background-image: url('../../images/page/online-store/ico-user-white.svg');
+    margin-right: 0;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+  .header .header-top .account-wrapper .account-logged .account-links {
+    left: auto;
+    right: 0;
+    background-color: white;
+  }
+  .header .header-top .account-wrapper .account-logged .account-links:before {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
   }
   .header .header-center {
     display: none;
@@ -5197,10 +5230,8 @@ body.has-modal:after {
 .modal-reset-password-account .modal-body .content-wrapper {
   margin-top: 20px;
 }
-.modal-reset-password-account .modal-body .content-wrapper .field {
+.modal-reset-password-account .modal-body .content-wrapper .fields input {
   margin-bottom: 12px;
-}
-.modal-reset-password-account .modal-body .content-wrapper .field input {
   border-width: 1px;
   border-style: solid;
   border-color: #E9E9EC;
@@ -5213,11 +5244,11 @@ body.has-modal:after {
   font-weight: 400;
   line-height: 17px;
 }
-.modal-reset-password-account .modal-body .content-wrapper .field input:hover,
-.modal-reset-password-account .modal-body .content-wrapper .field input:focus {
+.modal-reset-password-account .modal-body .content-wrapper .fields input:hover,
+.modal-reset-password-account .modal-body .content-wrapper .fields input:focus {
   border-color: #0092FF;
 }
-.modal-reset-password-account .modal-body .content-wrapper .field:last-child {
+.modal-reset-password-account .modal-body .content-wrapper .fields:last-child input {
   margin-bottom: 16px;
 }
 .modal-reset-password-account .modal-footer {
@@ -5284,8 +5315,6 @@ body.has-modal:after {
     transition: all ease 0.3s;
     background-color: white;
     border-width: 0;
-    -webkit-box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.45);
-            box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.45);
     z-index: 11;
     padding: 0 16px;
     border-radius: 0;
@@ -5293,6 +5322,8 @@ body.has-modal:after {
     -webkit-border-radius: 0;
   }
   .account-page .block-collapsible-nav.active {
+    -webkit-box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.45);
+            box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.45);
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -5549,7 +5580,7 @@ body.has-modal:after {
   }
   .modal-reset-password-account .modal-header .btn-close {
     top: 11px;
-    right: -19px;
+    right: -11px;
   }
   .modal-reset-password-account .modal-body .title-wrapper .title {
     font-size: 18px;

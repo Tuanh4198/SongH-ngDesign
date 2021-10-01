@@ -472,24 +472,24 @@
 			.field-doctor-wrapper {
 				position: relative;
 
-				&:hover {
-					#list-results {
-						opacity: 1;
-						visibility: visible;
-					}
-				}
+				// &:hover {
+				// 	#list-results {
+				// 		opacity: 1;
+				// 		visibility: visible;
+				// 	}
+				// }
 
 				.field {
 					background: transparent;
 
-					&:hover,
-					&:focus,
-					&:visited {
-						+ #list-results {
-							opacity: 1;
-							visibility: visible;
-						}
-					}
+					// &:hover,
+					// &:focus,
+					// &:visited {
+					// 	+ #list-results {
+					// 		opacity: 1;
+					// 		visibility: visible;
+					// 	}
+					// }
 				}
 
 				#list-results {
@@ -504,8 +504,6 @@
 					z-index: 1;
 					box-shadow: 0px 1px 3px rgba(19, 10, 46, 0.13);
 					border-radius: 4px;
-					opacity: 0;
-					visibility: hidden;
 
 					&::-webkit-scrollbar {
 						width: 5px;
@@ -1145,6 +1143,18 @@ body.has-modal {
 				right: 5px;
 			}
 		} 
+
+		.modal-body {
+			[class*="col-"] {
+				.field-doctor-wrapper {
+					#list-results {
+						.item{
+							display: block;
+						}
+					}
+				}
+			}
+		}
 	} 
 
 	.fixed-main-menu{

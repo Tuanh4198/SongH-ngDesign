@@ -660,10 +660,9 @@
         .content-wrapper{
             margin-top: 20px;
 
-            .field{
-                margin-bottom: 12px;
-
+            .fields{                
                 input{
+                    margin-bottom: 12px;
                     border-width: 1px;
                     border-style: solid;
                     border-color: @border_color;
@@ -681,7 +680,9 @@
                 }
 
                 &:last-child{
-                    margin-bottom: 16px;
+                    input{
+                        margin-bottom: 16px;
+                    }
                 }
             }
         }
@@ -758,12 +759,12 @@
             transition: all ease .3s;
             background-color: white;
             border-width: 0;
-            box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.45);
             z-index: 11;
             padding: 0 16px;
             .round-borders(0);
-
+            
             &.active{
+                box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.45);
                 transform: translateX(0);
             }
 
@@ -1094,7 +1095,7 @@
 
             .btn-close{
                 top: 11px;
-                right: -19px;
+                right: -11px;
             }
         }
         

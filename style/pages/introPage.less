@@ -256,6 +256,13 @@
 				color: @text_color;
 				border-radius: 50%;
 			}
+
+			&:hover{
+				&:before{
+					border-color: @base_color;
+					color: @base_color;
+				}
+			}
 		}
 
 		.slick-prev {
@@ -638,6 +645,14 @@
 					margin-bottom: 15px;
 				}
 			}
+
+			.item{
+				&:hover {
+					.doctor-info{
+						transform: translateY(0);
+					}
+				}
+			}
 		}
 
 		.block-why {
@@ -973,6 +988,10 @@
 					position: static;
 					opacity: 1;
 					visibility: visible;
+
+					.btn{
+						font-size: 12px;
+					}
 				}
 			}
 		}

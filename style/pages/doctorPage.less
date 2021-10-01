@@ -126,8 +126,7 @@
 					display: flex;
 
 					a {
-						display:flex;
-						align-items: center;
+						display:inline-block;
 						color: @base_color;
 
 						&:hover {
@@ -143,6 +142,10 @@
 							margin-left:5px;
 						}
 					}
+				}
+
+				&.show-more{
+					display: inline-block;
 				}
 			}
 
@@ -1211,16 +1214,29 @@
 @media only screen and (max-width: 575px){
 	.doctor-page {
 		.breadcrumb-wrapper {
+			margin-top: 0;
+
 			.list-breadcrumb-wrapper {
 				display: none;
 			}
 
 			.page-title {
-				font-style: normal;
-				font-weight: bold;
-				font-size: 24px;
-				line-height: 29px;
-				margin-bottom: 15px;
+				margin-bottom: 0;
+				padding-top: 24px;
+				padding-bottom: 15px;
+				color: @text_color;
+
+				.title{
+					font-style: normal;
+					font-weight: bold;
+					font-size: 24px;
+					line-height: 29px;
+					padding: 0;
+
+					.count{
+						display: none;
+					}
+				}
 			}
 		}
 	
@@ -1276,6 +1292,8 @@
 
 					.list-doctor {
 						li {
+							min-width: 82px;
+							
 							span,
 							img {
 								display: none;
@@ -1304,6 +1322,7 @@
 
 								&.mobile {
 									display: block !important;
+									text-align: right;
 								}
 							}
 						}
@@ -1360,13 +1379,12 @@
 			}
 
 			.list-academic-rank,
-			.list-doctor,
-			.filter-option {
+			.list-doctor {
+				display: block !important;
+			}
+
+			.filter-option{
 				display: flex !important;
-				align-items: stretch;
-				justify-content: flex-start;
-				flex-wrap: wrap;
-				flex-direction: row;
 			}
 
 			.list-academic-rank,
@@ -1375,19 +1393,20 @@
 				padding-bottom: 0;
 
 				li {
-					width: calc(~'(100% - 24px) / 5');
+					width: auto;
 					background: #FFFFFF;
 					border: 1px solid @border_color;
 					box-sizing: border-box;
 					border-radius: 8px;
 					margin-bottom: 6px;
-					padding: 15px 10px;
-					text-align: center;
-					display: flex;
+					padding: 12.5px 8px;
 					margin-right: 6px;
-					align-items: center;
-					justify-content: center;
+					text-align: center;
 					position: relative;
+					display: inline-block;
+					margin-right: 6px;
+					margin-bottom: 6px;
+					min-width: 65px;
 
 					input {
 						position: absolute;
@@ -1429,6 +1448,7 @@
 
 					&.divider {
 						color: @text_color;
+						display: inline-block;
 
 						a:after {
 							display: none;

@@ -632,6 +632,7 @@
                 visibility: hidden;
                 .transition(all .3s ease);
                 width: 181px;
+                z-index: 2;
 
                 &:before {
                     .hidden-visibility;
@@ -737,31 +738,12 @@
         background-color: white;
         .round-borders(12px);
         margin: 0 auto;
-        // overflow-y: auto;
-        // max-height: 100vh;
+        overflow-y: auto;
+        max-height: 100vh;
 
-        // &::-webkit-scrollbar {
-        //     width: 5px;
-        // }
-
-        // &::-webkit-scrollbar-thumb {
-        //     background-color: #999999;
-        //     -webkit-border-radius: 12px;
-        //     -moz-border-radius: 12px;
-        //     border-radius: 12px;
-
-        //     &:hover {
-        //         background-color: #242424;
-        //     }
-        // }
-
-        // &::-webkit-scrollbar-track {
-        //     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-        //     background-color: #242424;
-        //     -webkit-border-radius: 12px;
-        //     -moz-border-radius: 12px;
-        //     border-radius: 12px;
-        // }
+        &::-webkit-scrollbar {
+            width: 0;
+        }
     }
 
     &.modal-open {
@@ -1113,6 +1095,8 @@
             padding: 0;
             box-shadow: none;
             outline: none;
+            width: auto;
+            height: auto;
         }
     }
 
@@ -2077,6 +2061,31 @@ body {
                         background-image: url('../../images/page/online-store/ico-user-white.svg');
                         margin-right: 0;
                         background-position: center bottom;
+                    }
+                }
+
+                .account-logged{
+                    .show-option{
+                        &:before {
+                            content:"";
+                            height: 24px;
+                            width: 24px;
+                            background-image: url('../../images/page/online-store/ico-user-white.svg');
+                            margin-right: 0;
+                            background-position: center bottom;
+                            background-repeat: no-repeat;
+                            display: inline-block;
+                        }
+                    }
+
+                    .account-links{
+                        left: auto;
+                        right: 0;
+                        background-color: white;
+
+                        &:before{
+                            .hidden-visibility;
+                        }
                     }
                 }
             }
