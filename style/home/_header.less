@@ -568,6 +568,7 @@
 					color: @text_color;
 					z-index: 1;
 					font-size: 20px;
+					pointer-events: none;
 				}
 			}
 		}
@@ -596,6 +597,24 @@
 				strong {
 					font-weight: 600;
 				}
+			}
+		}
+	}
+
+	.actions{
+		text-align: right;
+		margin-bottom: 10px;
+
+		.btn-understand{
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 24px;
+			padding: 12px 24px;
+			background-color: #F7F7F7;
+
+			&:hover{
+				background-color: @base_color;
+				color: white;
 			}
 		}
 	}
@@ -844,7 +863,7 @@ body.has-modal {
 		position: fixed;
 		width: 100vw;
 		height: 100vh;
-		z-index: 9;
+		z-index: 10;
 		background-color: black;
 		opacity: 0.6;
 		left: 0;
@@ -1124,7 +1143,7 @@ body.has-modal {
 	}
 	.modal-registration{
 		width: calc(~"100% - 7.5px");
-		max-height: 95vh;
+		max-height: 100vh;
 		overflow-y: auto;
 		overflow-x: hidden;
 
@@ -1145,6 +1164,22 @@ body.has-modal {
 		} 
 
 		.modal-body {
+			padding: 24px 8px;
+
+			.title-wrapper {
+				.title{
+					font-size: 18px;
+					font-weight: 700;
+					line-height: 22px;
+				}
+
+				.sub-title{
+					font-size: 12px;
+					font-weight: 400;
+					line-height: 18px;
+				}
+			}
+
 			[class*="col-"] {
 				.field-doctor-wrapper {
 					#list-results {
@@ -1154,8 +1189,45 @@ body.has-modal {
 					}
 				}
 			}
+
+			.table-title{
+				font-size: 12px;
+				font-weight: 700;
+				line-height: 15px;
+			}
+
+			.table{
+				margin-bottom: 0;
+
+				td{
+					padding: 8px 10px;
+					font-size: 12px;
+					font-weight: 400;
+					line-height: 15px;
+				}
+			}
 		}
 	} 
+
+	.modal-login {
+		.modal-body {
+			.title-wrapper {
+				.title{
+					font-size: 18px;
+					font-weight: 700;
+					line-height: 22px;
+				}
+
+				.sub-title{
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 20px;
+					margin-bottom: 16px;
+				}
+			}
+		}
+	}
 
 	.fixed-main-menu{
 		box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
@@ -1163,7 +1235,6 @@ body.has-modal {
 }
 @media only screen and (max-width: 480px){
 	.modal-login{
-		width: 95vw;
 		.modal-body{
 			padding: 40px 20px 0;
 		}

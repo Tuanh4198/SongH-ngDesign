@@ -2854,6 +2854,10 @@ body.has-modal:after {
   .modal-login .modal-footer .social-login-group {
     margin-bottom: 15px;
   }
+  .modal-register .btn-login {
+    display: inline-block;
+    height: auto !important;
+  }
   .modal-confirm-account .inner-wrapper {
     max-width: calc(100% - 8px);
   }
@@ -2910,6 +2914,100 @@ body.has-modal:after {
   .modal-reset-passwork-success .modal-body .title-wrapper .sub-title {
     margin-top: 8px;
     line-height: 21px;
+  }
+  .modal-registration {
+    width: calc(100% - 7.5px);
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .modal-registration::-webkit-scrollbar {
+    width: 0;
+  }
+  .modal-registration .modal-header > img {
+    display: none;
+  }
+  .modal-registration .modal-header .btn-close {
+    background-color: transparent;
+    opacity: 1;
+    top: 5px;
+    right: 5px;
+  }
+  .modal-registration .modal-body {
+    padding: 24px 8px;
+  }
+  .modal-registration .modal-body .title-wrapper .title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  .modal-registration .modal-body .title-wrapper .sub-title {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .modal-registration .modal-body [class*="col-"] .field-doctor-wrapper #list-results .item {
+    display: block;
+  }
+  .modal-registration .modal-body .table-title {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+  }
+  .modal-registration .modal-body .table {
+    margin-bottom: 0;
+  }
+  .modal-registration .modal-body .table td {
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+  }
+  .modal-ajax-cart .inner-wrapper {
+    margin-right: 0;
+  }
+  .modal-custom {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    padding: 0 8px;
+    background-color: transparent;
+  }
+  .modal-custom .inner-wrapper {
+    background-color: white;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+  }
+  .modal-custom .modal-header .btn-close {
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    right: 11px !important;
+    top: 5px !important;
+    z-index: 1;
+    display: block !important;
+    background-image: none !important;
+  }
+  .modal-custom .modal-header .btn-close img {
+    width: 12px;
+    height: 12px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .modal-custom .modal-body .title-wrapper .sub-title {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 20px !important;
+  }
+  .modal-custom.short-modal .inner-wrapper {
+    margin-top: 50px;
   }
 }
 @media only screen and (max-width: 374px) {

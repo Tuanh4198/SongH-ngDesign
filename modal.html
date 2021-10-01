@@ -55,6 +55,13 @@
         #footer .home-page {
             display: none;
         }
+
+        .page-modal .container>.btn-modal {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            background-color: transparent;
+        }
     </style>
 </head>
 
@@ -197,205 +204,261 @@
                 </div>
             </div>
         </div>
-        <!--  -->
-        <div class="header-bottom">
-            <div class="container">
-                <ul class="main-menu">
-                    <li>
-                        <a href="#">Giới thiệu <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                        <div class="chile-menu">
-                            <ul>
-                                <li><a href="#">Về chúng tôi</a></li>
-                                <li><a href="#">Sứ mệnh - Tầm nhìn</a></li>
-                                <li><a href="#">Cơ sở vật chất</a></li>
-                                <li><a href="#">Hoạt động của bệnh viện</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">Đội ngũ bác sĩ</a>
-                    </li>
-                    <li>
-                        <a href="#">Dịch vụ y tế<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                        <div class="chile-menu">
-                            <ul>
-                                <li><a href="#">Dịch vụ y tế</a></li>
-                                <li><a href="#">Dịch vụ y tế</a></li>
-                                <li><a href="#">Dịch vụ y tế</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">Gian hàng trực tuyến</a>
-                    </li>
-                    <li>
-                        <a href="#">Tin tức, hướng dẫn và các bài viết <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                        <div class="chile-menu">
-                            <ul>
-                                <li><a href="#">Tin tức</a></li>
-                                <li><a href="#">Hướng dẫn khác hàng </a></li>
-                                <li><a href="#">Cơ sở vật chất</a></li>
-                                <li><a href="#">Hoạt động của bệnh viện</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">Thư viện</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <form action="#" method="post" class="modal-registration modal-custom" id="form-registration">
-            <div class="modal-header">
-                <img src="./images/home/Frame.png" alt="" />
-                <button class="btn-close btn-modal" data-modal="form-registration"><img src="./images/home/close.png" alt=""/></button>
-            </div>
-            <div class="modal-body">
-                <div class="title-wrapper">
-                    <h4 class="title">Đăng ký khám và tư vấn tại Đa khoa Sông Thương</h4>
-                    <p class="sub-title">Vui lòng để lại thông tin và nhu cầu của quý khách. Chúng tôi sẽ liên hệ trong thời gian sớm nhất.</p>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <label for="">Họ và tên <sup>*</sup></label>
-                        <input type="text" class="field" placeholder="Nhập họ và tên">
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label for="">Số điện thoại <sup>*</sup></label>
-                        <input type="text" class="field" placeholder="Nhập số điện thoại">
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label for="">Email</label>
-                        <input type="text" class="field" placeholder="Nhập email">
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label for="">Ngày khám</label>
-                        <div class="field-date-wrapper field">
-                            <p class="result">Chọn ngày khám bệnh</p>
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <input type="text" class="field-date">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <label for="">Bạn có muốn khám bác sĩ nào không?</label>
-                        <div class="field-doctor-wrapper">
-                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <input type="text" class="field-doctor field" placeholder="Chọn bác sĩ khám bệnh">
-                            <div id="list-results"></div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <label for="">Nhu cầu khám bệnh</label>
-                        <textarea name="" id="" class="field" placeholder="Bạn đang gặp vấn đề về sức khỏe như thế nào?"></textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button href="#" class="btn-submit btn-modal" data-modal="registration-success">Gửi yêu cầu khám bệnh</button>
-            </div>
-        </form>
-        <!-- modal đặt lịch -->
-        <div class="modal-registration modal-custom" id="registration-success">
-            <div class="modal-header">
-                <img src="./images/home/Frame.png" alt="" />
-                <button class="btn-close btn-modal" data-modal="registration-success"><img src="./images/home/close.png" alt=""/></button>
-            </div>
-            <div class="modal-body">
-                <div class="title-wrapper">
-                    <h4 class="title"><img src="./images/home/check.png" alt="" />Đăng ký thành công</h4>
-                    <p class="sub-title">Cảm ơn quý khách! Chúng tôi sẽ gửi thông tin sức khỏe của bạn tới cho bác sĩ và liên hệ lại với quý khách theo số điện thoại <a href="tel:0946233789">0946 233 789</a> để xác nhận lịch hẹn trong thời gian sớm nhất.</p>
-                </div>
-                <div class="table-title">Thông tin khám bệnh</div>
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <td>Họ và tên</td>
-                            <td><strong>Đào Anh Lâm</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Số điện thoại</td>
-                            <td><strong>0946 233 789</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Email</td>
-                            <td><strong>lamda@vdcs.com.vn</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Ngày khám</td>
-                            <td><strong>27 tháng 4, 2021</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Bác sĩ khám</td>
-                            <td><strong>Bác sĩ Nguyễn Đức Đạt</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Nhu cầu khám bệnh</td>
-                            <td><strong>Tôi đang đau 2 răng số 8, cần bác sĩ khám ngay.</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- modal login -->
-        <div class="modal-login modal-custom">
-            <div class="modal-header">
-                <button class="btn-close"><img src="./images/home/close.png" alt=""/></button>
-            </div>
-            <div class="modal-body">
-                <div class="title-wrapper">
-                    <h4 class="title">Đăng nhập để gửi câu hỏi</h4>
-                    <p class="sub-title">Bạn chưa có Tài khoản? Vui lòng đăng ký Tài khoản mới <a href="tel:0946233789">tại đây</a></p>
-                </div>
-                <form action="#" method="post" class="form-login">
-                    <input type="email" placeholder="Email" class="field">
-                    <input type="password" placeholder="Mật khẩu" class="field">
-                    <div class="field-group">
-                        <div class="check-box">
-                            <input type="checkbox" name="saveme" id="saveme">
-                            <label for="saveme">Lưu thông tin đăng nhập</label>
-                        </div>
-                        <a href="#" class="forgot-password">Lấy lại mật khẩu</a>
-                    </div>
-                    <button class="btn-login btn-block">Đăng nhập</button>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <div class="line"><span>Hoặc</span></div>
-                <div class="social-login-group">
-                    <a href="#" class="facebook btn-social-login">
-                        <img src="./images/home/facebook.png" alt="Facebook" />
-                        <span>Facebook</span>
-                    </a>
-                    <a href="#" class="google btn-social-login">
-                        <img src="./images/home/google.png" alt="Google" />
-                        <span>Google</span>
-                    </a>
-                </div>
-                <a href="#" class="anonymus">Gửi câu hỏi ẩn anh</a>
-            </div>
-        </div>
     </header>
     <!-- End header -->
 
     <!-- modal -->
     <section class="page-modal">
         <div class="container">
-            <div class="modal-qa-accept modal-custom" id="qa-accept" style="display: none;">
-                <div class="modal-header">
-                    <button class="btn-close btn-modal" data-modal="qa-accept"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="title-wrapper">
-                        <img src="./images/home/check.png" alt="">
-                        <h4 class="title">Gửi câu hỏi thành công</h4>
-                        <p class="sub-title">Cảm ơn bạn đã gửi câu hỏi đến các bác sĩ của Bệnh viện Đa khoa Sông Thương. Câu hỏi đang được xử lý và sẽ phản hồi lại bạn trong thời gian sớm nhất.</p>
+            <!-- Gửi câu hỏi cho bác sĩ -->
+            <div class="modal-qa-doctor modal-custom" id="modal-qa-doctor">
+                <div class="inner-wrapper">
+                    <div class="modal-header">
+                        <button class="btn-close btn-modal" data-modal="modal-qa-doctor"><img src="./images/home/close.png" alt=""/></button>
                     </div>
-                    <button class="btn-more btn-block">Tiếp tục xem câu hỏi khác</button>
+                    <div class="modal-body">
+                        <div class="title-wrapper">
+                            <h4 class="title">Gửi câu hỏi cho bác sĩ</h4>
+                        </div>
+                        <form action="#" method="post" class="form-qa-doctor">
+                            <div class="fields name">
+                                <label for="" class="label">Họ và tên</label>
+                                <input type="text" placeholder="Nhập họ và tên" class="field">
+                            </div>
+                            <div class="fields phone">
+                                <label for="" class="label">Số điện thoại</label>
+                                <input type="text" placeholder="Nhập số điện thoại" class="field">
+                            </div>
+                            <div class="fields email">
+                                <label for="" class="label">Email</label>
+                                <input type="text" placeholder="Nhập email" class="field">
+                            </div>
+                            <div class="fields topic">
+                                <label for="" class="label">Chủ đề bạn muốn hỏi là gì?</label>
+                                <select name="topic" id="toppic">
+                                    <option value="1">Chọn chủ đề</option>
+                                    <option value="2">Chọn chủ đề 1</option>
+                                    <option value="3">Chọn chủ đề 2</option>
+                                    <option value="4">Chọn chủ đề 3</option>
+                                </select>
+                            </div>
+                            <div class="fields qa-doctor">
+                                <label for="" class="label">Câu hỏi dành cho bác sĩ</label>
+                                <textarea name="qa-doctor" id="qa-doctor" cols="30" rows="10" placeholder="Bạn nên mô tả chi tiết triệu chứng và diễn biến bệnh nếu có..."></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-login btn-block btn-modal" data-modal="qa-accept">Gửi câu hỏi ngay</button>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="anonymus btn-modal" data-modal="modal-qa-doctor">Gửi câu hỏi ẩn danh</a>
+            <!-- end -->
+
+            <div class="modal-qa-accept modal-custom short-modal" id="qa-accept" style="display: none;">
+                <div class="inner-wrapper">
+                    <div class="modal-header position-relative">
+                        <button class="btn-close btn-modal" data-modal="qa-accept"><img src="./images/home/close.png" alt=""/></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="title-wrapper">
+                            <img src="./images/home/check.png" alt="">
+                            <h4 class="title">Gửi câu hỏi thành công</h4>
+                            <p class="sub-title">Cảm ơn bạn đã gửi câu hỏi đến các bác sĩ của Bệnh viện Đa khoa Sông Thương. Câu hỏi đang được xử lý và sẽ phản hồi lại bạn trong thời gian sớm nhất.</p>
+                        </div>
+                        <button class="btn-more btn-block">Tiếp tục xem câu hỏi khác</button>
+                    </div>
                 </div>
             </div>
 
             <!-- khi nào cần thì triggle đến nút này -->
             <button id="btn-qa-acept" class="btn-registration btn-modal" data-modal="qa-accept">Access</button>
+            <!-- end  -->
+
+            <!-- modal registration -->
+            <form action="#" method="post" class="modal-registration modal-custom" id="form-registration">
+                <div class="inner-wrapper">
+                    <div class="modal-header">
+                        <img src="./images/home/Frame.png" alt="" />
+                        <button class="btn-close btn-modal" data-modal="form-registration"><img src="./images/home/close.png" alt=""/></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="title-wrapper">
+                            <h4 class="title">Đăng ký khám và tư vấn tại Đa khoa Sông Thương</h4>
+                            <p class="sub-title">Vui lòng để lại thông tin và nhu cầu của quý khách. Chúng tôi sẽ liên hệ trong thời gian sớm nhất.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <label for="">Họ và tên <sup>*</sup></label>
+                                <input type="text" class="field" placeholder="Nhập họ và tên">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="">Số điện thoại <sup>*</sup></label>
+                                <input type="text" class="field" placeholder="Nhập số điện thoại">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="">Email</label>
+                                <input type="text" class="field" placeholder="Nhập email">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="">Ngày khám</label>
+                                <div class="field-date-wrapper field">
+                                    <p class="result">Chọn ngày khám bệnh</p>
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    <input type="text" class="field-date">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="">Bạn có muốn khám bác sĩ nào không?</label>
+                                <div class="field-doctor-wrapper dropdown">
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <input type="text" class="field-doctor field show-option" placeholder="Chọn bác sĩ khám bệnh">
+                                    <div id="list-results" class="fretboard" style="display: none;"></div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="">Nhu cầu khám bệnh</label>
+                                <textarea name="" id="" class="field" placeholder="Bạn đang gặp vấn đề về sức khỏe như thế nào?"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button href="#" class="btn-submit btn-modal" data-modal="registration-success">Gửi yêu cầu khám bệnh</button>
+                    </div>
+                </div>
+            </form>
+
+            <button id="btn-qa-acept" class="btn-registration btn-modal" data-modal="form-registration">Đăng kí khám</button>
+
+            <!-- modal đặt lịch -->
+            <div class="modal-registration modal-custom short-modal" id="registration-success">
+                <div class="inner-wrapper">
+                    <div class="modal-header">
+                        <img src="./images/home/Frame.png" alt=""/>
+                        <button class="btn-close btn-modal" data-modal="registration-success"><img src="./images/home/close.png" alt=""/></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="title-wrapper">
+                            <h4 class="title"><img src="./images/home/check.png" alt=""/>Đăng ký thành công</h4>
+                            <p class="sub-title">Cảm ơn quý khách! Chúng tôi sẽ gửi thông tin sức khỏe của bạn tới cho bác sĩ và liên hệ lại với quý khách theo số điện thoại <a href="tel:0946233789">0946 233 789</a> để xác nhận lịch hẹn trong thời gian sớm nhất.</p> 
+                        </div>
+                        <div class="table-title">Thông tin khám bệnh</div>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Họ và tên</td>
+                                    <td><strong>Đào Anh Lâm</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Số điện thoại</td>
+                                    <td><strong>0946 233 789</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><strong>lamda@vdcs.com.vn</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Ngày khám</td>
+                                    <td><strong>27 tháng 4, 2021</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Bác sĩ khám</td>
+                                    <td><strong>Bác sĩ Nguyễn Đức Đạt</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Nhu cầu khám bệnh</td>
+                                    <td><strong>Tôi đang đau 2 răng số 8, cần bác sĩ khám ngay.</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <button id="btn-qa-acept" class="btn-registration btn-modal" data-modal="registration-success">Đăng kí thành công</button>
+
+            <!-- modal login -->
+            <div class="modal-login modal-custom short-modal" id="modal-login-to-send-question">
+                <div class="inner-wrapper">
+                    <div class="modal-header position-relative">
+                        <button class="btn-close btn-modal" data-modal="modal-login-to-send-question"><img src="./images/home/close.png" alt=""/></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="title-wrapper">
+                            <h4 class="title">Đăng nhập để gửi câu hỏi</h4>
+                            <p class="sub-title">Bạn chưa có Tài khoản? Vui lòng đăng ký Tài khoản mới <a href="tel:0946233789">tại đây</a></p> 
+                        </div>
+                        <form action="#" method="post" class="form-login">
+                            <input type="email" placeholder="Email" class="field">
+                            <input type="password" placeholder="Mật khẩu" class="field">
+                            <div class="field-group">
+                                <div class="check-box">
+                                    <input type="checkbox" name="saveme" id="saveme">
+                                    <label for="saveme">Lưu thông tin đăng nhập</label>
+                                </div>
+                                <a href="#" class="forgot-password">Lấy lại mật khẩu</a>
+                            </div>
+                            <button class="btn-login btn-block">Đăng nhập</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="line"><span>Hoặc</span></div>
+                        <div class="social-login-group">
+                            <a href="#" class="facebook btn-social-login">
+                                <img src="./images/home/facebook.png" alt="Facebook"/>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="google btn-social-login">
+                                <img src="./images/home/google.png" alt="Google"/>
+                                <span>Google</span>
+                            </a>
+                        </div>
+                        <a href="#" class="anonymus">Gửi câu hỏi ẩn anh</a>
+                    </div>
+                </div>
+            </div>
+            <button id="btn-qa-acept" class="btn-registration btn-modal" data-modal="modal-login-to-send-question">Đăng nhập để gửi câu hỏi</button>
+            <!--  -->
+
+            <!-- đăng kí thành công -->
+            <div class="modal-registration modal-custom short-modal" id="registration-success-short">
+                <div class="inner-wrapper">
+                    <div class="modal-header">
+                        <img src="./images/home/Frame.png" alt=""/>
+                        <button class="btn-close btn-modal" data-modal="registration-success-short"><img src="./images/home/close.png" alt=""/></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="title-wrapper">
+                            <h4 class="title"><img src="./images/home/check.png" alt=""/>Đăng ký thành công</h4>
+                            <p class="sub-title">Cảm ơn quý khách! Chúng tôi sẽ gửi thông tin sức khỏe của bạn tới cho bác sĩ và liên hệ lại với quý khách theo số điện thoại <a href="tel:0946233789">0946 233 789</a> để xác nhận lịch hẹn trong thời gian sớm nhất.</p> 
+                        </div>
+                        <div class="table-title">Thông tin khám bệnh</div>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Họ và tên</td>
+                                    <td><strong>Đào Anh Lâm</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Số điện thoại</td>
+                                    <td><strong>0946 233 789</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Ngày khám</td>
+                                    <td><strong>27 tháng 4, 2021</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="actions">
+                            <button class="btn-understand">Tôi đã hiểu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="btn-qa-acept" class="btn-registration btn-modal" data-modal="registration-success-short">Đăng kí thành công thu gọn</button>
+            <!--  -->
+
         </div>
     </section>
     <!--  -->

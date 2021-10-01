@@ -2210,6 +2210,13 @@ body {
         }
     }
 
+    .modal-register{
+        .btn-login{
+            display: inline-block;
+            height: auto !important;
+        }
+    }
+
     .modal-confirm-account{
         .inner-wrapper{
             max-width: calc(~"100% - 8px");
@@ -2297,6 +2304,134 @@ body {
             }
         }
     }
+
+    .modal-registration{
+		width: calc(~"100% - 7.5px");
+		max-height: 100vh;
+		overflow-y: auto;
+		overflow-x: hidden;
+
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+
+		.modal-header{
+			& > img{
+				display: none;
+			}
+			.btn-close{
+				background-color: transparent;
+				opacity: 1;
+				top: 5px;
+				right: 5px;
+			}
+		} 
+
+		.modal-body {
+			padding: 24px 8px;
+
+			.title-wrapper {
+				.title{
+					font-size: 18px;
+					font-weight: 700;
+					line-height: 22px;
+				}
+
+				.sub-title{
+					font-size: 12px;
+					font-weight: 400;
+					line-height: 18px;
+				}
+			}
+
+			[class*="col-"] {
+				.field-doctor-wrapper {
+					#list-results {
+						.item{
+							display: block;
+						}
+					}
+				}
+			}
+
+			.table-title{
+				font-size: 12px;
+				font-weight: 700;
+				line-height: 15px;
+			}
+
+			.table{
+				margin-bottom: 0;
+
+				td{
+					padding: 8px 10px;
+					font-size: 12px;
+					font-weight: 400;
+					line-height: 15px;
+				}
+			}
+		}
+	} 
+
+    .modal-ajax-cart{
+        .inner-wrapper{
+            margin-right: 0;
+        }
+    }
+
+    .modal-custom{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		overflow-y: auto;
+		overflow-x: hidden;
+		transform: translate(0, 0);
+		padding: 0 8px;
+		background-color: transparent;
+
+		.inner-wrapper{
+			background-color: white;
+			.round-borders(12px);
+		}
+
+		.modal-header {
+			.btn-close{
+				width: auto !important;
+				height: auto !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				right: 11px !important;
+				top: 5px !important;
+				z-index: 1;
+				display: block !important;
+				background-image: none !important;
+
+				img{
+					width: 12px;
+					height: 12px;
+					object-fit: cover;
+				}
+			}
+		}
+
+        .modal-body {
+            .title-wrapper {
+                .sub-title{
+                    font-size: 14px !important;
+                    font-weight: 400 !important;
+                    line-height: 20px !important;
+                }
+            }
+        }
+
+		&.short-modal{
+			.inner-wrapper{
+				margin-top: 50px;
+			}
+		}
+	}
+
 }
 
 @media only screen and (max-width: 374px){
