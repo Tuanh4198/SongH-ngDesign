@@ -3748,6 +3748,7 @@ body.has-modal:after {
   right: 15px;
   cursor: pointer;
   z-index: 10;
+  background-image: none;
 }
 .modal-qa-accept .modal-header .btn-close:focus {
   -webkit-box-shadow: none;
