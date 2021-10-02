@@ -149,7 +149,24 @@ jQuery(document).ready(function ($) {
 		});
 
 	});
-	// end Effect accordion
+	// end Effect dropdown list
+
+	$(function () {
+		$('.dropdown-menu .show-menu').click(function (event) {
+			event.preventDefault();
+			
+			if ($(this).parent().hasClass('active')) {
+				$(this).parent().removeClass('active');
+				$(this).parent().find('.fretboard').slideUp();
+
+			} else{
+				$(this).parent().addClass('active');
+				$(this).parent().siblings().removeClass('active');
+				$(this).parent().siblings().find('.dropdown-menu-items').slideUp();
+				$(this).parent().find('.dropdown-menu-items').slideDown();
+			}
+		});
+	});
 
 	// Effect drop down
 	(function ($) {
@@ -236,6 +253,14 @@ jQuery(document).ready(function ($) {
 			$(this).addClass('action-tab-btn');
 			container_tab.find('.tab-content .content').eq($(this).index()).addClass('active-tab-content');
 		});
+
+		if ($(window).width() <= 991){
+			$(".magic-tabs  ul li").on('click', function () {
+				$(this).parents('.children').removeClass("active");
+				$(this).parents('.dropdown').removeClass("active");
+			});
+		}
+
 	});
 	// end tabs
 
@@ -358,7 +383,6 @@ jQuery(document).ready(function ($) {
             $(this).next().toggleClass('active')
         })
     })
-
 
 	// scroll tab
 	$('body').on('click', '.tab-scroll-content .tab-items .tab-item', function (event) {
