@@ -82,7 +82,6 @@ jQuery(document).ready(function ($) {
 		let up_btn = $("body .up");
 		let body = $('body,html');
 		up_btn.click(function () {
-			console.log('object')
 			$('body,html').delay(0).animate({ scrollTop: 0 }, 400, 'swing');
 			return false;
 		});
@@ -122,7 +121,6 @@ jQuery(document).ready(function ($) {
 	$(function () {
 		$('body').on('click', '.dropdown .show-option', function (event) {
 			event.preventDefault();
-			console.log('object')
 			if ($(this).parent().find('.fretboard')) {
 				$(this).parent().find('.fretboard').slideToggle();
 			}
@@ -134,7 +132,6 @@ jQuery(document).ready(function ($) {
 
 		$('body').on('click', '.close-tab', function (event) {
 			event.preventDefault();
-			console.log('object')
 			if ($(this).parents('.dropdown').find('.children')) {
 				$(this).parents('.dropdown').find('.children').removeClass('active');
 				$(this).parents('.dropdown').removeClass('active');
@@ -198,7 +195,6 @@ jQuery(document).ready(function ($) {
 
 	// spinner quantity
 	(function($) {
-		console.log('object')
         $('.quantity').each(function() {
             let spinner = $(this),
                 input = $(this).find('input'),
@@ -287,7 +283,8 @@ jQuery(document).ready(function ($) {
 		$('body').on('click', '#list-results .item', function () {
 			let text = $(this).children('.name').text() + $(this).children('.job').text();
 			$(".field-doctor").val(text);
-			console.log(text);
+			$(this).parents('#list-results').slideUp();
+			$(this).parents('.field-doctor-wrapper').removeClass('active');
 		});
 
 		// choose date
@@ -304,7 +301,6 @@ jQuery(document).ready(function ($) {
 		$(".field-date").attr("min", today);
 		$(".field-date").change(function () {
 			$(this).parent().find('.result').text($(this).val());
-			console.log($(this).text());
 		});
 	});
 	// end modal form registor

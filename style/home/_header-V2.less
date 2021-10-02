@@ -2082,9 +2082,85 @@ body {
                         left: auto;
                         right: 0;
                         background-color: white;
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        height: 100vh;
+                        width: 100%;
+                        max-width: 319px;
+                        transform: translateX(100%);
+                        transition: all ease .3s;
+                        background-color: white;
+                        border-width: 0;
+                        z-index: 11;
+                        padding: 0 16px;
+                        .round-borders(0);
 
                         &:before{
                             .hidden-visibility;
+                        }
+
+                        &.active{
+                            box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.45);
+                            transform: translateX(0);
+                        }
+            
+                        .collapsible-item {
+                            border-width: 0 0 1px;
+                            border-style: solid;
+                            border-color: @border_color;
+            
+                            a{
+                                padding: 16px 0;
+                                display: block;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 24px;
+                                color: @text_color;
+
+                                &:hover{
+                                    color: @base_color;
+                                }
+                            }
+                        }
+
+                        .account-logout {
+                            a{
+                                padding: 16px 0;
+                            }
+                        }
+            
+                        .block-collapible-title{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            border-width: 0 0 6px;
+                            border-style: solid;
+                            border-color: @border_color;
+                            padding: 8px 16px;
+                            margin-left: -16px;
+                            margin-right: -16px;
+            
+                            .close-tab{
+                                background-color: transparent;
+                            }
+                        }
+                    }
+
+                    &.active{
+                        .show-option{
+                            &:after{
+                                content: "";
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                width: 100%;
+                                height: 100vh;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                z-index: 10;
+                                display: block;
+                            }
                         }
                     }
                 }

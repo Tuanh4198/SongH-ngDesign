@@ -2755,8 +2755,23 @@ body.has-modal:after {
   }
   .header .header-top .account-wrapper .account-logged .account-links {
     left: auto;
+    position: fixed;
+    top: 0;
     right: 0;
+    height: 100vh;
+    width: 100%;
+    max-width: 319px;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
     background-color: white;
+    border-width: 0;
+    z-index: 11;
+    padding: 0 16px;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
   }
   .header .header-top .account-wrapper .account-logged .account-links:before {
     border: 0;
@@ -2767,6 +2782,63 @@ body.has-modal:after {
     padding: 0;
     position: absolute;
     width: 1px;
+  }
+  .header .header-top .account-wrapper .account-logged .account-links.active {
+    -webkit-box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.45);
+            box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.45);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .header .header-top .account-wrapper .account-logged .account-links .collapsible-item {
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: #E9E9EC;
+  }
+  .header .header-top .account-wrapper .account-logged .account-links .collapsible-item a {
+    padding: 16px 0;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #091D3E;
+  }
+  .header .header-top .account-wrapper .account-logged .account-links .collapsible-item a:hover {
+    color: #0092FF;
+  }
+  .header .header-top .account-wrapper .account-logged .account-links .account-logout a {
+    padding: 16px 0;
+  }
+  .header .header-top .account-wrapper .account-logged .account-links .block-collapible-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-width: 0 0 6px;
+    border-style: solid;
+    border-color: #E9E9EC;
+    padding: 8px 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  .header .header-top .account-wrapper .account-logged .account-links .block-collapible-title .close-tab {
+    background-color: transparent;
+  }
+  .header .header-top .account-wrapper .account-logged.active .show-option:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: block;
   }
   .header .header-center {
     display: none;
@@ -4227,6 +4299,10 @@ body.has-modal:after {
   -webkit-appearance: none;
   margin: 0;
 }
+.checkout-cart .product-list .product-wrapper .product-detail-wrapper .group-qty .quantity .quantity-nav input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
 .checkout-cart .product-list .product-wrapper .product-detail-wrapper .product-price-wrapper {
   margin-top: 0;
 }
@@ -4729,7 +4805,8 @@ body.has-modal:after {
   width: 100%;
   margin-bottom: 16px;
 }
-.new-password-page .form-set-password input:hover {
+.new-password-page .form-set-password input:hover,
+.new-password-page .form-set-password input:focus {
   border-color: #0092FF;
 }
 .new-password-page .form-set-password .action.confirm {
@@ -5265,6 +5342,12 @@ body.has-modal:after {
           flex: unset;
   margin-left: 0;
 }
+.account-page .send-us-comment .form-send-comment .field textarea:hover,
+.account-page .send-us-comment .form-send-comment .field input:hover,
+.account-page .send-us-comment .form-send-comment .field textarea:focus,
+.account-page .send-us-comment .form-send-comment .field input:focus {
+  border-color: #0092FF;
+}
 .account-page .send-us-comment .form-send-comment .field:last-child {
   margin-bottom: 32px;
 }
@@ -5299,9 +5382,21 @@ body.has-modal:after {
 .modal-reset-password-account .modal-header .btn-close {
   position: absolute;
   right: -16px;
-  top: 24px;
+  top: 16px;
   padding: 0;
   margin: 0;
+  background-image: none;
+  outline: none;
+  width: auto;
+  height: auto;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.modal-reset-password-account .modal-header .btn-close:hover,
+.modal-reset-password-account .modal-header .btn-close:focus,
+.modal-reset-password-account .modal-header .btn-close:visited {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .modal-reset-password-account .modal-body {
   padding: 0;
@@ -5669,8 +5764,10 @@ body.has-modal:after {
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
+  .modal-reset-password-account {
+    padding: 0 4px;
+  }
   .modal-reset-password-account .inner-wrapper {
-    max-width: calc(100% - 8px);
     padding: 0 24px 24px;
   }
   .modal-reset-password-account .modal-header {

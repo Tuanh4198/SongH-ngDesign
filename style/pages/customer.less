@@ -41,7 +41,8 @@
             width: 100%;
             margin-bottom: 16px;
 
-            &:hover{
+            &:hover,
+            &:focus{
                 border-color: @base_color;
             }
         }
@@ -578,6 +579,11 @@
                     width: 100%;
                     flex: unset;
                     margin-left: 0;
+
+                    &:hover,
+                    &:focus{
+                        border-color: @base_color;
+                    }
                 }
 
                 &:last-child {
@@ -625,9 +631,20 @@
         .btn-close{
             position: absolute;
             right: -16px;
-            top: 24px;
+            top: 16px;
             padding: 0;
             margin: 0;
+            background-image: none;
+            outline: none;
+            width: auto;
+            height: auto;
+            box-shadow: none;
+
+            &:hover,
+            &:focus,
+            &:visited{
+                box-shadow: none;
+            }
         }
     }
 
@@ -1085,8 +1102,9 @@
     }
 
     .modal-reset-password-account {
+        padding: 0 4px;
+        
         .inner-wrapper{
-            max-width: calc(~"100% - 8px");
             padding: 0 24px 24px;
         }
 

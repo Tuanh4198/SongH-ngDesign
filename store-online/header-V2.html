@@ -38,34 +38,32 @@
 							</div>
 						</form>
 						<div class="account-wrapper">
-							<div class="account-login">
+							<div class="account-login" style="display: none">
 								<button class="btn-modal account-links" data-modal="form-login">Đăng nhập</button>
 							</div>
-							<div class="account-logged dropdown" style="display: none">
+							<div class="account-logged dropdown" >
 								<span class="show-option"></span>
+
 								<ul class="account-links children">
-									<li>
-										<span class="welcome-customer">lamdao218@gmail.com</span>
-									</li>
-									<li class="account-link">
-										<a href="#">Thông tin tài khoản</a>
-									</li>
-									<li class="account-link">
-										<a href="#">Hỏi đáp bác sĩ</a>
-									</li>
-									<li class="account-link">
-										<a href="#">Theo dõi đơn hàng</a>
-									</li>
-									<li class="account-link">
-										<a href="#">Gửi ý kiến</a>
-									</li>
-									<li class="account-link logout">
+
+									<div class="block-collapible-title">
+										<img src="../images/home/logo.svg" alt="">
+										<button class="close-tab"><img src="../images/home/close.png" alt=""/></button>
+									</div>
+									<!-- <span class="welcome-customer">lamdao218@gmail.com</span> -->
+									<ul class="block-collapsible-nav-content">
+										<li class="collapsible-item"><a href="#">Thông tin tài khoản</a></li>
+										<li class="collapsible-item"><a href="#">Hỏi đáp bác sĩ</a></li>
+										<li class="collapsible-item"><a href="#">Theo dõi đơn hàng</a></li>
+										<li class="collapsible-item"><a href="#">Gửi ý kiến cho chúng tôi</a></li>
+									</ul>
+									<div class="account-logout">   
 										<a href="#">
-											<img class="icon" src="../images/page/online-store/logout.png" alt="">
-											<img class="icon icon-hover" src="../images/page/online-store/logout-white.png" alt="">
+											<img src="../images/page/online-store/logout.png" alt="" class="icon">
+											<img src="../images/page/online-store/logout.png" alt="" class="icon icon-hover">
 											Thoát
 										</a>
-									</li>
+									</div>
 								</ul>
 							</div>
 						</div>
@@ -231,255 +229,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- modal login -->
-<div class="modal-login modal-custom" id="form-login">
-	<div class="inner-wrapper">
-		<div class="modal-header">
-			<button class="btn-close btn-modal" data-modal="form-login"><img src="../images/home/close.png" alt="" /></button>
-		</div>
-		<div class="modal-body">
-			<div class="title-wrapper">
-				<h4 class="title">Đăng nhập</h4>
-				<p class="sub-title">
-					<span class="text">Bạn chưa có tài khoản? Vui lòng đăng ký tài khoản mới</span>
-					<a href="#" class="btn-modal btn-register" data-modal="form-register">tại đây</a>
-				</p>
-			</div>
-			<form action="#" method="post" class="form-login">
-				<input type="email" placeholder="Email" class="field">
-				<input type="password" placeholder="Mật khẩu" class="field">
-				<div class="field-group">
-					<div class="check-box">
-						<input type="checkbox" name="saveme" id="saveme">
-						<label for="saveme">Lưu thông tin đăng nhập</label>
-					</div>
-					<a href="#" class="btn-modal forgot-password" data-modal="form-reset-password">Lấy lại mật khẩu</a>
-				</div>
-				<button class="btn-login btn-block">Đăng nhập</button>
-			</form>
-		</div>
-		<div class="modal-footer">
-			<div class="line"><span>Hoặc</span></div>
-			<div class="social-login-group">
-				<a href="#" class="facebook btn-social-login">
-					<img src="../images/home/facebook.png" alt="Facebook" />
-					<span>Facebook</span>
-				</a>
-				<a href="#" class="google btn-social-login">
-					<img src="../images/home/google.png" alt="Google" />
-					<span>Google</span>
-				</a>
-			</div>
-			<!-- <a href="#" class="anonymus">Gửi câu hỏi ẩn danh</a> -->
-		</div>
-	</div>
-</div>
-<!-- register account -->
-<div class="modal-register modal-custom" id="form-register">
-	<div class="inner-wrapper">
-		<div class="modal-header">
-			<button class="btn-close btn-modal" data-modal="form-register"><img src="../images/home/close.png" alt="" /></button>
-		</div>
-		<div class="modal-body">
-			<div class="title-wrapper">
-				<h4 class="title">Đăng ký tài khoản mới</h4>
-				<p class="sub-title"> 
-					<span class="text">Bạn đã có Tài khoản? Vui lòng Đăng nhập</span>
-					<a href="#" class="btn-modal btn-login" data-modal="form-login">tại đây</a>
-				</p>
-			</div>
-			<form action="#" method="post" class="form-login">
-				<input type="email" placeholder="Email" class="field">
-				<input type="password" placeholder="Mật khẩu" class="field pasword">
-				<input type="password" placeholder="Nhập lại mật khẩu" class="field retype-password">
-				<input type="password" placeholder="Số điện thoại" class="field phone">
-				<button class="btn-register btn-block btn-modal" data-modal="form-confirm-account">Đăng ký ngay</button>
-			</form>
-		</div>
-		<div class="modal-footer">
-			<div class="line"><span>Hoặc</span></div>
-			<div class="social-login-group">
-				<a href="#" class="facebook btn-social-login">
-					<img src="../images/home/facebook.png" alt="Facebook" />
-					<span>Facebook</span>
-				</a>
-				<a href="#" class="google btn-social-login">
-					<img src="../images/home/google.png" alt="Google" />
-					<span>Google</span>
-				</a>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- confirm account -->
-<div class="modal-confirm-account modal-custom" id="form-confirm-account">
-	<div class="inner-wrapper">
-		<div class="modal-header">
-			<button class="btn-close btn-modal" data-modal="form-confirm-account"><img src="../images/home/close.png" alt="" /></button>
-		</div>
-		<div class="modal-body">
-			<div class="title-wrapper">
-				<h4 class="title">Xác minh tài khoản</h4>
-				<p class="sub-title">Đăng nhập vào email của bạn để xác minh tài khoản. Trong quá trình tạo tài khoản, bạn sẽ nhận được một email từ chúng tôi. Vui lòng bấm vào đường link xác nhận trong email của bạn để hoàn tất đăng ký</p>
-			</div>
-			<p class="notice">Tôi không nhận được email. <button class="action reset">Gửi lại ngay</button></p>
-			<a href="#" class="action back"><img src="../images/page/online-store/prev-arrow.png" alt=""><span class="title">Quay lại</span></a>
-		</div>
-	</div>
-</div>
-<!-- modal update password -->
-<div class="modal-reset-passwork modal-custom" id="form-reset-password">
-	<div class="inner-wrapper">
-		<div class="modal-header">
-			<button class="btn-close btn-modal" data-modal="form-reset-password"><img src="../images/home/close.png" alt="" /></button>
-		</div>
-		<div class="modal-body">
-			<div class="title-wrapper">
-				<h4 class="title">Cấp lại mật khẩu</h4>
-				<p class="sub-title">Bạn đang gặp vấn đề về mật khẩu khi đăng nhập. Vui lòng nhập email để chúng tôi gửi link cài đặt lại mật khẩu cho bạn.</a></p>
-			</div>
-			<form action="#" method="post" class="form-reset-password">
-				<input type="email" placeholder="Email" class="field">
-				<button class="btn-submit btn-block btn-modal" data-modal="form-reset-password-success">Gửi</button>
-			</form>
-			<a href="#" class="action back"><img src="../images/page/online-store/prev-arrow.png" alt=""><span class="title">Quay lại</span></a>
-		</div>
-	</div>
-</div>
-<!-- modal update password success-->
-<div class="modal-reset-passwork-success modal-custom" id="form-reset-password-success">
-	<div class="inner-wrapper">
-		<div class="modal-header">
-			<button class="btn-close btn-modal" data-modal="form-reset-password-success"><img src="../images/home/close.png" alt="" /></button>
-		</div>
-		<div class="modal-body">
-			<div class="title-wrapper">
-				<h4 class="title">Yêu cầu thay đổi mật khẩu thành công</h4>
-				<p class="sub-title">Vui lòng kiểm tra email để thực hiện thay đổi mật khẩu. Tôi không nhận được
-					email. <button class="reset">Gửi lại ngay</button></p>
-			</div>
-			<a href="#" class="action back"><img src="../images/page/online-store/prev-arrow.png" alt=""><span class="title">Quay lại</span></a>
-		</div>
-	</div>
-</div>
-<!-- modal register -->
-<form action="#" method="post" class="modal-registration modal-custom" id="form-registration">
-	<div class="inner-wrapper">
-		<div class="modal-header">
-			<img src="../images/home/Frame.png" alt="" />
-			<button class="btn-close btn-modal" data-modal="form-registration"><img src="../images/home/close.png"
-					alt="" /></button>
-		</div>
-		<div class="modal-body">
-			<div class="title-wrapper">
-				<h4 class="title">Đăng ký khám và tư vấn tại Đa khoa Sông Thương</h4>
-				<p class="sub-title">Vui lòng để lại thông tin và nhu cầu của quý khách. Chúng tôi sẽ liên hệ trong thời
-					gian sớm nhất.</p>
-			</div>
-			<div class="row">
-				<div class="col-6">
-					<label for="">Họ và tên <sup>*</sup></label>
-					<input type="text" class="field" placeholder="Nhập họ và tên">
-				</div>
-				<div class="col-6">
-					<label for="">Số điện thoại <sup>*</sup></label>
-					<input type="text" class="field" placeholder="Nhập số điện thoại">
-				</div>
-				<div class="col-6">
-					<label for="">Email</label>
-					<input type="text" class="field" placeholder="Nhập email">
-				</div>
-				<div class="col-6">
-					<label for="">Ngày khám</label>
-					<div class="field-date-wrapper field">
-						<p class="result">Chọn ngày khám bệnh</p>
-						<i class="fa fa-calendar" aria-hidden="true"></i>
-						<input type="date" class="field-date" placeholder="Nhập email">
-					</div>
-				</div>
-				<div class="col-12">
-					<label for="">Bạn có muốn khám bác sĩ nào không?</label>
-					<div class="field-doctor-wrapper">
-						<i class="fa fa-angle-down" aria-hidden="true"></i>
-						<input type="text" class="field-doctor field" placeholder="Chọn bác sĩ khám bệnh">
-						<div id="list-results"></div>
-					</div>
-				</div>
-				<div class="col-12">
-					<label for="">Nhu cầu khám bệnh</label>
-					<textarea name="" id="" class="field"
-						placeholder="Bạn đang gặp vấn đề về sức khỏe như thế nào?"></textarea>
-				</div>
-			</div>
-		</div>
-		<div class="modal-footer">
-			<button href="#" class="btn-submit btn-modal" data-modal="registration-success">Gửi yêu cầu khám
-				bệnh</button>
-		</div>
-	</div>
-</form>
-<!-- modal đặt lịch -->
-<div class="modal-registration modal-custom" id="registration-success">
-	<div class="inner-wrapper">
-		<div class="modal-header">
-			<img src="../images/home/Frame.png" alt="" />
-			<button class="btn-close btn-modal" data-modal="registration-success"><img src="../images/home/close.png"
-					alt="" /></button>
-		</div>
-		<div class="modal-body">
-			<div class="title-wrapper">
-				<h4 class="title"><img src="../images/home/check.png" alt="" />Đăng ký thành công</h4>
-				<p class="sub-title">Cảm ơn quý khách! Chúng tôi sẽ gửi thông tin sức khỏe của bạn tới cho bác sĩ và
-					liên hệ lại với quý khách theo số điện thoại <a href="tel:0946233789">0946 233 789</a> để xác nhận
-					lịch hẹn trong thời gian sớm nhất.</p>
-			</div>
-			<div class="table-title">Thông tin khám bệnh</div>
-			<table class="table">
-				<tbody>
-					<tr>
-						<td>Họ và tên</td>
-						<td><strong>Đào Anh Lâm</strong></td>
-					</tr>
-					<tr>
-						<td>Số điện thoại</td>
-						<td><strong>0946 233 789</strong></td>
-					</tr>
-					<tr>
-						<td>Email</td>
-						<td><strong>lamda@vdcs.com.vn</strong></td>
-					</tr>
-					<tr>
-						<td>Ngày khám</td>
-						<td><strong>27 tháng 4, 2021</strong></td>
-					</tr>
-					<tr>
-						<td>Bác sĩ khám</td>
-						<td><strong>Bác sĩ Nguyễn Đức Đạt</strong></td>
-					</tr>
-					<tr>
-						<td>Nhu cầu khám bệnh</td>
-						<td><strong>Tôi đang đau 2 răng số 8, cần bác sĩ khám ngay.</strong></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-</div>
-
-<!-- modal thêm giỏ hàng -->
-<div class="modal-ajax-cart modal-custom" id="ajax-cart">
-	<div class="inner-wrapper">
-		<div class="modal-body">
-			<div class="title-wrapper">
-				<h4 class="title">Sản phẩm của bạn vừa được thêm vào giỏ hàng</h4>
-			</div>
-			<div class="actions">
-				<a href="#" class="action shopping-cart">Xem giỏ hàng <span class="count">(2)</span></a>
-				<button class="btn-close btn-modal" data-modal="ajax-cart">Đã hiểu</button>
 			</div>
 		</div>
 	</div>

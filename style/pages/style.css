@@ -1160,6 +1160,10 @@ html {
   font-size: 14px;
   color: #091D3E;
 }
+.modal-login .modal-body .field:hover,
+.modal-login .modal-body .field:focus {
+  border-color: #0092FF;
+}
 .modal-login .modal-body .field-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1238,7 +1242,7 @@ html {
   margin-bottom: 15px;
 }
 .modal-login .modal-body .btn-login:hover {
-  background: #091D3E;
+  background: #004B84;
 }
 body.has-modal:after {
   content: "";
@@ -3494,6 +3498,9 @@ body.has-modal:after {
 .home-page .post-list-wrapper .item .view-more:hover {
   color: #091D3E;
 }
+.home-page .post-list-wrapper .item .view-more .fa {
+  margin-left: 8px;
+}
 .home-page .contact-us-wrapper .get-price-block {
   background-color: #F7FAFF;
   padding: 25px 0;
@@ -3692,7 +3699,7 @@ body.has-modal:after {
   transition: 0.3s ease-in;
 }
 .home-page .banner-and-dropdown-list .dropdown-list li.active:after {
-  width: 40%;
+  width: 100%;
   opacity: 1;
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
@@ -3864,6 +3871,14 @@ body.has-modal:after {
 .modal-qa-doctor .inner-wrapper .modal-body .fields select::placeholder {
   color: #858FA0;
 }
+.modal-qa-doctor .inner-wrapper .modal-body .fields input:hover,
+.modal-qa-doctor .inner-wrapper .modal-body .fields textarea:hover,
+.modal-qa-doctor .inner-wrapper .modal-body .fields select:hover,
+.modal-qa-doctor .inner-wrapper .modal-body .fields input:focus,
+.modal-qa-doctor .inner-wrapper .modal-body .fields textarea:focus,
+.modal-qa-doctor .inner-wrapper .modal-body .fields select:focus {
+  border-color: #0092FF;
+}
 .modal-qa-doctor .inner-wrapper .modal-body .fields .label {
   font-size: 14px;
   font-weight: 600;
@@ -3893,6 +3908,9 @@ body.has-modal:after {
 }
 .modal-qa-doctor.modal-open {
   display: block;
+}
+.modal-custom {
+  display: none;
 }
 @media only screen and (max-width: 1199px) {
   .home-page .block-bottom-slide .clinic-index [class*="col-"] {
@@ -4454,6 +4472,7 @@ body.has-modal:after {
     border-radius: 12px;
     -moz-border-radius: 12px;
     -webkit-border-radius: 12px;
+    margin-top: 24px;
   }
   .modal-custom .modal-header .btn-close {
     width: auto !important;
@@ -5055,6 +5074,10 @@ body.has-modal:after {
 .checkout-cart .product-list .product-wrapper .product-detail-wrapper .group-qty .quantity .quantity-nav input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.checkout-cart .product-list .product-wrapper .product-detail-wrapper .group-qty .quantity .quantity-nav input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
 }
 .checkout-cart .product-list .product-wrapper .product-detail-wrapper .product-price-wrapper {
   margin-top: 0;
@@ -6304,7 +6327,8 @@ body.has-modal:after {
   width: 100%;
   margin-bottom: 16px;
 }
-.new-password-page .form-set-password input:hover {
+.new-password-page .form-set-password input:hover,
+.new-password-page .form-set-password input:focus {
   border-color: #0092FF;
 }
 .new-password-page .form-set-password .action.confirm {
@@ -6840,6 +6864,12 @@ body.has-modal:after {
           flex: unset;
   margin-left: 0;
 }
+.account-page .send-us-comment .form-send-comment .field textarea:hover,
+.account-page .send-us-comment .form-send-comment .field input:hover,
+.account-page .send-us-comment .form-send-comment .field textarea:focus,
+.account-page .send-us-comment .form-send-comment .field input:focus {
+  border-color: #0092FF;
+}
 .account-page .send-us-comment .form-send-comment .field:last-child {
   margin-bottom: 32px;
 }
@@ -6874,9 +6904,21 @@ body.has-modal:after {
 .modal-reset-password-account .modal-header .btn-close {
   position: absolute;
   right: -16px;
-  top: 24px;
+  top: 16px;
   padding: 0;
   margin: 0;
+  background-image: none;
+  outline: none;
+  width: auto;
+  height: auto;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.modal-reset-password-account .modal-header .btn-close:hover,
+.modal-reset-password-account .modal-header .btn-close:focus,
+.modal-reset-password-account .modal-header .btn-close:visited {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .modal-reset-password-account .modal-body {
   padding: 0;
@@ -7244,8 +7286,10 @@ body.has-modal:after {
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
+  .modal-reset-password-account {
+    padding: 0 4px;
+  }
   .modal-reset-password-account .inner-wrapper {
-    max-width: calc(100% - 8px);
     padding: 0 24px 24px;
   }
   .modal-reset-password-account .modal-header {
@@ -8395,6 +8439,17 @@ body.has-modal:after {
   font-size: 28px;
   line-height: 34px;
   margin-bottom: 25px;
+  background-image: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #091D3E;
+  text-align: initial;
+}
+.doctor-page .breadcrumb-wrapper .page-title .count {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
 }
 .doctor-page .category-sidebar .form-search {
   height: 40px;
@@ -9684,10 +9739,6 @@ body.has-modal:after {
     line-height: 15px;
     text-align: center;
   }
-  .doctor-page .category-sidebar .list-academic-rank li:nth-child(5n),
-  .doctor-page .category-sidebar .list-doctor li:nth-child(5n) {
-    margin-right: 0;
-  }
   .doctor-page .category-sidebar .list-academic-rank li.divider,
   .doctor-page .category-sidebar .list-doctor li.divider {
     color: #091D3E;
@@ -10345,7 +10396,8 @@ body.has-modal:after {
   transition: all 0.3s ease-in;
 }
 .intro-page .block-hot-post .btn-slide i:hover {
-  border: 3px solid #091D3E;
+  border: 3px solid #0092FF;
+  color: #0092FF;
 }
 .intro-page .block-hot-post .btn-slide i:before {
   width: 100%;
@@ -12430,7 +12482,9 @@ body.has-modal:after {
     padding-right: 12px;
   }
   .qa-page .breadcrumb-wrapper .page-title {
-    padding-top: 0;
+    padding-top: 24px;
+    padding-bottom: 121px;
+    background-image: url('../../images/page/qa-page/banner_qa_page.png');
   }
   .qa-page .breadcrumb-wrapper .title {
     font-style: normal;
@@ -12445,7 +12499,7 @@ body.has-modal:after {
     padding: 15px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-top: -80px;
+    margin-top: -105px;
   }
   .qa-page .add-question-block .context-wrapper {
     width: 100%;
