@@ -5774,8 +5774,8 @@ body.has-modal:after {
     padding: 16px 0;
   }
   .modal-reset-password-account .modal-header .btn-close {
-    top: 11px;
-    right: -11px;
+    top: 11px !important;
+    right: -11px !important;
   }
   .modal-reset-password-account .modal-body .title-wrapper .title {
     font-size: 18px;

@@ -3879,6 +3879,15 @@ body.has-modal:after {
 .modal-qa-doctor .inner-wrapper .modal-body .fields select:focus {
   border-color: #0092FF;
 }
+.modal-qa-doctor .inner-wrapper .modal-body .fields select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url('../../images/page/qa-page/ico-dropdown.svg');
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+  background-size: auto;
+}
 .modal-qa-doctor .inner-wrapper .modal-body .fields .label {
   font-size: 14px;
   font-weight: 600;
@@ -4492,7 +4501,20 @@ body.has-modal:after {
        object-fit: cover;
   }
   .modal-custom.short-modal .inner-wrapper {
-    margin-top: 50px;
+    margin-top: 0;
+  }
+  .modal-custom.short-modal.modal-open {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .modal-qa-doctor .inner-wrapper .modal-body .title-wrapper .title {
     font-size: 18px;
@@ -7296,8 +7318,8 @@ body.has-modal:after {
     padding: 16px 0;
   }
   .modal-reset-password-account .modal-header .btn-close {
-    top: 11px;
-    right: -11px;
+    top: 11px !important;
+    right: -11px !important;
   }
   .modal-reset-password-account .modal-body .title-wrapper .title {
     font-size: 18px;

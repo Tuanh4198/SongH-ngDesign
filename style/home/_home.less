@@ -1761,6 +1761,14 @@
 					}
 				}
 
+				select{
+					appearance: none;
+					background-image: url('../../images/page/qa-page/ico-dropdown.svg');
+					background-repeat: no-repeat;
+					background-position: 96% 50%;
+					background-size: auto;
+				}
+
 				.label{
 					font-size: 14px;
 					font-weight: 600;
@@ -2552,8 +2560,16 @@
 		}
 
 		&.short-modal{
+
 			.inner-wrapper{
-				margin-top: 50px;
+				margin-top: 0;
+			}
+
+			&.modal-open{
+				display: flex !important;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
 			}
 		}
 	}
