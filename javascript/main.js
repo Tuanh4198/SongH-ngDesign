@@ -394,4 +394,19 @@ jQuery(document).ready(function ($) {
 		$('html, body').scrollTop( $(item_scroll).offset().top - 100);  
 	});
 
+	// fixed button share
+	(function ($) {
+		function onResize() {
+			let menu = $('.fixed-menu-social')
+			if(menu.length > 0) {
+				const left = ($(window).width() - $('.container').width())/2 - menu.width() - 20
+				menu.css('left', `${left}px`)
+			}
+		}
+		onResize()
+		$( window ).resize(function() {
+			onResize()
+		});
+	})($);
+	// end fixed button share
 });
